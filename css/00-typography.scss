@@ -1,0 +1,110 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Typography
+
+/*
+// Example for custom font
+
+@font-face {
+	font-family: 'My-Font';
+	src: url("../../fonts/My-Font.eot?#iefix") format('embedded-opentype'),
+	url("../../fonts/My-Font.woff2") format('woff2'),
+	url("../../fonts/My-Font.woff") format('woff'),
+	url("../../fonts/My-Font.ttf") format('truetype');
+}
+
+*/
+
+@mixin main-menu {
+    font-family: 'Helvetica Neue', serif;
+    font-size: 25px;
+    line-height: 35px;
+    text-decoration: none;
+
+     @include media-medium-up {
+        font-size: 40px;
+        line-height: 55px;
+    }
+    @include media-large-up {
+        font-size: 45px;
+        line-height: 60px;
+    }
+}
+
+@mixin sub-menu {
+    font-family: 'Helvetica Neue', serif;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+
+    @include media-medium-up {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    @include media-large-up {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+
+@mixin h2 {
+    font-family: 'Helvetica Neue', serif;
+    font-size: 17px;
+    line-height: 21px;
+    @include media-medium-up {
+        font-size: 23px;
+        line-height: 28px;
+    }
+    @include media-large-up {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
+
+@mixin h3 {
+    font-family: 'Helvetica Neue', serif;
+    font-size: 15px;
+    line-height: 18px;
+    @include media-medium-up {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    @include media-large-up {
+        font-size: 22px;
+        line-height: 25px;
+    }
+}
+
+@mixin text-link {
+    font-size: 11px;
+    line-height: 15px;
+
+    @include media-medium-up {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+.wysiwyg {
+    padding: 10px 0;
+
+    h2 {
+        @include h2;
+    }
+
+    h3 {
+        @include h3;
+    }
+
+    p {
+        a {
+            @include text-link;
+        }
+    }
+
+    ul {
+        padding-left: 20px;
+        li {
+            padding-left: 10px;
+        }
+    }
+}

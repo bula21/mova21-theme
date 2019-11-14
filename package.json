@@ -1,0 +1,28 @@
+{
+  "name": "bula21",
+  "version": "1.0.0",
+  "description": "bula21",
+  "main": "index.js",
+  "author": "Florian Bentele <florian.bentele@bula21.ch>",
+  "license": "None",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "grunt": "^1.0.4",
+    "grunt-concurrent": "2.3.1",
+    "grunt-contrib-clean": "1.1.0",
+    "grunt-contrib-concat": "1.0.1",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-postcss": "0.9.0",
+    "grunt-sftp-deploy": "^0.2.5",
+    "sass": "^1.23.0",
+    "sftp-deploy": "^0.1.1"
+  }
+}

@@ -1,0 +1,23 @@
+
+.mod-something {
+    .post-title {
+        background-color: red;
+        @include media-small {
+            background-color: blue;
+        }
+        @include media-large {
+            background-color: lightblue;
+        }
+        @include media-medium {
+            background-color: lightcoral;
+        }
+        @include media-xlarge {
+            background-color: #0eb5d6;
+        }
+        @include media-print {
+            background-color: lightgray;
+            color: red;
+            text-decoration: underline;
+        }
+    }
+}

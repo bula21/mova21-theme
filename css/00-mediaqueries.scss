@@ -1,0 +1,72 @@
+// Meadia Queries.
+@mixin media-small {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-small-portrait {
+    @media screen and (max-width: 768px) and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin media-small-landscape {
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin media-medium {
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin media-medium-down {
+    @media screen and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin media-medium-up {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-large {
+    @media screen and (min-width: 1200px) and (max-width: 1600px) {
+        @content;
+    }
+}
+
+@mixin media-large-down {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin media-large-up {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin media-xlarge {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}
+
+@mixin media-print {
+    @media print {
+        @content;
+    }
+}
+
+@mixin media-no-print {
+    @media not print {
+        @content;
+    }
+}
