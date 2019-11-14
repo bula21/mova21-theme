@@ -2,49 +2,23 @@
 
 Based on the aid-muster-theme using grunt, scss and npm
 
-1. Clone Repo
-2. _npm i_ (Install Packages)
-3. _grunt_ (Run Grunt-Task with watcher, Details in Gruntfile.js)
+1. Clone Repo into a existing wordpress installation into the _wp_content/themes/_ folder
+2. open a shell within the project-folder
+3. run `npm i` (Install Packages)
+4. run `grunt` (Run Grunt-Task with watcher, Details in Gruntfile.js)
 
-**Deployment-Configuration**
-1. Create **.ftppass**-File in Root-Directory
+## Deployment-Configuration
+1. Create an empty textfile named **.ftppass** in the projects root-directory
 ```
 {
-  "dev": {
-    "username": „HAUPT-LOGIN VON SERVER“,  
-    "password": „SSH-PASSWORT VON SERVER“
+  "bula-dev": {
+    "username": "YOUR_SSH_USERNAME",  
+    "password": "YOUR_SSH_PASSWORD"
   },
-  "prod": {
-    "username": „HAUPT-LOGIN VON SERVER“,  
-    "password": „SSH-PASSWORT VON SERVER“
+  "bula-prod": {
+    "username": "YOUR_SSH_USERNAME",  
+    "password": "YOUR_SSH_PASSWORD"
   }
 }
 ```
-2. adjust sftp-deploy-Task in Gruntfile.js 
-```
-dev: {
-    auth: {
-        host: 'dev.YOUR-DOMAIN',
-        port: 22,
-        authKey: 'dev'
-    },
-    src: './',
-    dest: 'PATH-ON-SERVER/wp-content/themes/bula21/',
-    exclusions: [
-        'temp/**',
-        'node_modules',
-        'css/**',
-        'js/**',
-        '.*',
-        'Gruntfile.js',
-        'package.json',
-        'package-lock.json'
-    ],
-    progress: true
-}
-```
-for Prod-System add same Snippet, but on first line change _dev_ to _prod_ and adjust the host-name and dest-path  
-3. Remove comment from
-```
-grunt.registerTask('deploy-prod', ['concurrent:build', 'sftp-deploy:prod']);
-```
+2. run `grunt deploy-dev` for dev deployment or `grunt deploy-prod` for prod deployment

@@ -1,15 +1,15 @@
-
-.mod-something {
+.mod-home {
     .post-title {
+        /* example of how to use responsive mixins */
         background-color: red;
         @include media-small {
             background-color: blue;
         }
         @include media-large {
-            background-color: lightblue;
+            background-color: red;
         }
         @include media-medium {
-            background-color: lightcoral;
+            background-color: red;
         }
         @include media-xlarge {
             background-color: #0eb5d6;
