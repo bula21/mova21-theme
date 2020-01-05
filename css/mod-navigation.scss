@@ -5,9 +5,29 @@
 
     .menu {
         display: flex;
+        align-items: center;
         list-style: none;
+        height: 100%;
+        padding: 0;
+        margin: 0;
         .menu-item {
             padding-right: 20px;
+        }
+    }
+
+    .navigation-wrapper {
+        display: flex;
+        align-items: center;
+        .lang-menu {
+            display: flex;
+            flex-wrap: wrap;
+            div {
+                flex: 1 50%;
+            }
+        }
+        .search-icon {
+            height: 40px;
+            width: 40px;
         }
     }
 }

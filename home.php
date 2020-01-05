@@ -64,7 +64,6 @@
 			wp_reset_query();
 			?>
         </div>
-
     </div>
 <?php endwhile; endif; ?>
 
