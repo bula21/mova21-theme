@@ -23,6 +23,10 @@ function bula_enqueue_script() {
 	}
 }
 
+/**
+ * Theme support
+ */
+add_theme_support( 'post-thumbnails' );
 
 /**
  * wysiwyg style same as frontend

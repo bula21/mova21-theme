@@ -1,0 +1,13 @@
+.mod-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .menu {
+        display: flex;
+        list-style: none;
+        .menu-item {
+            padding-right: 20px;
+        }
+    }
+}

@@ -14,9 +14,16 @@
 } ?>>
 <?php the_field( 'analyticsscript-body', 'options' ); ?>
 
-<div class="container">
-	<?php if ( has_nav_menu( 'main-menu' ) ) {
-		wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'bula-main-menu' ) );
-	} ?>
+<div class="container mod-navigation">
+    <div class="mod-logo">
+        <a href="<?php echo home_url(); ?>">
+            <img src="<?php echo BULA_URL_TO_THEME; ?>/img/movo_logo.svg">
+        </a>
+    </div>
+    <div class="navigation-wrapper">
+		<?php if ( has_nav_menu( 'main-menu' ) ) {
+			wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'bula-main-menu' ) );
+		} ?>
+    </div>
 </div>
 

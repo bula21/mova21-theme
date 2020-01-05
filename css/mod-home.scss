@@ -1,0 +1,22 @@
+.mod-home {
+
+    .home-animation-1 {
+        img {
+            width: 100%;
+        }
+    }
+
+    .home-content-block-1 {
+        background-color: $yellow;
+    }
+
+
+    .home-content-block-3 {
+        .content-news {
+            img {
+                max-width: 100%;
+                height:auto;
+            }
+        }
+    }
+}
