@@ -107,19 +107,33 @@ body {
     }
 }
 
-@mixin sub-menu {
-    font-family: 'MessinaSansWeb-Regular', serif;
+@mixin font-menu {
+    font-family: 'MessinaSansWeb-Bold', serif;
     font-size: 18px;
     line-height: 22px;
     text-decoration: none;
+    color: black;
 
     @include media-medium-up {
-        font-size: 25px;
+        font-size: 20px;
         line-height: 30px;
     }
-    @include media-large-up {
-        font-size: 30px;
-        line-height: 35px;
+}
+
+@mixin font-footer {
+    font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    color: black;
+
+    a {
+        color: black;
+    }
+
+    @include media-medium-up {
+        font-size: 16px;
+        line-height: 20px;
     }
 }
 

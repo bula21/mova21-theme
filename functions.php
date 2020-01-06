@@ -62,8 +62,7 @@ add_action( 'init', 'bula_register_menu' );
 function bula_register_menu() {
 	register_nav_menus(
 		array(
-			'main-menu'    => __( 'Hauptnavigation', 'bula21' ),
-			'service-menu' => __( 'Servicenavigation', 'bula21' )
+			'main-menu'    => __( 'Hauptnavigation', 'bula21' )
 		)
 	);
 }

@@ -12,6 +12,55 @@
         margin: 0;
         .menu-item {
             padding-right: 20px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            a {
+                @include font-menu;
+            }
+            &:hover {
+                .sub-menu {
+                    opacity: 1;
+                    visibility: visible;
+                    transition: opacity 250ms, transform 250ms;
+                    transform: translateY(0);
+                }
+            }
+            .sub-menu {
+                opacity: 0;
+                visibility: hidden;
+                transition: visibility 500ms 250ms linear, opacity 500ms 250ms, transform 500ms 250ms;
+                transform: translateY(20px);
+                width: 100%;
+                position: absolute;
+                left: 0;
+                right: 0;
+                max-width: 1140px;
+                display: flex;
+                justify-content: center;
+                padding: 1em 0;
+                margin: 20px auto 0;
+                list-style: none;
+                &:before {
+                    display: block;
+                    position: absolute;
+                    content: " ";
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: $gray;
+                    margin-left: -9999px;
+                    margin-right: -9999px;
+                    padding-left: 9999px;
+                    padding-right: 9999px;
+                }
+                & .menu-item {
+                    position: relative;
+                    a {
+                        @include font-menu;
+                    }
+                }
+            }
         }
     }
 

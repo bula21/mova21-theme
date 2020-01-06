@@ -10,12 +10,39 @@
         background-color: $yellow;
     }
 
-
     .home-content-block-3 {
         .content-news {
-            img {
-                max-width: 100%;
-                height:auto;
+            .news-image {
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+            .news-text {
+                padding: 10px;
+                .post-link {
+                    color: $black;
+                    font-size: 2em;
+                }
+            }
+        }
+
+        .content-news:nth-child(2n+1) {
+            flex-direction: row-reverse;
+        }
+        .content-news:nth-child(3n+2) {
+            .news-text {
+                background-color: $blue;
+            }
+        }
+        .content-news:nth-child(3n) {
+            .news-text {
+                background-color: $red;
+            }
+        }
+        .content-news:nth-child(3n+1) {
+            .news-text {
+                background-color: $yellow;
             }
         }
     }
