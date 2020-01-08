@@ -16,7 +16,6 @@
         <div class="row">
 			<?php
 			if ( have_rows( 'faqs' ) ):
-
 				while ( have_rows( 'faqs' ) ) : the_row();
 					get_template_part( 'template-parts/collapse', 'items' );
 				endwhile;

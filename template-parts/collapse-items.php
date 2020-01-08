@@ -5,8 +5,8 @@
 
 // set unique id
 global $collaps_id;
-$collaps_id = $collaps_id ? $collaps_id ++ : 1;
-$id         = 'collapse-block-' . $collaps_id;
+$collaps_id ++;
+$id = 'collapse-block-' . $collaps_id;
 ?>
 
 <div id="<?php echo esc_attr( $id ); ?>" class="mod-collapse col-12 col-md-6">
