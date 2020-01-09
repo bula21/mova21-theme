@@ -112,7 +112,12 @@ body {
     font-size: 18px;
     line-height: 22px;
     text-decoration: none;
-    color: black;
+    color: $black;
+    transition: color 250ms;
+    &:hover {
+         text-decoration: underline;
+        color: $yellow;
+    }
 
     @include media-medium-up {
         font-size: 20px;
