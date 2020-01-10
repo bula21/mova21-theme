@@ -46,6 +46,17 @@ acf_add_local_field_group( array(
 				),
 			),
 		),
+		array(
+			'key'               => 'field_5ccae01e0b11a',
+			'label'             => 'More Content',
+			'name'              => 'more-content',
+			'type'              => 'wysiwyg',
+			'wrapper'           => array(
+				'width' => '',
+				'class' => '',
+				'id'    => '',
+			),
+		),
 	),
 	'location'              => array(
 		array(

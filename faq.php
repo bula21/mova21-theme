@@ -28,6 +28,13 @@
 			?>
 
         </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="wysiwyg">
+					<?php the_field( 'more-content' ); ?>
+                </div>
+            </div>
+        </div>
     </div>
 <?php endwhile; endif; ?>
 
