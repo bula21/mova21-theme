@@ -25,7 +25,7 @@ acf_add_local_field_group( array(
 		),
 		array(
 			'key'               => 'field_5e16227cd1d47',
-			'label'             => 'Fragen',
+			'label'             => 'Element',
 			'name'              => 'fragen',
 			'type'              => 'repeater',
 			'instructions'      => '',
@@ -40,11 +40,11 @@ acf_add_local_field_group( array(
 			'min'               => 0,
 			'max'               => 0,
 			'layout'            => 'table',
-			'button_label'      => 'Frage hinzufügen',
+			'button_label'      => 'Element hinzufügen',
 			'sub_fields'        => array(
 				array(
 					'key'               => 'field_5e162291d1d48',
-					'label'             => 'Frage',
+					'label'             => 'Titel',
 					'name'              => 'frage',
 					'type'              => 'text',
 					'instructions'      => '',
@@ -63,7 +63,7 @@ acf_add_local_field_group( array(
 				),
 				array(
 					'key'               => 'field_5e16229cd1d49',
-					'label'             => 'Antwort',
+					'label'             => 'Text',
 					'name'              => 'antwort',
 					'type'              => 'wysiwyg',
 					'instructions'      => '',
