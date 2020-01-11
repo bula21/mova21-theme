@@ -15,6 +15,8 @@
         </div>
         <div class="row">
 			<?php
+			$readmore        = array();
+			$readmorecounter = 1;
 			if ( have_rows( 'timeline' ) ):
 				while ( have_rows( 'timeline' ) ) : the_row();
 					?>
@@ -23,6 +25,17 @@
                     </div>
                     <div class="col-8">
 						<?php the_sub_field( 'timeline-text' ); ?>
+						<?php
+						if ( $more = get_sub_field( 'read-more-content' ) ) {
+							$readmore[] = array(
+								'number'  => $readmorecounter,
+								'title'   => get_sub_field( 'read-more-title' ),
+								'content' => $more
+							);
+							echo '<a href="#timeline-item-' . $readmorecounter . '">Read more</a>';
+							$readmorecounter++;
+						}
+						?>
                     </div>
                     <div class="col-2">
 						<?php
@@ -47,13 +60,23 @@
 			?>
 
         </div>
-        <div class="row">
+
+		<?php
+		foreach ( $readmore as $item ) {
+			?>
+        <div class="row" id="timeline-item-<?php echo $item['number']; ?>">
             <div class="col-12">
+                <h2 class="more-title">
+	                <?php echo $item['title']; ?>
+                </h2>
                 <div class="wysiwyg">
-					<?php the_field( 'more-content' ); ?>
+	                <?php echo $item['content']; ?>
                 </div>
             </div>
-        </div>
+            </div><?php
+		}
+		?>
+
     </div>
 <?php endwhile; endif; ?>
 
