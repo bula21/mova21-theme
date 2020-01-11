@@ -20,8 +20,9 @@
                 <div class="member">
                     <div class="member-pic">
 						<?php
-						$foto = get_sub_field( 'foto' );
-						the_aid_picture_tag( $foto );
+						if ( $foto = get_sub_field( 'foto' ) ) {
+							the_aid_picture_tag( $foto );
+						}
 						?>
                     </div>
                     <div class="member-name">
