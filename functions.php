@@ -57,10 +57,17 @@ function bula_register_menu() {
 function the_aid_picture_tag( $image_id = null, $size = 'medium', $size_2x = 'large', $classlist = '' ) {
 	$src  = wp_get_attachment_image_src( $image_id, $size );
 	$src2 = wp_get_attachment_image_src( $image_id, $size_2x );
-	$alt = get_post_meta( $image_id, '_wp_attachment_image_alt', true );
+	$alt  = get_post_meta( $image_id, '_wp_attachment_image_alt', true );
 	?>
     <picture class="<?php echo $classlist; ?>">
         <img srcset="<?php echo $src[0]; ?> 1x, <?php echo $src2[0]; ?> 2x" alt="<?php echo $alt; ?>">
     </picture>
 	<?php
+}
+
+function bula_get_current_url_in( $lang = 'de' ) {
+	global $wp;
+	$url = home_url( $wp->request );
+
+	return apply_filters( 'wpml_permalink', $url, $lang );
 }

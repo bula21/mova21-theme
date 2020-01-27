@@ -28,10 +28,10 @@
                 <img src="<?php echo BULA_URL_TO_THEME; ?>/img/search-icon.svg">
             </div>
             <div class="lang-menu">
-                <div>D</div>
-                <div>I</div>
-                <div>F</div>
-                <div>E</div>
+                <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'de' ); ?>">D</a>
+                <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'fr' ); ?>">F</a>
+                <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'it' ); ?>">I</a>
+                <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'en' ); ?>">E</a>
             </div>
         </div>
     </div>

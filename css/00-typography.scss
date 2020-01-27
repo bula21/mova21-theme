@@ -115,7 +115,7 @@ body {
     color: $black;
     transition: color 250ms;
     &:hover {
-         text-decoration: underline;
+        text-decoration: underline;
         color: $yellow;
     }
 
@@ -142,10 +142,30 @@ body {
     }
 }
 
+@mixin bold-content {
+    font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 22px;
+    line-height: 26px;
+    text-decoration: none;
+    color: black;
+
+    a {
+        color: black;
+    }
+
+    @include media-medium-up {
+        font-size: 30px;
+        line-height: 38px;
+    }
+}
+
 @mixin h2 {
-    font-family: 'MessinaSansWeb-Regular', serif;
+    font-family: 'MessinaSansWeb-Bold', serif;
     font-size: 17px;
     line-height: 21px;
+    text-decoration: none;
+    color: black;
+
     @include media-medium-up {
         font-size: 23px;
         line-height: 28px;

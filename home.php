@@ -20,8 +20,7 @@
         <div class="row">
             <div class="col-12 home-content-block-1">
                 <div class="wysiwyg">
-                    Das Bundeslager der Pfadibewegung Schweiz findet vom 24. Juli bis 7. August 2021
-                    im Goms unter dem Motto mova statt
+					<?php the_content(); ?>
                 </div>
             </div>
         </div>
@@ -32,18 +31,29 @@
 		?>
         <div class="home-content-block-2">
             <div class="row">
-                <div class="col-12 col-md-4 bg-blue">
-                    <img src="<?php echo BULA_URL_TO_THEME; ?>/img/logo_gruppen.svg">
-                    <div>Pfadis</div>
+                <div class="col">
+                    <h2><?php _e( 'mova für', 'bula21' ); ?></h2>
                 </div>
-                <div class="col-12 col-md-4 bg-red">
-                    <img src="<?php echo BULA_URL_TO_THEME; ?>/img/logo_helfende.svg">
-                    <div>Helfende</div>
-                </div>
-                <div class="col-12 col-md-4 bg-yellow">
-                    <img src="<?php echo BULA_URL_TO_THEME; ?>/img/logo_externe.svg">
-                    <div>Externe</div>
-                </div>
+            </div>
+            <div class="row">
+                <a href="<?php _e( 'Link Pfadis', 'bula21' ); ?>" class="block--item">
+                    <div class="bg-blue">
+                        <img src="<?php echo BULA_URL_TO_THEME; ?>/img/logo_gruppen.svg">
+                    </div>
+                    <div class="bg-black"><?php _e( 'Pfadis', 'bula21' ); ?></div>
+                </a>
+                <a href="<?php _e( 'Link Helfende', 'bula21' ); ?>" class="block--item">
+                    <div class="bg-red">
+                        <img src="<?php echo BULA_URL_TO_THEME; ?>/img/logo_helfende.svg">
+                    </div>
+                    <div class="bg-yellow"><?php _e( 'Helfende', 'bula21' ); ?></div>
+                </a>
+                <a href="<?php _e( 'Link Externe', 'bula21' ); ?>" class="block--item">
+                    <div class="bg-yellow">
+                        <img src="<?php echo BULA_URL_TO_THEME; ?>/img/logo_externe.svg">
+                    </div>
+                    <div class="bg-blue"><?php _e( 'Externe', 'bula21' ); ?></div>
+                </a>
             </div>
         </div>
 
@@ -54,7 +64,13 @@
         <div class="home-content-block-3">
             <h2>News</h2>
 			<?php
-			$query = new WP_Query( array( 'post_type' => 'post' ) );
+			$query = new WP_Query(
+				array( 'post_type' => 'post' )
+			// maybe add max-number of posts, like:
+			// 'posts-per-page' => 3
+			// or add category-filter, like
+			// 'category_name' => 'news'
+			);
 			if ( $query->have_posts() ) {
 				while ( $query->have_posts() ) {
 					$query->the_post();

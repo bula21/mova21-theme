@@ -8,6 +8,21 @@
 
     .home-content-block-1 {
         background-color: $yellow;
+        @include bold-content;
+    }
+
+    .home-content-block-2 {
+        .block--item {
+            width: 33.334%;
+            text-align: center;
+            @include h2;
+
+
+            .bg-black {
+                color: $white;
+
+            }
+        }
     }
 
     .home-content-block-3 {

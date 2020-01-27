@@ -71,7 +71,7 @@
         .lang-menu {
             display: flex;
             flex-wrap: wrap;
-            div {
+            .lang-switch {
                 flex: 1 50%;
             }
         }
