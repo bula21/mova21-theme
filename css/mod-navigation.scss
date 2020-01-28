@@ -5,42 +5,45 @@
 
     .menu {
         display: flex;
+        position: relative;
         align-items: center;
         list-style: none;
         height: 100%;
         padding: 0;
         margin: 0;
+
         .menu-item {
-            padding-right: 20px;
-            padding-bottom: 20px;
-            padding-top: 20px;
+            padding: 20px;
+
             a {
                 @include font-menu;
             }
+
             &:hover {
                 .sub-menu {
                     opacity: 1;
                     visibility: visible;
-                    transition: opacity 250ms, transform 250ms;
-                    transform: translateY(0);
                 }
+
+                background: $gray;
             }
+
             .sub-menu {
-                opacity: 0;
                 visibility: hidden;
-                transition: visibility 500ms 250ms linear, opacity 500ms 250ms, transform 500ms 250ms;
-                transform: translateY(20px);
                 width: 100%;
                 position: absolute;
                 left: 0;
                 right: 0;
                 max-width: 1140px;
                 display: flex;
-                justify-content: center;
+                opacity: 0;
+                justify-content: flex-start;
                 padding: 1em 0;
-                margin: 20px auto 0;
+                margin: 10px;
                 list-style: none;
                 z-index: 1;
+                transition: all .2s;
+
                 &:before {
                     display: block;
                     position: absolute;
@@ -55,26 +58,58 @@
                     padding-left: 9999px;
                     padding-right: 9999px;
                 }
+
                 & .menu-item {
                     position: relative;
-                    a {
-                        @include font-menu;
+                }
+
+                ul {
+                    flex-direction: column;
+                    font-size: 10px;
+                    
+                    .menu-item{
+                        margin-bottom: 10px;
+                        padding: 0 20px;
+                        box-sizing: border-box;
+                        
+                        a{
+                            font-size: 14px;
+                            line-height: 10px;
+                        }
+                    }
+
+                    &:before {
+                        margin: 0;
+                        padding: 0;
                     }
                 }
             }
+
+            & #menu-item-106 ul:before {
+                margin-left: -9999px;
+                margin-right: -9999px;
+                margin-bottom: -30px;
+                padding-left: 9999px;
+                padding-right: 9999px;
+            }
+
         }
     }
 
     .navigation-wrapper {
         display: flex;
         align-items: center;
+
         .lang-menu {
             display: flex;
             flex-wrap: wrap;
+            
             .lang-switch {
+
                 flex: 1 50%;
             }
         }
+
         .search-icon {
             height: 40px;
             width: 40px;
