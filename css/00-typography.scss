@@ -91,6 +91,42 @@ body {
     font-family: 'MessinaSansWeb-Regular', serif;
 }
 
+@mixin paragraphe {
+    font-family: 'MessinaSansWeb-SemiBold', serif;
+    font-size: 12px;
+    line-height: 15px;
+    text-decoration: none;
+
+    @include media-medium-up {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    @include media-large-up {
+        font-size: 17px;
+        line-height: 24px;
+    }
+}
+
+@mixin article {
+    font-family: 'MessinaSansWeb-Regular', serif;
+    font-size: 12px;
+    line-height: 15px;
+    text-decoration: none;
+
+    @include media-medium-up {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    @include media-large-up {
+        font-size: 17px;
+        line-height: 23.5px;
+    }
+}
+
+
+
 @mixin main-menu {
     font-family: 'MessinaSansWeb-Regular', serif;
     font-size: 25px;
@@ -101,6 +137,7 @@ body {
         font-size: 40px;
         line-height: 55px;
     }
+
     @include media-large-up {
         font-size: 45px;
         line-height: 60px;
@@ -114,6 +151,7 @@ body {
     text-decoration: none;
     color: $black;
     transition: color 250ms;
+
     &:hover {
         text-decoration: underline;
         color: $yellow;
@@ -160,6 +198,26 @@ body {
     }
 }
 
+@mixin h1 {
+    font-family: 'MessinaSansWeb-Black', serif;
+    font-size: 30px;
+    line-height: 35px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+
+    @include media-medium-up {
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    @include media-large-up {
+        font-size: 40px;
+        line-height: 46px;
+    }
+
+}
+
 @mixin h2 {
     font-family: 'MessinaSansWeb-Bold', serif;
     font-size: 17px;
@@ -171,6 +229,7 @@ body {
         font-size: 23px;
         line-height: 28px;
     }
+
     @include media-large-up {
         font-size: 32px;
         line-height: 40px;
@@ -181,10 +240,12 @@ body {
     font-family: 'MessinaSansWeb-Regular', serif;
     font-size: 15px;
     line-height: 18px;
+
     @include media-medium-up {
         font-size: 20px;
         line-height: 25px;
     }
+
     @include media-large-up {
         font-size: 22px;
         line-height: 25px;
@@ -199,6 +260,24 @@ body {
         font-size: 15px;
         line-height: 20px;
     }
+}
+
+@mixin font-collapse{
+    font-family: 'MessinaSansWeb-SemiBold', serif;
+    font-size: 17px;
+    line-height: 19px;
+    text-decoration: none;
+    color: black; 
+    text-align: left;
+}
+
+@mixin font-collapse-h2{
+    font-family: 'MessinaSansWeb-SemiBold', serif;
+    font-size: 30px;
+    line-height: 15px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
 }
 
 .wysiwyg {
@@ -220,6 +299,7 @@ body {
 
     ul {
         padding-left: 20px;
+
         li {
             padding-left: 10px;
         }

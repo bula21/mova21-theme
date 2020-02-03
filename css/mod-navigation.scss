@@ -1,5 +1,6 @@
 .mod-navigation {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
@@ -99,6 +100,7 @@
     .navigation-wrapper {
         display: flex;
         align-items: center;
+        width: 80%;
 
         .lang-menu {
             display: flex;

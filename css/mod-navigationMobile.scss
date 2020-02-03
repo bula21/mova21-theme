@@ -1,43 +1,48 @@
-.mod-navigationMobile {
-    display: flex;
-    align-items: left;
-    justify-content: space-between;
+.burgerButton{
+    display: none;
+}
 
-    img {
-        width: 30px;
-    }
-
-    .burgerButton {
-
-        .line {
-            list-style-type: none;
-            width: 55px;
-            height: 1px;
-            background: black;
-            margin-bottom: 7px;
-        }
-    
-    }
-
-    .menu {
+.mod-navigation {
+    @include media-small {
         display: flex;
-        position: fixed;
-        top: 50px;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        transform: translateX(-100%);
-        z-index: 10;
-        align-items: center;
-        list-style: none;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        background: $gray;
-        transition: all .2s;
+        align-items: left;
+
+        .burgerButton {
+            
+            display: block;
+
+            .line {
+                list-style-type: none;
+                width: 55px;
+                height: 1px;
+                background: black;
+                margin-bottom: 7px;
+            }
+
+        }
+
+        .menu {
+            display: flex;
+            position: fixed;
+            top: 50px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            transform: translateX(-100%);
+            z-index: 10;
+            align-items: center;
+            list-style: none;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            background: $gray;
+            transition: all .2s;
+        }
+        
+
+        .menuActive {
+            transform: translateX(0);
+        }
     }
 
-    .menuActive {
-        transform: translateX(0);
-    }
 }

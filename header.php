@@ -21,18 +21,25 @@
                     <img src="<?php echo BULA_URL_TO_THEME; ?>/img/movo_logo.svg">
                 </a>
             </div>
-            <div class="lang-menu">
-                <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'de' ); ?>">D</a>
-                <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'fr' ); ?>">F</a>
-                <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'it' ); ?>">I</a>
-                <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'en' ); ?>">E</a>
-            <div class="navigation-wrapper">
+            <div class="burgerButton">
+                <ul>
+                    <li class="line"></li>
+                    <li class="line"></li>
+                    <li class="line"></li>
+                </ul>
+            </div>
+            <div class="navigation-wrapper mobileNav">
                 <?php if ( has_nav_menu( 'main-menu' ) ) {
 				wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'bula-main-menu', 'depth' => 3 ) );
 			} ?>
                 <div class="search-icon">
                     <img src="<?php echo BULA_URL_TO_THEME; ?>/img/search-icon.svg">
                 </div>
+                <div class="lang-menu">
+                    <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'de' ); ?>">D</a>
+                    <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'fr' ); ?>">F</a>
+                    <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'it' ); ?>">I</a>
+                    <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'en' ); ?>">E</a>
+                </div>
             </div>
         </div>
-    </div>
