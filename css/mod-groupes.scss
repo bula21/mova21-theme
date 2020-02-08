@@ -1,0 +1,41 @@
+.intro {
+    margin-bottom: 50px;
+}
+
+.mod-groupes {
+
+    .timeLine {
+        margin-bottom: 50px;
+
+
+        .event {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 25px;
+
+            .date {
+                @include tl-date;
+                margin-right: 25px;
+            }
+
+            .keyPoint {
+                width: 30px;
+                height: 30px;
+                background: $red;
+                border-radius: 50%;
+                margin-right: 25px;
+            }
+
+            .eventName {
+                @include tl-name;
+                margin-right: 25px;
+            }
+        }
+    }
+
+    .info {
+        .infoContainer{
+            margin-bottom: 50px;
+        }
+    }
+}

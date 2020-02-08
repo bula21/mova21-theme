@@ -9,17 +9,20 @@ h1 {
     margin-bottom: 50px;
 }
 
-.columnsTwo {
+.text-2-cols {
     column-count: 2;
 }
 
-.imageFullPage {
+.image-fullSize {
     width: 100%;
-    height: 100%;
     margin-bottom: 25px;
+
+    img {
+        width: 100%;
+    }
 }
 
-.modulTxtImg{
+.mti {
     background: $red;
     width: 100%;
     height: 500px;
@@ -27,22 +30,33 @@ h1 {
     display: flex;
     flex-direction: row;
     margin-bottom: 25px;
-    
-    img{
-        width: 50%;
-        height: 100%;
+
+    .mti-img {
+         width: 50%;
+        overflow: hidden;
+        position: relative;
+        
+        img {
+            display: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: auto;
+            height: 100%;
+        }
+
     }
-    
-    .blocTxt{
-        
+
+    .mti-txt {
+
         padding: 30px;
+        width: 50%;
         box-sizing: border-box;
-        
-        h2{
+
+        h2 {
             margin-bottom: 25px;
         }
-        
-        p{
+
+        p {
             margin: 0;
             padding: 0;
             @include article;

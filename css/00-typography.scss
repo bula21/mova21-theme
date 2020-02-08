@@ -280,6 +280,22 @@ body {
     text-transform: uppercase;
 }
 
+@mixin tl-date {
+    font-family: 'MessinaSansWeb-Black', serif;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+@mixin tl-name {
+    font-family: 'MessinaSansWeb-SemiBold', serif;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
 .wysiwyg {
     padding: 10px 0;
 

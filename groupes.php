@@ -4,80 +4,58 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) :
 	the_post(); ?>
-    <div class="container mod-groupes">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="post-title"><?php the_title(); ?></h1>
-                <div class="wysiwyg">
-					<?php the_content(); ?>
-                </div>
-            </div>
+<div class="container mod-groupes">
+    <div class="col-12">
+        <h1 class="post-title"><?php the_title(); ?></h1>
+        <div class="wysiwyg">
+            <?php the_content(); ?>
         </div>
-        <div class="row">
-			<?php
-			$readmore        = array();
-			$readmorecounter = 1;
-			if ( have_rows( 'timeline' ) ):
-				while ( have_rows( 'timeline' ) ) : the_row();
-					?>
-                    <div class="col-2">
-						<?php the_sub_field( 'date' ); ?>
-                    </div>
-                    <div class="col-8">
-						<?php the_sub_field( 'timeline-text' ); ?>
-						<?php
-						if ( $more = get_sub_field( 'read-more-content' ) ) {
-							$readmore[] = array(
-								'number'  => $readmorecounter,
-								'title'   => get_sub_field( 'read-more-title' ),
-								'content' => $more
-							);
-							echo '<a href="#timeline-item-' . $readmorecounter . '">Read more</a>';
-							$readmorecounter++;
-						}
-						?>
-                    </div>
-                    <div class="col-2">
-						<?php
-						if ( $link = get_sub_field( 'timeline-link' ) ) {
-							?>
-                            <a href="<?php echo $link['url']; ?>" class="btn btn-primary">
-								<?php echo $link['title']; ?>
-                            </a>
-							<?php
-						}
-						?>
-                    </div>
-				<?php
-
-				endwhile;
-
-			else :
-
-				// no rows found
-
-			endif;
-			?>
-
-        </div>
-
-		<?php
-		foreach ( $readmore as $item ) {
-			?>
-        <div class="row" id="timeline-item-<?php echo $item['number']; ?>">
-            <div class="col-12">
-                <h2 class="more-title">
-	                <?php echo $item['title']; ?>
-                </h2>
-                <div class="wysiwyg">
-	                <?php echo $item['content']; ?>
-                </div>
-            </div>
-            </div><?php
-		}
-		?>
-
     </div>
+    <div class="timeLine">
+       <div class="intro">
+           <p class="text-intro"><?php the_field('intro_text'); ?></p>
+       </div>
+        
+        <?php        
+                if( have_rows('group_timeline') ):
+                    while ( have_rows('group_timeline') ) : the_row();
+            
+                        if( have_rows('timeline_event') ):
+                        while ( have_rows('timeline_event') ) : the_row(); ?>
+
+                            <div class="timeLine">
+                                <div class="event">
+                                    <p class="date"><?php the_sub_field('event_date'); ?></p>
+                                    <div class="keyPoint"></div>
+                                    <p class="eventName"><?php the_sub_field('event_name'); ?></p>
+                                    <button><?php the_sub_field('event_button'); ?></button>
+                                </div>
+                            </div>
+
+        <?php endwhile; else : endif;
+                    endwhile; else : endif;
+                ?>
+    </div>
+    <div class="event-infos">
+        <?php
+
+            if( have_rows('tm-event-info') ):
+            while ( have_rows('tm-event-info') ) : the_row(); ?>
+        
+                <div class="info">
+                   <div class="infoContainer">
+                        <p class="number"><?php the_sub_field('event_number'); ?></p>
+                        <h2><?php the_sub_field('event_name'); ?></h2>
+                        <p class="text"><?php the_sub_field('event_description'); ?></p>
+                        <button><?php the_sub_field('event_button'); ?></button>
+                    </div>
+                </div>
+        
+            <?php endwhile; else : endif;
+        ?>
+    </div>
+
+</div>
 <?php endwhile; endif; ?>
 
 <?php get_footer(); ?>
