@@ -13,6 +13,14 @@
 	body_class();
 } ?>>
 <?php the_field( 'analyticsscript-body', 'options' ); ?>
+
+<div class="mod-search">
+    <div class="search-form-wrapper">
+        <button class="search-form-close"><?php _e('Schliessen', 'bula21');?></button>
+	        <?php echo get_search_form(); ?>
+    </div>
+</div>
+
 <div class="container">
     <div class="mod-navigation row">
         <div class="mod-logo">
