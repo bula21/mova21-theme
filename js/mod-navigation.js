@@ -24,5 +24,16 @@ jQuery(document).ready(function ($) {
             $('body').removeClass('menu-active');
         }
     });
+
+    var lastScrollTop = 0;
+    document.addEventListener('scroll', function (event) {
+        var st = window.pageYOffset || document.documentElement.scrollTop;
+        if (st > lastScrollTop && st > 100) {
+            $('body').removeClass('navigation-visible');
+        } else {
+            $('body').addClass('navigation-visible');
+        }
+        lastScrollTop = st <= 0 ? 0 : st;
+    }, true);
 });
 
