@@ -169,7 +169,8 @@
             }
             .burger-button {
                 display: block;
-
+                background-color: $white;
+                border: 0;
                 .line {
                     width: 55px;
                     height: 1px;
