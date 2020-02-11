@@ -16,7 +16,7 @@
 <div class="container">
     <div class="mod-navigation row">
         <div class="mod-logo">
-            <a href="<?php echo home_url(); ?>">
+            <a class="logo-link" href="<?php echo home_url(); ?>">
                 <img src="<?php echo BULA_URL_TO_THEME; ?>/img/movo_logo.svg">
             </a>
         </div>
@@ -26,17 +26,20 @@
             <div class="line"></div>
         </button>
         <div class="navigation-wrapper">
-			<?php if ( has_nav_menu( 'main-menu' ) ) {
-				wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'bula-main-menu', 'depth' => 3 ) );
-			} ?>
-            <button class="search-icon">
-                <img src="<?php echo BULA_URL_TO_THEME; ?>/img/search-icon.svg">
-            </button>
-            <div class="lang-menu">
-                <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'de' ); ?>">D</a>
-                <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'fr' ); ?>">F</a>
-                <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'it' ); ?>">I</a>
-                <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'en' ); ?>">E</a>
+            <div class="inner-wrapper">
+				<?php if ( has_nav_menu( 'main-menu' ) ) {
+					wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'bula-main-menu', 'depth' => 3 ) );
+				} ?>
+
+                <button class="search-icon">
+                    <img src="<?php echo BULA_URL_TO_THEME; ?>/img/search-icon.svg">
+                </button>
+                <div class="lang-menu">
+                    <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'de' ); ?>">D</a>
+                    <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'fr' ); ?>">F</a>
+                    <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'it' ); ?>">I</a>
+                    <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'en' ); ?>">E</a>
+                </div>
             </div>
         </div>
     </div>
