@@ -1,34 +1,21 @@
-.mod-organigram {
+.contact-row {
+    display: flex;
+    flex-direction: row;
+}
 
-    .org-container {
+.contact-info {
+    margin-right: 50px;
+    width: 250px;
+    height: 250px;
+    border: 10px solid red;
 
-        .contact-row {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: flex-start;
+    .img-container {
+        height: 180px;
+        overflow: hidden;
 
-            .contact {
-                margin-right: 50px;
-                padding-top: 180px;
-                width: 250px;
-                height: 250px;
-                position: relative;
-                overflow: hidden;
-
-                img {
-                    margin-top: -180px;
-                    height: 175px;
-                    position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%);
-                }
-
-                .org-name {
-                    margin: 0;
-                    @include h3;
-                }
-            }
+        img {
+            width: 100%;
         }
     }
+
 }

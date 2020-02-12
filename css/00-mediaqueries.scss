@@ -1,6 +1,6 @@
 // Meadia Queries.
 @mixin media-small {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         @content;
     }
 }
@@ -24,7 +24,7 @@
 }
 
 @mixin media-medium-down {
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 991px) {
         @content;
     }
 }

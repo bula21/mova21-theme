@@ -1,4 +1,17 @@
 .mod-faq {
+
+    .header {
+        height: 400px;
+        background: $blue;
+        padding: 75px;
+        box-sizing: border-box;
+        margin-bottom: 50px;
+
+        h1 {
+            @include h1;
+        }
+    }
+
     .mod-collapse {
         &:nth-of-type(1n) {
             .collapse-title {

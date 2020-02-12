@@ -1,0 +1,26 @@
+.mod-news-template {
+
+    .news-text {
+        padding: 20px;
+        box-sizing: border-box;
+        
+        .post-date {
+            @include news-text;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+
+        .post-title {
+            @include news-title;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+
+        p {
+            @include news-text;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+
+    }
+}

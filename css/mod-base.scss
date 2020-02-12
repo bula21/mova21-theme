@@ -1,10 +1,10 @@
-body{
-    width: 100vw;
-    overflow-x: hidden;
-}
-
 @include media-large-up {
     .container {
         max-width: 1400px;
     }
+}
+
+
+body.menu-active {
+    overflow: hidden;
 }
