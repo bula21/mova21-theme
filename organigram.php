@@ -11,30 +11,32 @@
         </div>
     </div>
     <div class="org-container">
-        <?php        
+        <div class="contact-row">
+            <?php        
                 if( have_rows('org_row') ):
                     while ( have_rows('org_row') ) : the_row(); ?>
 
-        <div class="contact-row"> 
-            
-<!-- problème de logique quelque part ..-->
+            <div class="contact">
 
-            <?php if( have_rows('person') ):
+                <!-- problème de logique quelque part ..-->
+
+                <?php if( have_rows('person') ):
                         while ( have_rows('person') ) : the_row(); 
                         $org_img = get_sub_field('image'); ?>
 
 
-            <div class="contact">
-                <img src="<?php echo $org_img['url'];?>')">
-                <p class="org-name"><?php the_sub_field('name'); ?></p>
-                <p class="org-contact"><?php the_sub_field('contact'); ?></p>
+                <div class="contact-info">
+                    <div class="img-container"><img src="<?php echo $org_img['url'];?>')"></div>
+                    <p class="org-name"><?php the_sub_field('name'); ?></p>
+                    <p class="org-contact"><?php the_sub_field('contact'); ?></p>
+                </div>
             </div>
-        </div>
 
-        <?php endwhile; else : endif;
+            <?php endwhile; else : endif;
         
                     endwhile; else : endif;
                 ?>
+        </div>
     </div>
 
 </div>

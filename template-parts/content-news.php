@@ -4,7 +4,7 @@
  */
 ?>
 
-<div class="row content-news no-gutters">
+<div class="row content-news no-gutters mod-news-template">
     <div class="col-12 col-md-6 news-text">
         <div class="post-date"><?php the_date(); ?></div>
         <h3 class="post-title"><?php the_title(); ?></h3>

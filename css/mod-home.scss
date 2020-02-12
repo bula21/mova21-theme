@@ -9,19 +9,35 @@
     .home-content-block-1 {
         background-color: $yellow;
         @include bold-content;
+        margin-bottom: 50px;
     }
 
     .home-content-block-2 {
+        margin-bottom: 50px;
+
         .block--item {
-            width: 33.334%;
+            width: calc(100% / 3);
             text-align: center;
-            @include h2;
 
+            .choice-text {
+                height: 75px;
+                position: relative;
 
-            .bg-black {
-                color: $white;
+                p {
+                    position: absolute;
+                    width: 100%;
+                    text-align: center;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    @include h2;
+                }
 
+                .t-white {
+                    color: white;
+                }
             }
+
+
         }
     }
 
@@ -33,8 +49,8 @@
                     height: auto;
                 }
             }
+
             .news-text {
-                padding: 10px;
                 .post-link {
                     color: $black;
                     font-size: 2em;
@@ -45,20 +61,29 @@
         .content-news:nth-child(2n+1) {
             flex-direction: row-reverse;
         }
+
         .content-news:nth-child(3n+2) {
             .news-text {
                 background-color: $blue;
             }
         }
+
         .content-news:nth-child(3n) {
             .news-text {
                 background-color: $red;
             }
         }
+
         .content-news:nth-child(3n+1) {
             .news-text {
                 background-color: $yellow;
             }
         }
     }
+
+    h2 {
+        @include h2;
+        margin-bottom: 15px;
+    }
+
 }

@@ -6,6 +6,25 @@ acf_add_local_field_group(array(
 	'title' => 'Bula-Page-Template',
 	'fields' => array(
 		array(
+			'key' => 'field_5e42d3b4aa2f9',
+			'label' => 'page sub title',
+			'name' => 'main-h2',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
 			'key' => 'field_5e387a6d126e1',
 			'label' => 'image(full size)',
 			'name' => 'image_full_size',

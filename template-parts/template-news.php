@@ -4,7 +4,7 @@
  */
 ?>
 
-<div class="col-12 col-md-4 news-text">
+<div class="col-12 col-md-4 news-text mod-news-template">
     <div class="news-image">
 		<?php
 		if ( has_post_thumbnail() ) {

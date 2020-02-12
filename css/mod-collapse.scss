@@ -4,7 +4,7 @@
 
     h2 {
         margin-bottom: 20px;
-        @include font-collapse-h2
+        @include h2
     }
 
     .collapse-item {

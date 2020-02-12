@@ -92,7 +92,7 @@ body {
 }
 
 @mixin paragraphe {
-    font-family: 'MessinaSansWeb-SemiBold', serif;
+    font-family: 'MessinaSansWeb-Regular', serif;
     font-size: 12px;
     line-height: 15px;
     text-decoration: none;
@@ -104,7 +104,7 @@ body {
 
     @include media-large-up {
         font-size: 17px;
-        line-height: 24px;
+        line-height: 26.5px;
     }
 }
 
@@ -199,12 +199,11 @@ body {
 }
 
 @mixin h1 {
-    font-family: 'MessinaSansWeb-Black', serif;
+    font-family: 'MessinaSansWeb-Bold', serif;
     font-size: 30px;
     line-height: 35px;
     text-decoration: none;
     color: black;
-    text-transform: uppercase;
 
     @include media-medium-up {
         font-size: 35px;
@@ -212,7 +211,27 @@ body {
     }
 
     @include media-large-up {
-        font-size: 40px;
+        font-size: 60px;
+        line-height: 46px;
+    }
+
+}
+
+
+@mixin h1-sub {
+    font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 30px;
+    line-height: 35px;
+    text-decoration: none;
+    color: black;
+
+    @include media-medium-up {
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    @include media-large-up {
+        font-size: 25px;
         line-height: 46px;
     }
 
@@ -231,7 +250,7 @@ body {
     }
 
     @include media-large-up {
-        font-size: 32px;
+        font-size: 50px;
         line-height: 40px;
     }
 }
@@ -294,6 +313,19 @@ body {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
+}
+
+
+@mixin news-title {
+    @include h2;
+}
+
+@mixin news-text {
+    font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 20px;
+    line-height: 26px;
+    text-decoration: none;
+    color: black;
 }
 
 .wysiwyg {

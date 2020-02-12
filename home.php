@@ -40,19 +40,19 @@
                     <div class="bg-blue">
                         <img src="<?php echo BULA_URL_TO_THEME; ?>/img/logo_gruppen.svg">
                     </div>
-                    <div class="bg-black"><?php _e( 'Pfadis', 'bula21' ); ?></div>
+                    <div class="bg-black choice-text"><p class="t-white"><?php _e( 'Pfadis', 'bula21' ); ?></p></div>
                 </a>
                 <a href="<?php _e( 'Link Helfende', 'bula21' ); ?>" class="block--item">
                     <div class="bg-red">
                         <img src="<?php echo BULA_URL_TO_THEME; ?>/img/logo_helfende.svg">
                     </div>
-                    <div class="bg-yellow"><?php _e( 'Helfende', 'bula21' ); ?></div>
+                    <div class="bg-yellow choice-text"><p><?php _e( 'Helfende', 'bula21' ); ?></p></div>
                 </a>
                 <a href="<?php _e( 'Link Externe', 'bula21' ); ?>" class="block--item">
                     <div class="bg-yellow">
                         <img src="<?php echo BULA_URL_TO_THEME; ?>/img/logo_externe.svg">
                     </div>
-                    <div class="bg-blue"><?php _e( 'Externe', 'bula21' ); ?></div>
+                    <div class="bg-blue choice-text"><p><?php _e( 'Externe', 'bula21' ); ?></p></div>
                 </a>
             </div>
         </div>
