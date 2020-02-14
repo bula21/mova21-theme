@@ -237,6 +237,14 @@ body {
 
 }
 
+@mixin header-text{
+    font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 20px;
+    line-height: 26px;
+    text-decoration: none;
+    color: black;
+}
+
 @mixin h2 {
     font-family: 'MessinaSansWeb-Bold', serif;
     font-size: 17px;
@@ -320,13 +328,29 @@ body {
     @include h2;
 }
 
-@mixin news-text {
-    font-family: 'MessinaSansWeb-Bold', serif;
-    font-size: 20px;
-    line-height: 26px;
-    text-decoration: none;
-    color: black;
+@mixin news-text{
+    @include header-text;
 }
+
+@mixin bloc-date{
+    @include header-text;
+}
+
+@mixin bloc-title {
+    @include h2;
+}
+
+@mixin bloc-text{
+    @include article;
+    font-family: 'MessinaSansWeb-SemiBold', serif;
+}
+
+@mixin bloc-button{
+    @include header-text;
+}
+
+
+
 
 .wysiwyg {
     padding: 10px 0;

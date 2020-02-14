@@ -1,41 +1,126 @@
-.intro {
-    margin-bottom: 50px;
-}
-
 .mod-groupes {
 
-    .timeLine {
-        margin-bottom: 50px;
+    .header {
+        background: $yellow;
+        padding: 100px;
 
-
-        .event {
-            display: flex;
-            flex-direction: row;
+        h1 {
+            @include h1;
             margin-bottom: 25px;
+            position: relative;
+
+        }
+
+        p {
+            @include header-text;
+            width: 600px;
+        }
+    }
+}
+
+.timeLine {
+    margin-left: 200px;
+    padding: 100px 0;
+    border-left: 5px $blue solid;
+    
+
+    .event {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 100px;
+        position: relative;
+        
+    
+
+        .keyPoint {
+            margin-left: -175px;
+            margin-right: 50px;
+            background: $yellow;
+            position: relative;
+            width: 200px;
+            padding-left: 25px;
 
             .date {
                 @include tl-date;
-                margin-right: 25px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
             }
+        }
 
-            .keyPoint {
-                width: 30px;
-                height: 30px;
-                background: $red;
-                border-radius: 50%;
-                margin-right: 25px;
-            }
+        .eventName {
+            @include h2;
+            margin-right: 25px;
+        }
 
-            .eventName {
-                @include tl-name;
-                margin-right: 25px;
+        button {
+            position: absolute;
+            right: 100px;
+        }
+    }
+}
+
+.info {
+    padding: 50px;
+    position: relative;
+
+    &:nth-child(1) {
+        margin-top: -100px;
+        background: $yellow;
+    }
+
+    .date {
+        @include bloc-date;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        @include h2;
+        margin-bottom: 75px;
+    }
+
+    .callToAction {
+        display: flex;
+        flex-direction: row;
+        
+        p {
+            @include bloc-text;
+            width: 800px;
+            margin-right: 100px;
+        }
+
+        button {
+            right: 100px;
+            top: 50%;
+            align-self: center;
+        }
+    }
+    
+    &:nth-child(2){
+    
+        .cover{
+            background: $yellow;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0.75;
+            
+            &:hover{
+                cursor: not-allowed;
             }
         }
     }
 
-    .info {
-        .infoContainer{
-            margin-bottom: 50px;
-        }
-    }
+}
+
+button {
+    background: $black;
+    width: 250px;
+    height: 60px;
+    right: 100px;
+    border: none;
+    @include bloc-button;
+    color: $white;
 }
