@@ -58,8 +58,6 @@
         <?php endwhile; else : endif;
         ?>
     </div>
-
-</div>
 <?php endwhile; endif; ?>
 
 <?php get_footer(); ?>

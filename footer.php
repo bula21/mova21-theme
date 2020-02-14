@@ -6,18 +6,26 @@
             </div>
             <div class="col-6">
                 <div class="some-icons">
-                    <a class="some-icon" href="https://www.instagram.com/" target="_blank">
-                        <img src="<?php echo BULA_URL_TO_THEME; ?>/img/instagram.svg">
-                    </a>
-                    <a class="some-icon" href="https://www.facebook.com/" target="_blank">
-                        <img src="<?php echo BULA_URL_TO_THEME; ?>/img/facebook.svg">
-                    </a>
-                    <a class="some-icon" href="https://www.twitter.com/" target="_blank">
-                        <img src="<?php echo BULA_URL_TO_THEME; ?>/img/twitter.svg">
-                    </a>
+					<?php if ( get_field( 'instagram-url', 'option' ) ) : ?>
+                        <a class="some-icon" href="<?php the_field( 'instagram-url', 'option' ); ?>" target="_blank">
+                            <img src="<?php echo BULA_URL_TO_THEME; ?>/img/instagram.svg">
+                        </a>
+					<?php endif; ?>
+					<?php if ( get_field( 'facebook-url', 'option' ) ) : ?>
+                        <a class="some-icon" href="<?php the_field( 'facebook-url', 'option' ); ?>" target="_blank">
+                            <img src="<?php echo BULA_URL_TO_THEME; ?>/img/facebook.svg">
+                        </a>
+					<?php endif; ?>
+					<?php if ( get_field( 'twitter-url', 'option' ) ) : ?>
+                        <a class="some-icon" href="<?php the_field( 'twitter-url', 'option' ); ?>" target="_blank">
+                            <img src="<?php echo BULA_URL_TO_THEME; ?>/img/twitter.svg">
+                        </a>
+					<?php endif; ?>
                 </div>
                 <div class="newsletter">
-                    <a href="/newsletter">Newsletter abonnieren</a>
+	                <?php if ( get_field( 'newsletter-url', 'option' ) ) : ?>
+                    <a href="<?php the_field( 'newsletter-url', 'option' ); ?>"><?php _e( 'Newsletter abonnieren', 'bula21' ); ?></a>
+	                <?php endif; ?>
                 </div>
             </div>
         </div>
