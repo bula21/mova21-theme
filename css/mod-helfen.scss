@@ -1,0 +1,129 @@
+.mod-helfen {
+
+    .header {
+        background: $red;
+        padding: 100px;
+        margin-bottom: 50px;
+
+        @include media-medium-down {
+            padding: 50px;
+        }
+
+        @include media-small {
+            padding: 25px;
+        }
+
+
+        h1 {
+            @include h1;
+            margin-bottom: 25px;
+            position: relative;
+
+        }
+
+        p {
+            @include header-text;
+        }
+    }
+
+    .crew-info {
+        padding: 50px;
+        margin-bottom: 50px;
+        //        background: $red;
+
+        h2 {
+            @include h2;
+            margin-bottom: 35px;
+
+            @include media-medium-up {
+                margin-bottom: 50px;
+            }
+        }
+
+        p {
+            position: relative;
+            @include bloc-text;
+            padding: 25px;
+            width: 100%;
+
+            @include media-large-up {
+                width: 800px;
+            }
+
+            &:before {
+                content: "";
+                border: $black solid;
+                border-width: 10px 0 0 10px;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            &:after {
+                content: "";
+                border: $black solid;
+                border-width: 0 10px 10px 0;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+
+    .helper-bloc {
+        padding: 50px;
+        position: relative;
+        background: $red;
+
+        h2 {
+            @include h2;
+            margin-bottom: 50px;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            @include media-medium-up {
+                flex-direction: row;
+            }
+
+            p {
+                @include bloc-text;
+                width: 100%;
+                margin-bottom: 50px;
+
+                @include media-medium-up {
+                    width: calc(100% - 300px);
+                     margin-bottom: 0;
+                }
+                
+                @include media-large-up {
+                width: 800px;
+            }
+
+            }
+
+            button {
+                position: static;
+                align-self: flex-start;
+
+                @include media-medium-up {
+                    position: absolute;
+                    align-self: center;
+                    right: 0;
+
+                }
+
+                @include media-large-up {
+                    right: 100px;
+                }
+            }
+        }
+    }
+}

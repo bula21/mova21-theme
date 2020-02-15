@@ -4,6 +4,14 @@
         background: $yellow;
         padding: 100px;
 
+        @include media-medium-down {
+            padding: 50px;
+        }
+
+        @include media-small {
+            padding: 25px;
+        }
+
         h1 {
             @include h1;
             margin-bottom: 25px;
@@ -13,32 +21,79 @@
 
         p {
             @include header-text;
-            width: 600px;
+            width: 100%;
+
+            @include media-medium-up {
+                width: 600px;
+            }
+
+            @include media-large-up {
+                width: 600px;
+            }
         }
     }
 }
 
 .timeLine {
-    margin-left: 200px;
+    margin-left: 20px;
     padding: 100px 0;
     border-left: 5px $blue solid;
-    
+
+    @include media-medium-up {
+        margin-left: 200px;
+    }
+
+    @include media-large-up {
+        margin-left: 200px;
+    }
+
 
     .event {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         margin-bottom: 100px;
         position: relative;
-        
-    
+        background: $yellow;
+        margin-left: 10px;
+        padding: 20px;
+
+        &:before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            transform: rotate(45deg);
+            background: $yellow;
+            position: absolute;
+            top: 30px;
+            left: -10px;
+        }
+
+
+
+        @include media-medium-up {
+            flex-direction: row;
+            background: none;
+            margin-left: 0;
+            padding: 0;
+
+            &:before {
+                display: none;
+            }
+        }
 
         .keyPoint {
-            margin-left: -175px;
-            margin-right: 50px;
-            background: $yellow;
             position: relative;
-            width: 200px;
-            padding-left: 25px;
+            margin-bottom: 15px;
+
+            @include media-medium-up {
+                background: $yellow;
+                margin-left: -175px;
+                margin-right: 50px;
+                margin-bottom: 0;
+                padding-left: 25px;
+                height: 75px;
+                width: 200px;
+            }
 
             .date {
                 @include tl-date;
@@ -48,14 +103,39 @@
             }
         }
 
-        .eventName {
-            @include h2;
-            margin-right: 25px;
-        }
+        .cta-bloc {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding-right: 0;
+            justify-content: space-between;
 
-        button {
-            position: absolute;
-            right: 100px;
+            @include media-large-up {
+                flex-direction: row;
+                padding-right: 100px;
+            }
+
+            .eventName {
+                @include h2;
+                margin-bottom: 30px;
+
+                @include media-medium-up {
+                    margin-bottom: 0;
+                }
+            }
+
+            button {
+                align-self: flex-start;
+
+                @include media-medium-down {
+                    width: 150px;
+                }
+
+
+                @include media-large-up {
+                    align-self: center;
+                }
+            }
         }
     }
 }
@@ -63,6 +143,10 @@
 .info {
     padding: 50px;
     position: relative;
+    
+     @include media-large-down {
+                padding: 25px;
+            }
 
     &:nth-child(1) {
         margin-top: -100px;
@@ -76,29 +160,43 @@
 
     h2 {
         @include h2;
-        margin-bottom: 75px;
+        margin-bottom: 50px;
     }
 
     .callToAction {
         display: flex;
         flex-direction: row;
-        
+
+        @include media-large-down {
+            flex-direction: column;
+        }
+
         p {
             @include bloc-text;
             width: 800px;
             margin-right: 100px;
+
+            @include media-large-down {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 50px;
+            }
         }
 
         button {
             right: 100px;
             top: 50%;
             align-self: center;
+            
+            @include media-large-down {
+                align-self: flex-start;
+            }
         }
     }
-    
-    &:nth-child(2){
-    
-        .cover{
+
+    &:nth-child(2) {
+
+        .cover {
             background: $yellow;
             position: absolute;
             top: 0;
@@ -106,8 +204,8 @@
             bottom: 0;
             right: 0;
             opacity: 0.75;
-            
-            &:hover{
+
+            &:hover {
                 cursor: not-allowed;
             }
         }
@@ -119,7 +217,6 @@ button {
     background: $black;
     width: 250px;
     height: 60px;
-    right: 100px;
     border: none;
     @include bloc-button;
     color: $white;

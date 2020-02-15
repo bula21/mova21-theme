@@ -91,27 +91,10 @@ body {
     font-family: 'MessinaSansWeb-Regular', serif;
 }
 
-@mixin paragraphe {
-    font-family: 'MessinaSansWeb-Regular', serif;
-    font-size: 12px;
-    line-height: 15px;
-    text-decoration: none;
-
-    @include media-medium-up {
-        font-size: 15px;
-        line-height: 20px;
-    }
-
-    @include media-large-up {
-        font-size: 17px;
-        line-height: 26.5px;
-    }
-}
-
 @mixin article {
     font-family: 'MessinaSansWeb-Regular', serif;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 14px;
+    line-height: 18px;
     text-decoration: none;
 
     @include media-medium-up {
@@ -121,7 +104,7 @@ body {
 
     @include media-large-up {
         font-size: 17px;
-        line-height: 23.5px;
+        line-height: 25px;
     }
 }
 
@@ -200,14 +183,14 @@ body {
 
 @mixin h1 {
     font-family: 'MessinaSansWeb-Bold', serif;
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 40px;
+    line-height: 47px;
     text-decoration: none;
     color: black;
 
     @include media-medium-up {
-        font-size: 35px;
-        line-height: 40px;
+        font-size: 45px;
+        line-height: 50px;
     }
 
     @include media-large-up {
@@ -220,14 +203,14 @@ body {
 
 @mixin h1-sub {
     font-family: 'MessinaSansWeb-Bold', serif;
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 17px;
+    line-height: 24px;
     text-decoration: none;
     color: black;
 
     @include media-medium-up {
-        font-size: 35px;
-        line-height: 40px;
+        font-size: 20px;
+        line-height: 25px;
     }
 
     @include media-large-up {
@@ -239,27 +222,37 @@ body {
 
 @mixin header-text{
     font-family: 'MessinaSansWeb-Bold', serif;
-    font-size: 20px;
-    line-height: 26px;
     text-decoration: none;
     color: black;
+    font-size: 14px;
+    line-height: 18px;
+    
+    @include media-medium-up {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    @include media-large-up {
+        font-size: 20px;
+        line-height: 26px;
+    }
 }
 
 @mixin h2 {
     font-family: 'MessinaSansWeb-Bold', serif;
-    font-size: 17px;
-    line-height: 21px;
+    font-size: 25px;
+    line-height: 30px;
     text-decoration: none;
     color: black;
 
     @include media-medium-up {
-        font-size: 23px;
-        line-height: 28px;
+        font-size: 35px;
+        line-height: 41px;
     }
 
     @include media-large-up {
         font-size: 50px;
-        line-height: 40px;
+        line-height: 58px;
     }
 }
 

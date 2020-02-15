@@ -28,10 +28,12 @@
                 <div class="keyPoint">
                     <p class="date"><?php the_sub_field('event_date'); ?></p>
                 </div>
-                <p class="eventName"><?php the_sub_field('event_name'); ?></p>
-                <?php if( get_sub_field('event_button') ): ?>
-                <button><?php the_sub_field('event_button'); ?></button>
-                <?php endif; ?>
+                <div class="cta-bloc">
+                    <p class="eventName"><?php the_sub_field('event_name'); ?></p>
+                    <?php if( get_sub_field('event_button') ): ?>
+                    <button><?php the_sub_field('event_button'); ?></button>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
 
@@ -58,6 +60,6 @@
         <?php endwhile; else : endif;
         ?>
     </div>
-<?php endwhile; endif; ?>
+    <?php endwhile; endif; ?>
 
-<?php get_footer(); ?>
+    <?php get_footer(); ?>
