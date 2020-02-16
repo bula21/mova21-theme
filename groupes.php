@@ -1,4 +1,4 @@
-<?php /* Template Name: Groupes */ ?>
+<?php /* Template Name: Groupe */ ?>
 
 <?php get_header(); ?>
 
