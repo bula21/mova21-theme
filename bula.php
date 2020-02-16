@@ -13,7 +13,6 @@
                     <h1 class="post-title"><?php the_title(); ?></h1>
                     <div class="h2-background"></div>
                     <h2><?php the_field('main-h2'); ?></h2>
-                    <?php the_content(); ?>
                 </div>
             </div>
             <div class="image-intro">

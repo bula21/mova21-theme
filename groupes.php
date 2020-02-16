@@ -8,9 +8,6 @@
     <div class="header">
         <div class="col-12">
             <h1 class="post-title"><?php the_title(); ?></h1>
-            <div class="wysiwyg">
-                <?php the_content(); ?>
-            </div>
         </div>
         <p class="text-intro"><?php the_field('intro_text'); ?></p>
     </div>

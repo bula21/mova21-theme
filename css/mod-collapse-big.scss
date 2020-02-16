@@ -1,0 +1,65 @@
+.mod-collapse-big {
+    margin-bottom: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+
+    @include media-medium-up {
+        padding: 0 50px;
+    }
+
+    @include media-large-up {
+        padding: 0 100px;
+
+    }
+
+    .collapse-item {
+        transition: all .1s;
+        background: $red;
+        align-self: center;
+        border-bottom: 5px solid $black;
+
+        &:hover {
+            transform: scale(1.025);
+        }
+
+
+        .collapse-title {
+
+            button {
+                @include font-collapse;
+                width: 100%;
+                height: 100%;
+                @include h2;
+                padding: 15px;
+
+                @include media-medium-up {
+                    padding: 25px;
+                }
+
+                @include media-large-up {
+                    padding: 30px;
+
+                }
+
+            }
+        }
+
+        p, span {
+            @include bloc-text;
+        }
+        
+        p{
+            padding: 0 25px;
+        }
+
+        a {
+            color: $yellow;
+            text-decoration: underline;
+        }
+    }
+
+}
+
+.card

@@ -8,9 +8,6 @@
     <div class="header">
         <div class="col-12">
             <h1 class="post-title"><?php the_title(); ?></h1>
-            <div class="wysiwyg">
-                <?php the_content(); ?>
-            </div>
         </div>
         <p class="text-intro"><?php the_field('text_intro'); ?></p>
     </div>
@@ -28,7 +25,7 @@
 			$id = 'collapse-block-' . $collaps_id;
 			?>
 
-        <div id="<?php echo esc_attr( $id ); ?>" class="mod-collapse col-12">
+        <div id="<?php echo esc_attr( $id ); ?>" class="mod-collapse-big">
             <h2><?php the_sub_field( 'ueberschrift' ); ?></h2>
 
             <?php if ( have_rows( 'fragen' ) ): ?>
