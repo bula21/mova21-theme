@@ -36,6 +36,7 @@ module.exports = function (grunt) {
                 scripts: [
                     'node_modules/jquery/dist/jquery.min.js',
                     'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+                    'node_modules/lottie-web/build/player/lottie.min.js',
                     'js/*.js'
                 ]
             }

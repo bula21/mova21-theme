@@ -23,6 +23,9 @@
             .inner-wrapper {
                 display: flex;
                 align-items: center;
+                .mobile-spacer {
+                    display: none;
+                }
             }
 
             .lang-menu {
@@ -160,17 +163,14 @@
                     transition: transform 500ms, opacity 550ms;
                     opacity: 1;
                     overflow-y: auto;
-                    .inner-wrapper {
-                        max-width: 720px;
-                        width: 100%;
-                        margin: 20px auto;
-                    }
                 }
             }
             .burger-button {
                 display: block;
+                width: 70px;
                 background-color: $white;
                 border: 0;
+                overflow: hidden;
                 .line {
                     width: 55px;
                     height: 1px;
@@ -188,10 +188,11 @@
                 left: 0;
                 bottom: 0;
                 right: 0;
-                top: 40px;
+                top: 60px;
                 height: 100vh;
                 background: $gray;
                 z-index: 10;
+                padding-bottom: 30px;
                 .bula-main-menu {
                     height: 100%;
                     .menu {
@@ -205,7 +206,40 @@
                         overflow-y: auto;
                         .menu-item {
                             padding: 5px;
+                            .sub-menu {
+                                position: initial;
+                                max-height: 0;
+                                overflow: hidden;
+                                margin: 0;
+                                flex-direction: column;
+                                &:before {
+                                    display: none;
+                                }
+                            }
+                            &.tapped {
+                                .sub-menu {
+                                    max-height: 500px;
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
                         }
+                    }
+                }
+                .inner-wrapper {
+                    max-width: 720px;
+                    min-height: calc(100% - 100px);
+                    width: 100%;
+                    margin: 20px auto;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    .mobile-spacer {
+                        flex-grow: 1;
+                        display: block;
+                    }
+                    .lang-menu {
+                        padding: 5px;
                     }
                 }
 
@@ -230,8 +264,5 @@
 
 .navi-spacer {
     height: 70px;
-    @include media-medium-down {
-        height: 40px;
-    }
     content: ' ';
 }

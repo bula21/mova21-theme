@@ -43,6 +43,7 @@
                     <button class="search-icon">
                         <img src="<?php echo BULA_URL_TO_THEME; ?>/img/search-icon.svg">
                     </button>
+                    <div class="mobile-spacer">&nbsp;</div>
                     <div class="lang-menu">
                         <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'de' ); ?>">D</a>
                         <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'fr' ); ?>">F</a>

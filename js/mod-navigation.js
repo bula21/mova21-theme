@@ -2,7 +2,6 @@ jQuery(document).ready(function ($) {
     var ctx = $('.mod-navigation');
     var burger = $('.burger-button', ctx);
     var searchButton = $('.search-icon', ctx);
-    var searchFormClose = $('.search-form-close', ctx);
 
     $(burger).on('click', function (e) {
         $('body').toggleClass('menu-active');
@@ -14,7 +13,7 @@ jQuery(document).ready(function ($) {
     });
 
     $(document).on('click', '.search-form-close', function (e) {
-        e.preventDefault()
+        e.preventDefault();
         $('body').removeClass('search-active');
     });
 
@@ -35,5 +34,15 @@ jQuery(document).ready(function ($) {
         }
         lastScrollTop = st <= 0 ? 0 : st;
     }, true);
+
+    $(document).on('click', '.touch-device .menu > .menu-item-has-children', function (e) {
+        if ($(this).hasClass('tapped')) {
+            $('.tapped').removeClass('tapped');
+        } else {
+            $('.tapped').removeClass('tapped');
+            e.preventDefault();
+            $(this).addClass('tapped');
+        }
+    })
 });
 

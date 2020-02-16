@@ -37,21 +37,15 @@
             </div>
             <div class="row">
                 <a href="<?php _e( 'Link Pfadis', 'bula21' ); ?>" class="block--item">
-                    <div class="bg-blue">
-                        <img src="<?php echo BULA_URL_TO_THEME; ?>/img/logo_gruppen.svg">
-                    </div>
+                    <div class="mod-animation animation d-none d-md-block" data-animation="gruppen" data-autoplay="false" data-hover="true"></div>
                     <div class="bg-black choice-text"><p class="t-white"><?php _e( 'Pfadis', 'bula21' ); ?></p></div>
                 </a>
                 <a href="<?php _e( 'Link Helfende', 'bula21' ); ?>" class="block--item">
-                    <div class="bg-red">
-                        <img src="<?php echo BULA_URL_TO_THEME; ?>/img/logo_helfende.svg">
-                    </div>
+                    <div class="mod-animation animation d-none d-md-block" data-animation="helfende" data-autoplay="false" data-hover="true"></div>
                     <div class="bg-yellow choice-text"><p><?php _e( 'Helfende', 'bula21' ); ?></p></div>
                 </a>
                 <a href="<?php _e( 'Link Externe', 'bula21' ); ?>" class="block--item">
-                    <div class="bg-yellow">
-                        <img src="<?php echo BULA_URL_TO_THEME; ?>/img/logo_externe.svg">
-                    </div>
+                    <div class="mod-animation animation d-none d-md-block" data-animation="externe" data-autoplay="false" data-hover="true"></div>
                     <div class="bg-blue choice-text"><p><?php _e( 'Externe', 'bula21' ); ?></p></div>
                 </a>
             </div>
