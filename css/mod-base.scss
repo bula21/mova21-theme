@@ -4,7 +4,16 @@
     }
 }
 
-
 body.menu-active {
     overflow: hidden;
+}
+
+.cn-buttons-container {
+    .button {
+        padding: 10px;
+        margin: 5px;
+        display: inline-block;
+        background: $yellow;
+        color: $red;
+    }
 }
