@@ -35,7 +35,7 @@ jQuery(document).ready(function ($) {
         lastScrollTop = st <= 0 ? 0 : st;
     }, true);
 
-    $(document).on('click', '.menu > .menu-item-has-children', function (e) {
+    $(document).on('click', '.touch-device .menu > .menu-item-has-children', function (e) {
         if ($(this).hasClass('tapped')) {
             $('.tapped').removeClass('tapped');
         } else {
