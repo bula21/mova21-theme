@@ -1,11 +1,10 @@
 .contact-row {
-    display: flex;
-    flex-direction: row;
 }
-
+.contact {
+    padding: 10px;
+}
 .contact-info {
     margin-right: 50px;
-    width: 250px;
     height: 250px;
     border: 10px solid red;
 

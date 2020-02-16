@@ -4,6 +4,25 @@ acf_add_local_field_group( array(
 	'key'                   => 'group_5e162dfc79f45',
 	'title'                 => 'FAQ',
 	'fields'                => array(
+        array(
+			'key' => 'field_5e3d84b12d1aa',
+			'label' => 'Text intro',
+			'name' => 'text_intro',
+			'type' => 'textarea',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
 		array(
 			'key'               => 'field_5e162e034abc2',
 			'label'             => 'FAQs',
