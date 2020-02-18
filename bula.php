@@ -25,6 +25,7 @@
             <?php the_field('text_2_cols'); ?>
 
         </div>
+<!--
         <div class="mti">
             <?php $mti = get_field('mti'); if( $mti ): ?>
             <div class="mti-img">
@@ -36,6 +37,7 @@
             </div>
             <?php endif; ?>
         </div>
+-->
     </div>
 </div>
 <?php endwhile; endif; ?>

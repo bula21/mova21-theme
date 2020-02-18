@@ -48,24 +48,21 @@
 
             .contact {
                 margin-right: 25px;
-                background: $yellow;
                 margin-bottom: 50px;
+                display: flex;
+                flex-direction: row;
 
                 .img-container {
-                    width: 150px;
-                    height: 110px;
+                    width: calc(100vw / 2 - 50px);
+                    height: calc((100vw / 2 - 50px) * 1.5);
                     position: relative;
                     overflow: hidden;
 
                     @include media-medium-up {
-                        width: 250px;
-                        height: 185px;
+                        width: calc(100vw / 4 - 50px);
+                        height: calc((100vw / 4 - 50px) * 1.5);
                     }
 
-                    @include media-large-up {
-                        width: 300px;
-                        height: 225px;
-                    }
 
                     img {
                         width: 100%;
@@ -78,15 +75,10 @@
 
                 .info-container {
                     padding: 10px;
-                    width: 150px;
-                    
-                    @include media-medium-up {
-                        width: 250px;
-                    }
+                    background: $yellow;
+                    width: calc(100vw / 4 - 50px);
+                    height: 200px;
 
-                    @include media-large-up {
-                        width: 300px;
-                    }
 
                     p {
                         margin: 0;
@@ -117,57 +109,63 @@
             &:nth-of-type(1) {
 
                 .contact {
-                    background: $yellow;
+                    .info-container {
+                        background: $yellow;
+                    }
                 }
             }
 
             &:nth-of-type(2) {
                 .contact {
-                    background: $blue;
+                    .info-container {
+                        background: $blue;
+                    }
                 }
             }
 
             &:nth-of-type(3) {
                 .contact {
+                    .info-container {
 
-                    &:nth-of-type(1),
-                    &:nth-of-type(2) {
-                        background: $red;
-                    }
-
-                    &:nth-of-type(3),
-                    &:nth-of-type(4) {
-                        background: $blue;
-                    }
-
-                    &:nth-of-type(5),
-                    &:nth-of-type(6) {
-                        background: $yellow;
-                    }
-
-                    &:nth-of-type(7),
-                    &:nth-of-type(8) {
-                        background: $black;
-
-                        p,
-                        a {
-                            color: $white;
+                        &:nth-of-type(1),
+                        &:nth-of-type(2) {
+                            background: $red;
                         }
-                    }
 
-                    &:nth-of-type(9),
-                    &:nth-of-type(10) {
-                        background: $red;
-                    }
+                        &:nth-of-type(3),
+                        &:nth-of-type(4) {
+                            background: $blue;
+                        }
 
-                    &:nth-of-type(11),
-                    &:nth-of-type(12) {
-                        background: $yellow;
-                    }
+                        &:nth-of-type(5),
+                        &:nth-of-type(6) {
+                            background: $yellow;
+                        }
 
-                    &:nth-of-type(13),
-                    &:nth-of-type(14) {
-                        background: $blue;
+                        &:nth-of-type(7),
+                        &:nth-of-type(8) {
+                            background: $black;
+
+                            p,
+                            a {
+                                color: $white;
+                            }
+                        }
+
+                        &:nth-of-type(9),
+                        &:nth-of-type(10) {
+                            background: $red;
+                        }
+
+                        &:nth-of-type(11),
+                        &:nth-of-type(12) {
+                            background: $yellow;
+                        }
+
+                        &:nth-of-type(13),
+                        &:nth-of-type(14) {
+                            background: $blue;
+                        }
                     }
                 }
             }

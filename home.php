@@ -38,7 +38,7 @@
             <div class="row">
                 <a href="<?php _e( 'Link Pfadis', 'bula21' ); ?>" class="block--item">
                     <div class="mod-animation animation d-none d-md-block" data-animation="gruppen" data-autoplay="false" data-hover="true"></div>
-                    <div class="bg-black choice-text"><p class="t-white"><?php _e( 'Pfadis', 'bula21' ); ?></p></div>
+                    <div class="bg-black  choice-text"><p class="t-white"><?php _e( 'Pfadis', 'bula21' ); ?></p></div>
                 </a>
                 <a href="<?php _e( 'Link Helfende', 'bula21' ); ?>" class="block--item">
                     <div class="mod-animation animation d-none d-md-block" data-animation="helfende" data-autoplay="false" data-hover="true"></div>
