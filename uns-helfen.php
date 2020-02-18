@@ -11,12 +11,14 @@
         </div>
         <p class="text-intro"><?php the_field('text_intro'); ?></p>
     </div>
-    <div class="crew-info">
-        <?php $text_bloc = get_field('text_bloc'); ?>
-        <h2><?php echo $text_bloc['group_title']; ?></h2>
-        <p><?php echo $text_bloc['group_text']; ?></p>
-    </div>
 
+	<?php $text_bloc = get_field('text_bloc'); ?>
+    <?php if($text_bloc['group_title']): ?>
+        <div class="crew-info">
+            <h2><?php echo $text_bloc['group_title']; ?></h2>
+            <p><?php echo $text_bloc['group_text']; ?></p>
+        </div>
+    <?php endif; ?>
 
     <div class="row">
         <?php
@@ -63,14 +65,16 @@
 				?>
         </div>
     </div>
-    <div class="helper-bloc">
-        <?php $helper_bloc = get_field('inscription_bloc'); ?>
-        <h2><?php echo $helper_bloc['title']; ?></h2>
-        <div class="row">
-            <p><?php echo $helper_bloc['text']; ?></p>
-            <button class="btn-black"><?php echo $helper_bloc['button']; ?></button>
+	<?php $helper_bloc = get_field('inscription_bloc'); ?>
+    <?php if($helper_bloc['text']): ?>
+        <div class="helper-bloc">
+            <h2><?php echo $helper_bloc['title']; ?></h2>
+            <div class="row">
+                <p><?php echo $helper_bloc['text']; ?></p>
+                <button class="btn-black"><?php echo $helper_bloc['button']; ?></button>
+            </div>
         </div>
-    </div>
+    <?php endif; ?>
 </div>
 <?php endwhile; endif; ?>
 

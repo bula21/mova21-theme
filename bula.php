@@ -28,9 +28,12 @@
 <!--
         <div class="mti">
             <?php $mti = get_field('mti'); if( $mti ): ?>
+
+            <?php if($mti['mti_img']): ?>
             <div class="mti-img">
-                <img class="mti-img" src="<?php echo esc_url( $mti['mti_img']['url'] ); ?>" alt="<?php echo esc_attr( $mti['image']['alt'] ); ?>" />
+                <img class="mti-img" src="<?php echo esc_url( $mti['mti_img']['url'] ); ?>" alt="<?php echo esc_attr( $mti['mti_img']['alt'] ); ?>" />
             </div>
+            <?php endif; ?>
             <div class="mti-txt">
                 <h2><?php echo $mti['mti_title']; ?></h2>
                 <p><?php echo $mti['mti_txt']; ?></p>

@@ -8,7 +8,7 @@ acf_add_local_field_group(array(
 	'fields' => array(
 		array(
 			'key' => 'field_5e3d9206bd58c',
-			'label' => 'intro text',
+			'label' => 'Intro Text',
 			'name' => 'intro_text',
 			'type' => 'text',
 			'instructions' => '',
@@ -27,7 +27,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5e3d927bbd58d',
-			'label' => 'group-timeline',
+			'label' => 'Group Timeline',
 			'name' => 'group_timeline',
 			'type' => 'repeater',
 			'instructions' => '',
@@ -46,7 +46,7 @@ acf_add_local_field_group(array(
 			'sub_fields' => array(
 				array(
 					'key' => 'field_5e3d929ebd58e',
-					'label' => 'timeline event',
+					'label' => 'Timeline Event',
 					'name' => 'timeline_event',
 					'type' => 'repeater',
 					'instructions' => '',
@@ -65,7 +65,7 @@ acf_add_local_field_group(array(
 					'sub_fields' => array(
 						array(
 							'key' => 'field_5e3d9308bd58f',
-							'label' => 'event date',
+							'label' => 'Event Date',
 							'name' => 'event_date',
 							'type' => 'text',
 							'instructions' => '',
@@ -84,7 +84,7 @@ acf_add_local_field_group(array(
 						),
 						array(
 							'key' => 'field_5e3e3f59730de',
-							'label' => 'event name',
+							'label' => 'Event Name',
 							'name' => 'event_name',
 							'type' => 'text',
 							'instructions' => '',
@@ -103,9 +103,9 @@ acf_add_local_field_group(array(
 						),
 						array(
 							'key' => 'field_5e3d9371bd591',
-							'label' => 'event button',
+							'label' => 'Event Button',
 							'name' => 'event_button',
-							'type' => 'text',
+							'type' => 'link',
 							'instructions' => '',
 							'required' => 0,
 							'conditional_logic' => 0,
@@ -126,7 +126,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5e3e44327679b',
-			'label' => 'timeline event info',
+			'label' => 'Timeline Event Info',
 			'name' => 'tm-event-info',
 			'type' => 'repeater',
 			'instructions' => '',
@@ -145,7 +145,7 @@ acf_add_local_field_group(array(
 			'sub_fields' => array(
 				array(
 					'key' => 'field_5e3e444d7679c',
-					'label' => 'event date',
+					'label' => 'Event Date',
 					'name' => 'event_date',
 					'type' => 'text',
 					'instructions' => '',
@@ -164,7 +164,7 @@ acf_add_local_field_group(array(
 				),
 				array(
 					'key' => 'field_5e3e445e7679d',
-					'label' => 'event name',
+					'label' => 'Event Name',
 					'name' => 'event_name',
 					'type' => 'text',
 					'instructions' => '',
@@ -183,9 +183,9 @@ acf_add_local_field_group(array(
 				),
 				array(
 					'key' => 'field_5e4483e68424e',
-					'label' => 'event text',
+					'label' => 'Event Text',
 					'name' => 'event_text',
-					'type' => 'text',
+					'type' => 'textarea',
 					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
@@ -202,9 +202,9 @@ acf_add_local_field_group(array(
 				),
 				array(
 					'key' => 'field_5e3e446e7679f',
-					'label' => 'event button',
+					'label' => 'Event Button',
 					'name' => 'event_button',
-					'type' => 'text',
+					'type' => 'link',
 					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
