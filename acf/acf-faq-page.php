@@ -8,7 +8,7 @@ acf_add_local_field_group( array(
 			'key' => 'field_5e3d84b12d1aa',
 			'label' => 'Text intro',
 			'name' => 'text_intro',
-			'type' => 'textarea',
+			'type' => 'wysiwyg',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,

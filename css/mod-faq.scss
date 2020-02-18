@@ -1,16 +1,42 @@
 .mod-faq {
 
-    .header {
-        height: 400px;
+     .header {
         background: $blue;
-        padding: 75px;
-        box-sizing: border-box;
+        padding: 100px;
         margin-bottom: 50px;
+
+        @include media-medium-down {
+            padding: 50px;
+        }
+
+        @include media-small {
+            padding: 25px;
+        }
+
 
         h1 {
             @include h1;
+            margin-bottom: 50px;
+            position: relative;
+
+            @include media-medium-down {
+                margin-bottom: 25px;
+            }
+
+            @include media-small {
+                margin-bottom: 10px;
+            }
+        }
+
+        p {
+            @include header-text;
+            
+            a{
+                color: $yellow;
+            }
         }
     }
+
 
     .mod-collapse {
         &:nth-of-type(1n) {
@@ -28,6 +54,38 @@
         &:nth-of-type(3n) {
             .collapse-title {
                 background-color: $red;
+            }
+        }
+
+        margin-bottom: 50px;
+
+
+        h2 {
+            margin-bottom: 20px;
+            @include h2;
+        }
+
+        .collapse-item {
+            transition: all .1s;
+
+            &:hover {
+                transform: scale(1.025);
+            }
+
+
+            .collapse-title {
+                border-bottom: 2px solid $white;
+                padding: 7.5px 0;
+                box-sizing: border-box;
+
+                .btn-faq {
+                    @include font-collapse;
+                    padding: 15px;
+                    width: 100%;
+                    height: 100%;
+                    background: none;
+                    outline: none;
+                }
             }
         }
     }

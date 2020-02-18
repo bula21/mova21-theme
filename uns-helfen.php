@@ -68,7 +68,7 @@
         <h2><?php echo $helper_bloc['title']; ?></h2>
         <div class="row">
             <p><?php echo $helper_bloc['text']; ?></p>
-            <button><?php echo $helper_bloc['button']; ?></button>
+            <button class="btn-black"><?php echo $helper_bloc['button']; ?></button>
         </div>
     </div>
 </div>

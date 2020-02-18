@@ -4,19 +4,20 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) :
 	the_post(); ?>
-   
-    <div class="container mod-faq">
-        <div class="row header">
-            <div class="col-12">
-                <h1 class="post-title"><?php the_title(); ?></h1>
-                     <div><?php $intro = get_field('text_intro');
+
+<div class="container mod-faq">
+    <div class="row header">
+        <div class="col-12">
+            <h1 class="post-title"><?php the_title(); ?></h1>
+            <div><?php $intro = get_field('text_intro');
                          echo nl2br($intro);
                          ?></div>
-                
-            </div>
+
         </div>
+    </div>
+    <div>
         <div class="row">
-			<?php
+            <?php
 			if ( have_rows( 'faqs' ) ):
 				while ( have_rows( 'faqs' ) ) : the_row();
 					get_template_part( 'template-parts/collapse', 'items' );
@@ -33,11 +34,12 @@
         <div class="row">
             <div class="col-12">
                 <div class="wysiwyg">
-					<?php the_field( 'more-content' ); ?>
+                    <?php the_field( 'more-content' ); ?>
                 </div>
             </div>
         </div>
     </div>
+</div>
 <?php endwhile; endif; ?>
 
 <?php get_footer(); ?>

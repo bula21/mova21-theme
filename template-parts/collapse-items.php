@@ -9,7 +9,7 @@ $collaps_id ++;
 $id = 'collapse-block-' . $collaps_id;
 ?>
 
-<div id="<?php echo esc_attr( $id ); ?>" class="mod-collapse col-12 col-md-6">
+<div id="<?php echo esc_attr( $id ); ?>" class="mod-collapse mod-faq-collapse col-12 col-md-6">
     <h2><?php the_sub_field( 'ueberschrift' ); ?></h2>
 
 	<?php if ( have_rows( 'fragen' ) ): ?>
@@ -23,7 +23,7 @@ $id = 'collapse-block-' . $collaps_id;
 				?>
                 <div class="collapse-item">
                     <div class="collapse-title" id="<?php echo $id_head; ?>">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#<?php echo $id_content; ?>"
+                        <button class="btn-faq" type="button" data-toggle="collapse" data-target="#<?php echo $id_content; ?>"
                                 aria-expanded="true" aria-controls="collapseOne">
 							<?php the_sub_field( 'frage' ); ?>
                         </button>

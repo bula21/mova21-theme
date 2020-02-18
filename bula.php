@@ -26,7 +26,7 @@
 
         </div>
         <div class="mti">
-            <?php $mti = get_field('mti'); if( mti ): ?>
+            <?php $mti = get_field('mti'); if( $mti ): ?>
             <div class="mti-img">
                 <img class="mti-img" src="<?php echo esc_url( $mti['mti_img']['url'] ); ?>" alt="<?php echo esc_attr( $mti['image']['alt'] ); ?>" />
             </div>

@@ -1,32 +1,36 @@
-.mod-collapse {
-     margin-bottom: 50px;
-    
+.mod-faq-collapse{
+    margin-bottom: 50px;
+    background: red;
+
 
     h2 {
         margin-bottom: 20px;
-        @include h2
+        background: red;
+        @include h2;
     }
 
     .collapse-item {
         transition: all .1s;
-        
-        &:hover{
+
+        &:hover {
             transform: scale(1.025);
         }
-        
+
 
         .collapse-title {
-            border-bottom: 2px solid $white;
+            border-bottom: 2px solid $red;
             padding: 7.5px 0;
             box-sizing: border-box;
-
-            button {
-                @include font-collapse;
-                width: 100%;
-                height: 100%;
-
-            }
+            display: none;
         }
     }
+}
 
+.btn-faq {
+    @include font-collapse;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
 }

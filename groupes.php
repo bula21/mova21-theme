@@ -28,7 +28,7 @@
                 <div class="cta-bloc">
                     <p class="eventName"><?php the_sub_field('event_name'); ?></p>
                     <?php if( get_sub_field('event_button') ): ?>
-                    <button><?php the_sub_field('event_button'); ?></button>
+                    <button class="btn-black"><?php the_sub_field('event_button'); ?></button>
                     <?php endif; ?>
                 </div>
             </div>
@@ -49,7 +49,7 @@
             <h2><?php the_sub_field('event_name'); ?></h2>
             <div class="callToAction">
                 <p class="text"><?php the_sub_field('event_text'); ?></p>
-                <button><?php the_sub_field('event_button'); ?></button>
+                <button class="btn-black"><?php the_sub_field('event_button'); ?></button>
             </div>
             <div class="cover"></div>
         </div>
