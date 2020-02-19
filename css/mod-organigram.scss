@@ -36,7 +36,7 @@
 
         h2 {
             @include h2;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
         }
 
         .contact-row {
@@ -44,23 +44,40 @@
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            margin-bottom: 25px;
+            margin-bottom: 100px;
 
             .contact {
-                margin-right: 25px;
+                margin-right: 0;
                 margin-bottom: 50px;
                 display: flex;
                 flex-direction: row;
 
+                @include media-medium-up {
+                    margin-right: 50px;
+                    display: block;
+                }
+
                 .img-container {
-                    width: calc(100vw / 2 - 50px);
-                    height: calc((100vw / 2 - 50px) * 1.5);
+                    width: calc(100vw / 2 - 100px);
+                    height: calc((100vw / 2 - 100px) * 1.5);
                     position: relative;
                     overflow: hidden;
+                    margin-right: 15px;
+
+                    @include media-small-up {
+                        width: calc(100vw / 3 - 50px);
+                        height: calc((100vw / 3 - 50px) * 1.5);
+                    }
 
                     @include media-medium-up {
                         width: calc(100vw / 4 - 50px);
                         height: calc((100vw / 4 - 50px) * 1.5);
+                        margin-right: 0;
+                    }
+
+                    @include media-large-up {
+                        width: calc(100vw / 4 - 150px);
+                        height: calc((100vw / 4 - 150px) * 1.5);
                     }
 
 
@@ -74,10 +91,12 @@
                 }
 
                 .info-container {
-                    padding: 10px;
-                    background: $yellow;
-                    width: calc(100vw / 4 - 50px);
-                    height: 200px;
+                    align-self: flex-end;
+                    width: 200px;
+
+                    @include media-medium-up {
+                        width: auto;
+                    }
 
 
                     p {
@@ -86,7 +105,7 @@
                     }
 
                     .org-job {
-                        margin-bottom: 15px;
+                        margin-bottom: 10px;
                         @include bloc-text;
                         color: $black;
                     }
@@ -95,11 +114,17 @@
                         @include news-text;
                     }
 
+                    .email-icon {
+                        width: 18px;
+                        height: 18px;
+                        margin-right: 5px;
+                    }
+
                     .org-contact {
                         @include bloc-text;
+                        margin-top: -2.5px;
 
                         a {
-                            color: $black;
                             text-decoration: underline
                         }
                     }
@@ -109,62 +134,105 @@
             &:nth-of-type(1) {
 
                 .contact {
-                    .info-container {
-                        background: $yellow;
+                    a {
+                        color: $yellow;
+                    }
+
+                    .email-icon {
+                        fill: $yellow;
                     }
                 }
             }
 
             &:nth-of-type(2) {
                 .contact {
-                    .info-container {
-                        background: $blue;
+                    a {
+                        color: $blue;
+                    }
+
+                    .email-icon {
+                        fill: $blue;
                     }
                 }
             }
 
             &:nth-of-type(3) {
                 .contact {
-                    .info-container {
 
-                        &:nth-of-type(1),
-                        &:nth-of-type(2) {
-                            background: $red;
+                    &:nth-of-type(1),
+                    &:nth-of-type(2) {
+                        a {
+                            color: $red;
                         }
 
-                        &:nth-of-type(3),
-                        &:nth-of-type(4) {
-                            background: $blue;
+                        .email-icon {
+                            fill: $red;
+                        }
+                    }
+
+                    &:nth-of-type(3),
+                    &:nth-of-type(4) {
+                        a {
+                            color: $blue;
                         }
 
-                        &:nth-of-type(5),
-                        &:nth-of-type(6) {
-                            background: $yellow;
+                        .email-icon {
+                            fill: $blue;
+                        }
+                    }
+
+                    &:nth-of-type(5),
+                    &:nth-of-type(6) {
+                        a {
+                            color: $yellow;
                         }
 
-                        &:nth-of-type(7),
-                        &:nth-of-type(8) {
-                            background: $black;
+                        .email-icon {
+                            fill: $yellow;
+                        }
+                    }
 
-                            p,
-                            a {
-                                color: $white;
-                            }
+                    &:nth-of-type(7),
+                    &:nth-of-type(8) {
+                        a {
+                            color: $black;
                         }
 
-                        &:nth-of-type(9),
-                        &:nth-of-type(10) {
-                            background: $red;
+                        .email-icon {
+                            fill: $black;
+                        }
+                    }
+
+                    &:nth-of-type(9),
+                    &:nth-of-type(10) {
+                        a {
+                            color: $red;
                         }
 
-                        &:nth-of-type(11),
-                        &:nth-of-type(12) {
-                            background: $yellow;
+                        .email-icon {
+                            fill: $red;
+                        }
+                    }
+
+                    &:nth-of-type(11),
+                    &:nth-of-type(12) {
+                        a {
+                            color: $yellow;
                         }
 
-                        &:nth-of-type(13),
-                        &:nth-of-type(14) {
-                            background: $blue;
+                        .email-icon {
+                            fill: $yellow;
+                        }
+                    }
+
+                    &:nth-of-type(13),
+                    &:nth-of-type(14) {
+                        a {
+                            color: $blue;
+                        }
+
+                        .email-icon {
+                            fill: $blue;
                         }
                     }
                 }
