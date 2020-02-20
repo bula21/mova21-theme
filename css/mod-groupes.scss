@@ -33,12 +33,8 @@
             @include header-text;
             width: 100%;
 
-            @include media-medium-up {
-                width: 600px;
-            }
-
             @include media-large-up {
-                width: 600px;
+                width: 900px;
             }
         }
     }
