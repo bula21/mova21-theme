@@ -1,5 +1,5 @@
 .mod-groupes {
-    
+
 
     .header {
         background: $yellow;
@@ -12,6 +12,7 @@
 
         @include media-small {
             padding: 25px;
+            margin-bottom: 0;
         }
 
         h1 {
@@ -44,7 +45,7 @@
 }
 
 .timeLine {
-    padding: 100px 25px;
+    padding: 100px 0 -0 25px;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -52,8 +53,6 @@
     align-items: center;
     margin-bottom: 100px;
     scroll-snap-type: x proximity;
-    //    border: solid $yellow;
-    //    border-width: 0 20px;
 
     &::-webkit-scrollbar {
         width: 10px;
@@ -64,16 +63,25 @@
         background: $blue;
     }
 
+    @include media-small {
+        margin-left: 25px;
+        border-left: 5px solid $blue;
+        flex-direction: column;
+        overflow-x: visible;
+        align-items: flex-start;
+    }
+
+
     .event {
         display: flex;
         flex-direction: column;
-        margin-right: 100px;
+        margin-right: 0;
+        margin-bottom: 25px;
         position: relative;
         background: $yellow;
         padding: 10px;
         box-sizing: border-box;
         max-height: 300px;
-        max-width: 700px;
         scroll-snap-align: start;
 
         @include media-medium-up {
@@ -93,7 +101,14 @@
             position: absolute;
             top: 0;
             left: 100%;
-            align-items: right;
+
+            @include media-small {
+                transform: rotate(-90deg);
+                right: 100%;
+                left: auto;
+                top: 10px;
+                height: 30px;
+            }
 
         }
 
@@ -232,7 +247,6 @@
         p {
             position: relative;
             @include bloc-text;
-            padding: 25px;
             width: 100%;
 
             @include media-large-up {

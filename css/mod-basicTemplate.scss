@@ -9,7 +9,7 @@
             left: 50px;
 
             .background {
-                width: 200px;
+                width: 250px;
                 height: 50px;
                 background: $yellow;
                 animation-name: background-appear;
@@ -21,19 +21,19 @@
                 transform-origin: left;
 
                 @include media-medium-up {
-                    width: 250px;
+                    width: 300px;
                     height: 60px;
                 }
 
                 @include media-large-up {
-                    width: 350px;
+                    width: 400px;
                     height: 70px;
                 }
 
             }
 
             .h2-background {
-                width: 200px;
+                width: 250px;
                 height: 35px;
                 margin-left: -25px;
                 background: $yellow;
@@ -46,12 +46,12 @@
                 transform-origin: right;
 
                 @include media-medium-up {
-                    width: 230px;
+                    width: 270px;
                     height: 40px;
                 }
 
                 @include media-large-up {
-                    width: 300px;
+                    width: 350px;
                     height: 50px;
                 }
             }
