@@ -152,10 +152,10 @@ body {
     font-size: 16px;
     line-height: 20px;
     text-decoration: none;
-    color: black;
+    color: $black;
 
     a {
-        color: black;
+        color: $black;
     }
 
     @include media-medium-up {
@@ -169,10 +169,10 @@ body {
     font-size: 22px;
     line-height: 26px;
     text-decoration: none;
-    color: black;
+    color: $black;
 
     a {
-        color: black;
+        color: $black;
     }
 
     @include media-medium-up {
@@ -186,7 +186,7 @@ body {
     font-size: 40px;
     line-height: 47px;
     text-decoration: none;
-    color: black;
+    color: $black;
 
     @include media-medium-up {
         font-size: 45px;
@@ -206,7 +206,7 @@ body {
     font-size: 17px;
     line-height: 24px;
     text-decoration: none;
-    color: black;
+    color: $black;
 
     @include media-medium-up {
         font-size: 20px;
@@ -223,7 +223,7 @@ body {
 @mixin header-text{
     font-family: 'MessinaSansWeb-Bold', serif;
     text-decoration: none;
-    color: black;
+    color: $black;
     font-size: 14px;
     line-height: 18px;
     
@@ -243,7 +243,7 @@ body {
     font-size: 25px;
     line-height: 30px;
     text-decoration: none;
-    color: black;
+    color: $black;
 
     @include media-medium-up {
         font-size: 35px;
@@ -287,7 +287,7 @@ body {
     font-size: 17px;
     line-height: 19px;
     text-decoration: none;
-    color: black; 
+    color: $black; 
     text-align: left;
 }
 
@@ -296,7 +296,7 @@ body {
     font-size: 30px;
     line-height: 15px;
     text-decoration: none;
-    color: black;
+    color: $black;
     text-transform: uppercase;
 }
 
@@ -304,7 +304,7 @@ body {
     font-family: 'MessinaSansWeb-Black', serif;
     font-size: 18px;
     text-decoration: none;
-    color: black;
+    color: $black;
     text-transform: uppercase;
 }
 
@@ -312,8 +312,17 @@ body {
     font-family: 'MessinaSansWeb-SemiBold', serif;
     font-size: 18px;
     text-decoration: none;
-    color: black;
+    color: $black;
     text-transform: uppercase;
+}
+
+@mixin tl-button {
+    font-family: 'MessinaSansWeb-Black', serif;
+    font-size: 18px;
+    text-decoration: none;
+    color: $blue;
+    text-decoration: underline;
+    border: 1px;
 }
 
 

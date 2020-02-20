@@ -1,8 +1,10 @@
 .mod-groupes {
+    
 
     .header {
         background: $yellow;
         padding: 100px;
+        margin-bottom: 100px;
 
         @include media-medium-down {
             padding: 50px;
@@ -42,72 +44,62 @@
 }
 
 .timeLine {
-    margin-left: 20px;
-    padding: 100px 0;
-    border-left: 5px $blue solid;
+    padding: 100px 25px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: scroll;
+    align-items: center;
+    margin-bottom: 100px;
+    scroll-snap-type: x proximity;
+    //    border: solid $yellow;
+    //    border-width: 0 20px;
 
-    @include media-medium-up {
-        margin-left: 200px;
+    &::-webkit-scrollbar {
+        width: 10px;
+        background: $yellow;
     }
 
-    @include media-large-up {
-        margin-left: 200px;
+    &::-webkit-scrollbar-thumb {
+        background: $blue;
     }
-
 
     .event {
         display: flex;
         flex-direction: column;
-        margin-bottom: 100px;
+        margin-right: 100px;
         position: relative;
         background: $yellow;
-        margin-left: 10px;
-        padding: 20px;
-
-        &:before {
-            content: '';
-            width: 20px;
-            height: 20px;
-            transform: rotate(45deg);
-            background: $yellow;
-            position: absolute;
-            top: 30px;
-            left: -10px;
-        }
-
-
+        padding: 10px;
+        box-sizing: border-box;
+        max-height: 300px;
+        max-width: 700px;
+        scroll-snap-align: start;
 
         @include media-medium-up {
-            flex-direction: row;
-            background: none;
-            margin-left: 0;
-            padding: 0;
-
-            &:before {
-                display: none;
-            }
+            margin-right: 150px;
+            padding: 15px;
         }
 
-        .keyPoint {
-            position: relative;
-            margin-bottom: 15px;
+        @include media-large-up {
+            margin-right: 200px;
+            padding: 20px;
+        }
 
-            @include media-medium-up {
-                background: $yellow;
-                margin-left: -175px;
-                margin-right: 50px;
-                margin-bottom: 0;
-                padding-left: 25px;
-                height: 75px;
-                width: 200px;
-            }
+        .arrow {
+            fill: $yellow;
+            transform: rotate(90deg);
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            align-items: right;
 
-            .date {
-                @include tl-date;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-            }
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
         }
 
         .cta-bloc {
@@ -117,31 +109,19 @@
             padding-right: 0;
             justify-content: space-between;
 
-            @include media-large-up {
-                flex-direction: row;
-                padding-right: 100px;
+            .date {
+                @include tl-date;
+                margin-bottom: -5px;
             }
 
             .eventName {
                 @include h2;
-                margin-bottom: 30px;
-
-                @include media-medium-up {
-                    margin-bottom: 0;
-                }
+                white-space: nowrap;
+                margin-bottom: 10px;
             }
 
-            button {
-                align-self: flex-start;
-
-                @include media-medium-down {
-                    width: 150px;
-                }
-
-
-                @include media-large-up {
-                    align-self: center;
-                }
+            .cta-button {
+                @include tl-button;
             }
         }
     }
@@ -155,11 +135,6 @@
         padding: 25px;
     }
 
-    &:nth-child(1) {
-        margin-top: -100px;
-        background: $yellow;
-    }
-
     .date {
         @include bloc-date;
         margin-bottom: 10px;
@@ -167,7 +142,11 @@
 
     h2 {
         @include h2;
-        margin-bottom: 50px;
+        margin-bottom: 25px;
+
+        @include media-medium-up {
+            margin-bottom: 50px;
+        }
     }
 
     .callToAction {
@@ -201,30 +180,73 @@
         }
     }
 
+    &:nth-child(1) {
+        margin-bottom: 100px;
+    }
+
     &:nth-child(2) {
 
-        .cover {
-            background: $yellow;
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            opacity: 0.75;
+        padding: 50px;
+        margin-bottom: 50px;
 
-            &:hover {
-                cursor: not-allowed;
+        h2 {
+            @include h2;
+            margin-bottom: 35px;
+
+            @include media-medium-up {
+                margin-bottom: 50px;
+            }
+        }
+
+        background: $yellow;
+
+        p {
+            width: 100%;
+            column-count: 2;
+            column-gap: 100px;
+            padding: 10px;
+            opacity: .65;
+
+            @include media-medium-down {
+                column-count: 1;
+                padding: 10px 25px;
+            }
+        }
+
+    }
+
+    &:nth-child(3) {
+
+        padding: 50px;
+        margin-bottom: 50px;
+
+        h2 {
+            @include h2;
+            margin-bottom: 35px;
+
+            @include media-medium-up {
+                margin-bottom: 50px;
+            }
+        }
+
+        p {
+            position: relative;
+            @include bloc-text;
+            padding: 25px;
+            width: 100%;
+
+            @include media-large-up {
+                width: 1000px;
             }
         }
     }
 
-}
+    .date {
 
-.btn-black {
-    background: $black;
-    width: 250px;
-    height: 60px;
-    border: none;
-    @include bloc-button;
-    color: $white;
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+
 }

@@ -7,13 +7,10 @@
 
 <div class="container mod-faq">
     <div class="row header">
-        <div class="col-12">
-            <h1 class="post-title"><?php the_title(); ?></h1>
-            <div><?php $intro = get_field('text_intro');
+        <h1 class="post-title"><?php the_title(); ?></h1>
+        <div><?php $intro = get_field('text_intro');
                          echo nl2br($intro);
                          ?></div>
-
-        </div>
     </div>
     <div>
         <div class="row">

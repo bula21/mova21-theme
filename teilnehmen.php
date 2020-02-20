@@ -6,9 +6,7 @@
 	the_post(); ?>
 <div class="container mod-teilnehmen">
     <div class="header">
-        <div class="col-12">
-            <h1 class="post-title"><?php the_title(); ?></h1>
-        </div>
+        <h1 class="post-title"><?php the_title(); ?></h1>
         <p><?php the_field('text_intro'); ?></p>
     </div>
     <div class="choice-container">
@@ -39,7 +37,7 @@
                         <div id="<?php echo $id_content; ?>" class="collapse content" aria-labelledby="<?php echo $id_head; ?>">
                             <p>
                                 <?php the_sub_field( 'antwort' ); ?>
-                            <p>
+                                <p>
                         </div>
                     </div>
                     <?php
