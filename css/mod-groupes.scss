@@ -1,6 +1,5 @@
 .mod-groupes {
 
-
     .header {
         background: $yellow;
         padding: 100px;
@@ -55,6 +54,7 @@
         padding-bottom: 0;
     }
 
+<<<<<<< HEAD
     .tl-line {
         width: 10px;
         height: 100%;
@@ -69,6 +69,8 @@
         }
     }
 
+=======
+>>>>>>> 74b2868f76a6086a5266b897d8a1af02f5f180a7
     .event {
         background: $yellow;
         padding: 15px 30px;
@@ -170,31 +172,16 @@
 
     h2 {
         @include h2;
-        margin-bottom: 25px;
-
-        @include media-medium-up {
-            margin-bottom: 50px;
-        }
+        margin-bottom: 35px;
     }
 
     .callToAction {
-        display: flex;
-        flex-direction: row;
-
-        @include media-large-down {
-            flex-direction: column;
-        }
-
-        p {
+        .text {
             @include bloc-text;
-            width: 800px;
-            margin-right: 100px;
-
             @include media-large-down {
-                width: 100%;
-                margin-right: 0;
                 margin-bottom: 50px;
             }
+<<<<<<< HEAD
         }
 
         button {
@@ -250,17 +237,18 @@
         background: $yellow;
 
         p {
+=======
+>>>>>>> 74b2868f76a6086a5266b897d8a1af02f5f180a7
             width: 100%;
             column-count: 2;
             column-gap: 100px;
-            padding: 10px;
-            opacity: .65;
 
             @include media-medium-down {
                 column-count: 1;
             }
         }
 
+<<<<<<< HEAD
     }
 
     &:nth-child(3) {
@@ -284,6 +272,16 @@
 
             @include media-large-up {
                 width: 1000px;
+=======
+        .btn-black {
+            background-color: $black;
+            color: $white;
+            padding: 10px;
+            border: 0;
+            transition: transform 150ms;
+            &:hover {
+                transform: scale(1.1);
+>>>>>>> 74b2868f76a6086a5266b897d8a1af02f5f180a7
             }
         }
 
@@ -298,12 +296,12 @@
         }
     }
 
-    .date {
-
-        &:before,
-        &:after {
-            display: none;
-        }
+    &:nth-child(2) {
+        background: $yellow;
     }
+<<<<<<< HEAD
 
 }
+=======
+}
+>>>>>>> 74b2868f76a6086a5266b897d8a1af02f5f180a7

@@ -9,7 +9,7 @@ acf_add_local_field_group(array(
 			'key' => 'field_5e3d84b12d1ef',
 			'label' => 'Text intro',
 			'name' => 'text_intro',
-			'type' => 'text',
+			'type' => 'textarea',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
@@ -60,7 +60,9 @@ acf_add_local_field_group(array(
 	'style' => 'default',
 	'label_placement' => 'top',
 	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
+	'hide_on_screen' => array(
+		0 => 'the_content',
+	),
 	'active' => true,
 	'description' => '',
 ));
