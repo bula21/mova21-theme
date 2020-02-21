@@ -60,7 +60,9 @@ acf_add_local_field_group(array(
 	'style' => 'default',
 	'label_placement' => 'top',
 	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
+	'hide_on_screen' => array(
+		0 => 'the_content',
+	),
 	'active' => true,
 	'description' => '',
 ));
