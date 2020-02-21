@@ -1,6 +1,5 @@
 .mod-groupes {
 
-
     .header {
         background: $yellow;
         padding: 100px;
@@ -66,7 +65,6 @@
         overflow-x: visible;
         align-items: flex-start;
     }
-
 
     .event {
         display: flex;
@@ -153,70 +151,18 @@
 
     h2 {
         @include h2;
-        margin-bottom: 25px;
-
-        @include media-medium-up {
-            margin-bottom: 50px;
-        }
+        margin-bottom: 35px;
     }
 
     .callToAction {
-        display: flex;
-        flex-direction: row;
-
-        @include media-large-down {
-            flex-direction: column;
-        }
-
-        p {
+        .text {
             @include bloc-text;
-            width: 800px;
-            margin-right: 100px;
-
             @include media-large-down {
-                width: 100%;
-                margin-right: 0;
                 margin-bottom: 50px;
             }
-        }
-
-        button {
-            right: 100px;
-            top: 50%;
-            align-self: center;
-
-            @include media-large-down {
-                align-self: flex-start;
-            }
-        }
-    }
-
-    &:nth-child(1) {
-        margin-bottom: 100px;
-    }
-
-    &:nth-child(2) {
-
-        padding: 50px;
-        margin-bottom: 50px;
-
-        h2 {
-            @include h2;
-            margin-bottom: 35px;
-
-            @include media-medium-up {
-                margin-bottom: 50px;
-            }
-        }
-
-        background: $yellow;
-
-        p {
             width: 100%;
             column-count: 2;
             column-gap: 100px;
-            padding: 10px;
-            opacity: .65;
 
             @include media-medium-down {
                 column-count: 1;
@@ -224,39 +170,19 @@
             }
         }
 
-    }
-
-    &:nth-child(3) {
-
-        padding: 50px;
-        margin-bottom: 50px;
-
-        h2 {
-            @include h2;
-            margin-bottom: 35px;
-
-            @include media-medium-up {
-                margin-bottom: 50px;
-            }
-        }
-
-        p {
-            position: relative;
-            @include bloc-text;
-            width: 100%;
-
-            @include media-large-up {
-                width: 1000px;
+        .btn-black {
+            background-color: $black;
+            color: $white;
+            padding: 10px;
+            border: 0;
+            transition: transform 150ms;
+            &:hover {
+                transform: scale(1.1);
             }
         }
     }
 
-    .date {
-
-        &:before,
-        &:after {
-            display: none;
-        }
+    &:nth-child(2) {
+        background: $yellow;
     }
-
 }
