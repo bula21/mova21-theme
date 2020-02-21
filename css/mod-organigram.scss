@@ -110,7 +110,7 @@
                     }
 
                     .org-name {
-                        @include organigram-titles;
+                        @include header-text;
                         padding-bottom: 5px;
                     }
 
