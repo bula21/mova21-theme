@@ -24,7 +24,7 @@
                 </div>
                 <div class="newsletter">
 	                <?php if ( get_field( 'newsletter-url', 'option' ) ) : ?>
-                    <a href="<?php the_field( 'newsletter-url', 'option' ); ?>"><?php _e( 'Newsletter abonnieren', 'bula21' ); ?></a>
+                    <a href="<?php the_field( 'newsletter-url', 'option' ); ?>" target="_blank"><?php _e( 'Newsletter abonnieren', 'bula21' ); ?></a>
 	                <?php endif; ?>
                 </div>
             </div>
