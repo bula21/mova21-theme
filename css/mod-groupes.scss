@@ -53,6 +53,7 @@
         align-items: flex-start;
         padding-left: 50px;
         padding-top: 50px;
+        margin-bottom: 50px;
     }
 
     .tl-line {
@@ -74,12 +75,16 @@
         padding: 15px 30px;
         margin-bottom: 50px;
         position: relative;
-        align-self: flex-start;
-        
-        @include media-medium-up {
-            align-self: flex-end;
+        align-self: flex-end;
+        right: calc(50% - 40px);
+        transform: translateX(100%);
+
+        @include media-small {
+            align-self: flex-start;
+            left: 0;
+            transform: none;
         }
-        
+
 
         .arrow {
             fill: $yellow;
@@ -93,7 +98,7 @@
                 top: 10px;
                 height: 50px;
             }
-            
+
             @include media-large-up {
                 top: 25px;
             }
@@ -120,7 +125,7 @@
                 @include media-medium-up {
                     max-width: 250px;
                 }
-                
+
                 @include media-large-up {
                     max-width: 450px;
                 }
@@ -135,6 +140,15 @@
         }
 
         &:nth-of-type(2n) {
+            align-self: flex-start;
+            left: calc(50% - 40px);
+            transform: translateX(-100%);
+            
+            @include media-small {
+            left: 0;
+            transform: none;
+        }
+
             .arrow {
                 transform: rotate(90deg);
                 left: 100%;
@@ -147,10 +161,9 @@
             }
         }
         
-        &:nth-of-type(2n) {
-            align-self: flex-start;
+        &:nth-last-of-type(1) {
+            margin-bottom: 0;
         }
-        
     }
 
 }
@@ -214,7 +227,7 @@
         @include media-medium-up {
             margin-bottom: 50px;
         }
-        
+
         @include media-large-up {
             margin-bottom: 100px;
         }
@@ -228,24 +241,24 @@
         h2 {
             @include h2;
             margin-bottom: 15px;
-            
-             @include media-medium-up {
-             margin-bottom: 25px;
+
+            @include media-medium-up {
+                margin-bottom: 25px;
             }
-            
+
             @include media-large-up {
-                 margin-bottom: 35px;
+                margin-bottom: 35px;
             }
         }
-        
+
         @include media-medium-up {
             padding: 35px;
             margin-bottom: 50px;
-            }
-            
-            @include media-large-up {
-                margin-bottom: 50px;
-            }
+        }
+
+        @include media-large-up {
+            margin-bottom: 50px;
+        }
 
         background: $yellow;
 
