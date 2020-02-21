@@ -4,6 +4,10 @@
         img {
             width: 100%;
         }
+
+        .animation {
+            background-image: url("/wp-content/themes/bula21/img/mova_header_background.png")
+        }
     }
 
     .home-content-block-1 {
@@ -44,59 +48,59 @@
 
             .block--item {
                 width: 100%;
-                
-                img{
+
+                img {
                     display: none;
-                
+
                 }
             }
         }
     }
 
-        .home-content-block-3 {
-            .content-news {
-                .news-image {
-                    img {
-                        width: 100%;
-                        height: auto;
-                        object-fit: cover;
-                    }
-                }
-
-                .news-text {
-                    .post-link {
-                        color: $black;
-                        font-size: 2em;
-                    }
+    .home-content-block-3 {
+        .content-news {
+            .news-image {
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
                 }
             }
 
-            .content-news:nth-child(2n+1) {
-                flex-direction: row-reverse;
-            }
-
-            .content-news:nth-child(3n+2) {
-                .news-text {
-                    background-color: $blue;
-                }
-            }
-
-            .content-news:nth-child(3n) {
-                .news-text {
-                    background-color: $red;
-                }
-            }
-
-            .content-news:nth-child(3n+1) {
-                .news-text {
-                    background-color: $yellow;
+            .news-text {
+                .post-link {
+                    color: $black;
+                    font-size: 2em;
                 }
             }
         }
 
-        h2 {
-            @include h2;
-            margin-bottom: 15px;
+        .content-news:nth-child(2n+1) {
+            flex-direction: row-reverse;
         }
 
+        .content-news:nth-child(3n+2) {
+            .news-text {
+                background-color: $blue;
+            }
+        }
+
+        .content-news:nth-child(3n) {
+            .news-text {
+                background-color: $red;
+            }
+        }
+
+        .content-news:nth-child(3n+1) {
+            .news-text {
+                background-color: $yellow;
+            }
+        }
     }
+
+    h2 {
+        @include h2;
+        margin-bottom: 15px;
+    }
+
+}
