@@ -1,6 +1,5 @@
 .mod-faq {
-
-     .header {
+    .header {
         background: $blue;
         padding: 100px;
         margin-bottom: 50px;
@@ -13,30 +12,28 @@
             padding: 25px;
         }
 
-
-        h1 {
+        .post-title {
             @include h1;
-            margin-bottom: 50px;
-            position: relative;
+        }
+
+        .post-intro {
+            margin-top: 50px;
 
             @include media-medium-down {
-                margin-bottom: 25px;
+                margin-top: 25px;
             }
 
             @include media-small {
-                margin-bottom: 10px;
+                margin-top: 10px;
             }
-        }
 
-        p {
             @include header-text;
-            
-            a{
+
+            a {
                 color: $yellow;
             }
         }
     }
-
 
     .mod-collapse {
         &:nth-of-type(1n) {
@@ -59,7 +56,6 @@
 
         margin-bottom: 50px;
 
-
         h2 {
             margin-bottom: 20px;
             @include h2;
@@ -71,7 +67,6 @@
             &:hover {
                 transform: scale(1.025);
             }
-
 
             .collapse-title {
                 border-bottom: 2px solid $white;
