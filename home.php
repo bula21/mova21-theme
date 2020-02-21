@@ -56,29 +56,31 @@
             </div>
         </div>
 
-
 		<?php
 		// Content Block 3 - News
-		?>
-        <div class="home-content-block-3">
-            <h2>News</h2>
-			<?php
-			$query = new WP_Query(
-				array( 'post_type' => 'post' )
-			// maybe add max-number of posts, like:
-			// 'posts-per-page' => 3
-			// or add category-filter, like
-			// 'category_name' => 'news'
-			);
-			if ( $query->have_posts() ) {
+		$query = new WP_Query(
+			array( 'post_type' => 'post' )
+		// maybe add max-number of posts, like:
+		// 'posts-per-page' => 3
+		// or add category-filter, like
+		// 'category_name' => 'news'
+		);
+		if ( $query->have_posts() ) {
+			?>
+            <div class="home-content-block-3">
+                <h2>News</h2>
+				<?php
 				while ( $query->have_posts() ) {
 					$query->the_post();
 					get_template_part( 'template-parts/content', 'news' );
 				}
-			}
-			wp_reset_query();
-			?>
-        </div>
+				?>
+            </div>
+			<?php
+		}
+		wp_reset_query();
+		?>
+
     </div>
 <?php endwhile; endif; ?>
 

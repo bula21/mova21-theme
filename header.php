@@ -48,7 +48,7 @@
                         <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'de' ); ?>">D</a>
                         <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'fr' ); ?>">F</a>
                         <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'it' ); ?>">I</a>
-                        <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'en' ); ?>">E</a>
+                        <a class="lang-switch" href="/en/international/">E</a>
                     </div>
                 </div>
             </div>
