@@ -302,27 +302,53 @@ body {
 
 @mixin tl-date {
     font-family: 'MessinaSansWeb-Black', serif;
-    font-size: 18px;
+    font-size: 13px;
     text-decoration: none;
     color: $black;
     text-transform: uppercase;
+    
+    @include media-medium-up {
+        font-size: 14px;
+    }
+
+    @include media-large-up {
+        font-size: 16px;
+    }
 }
 
-@mixin tl-name {
-    font-family: 'MessinaSansWeb-SemiBold', serif;
-    font-size: 18px;
+@mixin tl-event {
+    font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 20px;
+    line-height: 22px;
     text-decoration: none;
     color: $black;
-    text-transform: uppercase;
+
+    @include media-medium-up {
+        font-size: 25px;
+        line-height: 28px;
+    }
+
+    @include media-large-up {
+        font-size: 35px;
+        line-height: 36px;
+    }
 }
 
 @mixin tl-button {
     font-family: 'MessinaSansWeb-Black', serif;
-    font-size: 18px;
+    font-size: 15px;
     text-decoration: none;
     color: $blue;
     text-decoration: underline;
     border: 1px;
+    
+    @include media-medium-up {
+        font-size: 18px;
+    }
+
+    @include media-large-up {
+        font-size: 20px;
+    }
 }
 
 
