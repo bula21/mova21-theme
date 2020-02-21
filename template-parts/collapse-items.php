@@ -28,7 +28,8 @@ $id = 'collapse-block-' . $collaps_id;
 							<?php the_sub_field( 'frage' ); ?>
                         </button>
                     </div>
-                    <div id="<?php echo $id_content; ?>" class="collapse" aria-labelledby="<?php echo $id_head; ?>">
+                    <div id="<?php echo $id_content; ?>" class="collapse" aria-labelledby="<?php echo $id_head; ?>"
+                         data-parent="#<?php echo $id; ?>-item">
                         <div class="card-body">
 							<?php the_sub_field( 'antwort' ); ?>
                         </div>
