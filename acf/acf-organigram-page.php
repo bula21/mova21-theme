@@ -10,7 +10,7 @@ acf_add_local_field_group(array(
 			'key' => 'field_5e3b06816f14e',
 			'label' => 'Intro text',
 			'name' => 'text_intro',
-			'type' => 'textarea',
+			'type' => 'wysiwyg',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
@@ -65,7 +65,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5e3b0b0f8839f',
-			'label' => 'org row',
+			'label' => 'Organisation',
 			'name' => 'org_row',
 			'type' => 'repeater',
 			'instructions' => '',
@@ -77,21 +77,21 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'collapsed' => '',
-			'min' => 0,
+			'min' => 1,
 			'max' => 0,
 			'layout' => 'table',
-			'button_label' => '',
+			'button_label' => 'Organisation hinzufügen',
 			'sub_fields' => array(
 				array(
 					'key' => 'field_5e3e5638f0bf0',
-					'label' => 'team',
+					'label' => 'Team',
 					'name' => 'team',
 					'type' => 'text',
 					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
-						'width' => '',
+						'width' => '25',
 						'class' => '',
 						'id' => '',
 					),
@@ -103,7 +103,7 @@ acf_add_local_field_group(array(
 				),
 				array(
 					'key' => 'field_5e3e51cc5f485',
-					'label' => 'person',
+					'label' => 'Person',
 					'name' => 'person',
 					'type' => 'repeater',
 					'instructions' => '',
@@ -115,14 +115,14 @@ acf_add_local_field_group(array(
 						'id' => '',
 					),
 					'collapsed' => '',
-					'min' => 0,
+					'min' => 1,
 					'max' => 0,
 					'layout' => 'table',
-					'button_label' => '',
+					'button_label' => 'Person hinzufügen',
 					'sub_fields' => array(
 						array(
 							'key' => 'field_5e3e520f5f487',
-							'label' => 'image',
+							'label' => 'Foto',
 							'name' => 'image',
 							'type' => 'image',
 							'instructions' => '',
@@ -146,7 +146,7 @@ acf_add_local_field_group(array(
 						),
 						array(
 							'key' => 'field_5e496e2810659',
-							'label' => 'job',
+							'label' => 'Job-Beschreibung',
 							'name' => 'job',
 							'type' => 'text',
 							'instructions' => '',
@@ -165,7 +165,7 @@ acf_add_local_field_group(array(
 						),
 						array(
 							'key' => 'field_5e3e521a5f488',
-							'label' => 'name',
+							'label' => 'Name',
 							'name' => 'name',
 							'type' => 'text',
 							'instructions' => '',
@@ -184,7 +184,7 @@ acf_add_local_field_group(array(
 						),
 						array(
 							'key' => 'field_5e3e521e5f489',
-							'label' => 'contact',
+							'label' => 'E-Mail',
 							'name' => 'contact',
 							'type' => 'text',
 							'instructions' => '',
@@ -220,7 +220,9 @@ acf_add_local_field_group(array(
 	'style' => 'default',
 	'label_placement' => 'top',
 	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
+	'hide_on_screen' => array(
+		0 => 'the_content',
+	),
 	'active' => true,
 	'description' => '',
 ));
