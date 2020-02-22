@@ -191,132 +191,34 @@
     }
 
     .callToAction {
-        display: flex;
-        flex-direction: row;
-
-        @include media-large-down {
-            flex-direction: column;
-        }
-
-        p {
+        .text {
             @include bloc-text;
-            width: 800px;
-            margin-right: 100px;
-
             @include media-large-down {
-                width: 100%;
-                margin-right: 0;
                 margin-bottom: 50px;
             }
-        }
+            width: 100%;
+            column-count: 2;
+            column-gap: 100px;
 
-        button {
-            right: 100px;
-            top: 50%;
-            align-self: center;
-
-            @include media-large-down {
-                align-self: flex-start;
+            @include media-medium-down {
+                column-count: 1;
+                padding: 10px 25px;
             }
         }
-    }
 
-    &:nth-child(1) {
-        margin-bottom: 20px;
-
-        @include media-medium-up {
-            margin-bottom: 50px;
-        }
-
-        @include media-large-up {
-            margin-bottom: 100px;
+        .btn-black {
+            background-color: $black;
+            color: $white;
+            padding: 10px;
+            border: 0;
+            transition: transform 150ms;
+            &:hover {
+                transform: scale(1.1);
+            }
         }
     }
 
     &:nth-child(2) {
-
-        padding: 20px;
-        margin-bottom: 25px;
-
-        h2 {
-            @include h2;
-            margin-bottom: 15px;
-
-            @include media-medium-up {
-                margin-bottom: 25px;
-            }
-
-            @include media-large-up {
-                margin-bottom: 35px;
-            }
-        }
-
-        @include media-medium-up {
-            padding: 35px;
-            margin-bottom: 50px;
-        }
-
-        @include media-large-up {
-            margin-bottom: 50px;
-        }
-
         background: $yellow;
-
-        p {
-            width: 100%;
-            column-count: 2;
-            column-gap: 100px;
-            padding: 10px;
-            opacity: .65;
-
-            @include media-medium-down {
-                column-count: 1;
-            }
-        }
-
     }
-
-    &:nth-child(3) {
-
-        padding: 20px;
-        margin-bottom: 0;
-
-        h2 {
-            @include h2;
-            margin-bottom: 20px;
-
-            @include media-medium-up {
-                margin-bottom: 50px;
-            }
-        }
-
-        p {
-            position: relative;
-            @include bloc-text;
-            width: 100%;
-
-            @include media-large-up {
-                width: 1000px;
-            }
-        }
-
-        @include media-medium-up {
-            padding: 25px;
-            margin-bottom: 25px;
-        }
-
-        @include media-large-up {
-            padding: 50px;
-            margin-bottom: 50px;
-        }
-    }
-
-    .date {
-
-        &:before,
-        &:after {
-            display: none;
-        }
-    }
-
 }
