@@ -41,7 +41,7 @@ acf_add_local_field_group(array(
 			'sub_fields' => array(
 				array(
 					'key' => 'field_5e47129201d14',
-					'label' => 'group title',
+					'label' => 'Group Title',
 					'name' => 'group_title',
 					'type' => 'text',
 					'instructions' => '',
@@ -60,9 +60,9 @@ acf_add_local_field_group(array(
 				),
 				array(
 					'key' => 'field_5e47129d01d15',
-					'label' => 'group text',
+					'label' => 'Group Text',
 					'name' => 'group_text',
-					'type' => 'text',
+					'type' => 'wysiwyg',
 					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
