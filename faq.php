@@ -17,7 +17,7 @@
             </div>
         </div>
         <div>
-            <div class="row">
+            <div class="">
 				<?php
 				if ( have_rows( 'faqs' ) ):
 					while ( have_rows( 'faqs' ) ) : the_row();

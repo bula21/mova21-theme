@@ -36,6 +36,8 @@
     }
 
     .mod-collapse {
+        float: left;
+
         &:nth-of-type(1n) {
             .collapse-title {
                 background-color: $yellow;
