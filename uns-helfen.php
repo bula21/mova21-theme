@@ -14,7 +14,7 @@
     <?php if($text_bloc['group_title']): ?>
     <div class="crew-info">
         <h2><?php echo $text_bloc['group_title']; ?></h2>
-        <p><?php echo $text_bloc['group_text']; ?></p>
+        <?php echo $text_bloc['group_text']; ?>
     </div>
     <?php endif; ?>
 
