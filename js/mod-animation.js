@@ -6,10 +6,11 @@ jQuery(document).ready(function ($) {
         var animationName = $(ctx).data('animation');
         var hover = $(ctx).data('hover') ? true : false; // we need real bools
         var autoplay = $(ctx).data('autoplay') ? true : false;
+        var loop = $(ctx).data('loop') ? true : false;
         var animation = lottie.loadAnimation({
             container: $(ctx).get(0),
             renderer: 'svg',
-            loop: true,
+            loop: loop,
             autoplay: autoplay,
             path: path + animationName + '/data.json'
         });
