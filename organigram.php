@@ -7,7 +7,7 @@
 <div class="container mod-organigram">
     <div class="header">
         <h1 class="post-title"><?php the_title(); ?></h1>
-        <p class="text-intro"><?php the_field('text_intro'); ?></p>
+        <div class="text-intro"><?php the_field('text_intro'); ?></div>
     </div>
     <div class="org-container">
         <?php        
