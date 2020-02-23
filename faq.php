@@ -17,7 +17,7 @@
             </div>
         </div>
         <div>
-            <div class="">
+            <div class="d-inline-block">
 				<?php
 				if ( have_rows( 'faqs' ) ):
 					while ( have_rows( 'faqs' ) ) : the_row();
