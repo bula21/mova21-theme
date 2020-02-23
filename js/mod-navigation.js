@@ -36,13 +36,17 @@ jQuery(document).ready(function ($) {
     }, true);
 
     $(document).on('click', '.touch-device .menu > .menu-item-has-children', function (e) {
-        if ($(this).hasClass('tapped')) {
-            $('.tapped').removeClass('tapped');
-        } else {
-            $('.tapped').removeClass('tapped');
-            e.preventDefault();
-            $(this).addClass('tapped');
+        var width = $(document).width();
+        if(width>992) {
+            if ($(this).hasClass('tapped')) {
+                $('.tapped').removeClass('tapped');
+            } else {
+                $('.tapped').removeClass('tapped');
+                e.preventDefault();
+                $(this).addClass('tapped');
+            }
         }
+
     })
 });
 
