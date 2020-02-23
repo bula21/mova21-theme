@@ -192,7 +192,7 @@
                 left: 0;
                 bottom: 0;
                 right: 0;
-                top: 60px;
+                top: 40px;
                 height: 100vh;
                 background: $gray;
                 z-index: 10;
@@ -215,12 +215,14 @@
                                 visibility: visible;
                                 opacity: 1;
                                 flex-direction: column;
+                                margin: 0;
                                 &:before {
                                     display: none;
                                 }
                                 .menu-item {
                                     padding-left: 15px;
                                     .sub-menu {
+                                        padding: 0;
                                         .menu-item {
                                             padding-left: 15px;
                                         }
