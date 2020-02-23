@@ -20,7 +20,7 @@ function bula_enqueue_style() {
 
 add_action( 'wp_enqueue_scripts', 'bula_enqueue_script' );
 function bula_enqueue_script() {
-	wp_enqueue_script( 'bula-dist-script', BULA_URL_TO_THEME . '/dist/js/script.js', array(), CACHE );
+	wp_enqueue_script( 'bula-dist-script', BULA_URL_TO_THEME . '/dist/js/script.js', array(), CACHE, true );
 	// add localized js vars
 	$config = array(
 		'themeUrl' 			=> BULA_URL_TO_THEME,
