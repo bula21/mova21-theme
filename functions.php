@@ -61,6 +61,9 @@ function bula_register_menu() {
 	);
 }
 
+/** images */
+add_image_size('bula-fullwidth', 1400);
+add_image_size('bula-fullwidth_2x', 2800);
 function the_aid_picture_tag( $image_id = null, $size = 'medium', $size_2x = 'large', $classlist = '' ) {
 	$src  = wp_get_attachment_image_src( $image_id, $size );
 	$src2 = wp_get_attachment_image_src( $image_id, $size_2x );
