@@ -35,6 +35,11 @@
                                                 </a>
                                             </p>
 										<?php endif; ?>
+	                                    <?php if ( $link = get_sub_field( 'person_link' ) ): ?>
+                                            <p class="org-link">
+                                                <a href="<?php $link['url']; ?>"><?php echo $link['title'];; ?></a>
+                                            </p>
+	                                    <?php endif; ?>
                                     </div>
                                 </div>
 							<?php endwhile; else : endif; ?>

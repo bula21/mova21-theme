@@ -123,12 +123,11 @@
                         margin-right: 5px;
                     }
 
-                    .org-contact {
+                    .org-contact, .org-link {
                         @include bloc-text;
-                        margin-top: -2.5px;
 
                         a {
-                            text-decoration: underline
+                            text-decoration: underline;
                         }
                     }
                 }
