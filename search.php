@@ -18,9 +18,9 @@ get_header();
                         <a href="<?php the_permalink(); ?>" class="search-result-item col-12">
                             <h2><?php the_title(); ?></h2>
                             <div class="search-result-content">
-								<?php the_content(); ?>
-								<?php the_field( 'text_intro' ); ?>
-								<?php the_field( 'intro_text' ); ?>
+								<?php echo wp_strip_all_tags( get_the_content() ); ?>
+								<?php echo wp_strip_all_tags( get_field( 'text_intro' ) ); ?>
+								<?php echo wp_strip_all_tags( get_field( 'intro_text' ) ); ?>
                             </div>
                         </a>
                     </div>
