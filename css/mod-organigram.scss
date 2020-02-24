@@ -29,6 +29,10 @@
 
         .text-intro {
             @include header-text;
+            
+            a{
+                text-decoration: underline;
+            }
         }
     }
 
