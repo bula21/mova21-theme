@@ -20,7 +20,7 @@ function bula_enqueue_style() {
 
 add_action( 'wp_enqueue_scripts', 'bula_enqueue_script' );
 function bula_enqueue_script() {
-	wp_enqueue_script( 'bula-dist-script', BULA_URL_TO_THEME . '/dist/js/script.js', array(), CACHE );
+	wp_enqueue_script( 'bula-dist-script', BULA_URL_TO_THEME . '/dist/js/script.js', array(), CACHE, true );
 	// add localized js vars
 	$config = array(
 		'themeUrl' 			=> BULA_URL_TO_THEME,
@@ -61,6 +61,9 @@ function bula_register_menu() {
 	);
 }
 
+/** images */
+add_image_size('bula-fullwidth', 1400);
+add_image_size('bula-fullwidth_2x', 2800);
 function the_aid_picture_tag( $image_id = null, $size = 'medium', $size_2x = 'large', $classlist = '' ) {
 	$src  = wp_get_attachment_image_src( $image_id, $size );
 	$src2 = wp_get_attachment_image_src( $image_id, $size_2x );

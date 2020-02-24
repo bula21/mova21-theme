@@ -11,7 +11,6 @@
         <div class="row">
             <div class="home-animation-1 col-12">
                 <div class="mod-animation animation" data-animation="home" data-autoplay="true" data-hover="false" data-loop="false"></div>
-                <!--<img src="<?php /*echo BULA_URL_TO_THEME; */?>/img/animation-tbd.png">-->
             </div>
         </div>
 

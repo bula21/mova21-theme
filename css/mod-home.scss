@@ -36,6 +36,10 @@
                     top: 50%;
                     transform: translateY(-50%);
                     @include h2;
+                    @include media-small {
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
                 }
 
                 .t-white {
@@ -63,7 +67,7 @@
             .news-image {
                 img {
                     width: 100%;
-                    height: auto;
+                    height: 100%;
                     object-fit: cover;
                 }
             }
