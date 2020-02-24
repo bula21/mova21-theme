@@ -28,8 +28,8 @@
 
         .text-intro {
             @include header-text;
-            
-            a{
+
+            a {
                 text-decoration: underline;
             }
         }
@@ -71,15 +71,34 @@
                     width: 50%;
                     overflow: hidden;
                     margin-right: 15px;
-                    @include media-small-up {
-                        margin-right: 0;
-                        width: 100%;
-                    }
 
                     img {
                         width: 100%;
-                        max-height: 450px;
+                        max-height: 240px;
                         object-fit: cover;
+                    }
+
+                    @include media-small-up {
+                        margin-right: 0;
+                        width: 100%;
+                        img {
+                            max-height: 330px;
+                        }
+                    }
+                    @include media-medium-up {
+                        img {
+                            max-height: 280px;
+                        }
+                    }
+                    @include media-large-up {
+                        img {
+                            max-height: 390px;
+                        }
+                    }
+                    @include media-xlarge {
+                        img {
+                            max-height: 440px;
+                        }
                     }
                 }
 
@@ -135,7 +154,7 @@
                     }
                 }
             }
-            
+
             &:nth-of-type(2) {
                 .contact {
 
