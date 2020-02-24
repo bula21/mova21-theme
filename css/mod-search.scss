@@ -1,4 +1,4 @@
-    .mod-search {
+.mod-search {
     .search-form-wrapper {
         display: none;
         position: fixed;
@@ -10,11 +10,13 @@
         z-index: 100;
         justify-content: center;
         align-items: center;
+
         #searchsubmit {
             display: block;
             background-color: $yellow;
             border: 1px solid black;
         }
+
         .search-form-close {
             background-color: transparent;
             border: 0;
@@ -24,9 +26,29 @@
             padding: 20px 30px;
         }
     }
+
     .search-active & {
         .search-form-wrapper {
             display: flex;
         }
     }
+
+    .page-header {
+        padding-top: 20px;
+    }
+
+    .search-result {
+        min-height: 60vh;
+    }
+
+    .search-result-item {
+        padding: 15px;
+        display: block;
+        color: $black;
+
+        &:hover {
+            background-color: $yellow;
+        }
+    }
+
 }
