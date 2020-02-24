@@ -56,6 +56,7 @@
                 flex-direction: row;
 
                 @include media-small-up {
+                    padding-right: 15px;
                     width: 50%;
                     display: block;
                 }
@@ -67,32 +68,17 @@
                 }
 
                 .img-container {
-                    width: calc(100vw / 2 - 100px);
-                    height: calc((100vw / 2 - 100px) * 1.4);
-                    position: relative;
+                    width: 50%;
                     overflow: hidden;
                     margin-right: 15px;
-
                     @include media-small-up {
-                        width: calc(100vw / 3 - 50px);
-                        height: calc((100vw / 3 - 50px) * 1.4);
-                    }
-
-                    @include media-medium-up {
-                        width: calc(100vw / 4 - 50px);
-                        height: calc((100vw / 4 - 50px) * 1.4);
                         margin-right: 0;
-                    }
-
-                    @include media-large-up {
-                        width: calc(100vw / 4 - 150px);
-                        height: calc((100vw / 4 - 150px) * 1.4);
+                        width: 100%;
                     }
 
                     img {
                         width: 100%;
-                        height: 100%;
-                        position: absolute;
+                        max-height: 450px;
                         object-fit: cover;
                     }
                 }
