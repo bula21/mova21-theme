@@ -149,20 +149,8 @@
                     }
                 }
             }
-
+            
             &:nth-of-type(2) {
-                .contact {
-                    a {
-                        color: $blue;
-                    }
-
-                    .email-icon {
-                        fill: $blue;
-                    }
-                }
-            }
-
-            &:nth-of-type(3) {
                 .contact {
 
                     &:nth-of-type(1),
@@ -243,6 +231,19 @@
                     }
                 }
             }
+
+            &:nth-of-type(3) {
+                .contact {
+                    a {
+                        color: $blue;
+                    }
+
+                    .email-icon {
+                        fill: $blue;
+                    }
+                }
+            }
+
         }
     }
 }
