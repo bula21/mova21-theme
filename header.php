@@ -29,7 +29,7 @@
                     <img src="<?php echo BULA_URL_TO_THEME; ?>/img/movo_logo.svg">
                 </a>
             </div>
-            <button class="burger-button">
+            <button class="burger-button" aria-label="<?php _e('Navigation', 'bula21');?>">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -40,7 +40,7 @@
 						wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'bula-main-menu', 'depth' => 3 ) );
 					} ?>
 
-                    <button class="search-icon">
+                    <button class="search-icon" aria-label="<?php _e('Search', 'bula21');?>">
                         <img src="<?php echo BULA_URL_TO_THEME; ?>/img/search-icon.svg">
                     </button>
                     <div class="mobile-spacer">&nbsp;</div>
