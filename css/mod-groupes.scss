@@ -120,6 +120,8 @@
             .eventName {
                 @include tl-event;
                 white-space: normal;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
                 max-width: 300px;
 
                 @include media-medium-up {
@@ -127,7 +129,7 @@
                 }
 
                 @include media-large-up {
-                    max-width: 450px;
+                    max-width: 500px;
                 }
 
             }
@@ -143,11 +145,11 @@
             align-self: flex-start;
             left: calc(50% - 40px);
             transform: translateX(-100%);
-            
+
             @include media-small {
-            left: 0;
-            transform: none;
-        }
+                left: 0;
+                transform: none;
+            }
 
             .arrow {
                 transform: rotate(90deg);
@@ -160,7 +162,7 @@
                 }
             }
         }
-        
+
         &:nth-last-of-type(1) {
             margin-bottom: 0;
         }
@@ -193,9 +195,11 @@
     .callToAction {
         .text {
             @include bloc-text;
+
             @include media-large-down {
                 margin-bottom: 50px;
             }
+
             width: 100%;
             column-count: 2;
             column-gap: 100px;
@@ -212,6 +216,7 @@
             padding: 10px;
             border: 0;
             transition: transform 150ms;
+
             &:hover {
                 transform: scale(1.1);
             }
