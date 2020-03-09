@@ -26,7 +26,7 @@
         <div class="banner-wrapper">
             <div class="mod-logo">
                 <a class="logo-link" href="<?php echo home_url(); ?>">
-                    <img src="<?php echo BULA_URL_TO_THEME; ?>/img/mova_logo.svg" alt="<?php _e( 'Mova Logo');?>">
+                    <img src="<?php echo BULA_URL_TO_THEME; ?>/img/mova_logo.svg" alt="<?php _e( 'Mova Logo' ); ?>">
                 </a>
             </div>
             <button class="burger-button" aria-label="<?php _e( 'Navigation', 'bula21' ); ?>">
@@ -56,3 +56,10 @@
     </div>
 </div>
 <div class="navi-spacer">&nbsp;</div>
+
+<?php if ( WP_DEBUG ) : ?>
+<div class="dev-banner" style="background-color: red; position: fixed; width: 200px;top: 0;z-index: 999; text-align: center;left: calc( 50% - 100px );font-size: 1.5em;">
+    DEV SYSTEM!
+</div>
+<?php
+endif;
