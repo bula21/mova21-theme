@@ -10,7 +10,7 @@
 </head>
 
 <body <?php if ( function_exists( 'body_class' ) ) {
-	body_class('navigation-visible');
+	body_class( 'navigation-visible' );
 } ?>>
 <?php the_field( 'analyticsscript-body', 'options' ); ?>
 
@@ -26,10 +26,10 @@
         <div class="banner-wrapper">
             <div class="mod-logo">
                 <a class="logo-link" href="<?php echo home_url(); ?>">
-                    <img src="<?php echo BULA_URL_TO_THEME; ?>/img/movo_logo.svg">
+                    <img src="<?php echo BULA_URL_TO_THEME; ?>/img/mova_logo.svg" alt="<?php _e( 'Mova Logo');?>">
                 </a>
             </div>
-            <button class="burger-button" aria-label="<?php _e('Navigation', 'bula21');?>">
+            <button class="burger-button" aria-label="<?php _e( 'Navigation', 'bula21' ); ?>">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -40,8 +40,8 @@
 						wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'bula-main-menu', 'depth' => 3 ) );
 					} ?>
 
-                    <button class="search-icon" aria-label="<?php _e('Search', 'bula21');?>">
-                        <img src="<?php echo BULA_URL_TO_THEME; ?>/img/search-icon.svg">
+                    <button class="search-icon" aria-label="<?php _e( 'Search', 'bula21' ); ?>">
+                        <img src="<?php echo BULA_URL_TO_THEME; ?>/img/search-icon.svg" alt="<?php _e( 'Search icon' ); ?>">
                     </button>
                     <div class="mobile-spacer">&nbsp;</div>
                     <div class="lang-menu">

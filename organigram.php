@@ -21,7 +21,7 @@
 								$org_img = get_sub_field( 'image' ); ?>
                                 <div class="contact">
                                     <div class="img-container">
-                                        <img src="<?php echo $org_img['sizes']['large']; ?>">
+                                        <img src="<?php echo $org_img['sizes']['large']; ?>" alt="<?php _e($org_img['alt']);?>">
                                     </div>
                                     <div class="info-container">
                                         <p class="org-job"><?php the_sub_field( 'job' ); ?></p>
