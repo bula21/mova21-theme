@@ -3,7 +3,7 @@
  * Global static theme path
  */
 define( 'BULA_URL_TO_THEME', get_stylesheet_directory_uri() );
-define( 'CACHE', WP_DEBUG ? time() : date( 'Ym' ) );
+define( 'CACHE', WP_DEBUG ? time() : date( 'Ym' ) . '2' );
 
 foreach ( glob( __DIR__ . '/acf/*.php' ) as $filename ) {
 	require_once( $filename );
@@ -32,6 +32,17 @@ function bula_enqueue_script() {
 		wp_enqueue_script( 'bula-dist-script-dev-helper', BULA_URL_TO_THEME . '/dev/mod-dev-helper.js', array(), CACHE, true );
 	}
 }
+
+
+/**
+ * remove gutenberg styles
+ */
+add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
+function wps_deregister_styles() {
+	wp_dequeue_style( 'wp-block-library' );
+	wp_dequeue_style( 'cookie-notice-front' );
+}
+
 
 /**
  * Theme support

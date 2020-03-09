@@ -7,18 +7,18 @@
             <div class="col-6">
                 <div class="some-icons">
 					<?php if ( get_field( 'instagram-url', 'option' ) ) : ?>
-                        <a class="some-icon" href="<?php the_field( 'instagram-url', 'option' ); ?>" target="_blank">
-                            <img src="<?php echo BULA_URL_TO_THEME; ?>/img/instagram.svg">
+                        <a class="some-icon" href="<?php the_field( 'instagram-url', 'option' ); ?>" target="_blank" rel="noreferrer">
+                            <img src="<?php echo BULA_URL_TO_THEME; ?>/img/instagram.svg" alt="<?php _e('Instagram');?>">
                         </a>
 					<?php endif; ?>
 					<?php if ( get_field( 'facebook-url', 'option' ) ) : ?>
-                        <a class="some-icon" href="<?php the_field( 'facebook-url', 'option' ); ?>" target="_blank">
-                            <img src="<?php echo BULA_URL_TO_THEME; ?>/img/facebook.svg">
+                        <a class="some-icon" href="<?php the_field( 'facebook-url', 'option' ); ?>" target="_blank" rel="noreferrer">
+                            <img src="<?php echo BULA_URL_TO_THEME; ?>/img/facebook.svg" alt="<?php _e('Facebook');?>">
                         </a>
 					<?php endif; ?>
 					<?php if ( get_field( 'twitter-url', 'option' ) ) : ?>
-                        <a class="some-icon" href="<?php the_field( 'twitter-url', 'option' ); ?>" target="_blank">
-                            <img src="<?php echo BULA_URL_TO_THEME; ?>/img/twitter.svg">
+                        <a class="some-icon" href="<?php the_field( 'twitter-url', 'option' ); ?>" target="_blank" rel="noreferrer">
+                            <img src="<?php echo BULA_URL_TO_THEME; ?>/img/twitter.svg" alt="<?php _e('Twitter');?>">
                         </a>
 					<?php endif; ?>
                 </div>

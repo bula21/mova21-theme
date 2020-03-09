@@ -173,12 +173,12 @@ module.exports = function (grunt) {
             },
             prod: {
                 auth: {
-                    host: 'bula21.ch',
+                    host: 'mova.ch',
                     port: 22,
                     authKey: 'bula-prod'
                 },
                 src: './',
-                dest: 'www/bula21.ch/wp-content/themes/bula21/',
+                dest: 'www/mova.ch/wp-content/themes/bula21/',
                 exclusions: [
                     'css/**',
                     'dev',
