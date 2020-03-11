@@ -198,8 +198,8 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 							'id'    => '',
 						),
 						'choices'           => array(
-							'red'  => 'Rot',
-							'blue' => 'Blau',
+							'red'    => 'Rot',
+							'blue'   => 'Blau',
 							'yellow' => 'Gelb',
 						),
 						'default_value'     => array(
@@ -322,8 +322,9 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 					'id'    => '',
 				),
 				'choices'           => array(
-					'red'  => 'Rot',
-					'blue' => 'Blau',
+					'white'  => 'Weiss',
+					'red'    => 'Rot',
+					'blue'   => 'Blau',
 					'yellow' => 'Gelb',
 				),
 				'default_value'     => array(),
