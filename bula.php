@@ -14,7 +14,8 @@
                     <h2><?php the_field( 'main-h2' ); ?></h2>
                 </div>
                 <div class="image-intro">
-					<?php $image_array = get_field( 'image_full_size' );
+					<?php
+                    $image_array = get_field( 'image_full_size' );
 					the_aid_picture_tag( $image_array['id'], 'bula-fullwidth', 'bula-fullwidth_2x' );
 					?>
                 </div>

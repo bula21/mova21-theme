@@ -2,39 +2,101 @@
 
 <?php get_header(); ?>
 
-<?php if ( have_posts() ) : while ( have_posts() ) :
-	the_post(); ?>
-    <div class="container mod-content">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="post-title"><?php the_title(); ?></h1>
-                <div class="wysiwyg">
-					<?php the_content(); ?>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-		    <?php
-		    if ( have_rows( 'elements' ) ):
-			    while ( have_rows( 'elements' ) ) : the_row();
-				    get_template_part( 'template-parts/collapse', 'items' );
-			    endwhile;
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <div class="mod-content">
+		<?php
+		if ( have_rows( 'content_elemente' ) ):
+			while ( have_rows( 'content_elemente' ) ) : the_row();
+				?>
+                <section>
+					<?php
 
-		    else :
+					if ( get_row_layout() == 'text-bild' ):
+						?>
+                        <div class="container-fluid content-element--text-bild" style="background-color: <?php the_sub_field( 'hintergrundfarbe' ); ?>;">
+                            <div class="container">
+								<?php $reverse = get_sub_field( 'reihenfolge' ) == 't2b' ? '' : 'flex-row-reverse'; ?>
+                                <div class="row no-gutters <?php echo $reverse; ?>">
+                                    <div class="col-12 col-md-6">
+                                        <div class="text">
+											<?php the_sub_field( 'text' ); ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+										<?php
+										$image = get_sub_field( 'bild' );
+										the_aid_picture_tag( $image['id'], 'bula-fullwidth', 'bula-fullwidth_2x', 'content-image' );
+										?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-			    // no rows found
+					<?php elseif ( get_row_layout() == 'farb-blocke' ): ?>
+                        <div class="container content-element--farb-bloecke">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2><?php the_sub_field( 'titel' ); ?></h2>
+                                </div>
+                            </div>
 
-		    endif;
-		    ?>
+							<?php if ( have_rows( 'blocke' ) ): ?>
+                                <div class="row">
+									<?php
+									while ( have_rows( 'blocke' ) ) : the_row();
+										?>
+                                        <div class="col-12 col-md-6">
+                                            <div class="farb-block bg-<?php the_sub_field( 'hintergrundfarbe' ); ?>">
+                                                <div class="title">
+													<?php if ( $image = get_sub_field( 'icon' ) ): ?>
+                                                        <div class="icon">
+                                                            <img src="<?php echo $image['url']; ?>">
+                                                        </div>
+													<?php endif; ?>
+                                                    <h3><?php the_sub_field( 'titel' ); ?></h3>
+                                                </div>
+                                                <div class="farb-block-content">
+													<?php the_sub_field( 'text' ); ?>
+                                                </div>
+                                            </div>
+                                        </div>
+									<?php endwhile; ?>
+                                </div>
+							<?php endif; ?>
+                        </div>
 
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="wysiwyg">
-					<?php the_field( 'more-content' ); ?>
-                </div>
-            </div>
-        </div>
+
+					<?php elseif ( get_row_layout() == 'text-spalten' ): ?>
+                        <div class="container content-element--text-spalten">
+                            <div class="col-12 spalte-element bg-<?php the_sub_field( 'hintergrundfarbe' ); ?>">
+								<?php if ( get_sub_field( 'title' ) ): ?>
+                                    <div>
+                                        <h2><?php the_sub_field( 'title' ); ?></h2>
+                                    </div>
+								<?php endif; ?>
+                                <div class="column-count-small-reset" style="column-count: <?php the_sub_field( 'anzahl_spalten' ); ?>">
+									<?php the_sub_field( 'text' ); ?>
+                                </div>
+								<?php if ( $link = get_sub_field( 'button' ) ): ?>
+                                    <a class="btn-black" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
+										<?php echo $link['title']; ?>
+                                    </a>
+								<?php endif; ?>
+                            </div>
+                        </div>
+					<?php endif; ?>
+
+                </section>
+			<?php
+
+			endwhile;
+
+		else :
+			echo 'emptyness';
+			// no rows found
+
+		endif;
+		?>
     </div>
 <?php endwhile; endif; ?>
 
