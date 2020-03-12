@@ -9,16 +9,13 @@
 			while ( have_rows( 'content_elemente' ) ) : the_row();
 				?>
                 <section>
-					<?php
-
-					if ( get_row_layout() == 'text-bild' ):
-						?>
+					<?php if ( get_row_layout() == 'text-bild' ): ?>
                         <div class="container-fluid content-element--text-bild" style="background-color: <?php the_sub_field( 'hintergrundfarbe' ); ?>;">
                             <div class="container">
 								<?php $reverse = get_sub_field( 'reihenfolge' ) == 't2b' ? '' : 'flex-row-reverse'; ?>
                                 <div class="row no-gutters <?php echo $reverse; ?>">
                                     <div class="col-12 col-md-6">
-                                        <div class="text">
+                                        <div class="text wysiwyg">
 											<?php the_sub_field( 'text' ); ?>
                                         </div>
                                     </div>
@@ -36,7 +33,9 @@
                         <div class="container content-element--farb-bloecke">
                             <div class="row">
                                 <div class="col-12">
-                                    <h2><?php the_sub_field( 'titel' ); ?></h2>
+                                    <div class="intro-title">
+                                        <h2><?php the_sub_field( 'titel' ); ?></h2>
+                                    </div>
                                 </div>
                             </div>
 
@@ -85,7 +84,6 @@
                             </div>
                         </div>
 					<?php endif; ?>
-
                 </section>
 			<?php
 

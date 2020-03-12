@@ -15,7 +15,12 @@
 
     .content-element--farb-bloecke {
         margin-bottom: 50px;
-
+        .intro-title {
+            h2 {
+                @include h2;
+            }
+            margin-bottom: 15px;
+        }
         .farb-block {
             padding: 20px;
             margin-bottom: 20px;
@@ -24,6 +29,9 @@
                 display: flex;
                 align-items: center;
                 margin-bottom: 10px;
+                h3 {
+                    @include h1-sub;
+                }
 
                 .icon {
                     height: 40px;
@@ -39,6 +47,10 @@
 
     .content-element--text-spalten {
         margin-bottom: 20px;
+
+        h2 {
+            @include h2;
+        }
 
         .spalte-element {
             padding: 20px;

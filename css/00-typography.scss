@@ -120,8 +120,6 @@ body {
     }
 }
 
-
-
 @mixin main-menu {
     font-family: 'MessinaSansWeb-Regular', serif;
     font-size: 25px;
@@ -157,7 +155,6 @@ body {
         line-height: 30px;
     }
 }
-
 
 @mixin font-footer {
     font-family: 'MessinaSansWeb-Bold', serif;
@@ -207,11 +204,10 @@ body {
 
     @include media-large-up {
         font-size: 60px;
-        line-height: 46px;
+        line-height: 64px;
     }
 
 }
-
 
 @mixin h1-sub {
     font-family: 'MessinaSansWeb-Bold', serif;
@@ -232,13 +228,13 @@ body {
 
 }
 
-@mixin header-text{
+@mixin header-text {
     font-family: 'MessinaSansWeb-Bold', serif;
     text-decoration: none;
     color: $black;
     font-size: 14px;
     line-height: 18px;
-    
+
     @include media-medium-up {
         font-size: 18px;
         line-height: 22px;
@@ -266,8 +262,8 @@ body {
     }
 
     @include media-large-up {
-        font-size: 50px;
-        line-height: 58px;
+        font-size: 44px;
+        line-height: 50px;
     }
 }
 
@@ -297,16 +293,16 @@ body {
     }
 }
 
-@mixin font-collapse{
+@mixin font-collapse {
     font-family: 'MessinaSansWeb-SemiBold', serif;
     font-size: 17px;
     line-height: 19px;
     text-decoration: none;
-    color: $black; 
+    color: $black;
     text-align: left;
 }
 
-@mixin font-collapse-h2{
+@mixin font-collapse-h2 {
     font-family: 'MessinaSansWeb-SemiBold', serif;
     font-size: 30px;
     line-height: 15px;
@@ -321,7 +317,7 @@ body {
     text-decoration: none;
     color: $black;
     text-transform: uppercase;
-    
+
     @include media-medium-up {
         font-size: 14px;
     }
@@ -356,7 +352,7 @@ body {
     color: $blue;
     text-decoration: underline;
     border: 1px;
-    
+
     @include media-medium-up {
         font-size: 18px;
     }
@@ -366,16 +362,15 @@ body {
     }
 }
 
-
 @mixin news-title {
     @include h2;
 }
 
-@mixin news-text{
+@mixin news-text {
     @include header-text;
 }
 
-@mixin bloc-date{
+@mixin bloc-date {
     @include header-text;
 }
 
@@ -383,21 +378,21 @@ body {
     @include h2;
 }
 
-@mixin bloc-text{
+@mixin bloc-text {
     @include article;
     font-family: 'MessinaSansWeb-SemiBold', serif;
 }
 
-@mixin bloc-button{
+@mixin bloc-button {
     @include header-text;
 }
-
-
-
 
 .wysiwyg {
     padding: 10px 0;
 
+    h1 {
+        @include h1;
+    }
     h2 {
         @include h2;
     }
@@ -418,5 +413,9 @@ body {
         li {
             padding-left: 10px;
         }
+    }
+
+    strong {
+        font-family: 'MessinaSansWeb-Bold', serif;
     }
 }
