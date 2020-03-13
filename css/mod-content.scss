@@ -9,6 +9,7 @@
         .content-image img {
             width: 100%;
             height: auto;
+            min-height: 100%;
             object-fit: cover;
         }
     }
@@ -20,6 +21,9 @@
                 @include h2;
             }
             margin-bottom: 15px;
+        }
+        .farb-block-wrapper {
+            float: left;
         }
         .farb-block {
             padding: 20px;

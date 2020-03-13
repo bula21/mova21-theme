@@ -15,4 +15,9 @@ jQuery(document).ready(function ($) {
     if (is_touch_device()) {
         $('body').addClass('touch-device');
     }
+
+    $('.masonry').masonry({
+        // options
+        itemSelector: '.masonry-item'
+    });
 });
