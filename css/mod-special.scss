@@ -1,0 +1,20 @@
+.mod-special {
+    margin-top: 50px;
+    position: relative;
+
+    .special-icon {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 20px;
+        height: 20px;
+        .icon-play {
+            opacity: 0.05;
+            display: inline-block;
+            background-image: url("/wp-content/themes/bula21/img/game.png");
+            background-size: contain;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
