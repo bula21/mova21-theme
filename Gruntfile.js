@@ -38,6 +38,7 @@ module.exports = function (grunt) {
                     'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
                     'node_modules/lottie-web/build/player/lottie.min.js',
                     'node_modules/phaser/dist/phaser.min.js',
+                    'node_modules/masonry-layout/dist/masonry.pkgd.min.js',
                     'js/*.js'
                 ]
             }

@@ -10,11 +10,11 @@
 				?>
                 <section>
 					<?php if ( get_row_layout() == 'text-bild' ): ?>
-                        <div class="container-fluid content-element--text-bild" style="background-color: <?php the_sub_field( 'hintergrundfarbe' ); ?>;">
+                        <div class="container-fluid content-element--text-bild">
                             <div class="container">
 								<?php $reverse = get_sub_field( 'reihenfolge' ) == 't2b' ? '' : 'flex-row-reverse'; ?>
                                 <div class="row no-gutters <?php echo $reverse; ?>">
-                                    <div class="col-12 col-md-6">
+                                    <div class="col-12 col-md-6" style="background-color: <?php the_sub_field( 'hintergrundfarbe' ); ?>;">
                                         <div class="text wysiwyg">
 											<?php the_sub_field( 'text' ); ?>
                                         </div>
@@ -29,6 +29,7 @@
                             </div>
                         </div>
 
+
 					<?php elseif ( get_row_layout() == 'farb-blocke' ): ?>
                         <div class="container content-element--farb-bloecke">
                             <div class="row">
@@ -40,11 +41,9 @@
                             </div>
 
 							<?php if ( have_rows( 'blocke' ) ): ?>
-                                <div class="row">
-									<?php
-									while ( have_rows( 'blocke' ) ) : the_row();
-										?>
-                                        <div class="col-12 col-md-6">
+                                <div class="row masonry">
+									<?php while ( have_rows( 'blocke' ) ) : the_row(); ?>
+                                        <div class="col-12 col-md-6 farb-block-wrapper masonry-item">
                                             <div class="farb-block bg-<?php the_sub_field( 'hintergrundfarbe' ); ?>">
                                                 <div class="title">
 													<?php if ( $image = get_sub_field( 'icon' ) ): ?>
