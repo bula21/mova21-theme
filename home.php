@@ -38,17 +38,28 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 d-flex">
+                <div class="d-none col-sm-12 d-sm-flex">
                     <a href="<?php _e( 'Link Pfadis', 'bula21' ); ?>" class="block--item">
-                        <div class="mod-animation animation" data-animation="gruppen" data-autoplay="false" data-hover="true"></div>
+                        <div class="bg-black mod-animation animation" data-animation="gruppen" data-autoplay="false" data-loop="true" data-hover="true"></div>
                         <div class="bg-black  choice-text"><p class="t-white"><?php _e( 'Pfadis', 'bula21' ); ?></p></div>
                     </a>
                     <a href="<?php _e( 'Link Helfende', 'bula21' ); ?>" class="block--item">
-                        <div class="mod-animation animation" data-animation="helfende" data-autoplay="false" data-hover="true"></div>
+                        <div class="bg-yellow mod-animation animation" data-animation="helfende" data-autoplay="false" data-loop="true" data-hover="true"></div>
                         <div class="bg-yellow choice-text"><p><?php _e( 'Helfende', 'bula21' ); ?></p></div>
                     </a>
                     <a href="<?php _e( 'Link Externe', 'bula21' ); ?>" class="block--item">
-                        <div class="mod-animation animation" data-animation="externe" data-autoplay="false" data-hover="true"></div>
+                        <div class="bg-blue mod-animation animation" data-animation="externe" data-autoplay="false" data-loop="true" data-hover="true"></div>
+                        <div class="bg-blue choice-text"><p><?php _e( 'Externe', 'bula21' ); ?></p></div>
+                    </a>
+                </div>
+                <div class="col-12 d-sm-none">
+                    <a href="<?php _e( 'Link Pfadis', 'bula21' ); ?>" class="block--item">
+                        <div class="bg-red choice-text"><p><?php _e( 'Pfadis', 'bula21' ); ?></p></div>
+                    </a>
+                    <a href="<?php _e( 'Link Helfende', 'bula21' ); ?>" class="block--item">
+                        <div class="bg-yellow choice-text"><p><?php _e( 'Helfende', 'bula21' ); ?></p></div>
+                    </a>
+                    <a href="<?php _e( 'Link Externe', 'bula21' ); ?>" class="block--item">
                         <div class="bg-blue choice-text"><p><?php _e( 'Externe', 'bula21' ); ?></p></div>
                     </a>
                 </div>
@@ -82,5 +93,4 @@
 
     </div>
 <?php endwhile; endif; ?>
-
 <?php get_footer(); ?>
