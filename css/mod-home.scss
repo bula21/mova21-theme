@@ -49,18 +49,6 @@
             }
 
         }
-
-        @include media-small {
-
-            .block--item {
-                width: 100%;
-
-                img {
-                    display: none;
-
-                }
-            }
-        }
     }
 
     .home-content-block-3 {

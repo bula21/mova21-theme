@@ -45,76 +45,34 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 100px;
-    scroll-snap-type: x proximity;
-    position: relative;
-
-
-    @include media-small {
-        align-items: flex-start;
-        padding-left: 50px;
-        padding-top: 50px;
-        margin-bottom: 50px;
-    }
-
-    .tl-line {
-        width: 10px;
-        height: 100%;
-        background: $blue;
-        position: absolute;
-        top: 0;
-        left: calc(50% - 5px);
-        z-index: -1;
-
-        @include media-small {
-            left: 25px;
-        }
-    }
 
     .event {
         background: $yellow;
         padding: 15px 30px;
-        margin-bottom: 50px;
+        margin-bottom: 150px;
         position: relative;
-        align-self: flex-end;
-        right: calc(50% - 40px);
-        transform: translateX(100%);
 
-        @include media-small {
-            align-self: flex-start;
-            left: 0;
-            transform: none;
-        }
+        @include media-small {}
 
 
         .arrow {
             fill: $yellow;
-            transform: rotate(-90deg);
-            height: 25px;
+            transform: rotate(180deg);
+            width: 100%;
             position: absolute;
-            top: 25px;
-            right: 100%;
-
-            @include media-medium-up {
-                top: 10px;
-                height: 50px;
-            }
-
-            @include media-large-up {
-                top: 25px;
-            }
+            left: 0;
+            top: 100%;
         }
 
         .cta-bloc {
-
-
             p {
+                text-align: center;
                 margin: 0;
                 padding: 0;
             }
 
             .date {
                 @include tl-date;
-                display: absolute;
             }
 
             .eventName {
@@ -139,32 +97,6 @@
                 margin-top: 15px;
                 display: absolute;
             }
-        }
-
-        &:nth-of-type(2n) {
-            align-self: flex-start;
-            left: calc(50% - 40px);
-            transform: translateX(-100%);
-
-            @include media-small {
-                left: 0;
-                transform: none;
-            }
-
-            .arrow {
-                transform: rotate(90deg);
-                left: 100%;
-
-                @include media-small {
-                    left: -25px;
-                    top: 25px;
-                    transform: rotate(-90deg);
-                }
-            }
-        }
-
-        &:nth-last-of-type(1) {
-            margin-bottom: 0;
         }
     }
 

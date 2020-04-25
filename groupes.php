@@ -11,7 +11,6 @@
     </div>
     <div class="timeLine">
         <h2 class="tl-title"></h2>
-        <div class="tl-line"></div>
 		<?php
 		if ( have_rows( 'group_timeline' ) ):
 			while ( have_rows( 'group_timeline' ) ) : the_row();
@@ -19,7 +18,7 @@
 					while ( have_rows( 'timeline_event' ) ) : the_row(); ?>
                         <div class="event">
                             <svg class="arrow" viewBox="0 -2 24 24">
-                                <path d="M24 22h-24l12-20z"/>
+                                <path d="M24 22h-24l12-4z"/>
                             </svg>
                             <div class="cta-bloc">
                                 <p class="date"><?php the_sub_field( 'event_date' ); ?></p>
