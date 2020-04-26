@@ -1,35 +1,12 @@
 .mod-helfen {
 
     .header {
-        background: $red;
-        padding: 100px;
-        margin-bottom: 50px;
-
-        @include media-medium-down {
-            padding: 50px;
+        .infos {
+            background: $red;
         }
 
-        @include media-small {
-            padding: 25px;
-        }
-
-
-        h1 {
-            @include h1;
-            margin-bottom: 50px;
-            position: relative;
-
-            @include media-medium-down {
-                margin-bottom: 25px;
-            }
-
-            @include media-small {
-                margin-bottom: 10px;
-            }
-        }
-
-        p {
-            @include header-text;
+        .illustration {
+            background: $blue;
         }
     }
 
@@ -138,42 +115,42 @@
         margin-bottom: 50px;
     }
 
-        .collapse-item {
+    .collapse-item {
 
-            &:nth-of-type(1) {
-                background: $blue;
-            }
+        &:nth-of-type(1) {
+            background: $blue;
+        }
 
-            &:nth-of-type(2) {
-                background: $yellow;
+        &:nth-of-type(2) {
+            background: $yellow;
 
-                a {
-                    color: $blue;
-                }
-            }
-
-            &:nth-of-type(3) {
-                background: $red;
-            }
-
-            &:nth-of-type(4) {
-                background: $white;
-            }
-
-            &:nth-of-type(5) {
-                background: $red;
-            }
-
-            &:nth-of-type(6) {
-                background: $yellow;
-
-                a {
-                    color: $blue;
-                }
-            }
-
-            &:nth-of-type(7) {
-                background: $blue;
+            a {
+                color: $blue;
             }
         }
+
+        &:nth-of-type(3) {
+            background: $red;
+        }
+
+        &:nth-of-type(4) {
+            background: $white;
+        }
+
+        &:nth-of-type(5) {
+            background: $red;
+        }
+
+        &:nth-of-type(6) {
+            background: $yellow;
+
+            a {
+                color: $blue;
+            }
+        }
+
+        &:nth-of-type(7) {
+            background: $blue;
+        }
+    }
 }

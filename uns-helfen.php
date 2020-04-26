@@ -6,8 +6,13 @@
 <div class="container mod-helfen">
 
     <div class="header">
-        <h1 class="post-title"><?php the_title(); ?></h1>
-        <p class="text-intro"><?php the_field('text_intro'); ?></p>
+        <div class="infos">
+            <h1 class="post-title"><?php the_title(); ?></h1>
+            <p class="text-intro"><?php the_field('text_intro'); ?></p>
+        </div>
+        <div class="illustration">
+            <img src="" alt="">
+        </div>
     </div>
 
     <?php $text_bloc = get_field('text_bloc'); ?>

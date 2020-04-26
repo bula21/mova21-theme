@@ -1,161 +1,132 @@
 .mod-groupes {
-
-
-    .header {
-        background: $yellow;
-        padding: 100px;
+    
+    .header{
+        .infos{
+             background: $yellow;
+        }
+        
+        .illustration{
+            background: $blue;
+        }
+    }
+    
+    .timeLine {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-bottom: 100px;
 
-        @include media-medium-down {
-            padding: 50px;
-        }
-
-        @include media-small {
-            padding: 25px;
-            margin-bottom: 0;
-        }
-
-        h1 {
-            @include h1;
-            margin-bottom: 50px;
+        .event {
+            background: $yellow;
+            padding: 15px 30px;
+            margin-bottom: 150px;
             position: relative;
 
-            @include media-medium-down {
-                margin-bottom: 25px;
+            @include media-small {}
+
+
+            .arrow {
+                fill: $yellow;
+                transform: rotate(180deg);
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 100%;
             }
 
-            @include media-small {
-                margin-bottom: 10px;
+            .cta-bloc {
+                p {
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .date {
+                    @include tl-date;
+                }
+
+                .eventName {
+                    @include tl-event;
+                    white-space: normal;
+                    overflow-wrap: break-word;
+                    word-wrap: break-word;
+                    max-width: 300px;
+
+                    @include media-medium-up {
+                        max-width: 250px;
+                    }
+
+                    @include media-large-up {
+                        max-width: 500px;
+                    }
+
+                }
+
+                .cta-button {
+                    @include tl-button;
+                    margin-top: 15px;
+                    display: absolute;
+                }
             }
         }
 
-        p {
-            @include header-text;
-            width: 100%;
-
-            @include media-large-up {
-                width: 900px;
-            }
-        }
     }
-}
 
-.timeLine {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 100px;
-
-    .event {
-        background: $yellow;
-        padding: 15px 30px;
-        margin-bottom: 150px;
+    .info {
+        padding: 50px;
         position: relative;
 
-        @include media-small {}
-
-
-        .arrow {
-            fill: $yellow;
-            transform: rotate(180deg);
-            width: 100%;
-            position: absolute;
-            left: 0;
-            top: 100%;
+        @include media-large-down {
+            padding: 25px;
         }
 
-        .cta-bloc {
-            p {
-                text-align: center;
-                margin: 0;
-                padding: 0;
-            }
-
-            .date {
-                @include tl-date;
-            }
-
-            .eventName {
-                @include tl-event;
-                white-space: normal;
-                overflow-wrap: break-word;
-                word-wrap: break-word;
-                max-width: 300px;
-
-                @include media-medium-up {
-                    max-width: 250px;
-                }
-
-                @include media-large-up {
-                    max-width: 500px;
-                }
-
-            }
-
-            .cta-button {
-                @include tl-button;
-                margin-top: 15px;
-                display: absolute;
-            }
+        .date {
+            @include bloc-date;
+            margin-bottom: 10px;
         }
-    }
 
-}
+        h2 {
+            @include h2;
+            margin-bottom: 25px;
 
-.info {
-    padding: 50px;
-    position: relative;
-
-    @include media-large-down {
-        padding: 25px;
-    }
-
-    .date {
-        @include bloc-date;
-        margin-bottom: 10px;
-    }
-
-    h2 {
-        @include h2;
-        margin-bottom: 25px;
-
-        @include media-medium-up {
-            margin-bottom: 50px;
-        }
-    }
-
-    .callToAction {
-        .text {
-            @include bloc-text;
-
-            @include media-large-down {
+            @include media-medium-up {
                 margin-bottom: 50px;
             }
+        }
 
-            width: 100%;
-            column-count: 2;
-            column-gap: 100px;
+        .callToAction {
+            .text {
+                @include bloc-text;
 
-            @include media-medium-down {
-                column-count: 1;
-                padding: 10px 0px;
+                @include media-large-down {
+                    margin-bottom: 50px;
+                }
+
+                width: 100%;
+                column-count: 2;
+                column-gap: 100px;
+
+                @include media-medium-down {
+                    column-count: 1;
+                    padding: 10px 0px;
+                }
+            }
+
+            .btn-black {
+                background-color: $black;
+                color: $white;
+                padding: 10px;
+                border: 0;
+                transition: transform 150ms;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
         }
 
-        .btn-black {
-            background-color: $black;
-            color: $white;
-            padding: 10px;
-            border: 0;
-            transition: transform 150ms;
-
-            &:hover {
-                transform: scale(1.1);
-            }
+        &:nth-child(2) {
+            background: $yellow;
         }
-    }
-
-    &:nth-child(2) {
-        background: $yellow;
     }
 }

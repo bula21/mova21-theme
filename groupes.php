@@ -6,8 +6,13 @@
 	the_post(); ?>
     <div class="container mod-groupes">
     <div class="header">
-        <h1 class="post-title"><?php the_title(); ?></h1>
+       <div class="infos">
+           <h1 class="post-title"><?php the_title(); ?></h1>
         <p class="text-intro"><?php the_field( 'intro_text' ); ?></p>
+        </div>
+        <div class="illustration">
+            <img src="" alt="">
+        </div>
     </div>
     <div class="timeLine">
         <h2 class="tl-title"></h2>

@@ -6,8 +6,13 @@
 	the_post(); ?>
 <div class="container mod-teilnehmen">
     <div class="header">
-        <h1 class="post-title"><?php the_title(); ?></h1>
-        <p><?php the_field('text_intro'); ?></p>
+        <div class="infos">
+            <h1 class="post-title"><?php the_title(); ?></h1>
+            <p><?php the_field('text_intro'); ?></p>
+        </div>
+        <div class="illustration">
+            <img src="" alt="">
+        </div>
     </div>
     <div class="choice-container">
 

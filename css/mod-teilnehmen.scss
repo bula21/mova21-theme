@@ -1,43 +1,12 @@
 .mod-teilnehmen {
 
     .header {
-        background: $blue;
-        padding: 100px;
-        margin-bottom: 50px;
-
-        @include media-medium-down {
-            padding: 50px;
+        .infos {
+            background: $blue;
         }
 
-        @include media-small {
-            padding: 25px;
-        }
-
-        h1 {
-            @include h1;
-            margin-bottom: 50px;
-            position: relative;
-
-            @include media-medium-down {
-                margin-bottom: 25px;
-            }
-
-            @include media-small {
-                margin-bottom: 10px;
-            }
-        }
-
-        p {
-            @include header-text;
-            width: 100%;
-
-            @include media-medium-up {
-                width: 600px;
-            }
-
-            @include media-large-up {
-                width: 800px;
-            }
+        .illustration {
+            background: $red;
         }
     }
 
@@ -49,7 +18,7 @@
 
         &:nth-of-type(2) {
             background: $yellow;
-            
+
             a {
                 color: $blue;
             }
@@ -66,7 +35,8 @@
         &:nth-of-type(5) {
             background: $black;
 
-            button, .content {
+            button,
+            .content {
                 color: $white;
             }
         }
