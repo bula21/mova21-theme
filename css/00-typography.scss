@@ -146,8 +146,7 @@ body {
     transition: color 250ms;
 
     &:hover {
-        text-decoration: underline;
-        color: $yellow;
+        color: $red;
     }
 
     @include media-medium-up {
@@ -244,6 +243,7 @@ body {
         font-size: 20px;
         line-height: 26px;
     }
+
     a {
         color: $blue;
     }
@@ -387,12 +387,31 @@ body {
     @include header-text;
 }
 
+@mixin org-job {
+    @include header-text;
+    color: $blue;
+}
+
+@mixin org-name {
+    @include header-text;
+}
+
+@mixin org-email {
+    @include article;
+
+    a{
+        font-family: 'MessinaSansWeb-SemiBold', serif;
+        color: $black;
+    }
+}
+
 .wysiwyg {
     padding: 10px 0;
 
     h1 {
         @include h1;
     }
+
     h2 {
         @include h2;
     }

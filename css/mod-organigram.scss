@@ -1,37 +1,11 @@
 .mod-organigram {
     .header {
-        background: $red;
-        padding: 100px;
-        margin-bottom: 75px;
-
-        @include media-medium-down {
-            padding: 50px;
+        .infos {
+            background: $red;
         }
 
-        @include media-small {
-            padding: 25px;
-        }
-
-        h1 {
-            @include h1;
-            margin-bottom: 50px;
-            position: relative;
-
-            @include media-medium-down {
-                margin-bottom: 25px;
-            }
-
-            @include media-small {
-                margin-bottom: 10px;
-            }
-        }
-
-        .text-intro {
-            @include header-text;
-
-            a {
-                text-decoration: underline;
-            }
+        .illustration {
+            background: $blue;
         }
     }
 
@@ -39,7 +13,7 @@
 
         h2 {
             @include h2;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
 
         .contact-row {
@@ -54,51 +28,31 @@
                 margin-bottom: 50px;
                 display: flex;
                 flex-direction: row;
+                display: block;
 
                 @include media-small-up {
-                    padding-right: 15px;
-                    width: 50%;
-                    display: block;
+                    width: calc(50% - 30px);
+                    margin-right: 30px;
                 }
+
                 @include media-medium-up {
-                    width: 33%;
+                    width: calc(33% - 40px);
+                    margin-right: 40px;
                 }
+
                 @include media-large-up {
-                    width: 25%;
+                    width: calc(25% - 50px);
+                    margin-right: 50px;
                 }
 
                 .img-container {
-                    width: 50%;
-                    overflow: hidden;
-                    margin-right: 15px;
+                    &:nth-of-type(3){
+                        border: none;
+                    }
 
                     img {
                         width: 100%;
-                        max-height: 240px;
-                        object-fit: cover;
-                    }
-
-                    @include media-small-up {
-                        margin-right: 0;
-                        width: 100%;
-                        img {
-                            max-height: 330px;
-                        }
-                    }
-                    @include media-medium-up {
-                        img {
-                            max-height: 280px;
-                        }
-                    }
-                    @include media-large-up {
-                        img {
-                            max-height: 390px;
-                        }
-                    }
-                    @include media-xlarge {
-                        img {
-                            max-height: 440px;
-                        }
+                        filter: grayscale(1);
                     }
                 }
 
@@ -116,135 +70,17 @@
                     }
 
                     .org-job {
+                        @include org-job;
                         margin-bottom: 10px;
-                        @include bloc-text;
-                        color: $black;
                     }
 
                     .org-name {
-                        @include header-text;
-                        padding-bottom: 5px;
+                        @include org-name;
                     }
 
-                    .email-icon {
-                        width: 18px;
-                        height: 18px;
-                        margin-right: 5px;
-                    }
-
-                    .org-contact, .org-link {
-                        @include bloc-text;
-
-                        a {
-                            text-decoration: underline;
-                        }
-                    }
-                }
-            }
-
-            &:nth-of-type(1) {
-
-                .contact {
-                    a {
-                        color: $black;
-                    }
-
-                    .email-icon {
-                        fill: $black;
-                    }
-                }
-            }
-
-            &:nth-of-type(2) {
-                .contact {
-
-                    &:nth-of-type(1),
-                    &:nth-of-type(2) {
-                        a {
-                            color: $red;
-                        }
-
-                        .email-icon {
-                            fill: $red;
-                        }
-                    }
-
-                    &:nth-of-type(3),
-                    &:nth-of-type(4) {
-                        a {
-                            color: $blue;
-                        }
-
-                        .email-icon {
-                            fill: $blue;
-                        }
-                    }
-
-                    &:nth-of-type(5),
-                    &:nth-of-type(6) {
-                        a {
-                            color: $yellow;
-                        }
-
-                        .email-icon {
-                            fill: $yellow;
-                        }
-                    }
-
-                    &:nth-of-type(7),
-                    &:nth-of-type(8) {
-                        a {
-                            color: $black;
-                        }
-
-                        .email-icon {
-                            fill: $black;
-                        }
-                    }
-
-                    &:nth-of-type(9),
-                    &:nth-of-type(10) {
-                        a {
-                            color: $red;
-                        }
-
-                        .email-icon {
-                            fill: $red;
-                        }
-                    }
-
-                    &:nth-of-type(11),
-                    &:nth-of-type(12) {
-                        a {
-                            color: $yellow;
-                        }
-
-                        .email-icon {
-                            fill: $yellow;
-                        }
-                    }
-
-                    &:nth-of-type(13),
-                    &:nth-of-type(14) {
-                        a {
-                            color: $blue;
-                        }
-
-                        .email-icon {
-                            fill: $blue;
-                        }
-                    }
-                }
-            }
-
-            &:nth-of-type(3) {
-                .contact {
-                    a {
-                        color: $blue;
-                    }
-
-                    .email-icon {
-                        fill: $blue;
+                    .org-contact,
+                    .org-link {
+                        @include org-email;
                     }
                 }
             }
