@@ -1,37 +1,15 @@
 .mod-faq {
-    .header {
-        background: $blue;
-        padding: 100px;
-        margin-bottom: 50px;
-
-        @include media-medium-down {
-            padding: 50px;
-        }
-
-        @include media-small {
-            padding: 25px;
-        }
-
-        .post-title {
-            @include h1;
-        }
-
-        .post-intro {
-            margin-top: 50px;
-
-            @include media-medium-down {
-                margin-top: 25px;
-            }
-
-            @include media-small {
-                margin-top: 10px;
-            }
-
-            @include header-text;
-
-            a {
+    .header{
+        .infos{
+            background: $blue;
+            
+            a{
                 color: $yellow;
             }
+        }
+        
+        .illustration{
+            background: $red;
         }
     }
 
@@ -71,7 +49,7 @@
             }
 
             .collapse-title {
-                border-bottom: 2px solid $white;
+                border-bottom: 5px solid $white;
                 padding: 7.5px 0;
                 box-sizing: border-box;
 
