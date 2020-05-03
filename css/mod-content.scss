@@ -76,6 +76,17 @@
             }
 
         }
+    }
 
+    .content-element--sidebar-blocks {
+        margin-bottom: 20px;
+
+        .element-item {
+            margin-bottom: 20px;
+        }
+        .sidebar-element {
+            background-color: $yellow;
+            padding: 20px;
+        }
     }
 }

@@ -63,6 +63,66 @@
 							<?php endif; ?>
                         </div>
 
+					<?php elseif ( get_row_layout() == 'sidebar-blocks' ): ?>
+                        <div class="container">
+                            <div class="row content-element--sidebar-blocks">
+                                <div class="col-7">
+									<?php
+									if ( have_rows( 'elements' ) ):
+										while ( have_rows( 'elements' ) ) : the_row();
+											?>
+                                            <div class="row element-item">
+												<?php if ( $image = get_sub_field( 'bild' ) ): ?>
+                                                    <div class="col-6">
+                                                        <div class="image-element">
+                                                            <img src="<?php echo $image['sizes']['medium']; ?>">
+                                                        </div>
+                                                    </div>
+												<?php endif; ?>
+                                                <div class="col">
+                                                    <div class="text-element">
+														<?php if ( get_sub_field( 'text' ) ): ?>
+                                                            <div class="wysiwyg">
+																<?php the_sub_field( 'text' ); ?>
+                                                            </div>
+														<?php endif; ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+										<?php
+										endwhile;
+									endif;
+									?>
+                                </div>
+                                <div class="col-5 sidebar-element">
+									<?php
+									if ( have_rows( 'timelineitems' ) ):
+										while ( have_rows( 'timelineitems' ) ) : the_row();
+											?>
+                                            <div class="row">
+												<?php if ( get_sub_field( 'date' ) ): ?>
+                                                    <div class="col-4">
+                                                        <div class="date">
+															<?php the_sub_field( 'date' ); ?>
+                                                        </div>
+                                                    </div>
+												<?php endif; ?>
+												<?php if ( get_sub_field( 'text' ) ): ?>
+                                                    <div class="col-8">
+                                                        <div class="wysiwyg">
+															<?php the_sub_field( 'text' ); ?>
+                                                        </div>
+                                                    </div>
+												<?php endif; ?>
+                                            </div>
+										<?php
+										endwhile;
+									endif;
+									?>
+                                </div>
+                            </div>
+                        </div>
+
 
 					<?php elseif ( get_row_layout() == 'text-spalten' ): ?>
                         <div class="container content-element--text-spalten">
@@ -83,6 +143,7 @@
                             </div>
                         </div>
 					<?php endif; ?>
+
                 </section>
 			<?php
 

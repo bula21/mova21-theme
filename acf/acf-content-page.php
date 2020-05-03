@@ -463,6 +463,147 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 	) );
 
 	acf_add_local_field_group( array(
+			'key'                   => 'group_5e67ae511bc88',
+			'title'                 => 'CE: Blöcke mit Sidebar',
+			'fields'                => array(
+				array(
+					'key'               => 'field_5e062e034ac99',
+					'label'             => 'Elemente (links)',
+					'name'              => 'elements',
+					'type'              => 'repeater',
+					'instructions'      => '',
+					'required'          => 0,
+					'conditional_logic' => 0,
+					'wrapper'           => array(
+						'width' => '50',
+						'class' => '',
+						'id'    => '',
+					),
+					'collapsed'         => '',
+					'min'               => 0,
+					'max'               => 0,
+					'layout'            => 'block',
+					'button_label'      => 'Element hinzufügen',
+					'sub_fields'        => array(
+						array(
+							'key'               => 'field_5e67ae97c4c90',
+							'label'             => 'Bild',
+							'name'              => 'bild',
+							'type'              => 'image',
+							'instructions'      => '',
+							'required'          => 0,
+							'conditional_logic' => 0,
+							'wrapper'           => array(
+								'width' => '40',
+								'class' => '',
+								'id'    => '',
+							),
+							'return_format'     => 'array',
+							'preview_size'      => 'medium',
+							'library'           => 'all',
+							'min_width'         => '',
+							'min_height'        => '',
+							'min_size'          => '',
+							'max_width'         => '',
+							'max_height'        => '',
+							'max_size'          => '',
+							'mime_types'        => '',
+						),
+						array(
+							'key'               => 'field_5e67ae57c4c89',
+							'label'             => 'Text',
+							'name'              => 'text',
+							'type'              => 'wysiwyg',
+							'instructions'      => '',
+							'required'          => 0,
+							'conditional_logic' => 0,
+							'wrapper'           => array(
+								'width' => '60',
+								'class' => '',
+								'id'    => '',
+							),
+							'default_value'     => '',
+							'tabs'              => 'all',
+							'toolbar'           => 'full',
+							'media_upload'      => 1,
+							'delay'             => 0,
+						),
+					)
+				),
+				array(
+					'key'               => 'field_5e062e034ad99',
+					'label'             => 'Timeline (rechts)',
+					'name'              => 'timelineitems',
+					'type'              => 'repeater',
+					'instructions'      => '',
+					'required'          => 0,
+					'conditional_logic' => 0,
+					'wrapper'           => array(
+						'width' => '50',
+						'class' => '',
+						'id'    => '',
+					),
+					'collapsed'         => '',
+					'min'               => 0,
+					'max'               => 0,
+					'layout'            => 'block',
+					'button_label'      => 'Element hinzufügen',
+					'sub_fields'        => array(
+						array(
+							'key'               => 'field_5e67ae97c4d00',
+							'label'             => 'Datum',
+							'name'              => 'date',
+							'type'              => 'text',
+							'instructions'      => '',
+							'required'          => 0,
+							'conditional_logic' => 0,
+							'wrapper'           => array(
+								'width' => '40',
+							),
+						),
+						array(
+							'key'               => 'field_5e67ae57c4d01',
+							'label'             => 'Text',
+							'name'              => 'text',
+							'type'              => 'wysiwyg',
+							'instructions'      => '',
+							'required'          => 0,
+							'conditional_logic' => 0,
+							'wrapper'           => array(
+								'width' => '60',
+								'class' => '',
+								'id'    => '',
+							),
+							'default_value'     => '',
+							'tabs'              => 'all',
+							'toolbar'           => 'full',
+							'media_upload'      => 1,
+							'delay'             => 0,
+						),
+					)
+				)
+			),
+			'location'              => array(
+				array(
+					array(
+						'param'    => 'post_type',
+						'operator' => '==',
+						'value'    => 'post',
+					),
+				),
+			),
+			'menu_order'            => 0,
+			'position'              => 'normal',
+			'style'                 => 'default',
+			'label_placement'       => 'top',
+			'instruction_placement' => 'label',
+			'hide_on_screen'        => '',
+			'active'                => true,
+			'description'           => '',
+		)
+	);
+
+	acf_add_local_field_group( array(
 		'key'                   => 'group_5e67ab14d5219',
 		'title'                 => 'Content-Elemente',
 		'fields'                => array(
@@ -563,6 +704,37 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 								),
 								'clone'             => array(
 									0 => 'group_5e67afaf25ac2',
+								),
+								'display'           => 'seamless',
+								'layout'            => 'block',
+								'prefix_label'      => 0,
+								'prefix_name'       => 0,
+							),
+						),
+						'min'        => '',
+						'max'        => '',
+					),
+					'layout_5e67b0aa84d01' => array(
+						'key'        => 'layout_5e67b0aa84d01',
+						'name'       => 'sidebar-blocks',
+						'label'      => 'Sidebar Blöcke',
+						'display'    => 'block',
+						'sub_fields' => array(
+							array(
+								'key'               => 'field_5e67b0ac84d02',
+								'label'             => 'Text-Spalten',
+								'name'              => 'text-spalten',
+								'type'              => 'clone',
+								'instructions'      => '',
+								'required'          => 0,
+								'conditional_logic' => 0,
+								'wrapper'           => array(
+									'width' => '',
+									'class' => '',
+									'id'    => '',
+								),
+								'clone'             => array(
+									0 => 'group_5e67ae511bc88',
 								),
 								'display'           => 'seamless',
 								'layout'            => 'block',
