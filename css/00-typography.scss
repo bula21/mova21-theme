@@ -312,11 +312,11 @@ body {
 }
 
 @mixin tl-date {
-    font-family: 'MessinaSansWeb-Black', serif;
-    font-size: 13px;
+    font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 14px;
     text-decoration: none;
     color: $black;
-    text-transform: uppercase;
+//    text-transform: uppercase;
 
     @include media-medium-up {
         font-size: 14px;
@@ -329,8 +329,61 @@ body {
 
 @mixin tl-event {
     font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 25px;
+    line-height: 28px;
+    text-decoration: none;
+    text-transform: lowercase;
+    color: $black;
+
+    @include media-medium-up {
+        font-size: 25px;
+        line-height: 28px;
+    }
+
+    @include media-large-up {
+        font-size: 25px;
+        line-height: 28px;
+    }
+}
+
+@mixin tl-button {
+    font-family: 'MessinaSansWeb-Black', serif;
+    font-size: 18px;
+    color: $blue;
+    position: relative;
+
+    @include media-medium-up {
+        font-size: 18px;
+    }
+
+    @include media-large-up {
+        font-size: 20px;
+    }
+}
+
+@mixin event-h2 {
+    font-family: 'MessinaSansWeb-Black', serif;
     font-size: 20px;
-    line-height: 22px;
+    line-height: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $black;
+
+    @include media-medium-up {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    @include media-large-up {
+        font-size: 20px;
+        line-height: 25px;
+    }
+}
+
+@mixin event-text {
+    font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 25px;
+    line-height: 29px;
     text-decoration: none;
     color: $black;
 
@@ -340,25 +393,8 @@ body {
     }
 
     @include media-large-up {
-        font-size: 35px;
-        line-height: 36px;
-    }
-}
-
-@mixin tl-button {
-    font-family: 'MessinaSansWeb-Black', serif;
-    font-size: 15px;
-    text-decoration: none;
-    color: $blue;
-    text-decoration: underline;
-    border: 1px;
-
-    @include media-medium-up {
-        font-size: 18px;
-    }
-
-    @include media-large-up {
-        font-size: 20px;
+        font-size: 30px;
+        line-height: 35px;
     }
 }
 
