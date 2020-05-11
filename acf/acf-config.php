@@ -120,6 +120,40 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 				'placeholder'       => '',
 			),
 			array(
+				'key'               => 'field_5d00f2201e1aa',
+				'label'             => 'Black-Site',
+				'type'              => 'tab',
+				'required'          => 0,
+				'conditional_logic' => 0,
+				'placement'         => 'top',
+				'endpoint'          => 0,
+			),
+			array(
+				'key' => 'field_5e4fcfe0eeaac',
+				'label' => 'Black-Site anzeigen?',
+				'name' => 'blacksite',
+				'type' => 'true_false',
+				'instructions' => 'Es werden alle Inhalte ausgeblendet und nur die Blacksite wird angezeigt!',
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '50',
+				),
+				'message' => '',
+				'default_value' => 0,
+				'ui' => 1,
+				'ui_on_text' => 'Ja',
+				'ui_off_text' => 'Nein',
+			),
+			array(
+				'key'     => 'field_5d00f2201e1ab',
+				'label'   => 'Black-Site Content',
+				'name'    => 'blacksite-content',
+				'type'    => 'wysiwyg',
+				'wrapper' => array(
+					'width' => '100'
+				)
+			),
+			array(
 				'key'               => 'field_5d00f2201e358',
 				'label'             => 'Google Analytics',
 				'type'              => 'tab',

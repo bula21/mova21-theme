@@ -14,6 +14,18 @@
 } ?>>
 <?php the_field( 'analyticsscript-body', 'options' ); ?>
 
+<?php if ( get_field( 'blacksite', 'option' ) ) : ?>
+    <div class="mod-blacksite">
+        <div class="container">
+            <div class="row">
+                <div class="wysiwyg">
+					<?php the_field( 'blacksite-content', 'option' ); ?>
+                </div>
+            </div>
+        </div>
+
+    </div>
+	<?php die(); endif; ?>
 <div class="mod-search">
     <div class="search-form-wrapper">
         <button class="search-form-close"><?php _e( 'Schliessen', 'bula21' ); ?></button>
