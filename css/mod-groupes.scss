@@ -100,8 +100,8 @@
 
                         &:hover::after {
                             right: calc(17.5px);
-                            
-                            
+
+
                         }
 
                         &:hover {
@@ -125,13 +125,13 @@
                 flex-direction: row;
             }
 
-            @include media-large-up {
-            }
+            @include media-large-up {}
 
             .title {
                 min-width: 30%;
                 margin-right: 50px;
-                
+                position: relative;
+
                 @include media-large-up {
                     min-width: 25%;
                     margin-right: 50px;
@@ -139,26 +139,34 @@
 
                 h2 {
                     @include event-h2;
-                    margin-bottom: 25px;
-                    
+                    //                    margin-bottom: 25px;
+
                     @include media-medium-up {
                         margin-bottom: 0;
                     }
                 }
 
-                .btn-black {
-                    background-color: $black;
-                    color: $white;
-                    padding: 10px;
-                    border: 0;
-                    transition: transform 150ms;
-                    display: none;
+                a {
+                    .btn-black {
+                        background-color: $red;
+                        @include event-btn;
+                        width: 100%;
+//                        height: 60px;
+                        padding: 30px;
+                        border: 0;
+                        
+                        .btn_arrow{
+                            transition: all .3s;
+                            transition-timing-function: cubic-bezier(.93, .11, .58, 1);
+                        }
 
-                    &:hover {
-                        transform: scale(1.1);
+                        &:hover {
+                            .btn_arrow{
+                                transform: scale(1.1);
+                            }
+                        }
                     }
                 }
-
             }
 
             .text {
@@ -168,7 +176,7 @@
                 @include media-large-down {}
 
                 @include media-medium-down {
-//                    padding: 10px 0px;
+                    //                    padding: 10px 0px;
                 }
             }
         }

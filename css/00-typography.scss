@@ -380,6 +380,25 @@ body {
     }
 }
 
+@mixin event-btn {
+    font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 25px;
+    line-height: 29px;
+    text-decoration: none;
+    color: $black;
+    text-align: left;
+
+    @include media-medium-up {
+        font-size: 25px;
+        line-height: 28px;
+    }
+
+    @include media-large-up {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+
 @mixin event-text {
     font-family: 'MessinaSansWeb-Bold', serif;
     font-size: 25px;
