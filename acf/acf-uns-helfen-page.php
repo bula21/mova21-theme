@@ -36,10 +36,10 @@ acf_add_local_field_group(array(
 				'width' => '',
 				'class' => '',
 				'id' => '',
-			),
+			),  
 			'layout' => 'block',
 			'sub_fields' => array(
-				array(
+                array(
 					'key' => 'field_5e47129201d14',
 					'label' => 'Group Title',
 					'name' => 'group_title',

@@ -417,6 +417,12 @@ body {
     }
 }
 
+
+//fp - full page
+@mixin fp-text{
+    @include event-text;
+}
+
 @mixin news-title {
     @include h2;
 }
