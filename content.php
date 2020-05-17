@@ -3,7 +3,7 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <div class="mod-content">
+    <div class="container mod-content">
 		<?php
 		if ( have_rows( 'content_elemente' ) ):
 			while ( have_rows( 'content_elemente' ) ) : the_row();
@@ -28,7 +28,12 @@
                                 </div>
                             </div>
                         </div>
-
+                        
+                    <?php elseif (get_row_layout() == 'fp-text'): ?>
+                         <div class="content-element--fp-text">
+                             <?php the_sub_field( 'fp-text' ); ?>
+                         </div>
+                        
 
 					<?php elseif ( get_row_layout() == 'farb-blocke' ): ?>
                         <div class="container content-element--farb-bloecke">
@@ -145,11 +150,12 @@
 					<?php endif; ?>
 
                 </section>
+                
 			<?php
 
-			endwhile;
-
-		else :
+			endwhile; ?>      
+        
+		<?php else :
 			echo 'emptyness';
 			// no rows found
 

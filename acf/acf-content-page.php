@@ -360,7 +360,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 		'title'                 => 'CE: Text-Bild',
 		'fields'                => array(
 			array(
-				'key'               => 'field_5e67ae57c4fe7',
+				'key'               => 'field_5e67ae57c4f',
 				'label'             => 'Text',
 				'name'              => 'text',
 				'type'              => 'wysiwyg',
@@ -603,6 +603,140 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 		)
 	);
 
+acf_add_local_field_group( array(
+		'key'                   => 'group_5e67afaf25af3c2',
+		'title'                 => 'CE: Full page text',
+		'fields'                => array(
+			array(
+				'key'               => 'field_5e67afs2b61be5a',
+				'label'             => 'Fp-Text',
+				'name'              => 'fp-text',
+				'type'              => 'wysiwyg',
+				'instructions'      => '',
+				'required'          => 0,
+				'conditional_logic' => 0,
+				'wrapper'           => array(
+					'width' => '',
+					'class' => '',
+					'id'    => '',
+				),
+				'default_value'     => '',
+			),
+		),
+		'location'              => array(
+			array(
+				array(
+					'param'    => 'post_type',
+					'operator' => '==',
+					'value'    => 'post',
+				),
+			),
+		),
+		'menu_order'            => 0,
+		'position'              => 'normal',
+		'style'                 => 'default',
+		'label_placement'       => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen'        => '',
+		'active'                => true,
+		'description'           => '',
+	) );
+
+    acf_add_local_field_group( array(
+            'key'                   => 'group_4e67afaf95jkac17',
+            'title'                 => 'CE: Header-2col',
+            'fields'                => array(
+                   array(
+                    'key'               => 'field_4e67ae98c1lfe2',
+                    'label'             => 'Header Text',
+                    'name'              => 'header_text',
+                    'type'              => 'wysiwyg',
+                    'instructions'      => '',
+                    'required'          => 0,
+                    'conditional_logic' => 0,
+                    'wrapper'           => array(
+                        'width' => '',
+                        'class' => '',
+                        'id'    => '',
+                    ),
+                    'default_value'     => '',
+                    'tabs'              => 'all',
+                    'toolbar'           => 'full',
+                    'media_upload'      => 1,
+                    'delay'             => 0,
+                ),
+                array(
+                    'key'               => 'field_4e67ae09ic4fe8',
+                    'label'             => 'Header Image',
+                    'name'              => 'header_image',
+                    'type'              => 'image',
+                    'instructions'      => '',
+                    'required'          => 0,
+                    'conditional_logic' => 0,
+                    'wrapper'           => array(
+                        'width' => '50',
+                        'class' => '',
+                        'id'    => '',
+                    ),
+                    'return_format'     => 'array',
+                    'preview_size'      => 'medium',
+                    'library'           => 'all',
+                    'min_width'         => '',
+                    'min_height'        => '',
+                    'min_size'          => '',
+                    'max_width'         => '',
+                    'max_height'        => '',
+                    'max_size'          => '',
+                    'mime_types'        => '',
+                ),
+                array(
+						'key'               => 'field_4e67af0o4b91f8',
+						'label'             => 'Hintergrundfarbe',
+						'name'              => 'hintergrundfarbe',
+						'type'              => 'select',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '',
+							'class' => '',
+							'id'    => '',
+						),
+						'choices'           => array(
+							'red'    => 'Rot',
+							'blue'   => 'Blau',
+							'yellow' => 'Gelb',
+						),
+						'default_value'     => array(
+							0 => 'red',
+						),
+						'allow_null'        => 0,
+						'multiple'          => 0,
+						'ui'                => 0,
+						'return_format'     => 'value',
+						'ajax'              => 0,
+						'placeholder'       => '',
+					),
+            ),
+            'location'              => array(
+                array(
+                    array(
+                        'param'    => 'post_type',
+                        'operator' => '==',
+                        'value'    => 'post',
+                    ),
+                ),
+            ),
+            'menu_order'            => 0,
+            'position'              => 'normal',
+            'style'                 => 'default',
+            'label_placement'       => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen'        => '',
+            'active'                => true,
+            'description'           => '',
+        ) );
+
 	acf_add_local_field_group( array(
 		'key'                   => 'group_5e67ab14d5219',
 		'title'                 => 'Content-Elemente',
@@ -621,6 +755,68 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 					'id'    => '',
 				),
 				'layouts'           => array(
+                    'layout_5e67adcb88dc36' => array(
+						'key'        => 'layout_5e67adcb88dc36',
+						'name'       => 'header-2col',
+						'label'      => 'Header-2col',
+						'display'    => 'block',
+						'sub_fields' => array(
+							array(
+								'key'               => 'field_5e67a0dd214069c',
+								'label'             => 'Header-2col',
+								'name'              => 'header-2col',
+								'type'              => 'clone',
+								'instructions'      => '',
+								'required'          => 0,
+								'conditional_logic' => 0,
+								'wrapper'           => array(
+									'width' => '',
+									'class' => '',
+									'id'    => '',
+								),
+								'clone'             => array(
+									0 => 'group_4e67afaf95ac17',
+								),
+								'display'           => 'seamless',
+								'layout'            => 'block',
+								'prefix_label'      => 0,
+								'prefix_name'       => 0,
+							),
+						),
+						'min'        => '',
+						'max'        => '',
+					),
+                    'layout_5e67adcb98d3dc0' => array(
+						'key'        => 'layout_5e67adadcb98dc0',
+						'name'       => 'fp-text',
+						'label'      => 'Fp-text',
+						'display'    => 'block',
+						'sub_fields' => array(
+							array(
+								'key'               => 'field_5e67add21d406c',
+								'label'             => 'Fp-text',
+								'name'              => 'fp-text',
+								'type'              => 'clone',
+								'instructions'      => '',
+								'required'          => 0,
+								'conditional_logic' => 0,
+								'wrapper'           => array(
+									'width' => '',
+									'class' => '',
+									'id'    => '',
+								),
+								'clone'             => array(
+									0 => 'group_5e67afaf25af3c2',
+								),
+								'display'           => 'seamless',
+								'layout'            => 'block',
+								'prefix_label'      => 0,
+								'prefix_name'       => 0,
+							),
+						),
+						'min'        => '',
+						'max'        => '',
+					),
 					'layout_5e67adcb98dc0' => array(
 						'key'        => 'layout_5e67adcb98dc0',
 						'name'       => 'text-bild',

@@ -16,15 +16,19 @@
 
     .content-element--farb-bloecke {
         margin-bottom: 50px;
+
         .intro-title {
             h2 {
                 @include h2;
             }
+
             margin-bottom: 15px;
         }
+
         .farb-block-wrapper {
             float: left;
         }
+
         .farb-block {
             padding: 20px;
             margin-bottom: 20px;
@@ -33,6 +37,7 @@
                 display: flex;
                 align-items: center;
                 margin-bottom: 10px;
+
                 h3 {
                     @include h1-sub;
                 }
@@ -84,9 +89,22 @@
         .element-item {
             margin-bottom: 20px;
         }
+
         .sidebar-element {
             background-color: $yellow;
             padding: 20px;
+        }
+    }
+
+    .content-element--fp-text {
+
+        p {
+            padding: 10px;
+            margin-bottom: 100px;
+            position: relative;
+            @include fp-text;
+            width: 100%;
+
         }
     }
 }
