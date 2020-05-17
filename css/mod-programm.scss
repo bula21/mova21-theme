@@ -16,10 +16,6 @@
         position: relative;
         @include fp-text;
         width: 100%;
-        
-//        @include media-large-up {
-//            width: 800px;
-//        }
     }
 
     .helper-bloc {
