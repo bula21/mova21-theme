@@ -47,7 +47,11 @@
                     <h2><?php the_sub_field( 'event_name' ); ?></h2>
                     <?php if ( get_sub_field( 'event_button' ) ): $link = get_sub_field( 'event_button' ); ?>
                     <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
-                        <button class="btn-black"><?php echo $link['title']; ?> <span class="btn_arrow">→</span></button>
+                        <button class="btn-black">
+                           <p>
+                                <?php echo $link['title']; ?> <span class="btn_arrow">→</span>
+                            </p>
+                        </button>
                     </a>
                     <?php endif; ?>
                 </div>
