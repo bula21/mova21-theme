@@ -33,6 +33,17 @@
                          <div class="content-element--fp-text">
                              <?php the_sub_field( 'fp-text' ); ?>
                          </div>
+                         
+                     <?php elseif (get_row_layout() == 'header-2col'): ?>
+                       <div class="header">
+                            <div class="infos">
+                                <h1 class="post-title"><?php the_title(); ?></h1>
+                                <p class="text-intro"><?php the_sub_field( 'text-header' ); ?></p>hello
+                            </div>
+                            <div class="illustration">
+                                <img src="" alt="">
+                            </div>
+                        </div>
                         
 
 					<?php elseif ( get_row_layout() == 'farb-blocke' ): ?>
