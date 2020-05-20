@@ -6,7 +6,8 @@
     <div class="container mod-content">
 		<?php
 		if ( have_rows( 'content_elemente' ) ):
-			while ( have_rows( 'content_elemente' ) ) : the_row();
+			while ( have_rows( 'content_elemente' ) ) :
+				the_row();
 				?>
                 <section>
 					<?php if ( get_row_layout() == 'text-bild' ): ?>
@@ -28,23 +29,36 @@
                                 </div>
                             </div>
                         </div>
-                        
-                    <?php elseif (get_row_layout() == 'fp-text'): ?>
-                         <div class="content-element--fp-text">
-                             <?php the_sub_field( 'fp-text' ); ?>
-                         </div>
-                         
-                     <?php elseif (get_row_layout() == 'header-2col'): ?>
-                       <div class="header">
-                            <div class="infos">
-                                <h1 class="post-title"><?php the_title(); ?></h1>
-                                <p class="text-intro"><?php the_sub_field( 'text-header' ); ?></p>hello
-                            </div>
-                            <div class="illustration">
-                                <img src="" alt="">
-                            </div>
+
+					<?php elseif ( get_row_layout() == 'fp-text' ): ?>
+                        <div class="content-element--fp-text">
+							<?php the_sub_field( 'fp-text' ); ?>
                         </div>
-                        
+
+					<?php elseif ( get_row_layout() == 'header-2col' ):
+						if ( have_rows( 'header-2col' ) ):
+							while ( have_rows( 'header-2col' ) ) : the_row();
+								?>
+                                <div class="header bg-<?php the_sub_field( 'hintergrundfarbe' ); ?>">
+                                    <div class="infos">
+                                        <h1 class="post-title"><?php the_title(); ?></h1>
+                                        <p class="text-intro"><?php the_sub_field( 'text-header' ); ?></p>
+                                    </div>
+                                    <div class="illustration">
+										<?php
+										$image = get_sub_field( 'img-header' );
+										// use the picture tag like this:
+										the_aid_picture_tag( $image['id'], 'bula-fullwidth', 'bula-fullwidth_2x', 'content-image' );
+
+										// or use your own custom img tag like this:
+										?>
+                                        <img src="<?php echo $image['url']; ?>">
+                                    </div>
+                                </div>
+							<?php
+							endwhile;
+						endif;
+						?>
 
 					<?php elseif ( get_row_layout() == 'farb-blocke' ): ?>
                         <div class="container content-element--farb-bloecke">
@@ -161,18 +175,10 @@
 					<?php endif; ?>
 
                 </section>
-                
-			<?php
-
-			endwhile; ?>      
-        
-		<?php else :
-			echo 'emptyness';
-			// no rows found
-
-		endif;
-		?>
+			<?php endwhile; ?>
+		<?php endif; ?>
     </div>
-<?php endwhile; endif; ?>
+<?php endwhile; ?>
+<?php endif; ?>
 
 <?php get_footer(); ?>

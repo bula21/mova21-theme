@@ -603,7 +603,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 		)
 	);
 
-acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key'                   => 'group_5e67afaf25af3c2',
 		'title'                 => 'CE: Full page text',
 		'fields'                => array(
@@ -642,140 +642,121 @@ acf_add_local_field_group( array(
 		'description'           => '',
 	) );
 
-    acf_add_local_field_group(array(
-        'key' => 'group_5ec3a25336d98',
-        'title' => 'test',
-        'fields' => array(
-            array(
-                'key' => 'field_5ec3a256e5f64',
-                'label' => 'Header-2col',
-                'name' => 'header-2col',
-                'type' => 'repeater',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'collapsed' => '',
-                'min' => 0,
-                'max' => 0,
-                'layout' => 'table',
-                'button_label' => '',
-                'sub_fields' => array(
-                    array(
-                        'key' => 'field_5ec3a295e5f66',
-                        'label' => 'Text-header',
-                        'name' => 'text-header',
-                        'type' => 'wysiwyg',
-                        'instructions' => '',
-                        'required' => 0,
-                        'conditional_logic' => 0,
-                        'wrapper' => array(
-                            'width' => '',
-                            'class' => '',
-                            'id' => '',
-                        ),
-                        'default_value' => '',
-                        'tabs' => 'all',
-                        'toolbar' => 'full',
-                        'media_upload' => 1,
-                        'delay' => 0,
-                    ),
-                    array(
-                        'key' => 'field_5ec3a2abe5f67',
-                        'label' => 'Img-header',
-                        'name' => 'img-header',
-                        'type' => 'image',
-                        'instructions' => '',
-                        'required' => 0,
-                        'conditional_logic' => 0,
-                        'wrapper' => array(
-                            'width' => '',
-                            'class' => '',
-                            'id' => '',
-                        ),
-                        'return_format' => 'array',
-                        'preview_size' => 'medium',
-                        'library' => 'all',
-                        'min_width' => '',
-                        'min_height' => '',
-                        'min_size' => '',
-                        'max_width' => '',
-                        'max_height' => '',
-                        'max_size' => '',
-                        'mime_types' => '',
-                    ),
-                    array(
-                        'key' => 'field_5ec3a2f9e5f68',
-                        'label' => 'Header-bg-main-color',
-                        'name' => 'Header-bg-main-color',
-                        'type' => 'select',
-                        'instructions' => '',
-                        'required' => 0,
-                        'conditional_logic' => 0,
-                        'wrapper' => array(
-                            'width' => '',
-                            'class' => '',
-                            'id' => '',
-                        ),
-                        'choices' => array(
-                            'red' => 'Red',
-                            'blue' => 'Blue',
-                            'yellow' => 'Yellow',
-                        ),
-                        'default_value' => array(
-                            0 => 'none',
-                        ),
-                        'allow_null' => 0,
-                        'multiple' => 0,
-                        'ui' => 0,
-                        'return_format' => 'value',
-                        'ajax' => 0,
-                        'placeholder' => '',
-                    ),
-                ),
-            ),
-            array(
-                'key' => 'field_5ec3a28ae5f65',
-                'label' => '',
-                'name' => '',
-                'type' => 'text',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-                'maxlength' => '',
-            ),
-        ),
-        'location' => array(
-            array(
-                array(
-                    'param' => 'post_type',
-                    'operator' => '==',
-                    'value' => 'post',
-                ),
-            ),
-        ),
-        'menu_order' => 0,
-        'position' => 'normal',
-        'style' => 'default',
-        'label_placement' => 'top',
-        'instruction_placement' => 'label',
-        'hide_on_screen' => '',
-        'active' => true,
-        'description' => '',
-    ));
+	acf_add_local_field_group( array(
+		'key'                   => 'group_5ec3a25336d98',
+		'title'                 => 'test',
+		'fields'                => array(
+			array(
+				'key'               => 'field_5ec3a256e5f64',
+				'label'             => 'Header-2col',
+				'name'              => 'header-2col',
+				'type'              => 'repeater',
+				'instructions'      => '',
+				'required'          => 0,
+				'conditional_logic' => 0,
+				'wrapper'           => array(
+					'width' => '',
+					'class' => '',
+					'id'    => '',
+				),
+				'collapsed'         => '',
+				'min'               => 0,
+				'max'               => 0,
+				'layout'            => 'table',
+				'button_label'      => '',
+				'sub_fields'        => array(
+					array(
+						'key'               => 'field_5ec3a295e5f66',
+						'label'             => 'Text-header',
+						'name'              => 'text-header',
+						'type'              => 'wysiwyg',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '',
+							'class' => '',
+							'id'    => '',
+						),
+						'default_value'     => '',
+						'tabs'              => 'all',
+						'toolbar'           => 'full',
+						'media_upload'      => 1,
+						'delay'             => 0,
+					),
+					array(
+						'key'               => 'field_5ec3a2abe5f67',
+						'label'             => 'Img-header',
+						'name'              => 'img-header',
+						'type'              => 'image',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '',
+							'class' => '',
+							'id'    => '',
+						),
+						'return_format'     => 'array',
+						'preview_size'      => 'medium',
+						'library'           => 'all',
+						'min_width'         => '',
+						'min_height'        => '',
+						'min_size'          => '',
+						'max_width'         => '',
+						'max_height'        => '',
+						'max_size'          => '',
+						'mime_types'        => '',
+					),
+					array(
+						'key'               => 'field_5e67af40b9111',
+						'label'             => 'Header Background Color',
+						'name'              => 'hintergrundfarbe',
+						'type'              => 'select',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '',
+							'class' => '',
+							'id'    => '',
+						),
+						'choices'           => array(
+							'red'    => 'Rot',
+							'blue'   => 'Blau',
+							'yellow' => 'Gelb',
+						),
+						'default_value'     => array(
+							0 => 'red',
+						),
+						'allow_null'        => 0,
+						'multiple'          => 0,
+						'ui'                => 0,
+						'return_format'     => 'value',
+						'ajax'              => 0,
+						'placeholder'       => '',
+					),
+				),
+			)
+		),
+		'location'              => array(
+			array(
+				array(
+					'param'    => 'post_type',
+					'operator' => '==',
+					'value'    => 'post',
+				),
+			),
+		),
+		'menu_order'            => 0,
+		'position'              => 'normal',
+		'style'                 => 'default',
+		'label_placement'       => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen'        => '',
+		'active'                => true,
+		'description'           => '',
+	) );
 
 	acf_add_local_field_group( array(
 		'key'                   => 'group_5e67ab14d5219',
@@ -795,14 +776,14 @@ acf_add_local_field_group( array(
 					'id'    => '',
 				),
 				'layouts'           => array(
-                    'layout_5e67adcb98d3dc0' => array(
-						'key'        => 'layout_5e67adadcb98dc0',
+					'layout_5e67adcb98d3dc0'     => array(
+						'key'        => 'layout_5e67adcb98d3dc0',
 						'name'       => 'fp-text',
 						'label'      => 'Fp-text',
 						'display'    => 'block',
 						'sub_fields' => array(
 							array(
-								'key'               => 'field_5e67add21d406c',
+								'key'               => 'field_5e67add21d406a',
 								'label'             => 'Fp-text',
 								'name'              => 'fp-text',
 								'type'              => 'clone',
@@ -826,8 +807,8 @@ acf_add_local_field_group( array(
 						'min'        => '',
 						'max'        => '',
 					),
-                    'layout_5e67adcb98ad36d3dc0' => array(
-						'key'        => 'layout_5e67adadc23ddc0',
+					'layout_5e67adcb98ad36d3dc0' => array(
+						'key'        => 'layout_5e67adcb98ad36d3dc0',
 						'name'       => 'header-2col',
 						'label'      => 'Header-2col',
 						'display'    => 'block',
@@ -857,7 +838,7 @@ acf_add_local_field_group( array(
 						'min'        => '',
 						'max'        => '',
 					),
-					'layout_5e67adcb98dc0' => array(
+					'layout_5e67adcb98dc0'       => array(
 						'key'        => 'layout_5e67adcb98dc0',
 						'name'       => 'text-bild',
 						'label'      => 'Text-Bild',
@@ -888,7 +869,7 @@ acf_add_local_field_group( array(
 						'min'        => '',
 						'max'        => '',
 					),
-					'layout_5e67ade71406d' => array(
+					'layout_5e67ade71406d'       => array(
 						'key'        => 'layout_5e67ade71406d',
 						'name'       => 'farb-blocke',
 						'label'      => 'Farb-Blöcke',
@@ -919,7 +900,7 @@ acf_add_local_field_group( array(
 						'min'        => '',
 						'max'        => '',
 					),
-					'layout_5e67b0aa8454f' => array(
+					'layout_5e67b0aa8454f'       => array(
 						'key'        => 'layout_5e67b0aa8454f',
 						'name'       => 'text-spalten',
 						'label'      => 'Text-Spalten',
@@ -950,7 +931,7 @@ acf_add_local_field_group( array(
 						'min'        => '',
 						'max'        => '',
 					),
-					'layout_5e67b0aa84d01' => array(
+					'layout_5e67b0aa84d01'       => array(
 						'key'        => 'layout_5e67b0aa84d01',
 						'name'       => 'sidebar-blocks',
 						'label'      => 'Sidebar Blöcke',
