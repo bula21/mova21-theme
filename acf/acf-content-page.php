@@ -644,7 +644,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 
 	acf_add_local_field_group( array(
 		'key'                   => 'group_5ec3a25336d98',
-		'title'                 => 'test',
+		'title'                 => 'CE: Header mit text und bild/illustration',
 		'fields'                => array(
 			array(
 				'key'               => 'field_5ec3a256e5f64',
