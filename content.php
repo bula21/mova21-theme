@@ -15,7 +15,7 @@
             <div class="container">
                 <?php $reverse = get_sub_field( 'reihenfolge' ) == 't2b' ? '' : 'flex-row-reverse'; ?>
                 <div class="row no-gutters <?php echo $reverse; ?>">
-                    <div class="col-12 col-md-6" style="background-color: <?php the_sub_field( 'hintergrundfarbe' ); ?>;">
+                    <div class="col-12 col-md-6 bg-<?php the_sub_field( 'hintergrundfarbe' ); ?>">
                         <div class="text wysiwyg">
                             <?php the_sub_field( 'text' ); ?>
                         </div>
