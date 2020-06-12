@@ -59,11 +59,11 @@
                 }
 
                 .date {
-                    @include tl-date;
+                    @include font_02;
                 }
 
                 .eventName {
-                    @include tl-event;
+                    @include font_04;
                     white-space: normal;
                     overflow-wrap: break-word;
                     word-wrap: break-word;
@@ -80,31 +80,15 @@
 
                     .cta-button {
                         display: inline;
-                        @include tl-button;
+                        @include font_02;
+                        color: $blue;
                         margin-top: 15px;
                         transition: .2s;
-                        animation-delay: .3;
-                        transition-timing-function: cubic-bezier(.68, .07, .92, .1);
-
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            right: 100%;
-                            height: 3px;
-                            background: $red;
-                            transition: .5s;
-                            transition-timing-function: cubic-bezier(.73, .33, 0, .99);
-
-                        }
+                        animation-delay: .1;
+                        transition-timing-function: cubic-bezier(.5, .49, .65, .61);
 
                         &:hover {
                             color: $red;
-                            
-                            &::after{
-                                right: calc(17.5px);
-                            }
                         }
                     }
                 }
@@ -119,6 +103,7 @@
             margin-bottom: 50px;
             display: flex;
             flex-direction: column;
+            position: relative;
 
             @include media-medium-up {
                 flex-direction: row;
@@ -126,80 +111,85 @@
 
             @include media-large-up {}
 
-            .title {
+            h2 {
                 min-width: 30%;
                 margin-right: 50px;
-                position: relative;
+                @include font_03;
+                margin-bottom: 25px;
+
+                @include media-medium-up {
+                    margin-bottom: 0;
+                }
 
                 @include media-large-up {
                     min-width: 25%;
                     margin-right: 50px;
                 }
-
-                h2 {
-                    @include event-h2;
-                    margin-bottom: 25px;
-
-                    @include media-medium-up {
-                        margin-bottom: 0;
-                    }
-                }
-
-                a {
-                    .btn-black {
-                        position: relative;
-                        background-color: $red;
-                        outline: none;
-                        @include event-btn;
-                        width: 100%;
-                        padding: 10px;
-                        border: 0;
-                        transition: all .3s;
-                        transition-timing-function: cubic-bezier(.48, 1.18, .58, 1);
-
-                        @include media-medium-up {
-                            position: absolute;
-                            bottom: 20px;
-                            padding: 10px 20px;
-                        }
-
-                        p {
-                            padding: 0;
-                            margin: 0;
-                            transition: all .6s;
-                            transition-timing-function: cubic-bezier(.48, 1.18, .58, 1);
-                            word-wrap: break-word;
-                        }
-
-                        &:hover {
-                            transform: scale(1.05);
-
-                            p {
-                                transform: scale(1.05);
-                                    margin-left: 10px;
-
-                                @include media-medium-up {
-                                    margin-left: 0;
-                                }
-                            }
-                        }
-
-                        &:active {
-                            transition: 0;
-                            transform: scale(1);
-                        }
-                    }
-                }
             }
 
             .text {
-                @include event-text;
+                @include font_04;
                 padding: 0;
 
                 @include media-large-down {}
 
                 @include media-medium-down {
                     //                    padding: 10px 0px;
+                }
+            }
+
+            a {
+                .btn-black {
+                    position: relative;
+                    background-color: $red;
+                    outline: none;
+                    @include font_04;
+                    text-align: left;
+                    width: 100%;
+                    padding: 10px;
+                    border: 0;
+                    transition: all .3s;
+                    transition-timing-function: cubic-bezier(.48, 1.18, .58, 1);
+
+
+
+                    @include media-medium-up {
+                        position: absolute;
+                        bottom: 20px;
+                        left: 0;
+                        padding: 10px 20px;
+                        max-width: 30%;
+                    }
+
+                    @include media-large-up {
+                        max-width: 25%;
+                    }
+
+                    p {
+                        padding: 0;
+                        margin: 0;
+                        transition: all .6s;
+                        transition-timing-function: cubic-bezier(.48, 1.18, .58, 1);
+                        word-wrap: break-word;
+                    }
+
+                    &:hover {
+                        transform: scale(1.05);
+
+                        p {
+                            transform: scale(1.05);
+                            margin-left: 10px;
+
+                            @include media-medium-up {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+
+                    &:active {
+                        transition: 0;
+                        transform: scale(1);
+                    }
                 }
             }
         }

@@ -428,7 +428,7 @@ body.menu-active {
         }
 
         h1 {
-            @include h1;
+            @include font_01;
             margin-bottom: 20px;
             position: relative;
 
@@ -442,7 +442,7 @@ body.menu-active {
         }
 
         p {
-            @include header-text;
+            @include font_02;
             width: 100%;
             height: 100%;
 
