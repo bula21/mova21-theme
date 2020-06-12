@@ -239,8 +239,8 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 		'title'                 => 'CE: Text (Spalten)',
 		'fields'                => array(
 			array(
-				'key'               => 'field_5e67afb61be5a',
-				'label'             => 'Titel',
+				'key'               => 'field_5e67afba61be5a',
+				'label'             => 'Title',
 				'name'              => 'title',
 				'type'              => 'text',
 				'instructions'      => '',
@@ -521,6 +521,25 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 							'max_height'        => '',
 							'max_size'          => '',
 							'mime_types'        => '',
+						),
+                        array(
+							'key'               => 'field_5e67ae57adsfasc4c89',
+							'label'             => 'Title',
+							'name'              => 'title',
+							'type'              => 'text',
+							'instructions'      => '',
+							'required'          => 0,
+							'conditional_logic' => 0,
+							'wrapper'           => array(
+								'width' => '60',
+								'class' => '',
+								'id'    => '',
+							),
+							'default_value'     => '',
+							'tabs'              => 'all',
+							'toolbar'           => 'full',
+							'media_upload'      => 1,
+							'delay'             => 0,
 						),
 						array(
 							'key'               => 'field_5e67ae57c4c89',
