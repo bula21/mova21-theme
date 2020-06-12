@@ -84,15 +84,105 @@
     }
 
     .content-element--sidebar-blocks {
-        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+        
+         @include media-medium-up {
+                flex-direction: row;
+            }
 
-        .element-item {
-            margin-bottom: 20px;
+        .contact-bloc {
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: row;
         }
 
-        .sidebar-element {
-            background-color: $yellow;
-            padding: 20px;
+        .contact {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            
+            @include media-medium-up {
+                width: 50%;
+            }
+            
+//            @include media-large-up {
+//                width: calc(100% / 3 * 2);
+//            }
+
+            .contact-img {
+                margin-right: 15px;
+                
+                img{
+                    height: 150px;
+                }
+            }
+
+            .contact-info {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 15px;
+
+                h2 {
+                    margin: 0;
+                    padding: 0;
+                    @include font_04;
+                }
+
+                h1 {
+                    margin: 0 0 15px 0;
+                    padding: 0;
+                    @include font_02;
+                }
+
+                .personal-info {
+                    margin: 0;
+                    padding: 0;
+                    @include font_02;
+
+                    p {
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        .timeline {
+            width: 100%;
+            background: $yellow;
+            padding: 15px;
+            
+            @include media-medium-up {
+                width: 50%;
+            }
+            
+//            @include media-large-up {
+//                width: calc(100% / 3);
+//            }
+
+            .event {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                margin-bottom: 15px;
+
+                .event-date {
+                    min-width: 100px;
+                    @include font_02;
+                    margin: 5.5px 25px 0 0;
+                }
+
+                .event-name {
+                    @include font_04;
+                }
+
+                p {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
         }
     }
 

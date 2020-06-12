@@ -63,7 +63,7 @@
 //                     use the picture tag like this:
 //                         the_aid_picture_tag( $image['id'], 'bula-fullwidth', 'bula-fullwidth_2x', 'content-image' );
                     ?>
-<!--                    or use your own custom img tag like this:-->
+                <!--                    or use your own custom img tag like this:-->
                 <img src="<?php echo $image['url']; ?>">
             </div>
         </div>
@@ -106,62 +106,62 @@
         </div>
 
         <?php elseif ( get_row_layout() == 'sidebar-blocks' ): ?>
-        <div class="container">
-            <div class="row content-element--sidebar-blocks">
-                <div class="col-7">
-                    <?php
-									if ( have_rows( 'elements' ) ):
-										while ( have_rows( 'elements' ) ) : the_row();
-											?>
-                    <div class="row element-item">
-                        <?php if ( $image = get_sub_field( 'bild' ) ): ?>
-                        <div class="col-6">
-                            <div class="image-element">
-                                <img src="<?php echo $image['sizes']['medium']; ?>">
-                            </div>
-                        </div>
-                        <?php endif; ?>
-                        <div class="col">
-                            <div class="text-element">
-                                <?php if ( get_sub_field( 'text' ) ): ?>
-                                <div class="wysiwyg">
-                                    <?php the_sub_field( 'text' ); ?>
-                                </div>
-                                <?php endif; ?>
-                            </div>
-                        </div>
+        <div class="content-element--sidebar-blocks">
+            <div class="contact">
+                <?php
+                        if ( have_rows( 'elements' ) ):
+                        while ( have_rows( 'elements' ) ) : the_row();
+                    ?>
+                <div class="contact-bloc">
+                    <?php if ( $image = get_sub_field( 'bild' ) ): ?>
+                    <div class="contact-img">
+                        <img src="<?php echo $image['sizes']['medium']; ?>">
                     </div>
-                    <?php
-										endwhile;
-									endif;
-									?>
-                </div>
-                <div class="col-5 sidebar-element">
-                    <?php
-									if ( have_rows( 'timelineitems' ) ):
-										while ( have_rows( 'timelineitems' ) ) : the_row();
-											?>
-                    <div class="row">
-                        <?php if ( get_sub_field( 'date' ) ): ?>
-                        <div class="col-4">
-                            <div class="date">
-                                <?php the_sub_field( 'date' ); ?>
-                            </div>
-                        </div>
+                    <?php endif; ?>
+                    <div class="contact-info">
+                        <?php if ( get_sub_field( 'function' ) ): ?>
+                        <h2>
+                            <?php the_sub_field( 'function' ); ?>
+                        </h2>
                         <?php endif; ?>
-                        <?php if ( get_sub_field( 'text' ) ): ?>
-                        <div class="col-8">
-                            <div class="wysiwyg">
-                                <?php the_sub_field( 'text' ); ?>
-                            </div>
+                        <?php if ( get_sub_field( 'name' ) ): ?>
+                        <h1>
+                            <?php the_sub_field( 'name' ); ?>
+                        </h1>
+                        <?php endif; ?>
+                        <?php if ( get_sub_field( 'contact-info' ) ): ?>
+                        <div class="personal-info">
+                            <?php the_sub_field( 'contact-info' ); ?>
                         </div>
                         <?php endif; ?>
                     </div>
-                    <?php
-										endwhile;
-									endif;
-									?>
                 </div>
+                <?php
+                        endwhile;
+                        endif;
+                    ?>
+            </div>
+            <div class="timeline">
+                <?php
+                        if ( have_rows( 'timeline-items' ) ):
+                        while ( have_rows( 'timeline-items' ) ) : the_row();
+                    ?>
+                <div class="event">
+                    <?php if ( get_sub_field( 'date' ) ): ?>
+                    <div class="event-date">
+                        <?php the_sub_field( 'date' ); ?>
+                    </div>
+                    <?php endif; ?>
+                    <?php if ( get_sub_field( 'text' ) ): ?>
+                    <div class="event-name">
+                        <?php the_sub_field( 'text' ); ?>
+                    </div>
+                    <?php endif; ?>
+                </div>
+                <?php
+                        endwhile;
+                        endif;
+                    ?>
             </div>
         </div>
 
