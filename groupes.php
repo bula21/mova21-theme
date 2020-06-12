@@ -43,17 +43,19 @@
 		if ( have_rows( 'tm-event-info' ) ):
 			while ( have_rows( 'tm-event-info' ) ) : the_row(); ?>
             <div class="event">
-                    <h2 class="title"><?php the_sub_field( 'event_name' ); ?></h2>
-                <p class="text"><?php the_sub_field( 'event_text' ); ?></p>
-                 <?php if ( get_sub_field( 'event_button' ) ): $link = get_sub_field( 'event_button' ); ?>
+                <h2 class="title"><?php the_sub_field( 'event_name' ); ?></h2>
+                <div class="rightCol">
+                    <p class="text"><?php the_sub_field( 'event_text' ); ?></p>
+                    <?php if ( get_sub_field( 'event_button' ) ): $link = get_sub_field( 'event_button' ); ?>
                     <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
-                        <button class="btn-black">
-                           <p>
+                        <button class="btn">
+                            <p>
                                 <?php echo $link['title']; ?> <span class="btn_arrow">→</span>
                             </p>
                         </button>
                     </a>
                     <?php endif; ?>
+                </div>
             </div>
             <?php endwhile;
 		else : endif;

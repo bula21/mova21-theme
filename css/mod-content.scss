@@ -1,9 +1,18 @@
 .mod-content {
     .content-element--text-bild {
         margin-bottom: 50px;
-
-        .text {
-            margin: 20px 10px 10px 10px;
+        
+        .text{
+            padding: 15px;
+            
+            h1{
+                @include h1-sub;
+            }
+            
+            p{
+                margin: 0;
+                padding: 0;
+            }
         }
 
         .content-image img {
@@ -62,7 +71,6 @@
         }
 
         .spalte-element {
-            padding: 20px;
 
             .btn-black {
                 display: inline-block;

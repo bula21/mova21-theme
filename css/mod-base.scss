@@ -415,8 +415,6 @@ body.menu-active {
         flex-direction: column;
     }
 
-
-
     .infos {
         width: 50%;
         padding: 15px;
@@ -463,5 +461,11 @@ body.menu-active {
         img{
             width: 100%;
         }
+    }
+}
+
+.oneCol {
+    .infos {
+        width: 100%!important;
     }
 }

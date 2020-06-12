@@ -87,7 +87,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 			array(
 				'key'               => 'field_5e67af16f9aa1',
 				'label'             => 'Überschrift',
-				'name'              => 'titel',
+				'name'              => 'title',
 				'type'              => 'text',
 				'instructions'      => '',
 				'required'          => 0,
@@ -148,8 +148,8 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 					),
 					array(
 						'key'               => 'field_5e67af16f9ad2',
-						'label'             => 'Titel',
-						'name'              => 'titel',
+						'label'             => 'Title',
+						'name'              => 'title',
 						'type'              => 'text',
 						'instructions'      => '',
 						'required'          => 0,
@@ -359,6 +359,25 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 		'key'                   => 'group_5e67ae511ba70',
 		'title'                 => 'CE: Text-Bild',
 		'fields'                => array(
+            array(
+						'key'               => 'field_5e67af16fadg9ad2',
+						'label'             => 'Title',
+						'name'              => 'title',
+						'type'              => 'text',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '',
+							'class' => '',
+							'id'    => '',
+						),
+						'default_value'     => '',
+						'placeholder'       => '',
+						'prepend'           => '',
+						'append'            => '',
+						'maxlength'         => '',
+					),
 			array(
 				'key'               => 'field_5e67ae57c4f',
 				'label'             => 'Text',
@@ -693,6 +712,98 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 		'description'           => '',
 	) );
 
+    acf_add_local_field_group( array(
+		'key'                   => 'group_5ec3a25ad3336d98',
+		'title'                 => 'CE: Header mit text und bild/illustration',
+		'fields'                => array(
+			array(
+				'key'               => 'field_5ec3a256afd4e5f64',
+				'label'             => 'Header-1col',
+				'name'              => 'header-1col',
+				'type'              => 'repeater',
+				'instructions'      => '',
+				'required'          => 0,
+				'conditional_logic' => 0,
+				'wrapper'           => array(
+					'width' => '',
+					'class' => '',
+					'id'    => '',
+				),
+				'collapsed'         => '',
+				'min'               => 0,
+				'max'               => 0,
+				'layout'            => 'table',
+				'button_label'      => '',
+				'sub_fields'        => array(
+					array(
+						'key'               => 'field_5ec3a295e5adff66',
+						'label'             => 'Text-header',
+						'name'              => 'text-header',
+						'type'              => 'wysiwyg',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '',
+							'class' => '',
+							'id'    => '',
+						),
+						'default_value'     => '',
+						'tabs'              => 'all',
+						'toolbar'           => 'full',
+						'media_upload'      => 1,
+						'delay'             => 0,
+					),
+					array(
+						'key'               => 'field_5e67fadaf40b9111',
+						'label'             => 'Header Background Color',
+						'name'              => 'hintergrundfarbe',
+						'type'              => 'select',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '',
+							'class' => '',
+							'id'    => '',
+						),
+						'choices'           => array(
+							'red'    => 'Rot',
+							'blue'   => 'Blau',
+							'yellow' => 'Gelb',
+						),
+						'default_value'     => array(
+							0 => 'red',
+						),
+						'allow_null'        => 0,
+						'multiple'          => 0,
+						'ui'                => 0,
+						'return_format'     => 'value',
+						'ajax'              => 0,
+						'placeholder'       => '',
+					),
+				),
+			)
+		),
+		'location'              => array(
+			array(
+				array(
+					'param'    => 'post_type',
+					'operator' => '==',
+					'value'    => 'post',
+				),
+			),
+		),
+		'menu_order'            => 0,
+		'position'              => 'normal',
+		'style'                 => 'default',
+		'label_placement'       => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen'        => '',
+		'active'                => true,
+		'description'           => '',
+	) );
+
 	acf_add_local_field_group( array(
 		'key'                   => 'group_5ec3a25336d98',
 		'title'                 => 'CE: Header mit text und bild/illustration',
@@ -827,16 +938,47 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 					'id'    => '',
 				),
 				'layouts'           => array(
-					'layout_5e67adcb98d3dc0'     => array(
-						'key'        => 'layout_5e67adcb98d3dc0',
-						'name'       => 'fp-text',
-						'label'      => 'Fp-text',
+//					'layout_5e67adcb98d3dc0'     => array(
+//						'key'        => 'layout_5e67adcb98d3dc0',
+//						'name'       => 'fp-text',
+//						'label'      => 'Fp-text',
+//						'display'    => 'block',
+//						'sub_fields' => array(
+//							array(
+//								'key'               => 'field_5e67add21d406a',
+//								'label'             => 'Fp-text',
+//								'name'              => 'fp-text',
+//								'type'              => 'clone',
+//								'instructions'      => '',
+//								'required'          => 0,
+//								'conditional_logic' => 0,
+//								'wrapper'           => array(
+//									'width' => '',
+//									'class' => '',
+//									'id'    => '',
+//								),
+//								'clone'             => array(
+//									0 => 'group_5e67afaf25af3c2',
+//								),
+//								'display'           => 'seamless',
+//								'layout'            => 'block',
+//								'prefix_label'      => 0,
+//								'prefix_name'       => 0,
+//							),
+//						),
+//						'min'        => '',
+//						'max'        => '',
+//					),
+                    'layout_5e67adcb98ad36d3dc0ddd' => array(
+						'key'        => 'layout_5e67adcb98ad36d3dc0ddd',
+						'name'       => 'header-1col',
+						'label'      => 'Header-1col',
 						'display'    => 'block',
 						'sub_fields' => array(
 							array(
-								'key'               => 'field_5e67add21d406a',
-								'label'             => 'Fp-text',
-								'name'              => 'fp-text',
+								'key'               => 'field_5e67add21dfsd406c',
+								'label'             => 'Header-1col',
+								'name'              => 'header-1col',
 								'type'              => 'clone',
 								'instructions'      => '',
 								'required'          => 0,
@@ -847,7 +989,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 									'id'    => '',
 								),
 								'clone'             => array(
-									0 => 'group_5e67afaf25af3c2',
+									0 => 'group_5ec3a25ad3336d98',
 								),
 								'display'           => 'seamless',
 								'layout'            => 'block',
@@ -858,7 +1000,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 						'min'        => '',
 						'max'        => '',
 					),
-					'layout_5e67adcb98ad36d3dc0' => array(
+                    'layout_5e67adcb98ad36d3dc0' => array(
 						'key'        => 'layout_5e67adcb98ad36d3dc0',
 						'name'       => 'header-2col',
 						'label'      => 'Header-2col',
