@@ -67,6 +67,11 @@
                         the_title(); 
                     }?> </h1>
                 <div class="text-intro"><?php the_sub_field( 'text-header' ); ?></div>
+                <?php if ( $link = get_sub_field( 'button' ) ): ?>
+                <a class="btn-black" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
+                    <?php echo $link['title']; ?>
+                </a>
+                <?php endif; ?>
             </div>
             <?php 
                 if(get_sub_field( 'hintergrundfarbe' ) == "yellow"){

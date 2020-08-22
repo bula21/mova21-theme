@@ -824,7 +824,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 				'collapsed'         => '',
 				'min'               => 0,
 				'max'               => 0,
-				'layout'            => 'table',
+				'layout'            => 'row',
 				'button_label'      => '',
 				'sub_fields'        => array(
 					array(
@@ -925,7 +925,22 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 						'ajax'              => 0,
 						'placeholder'       => '',
 					),
-				),
+                    array(
+                        'key'               => 'field_5e67afasda3d285e09',
+                        'label'             => 'Button',
+                        'name'              => 'button',
+                        'type'              => 'link',
+                        'instructions'      => '',
+                        'required'          => 0,
+                        'conditional_logic' => 0,
+                        'wrapper'           => array(
+                            'width' => '30',
+                            'class' => '',
+                            'id'    => '',
+                        ),
+                        'return_format'     => 'array',
+                    ),
+                ),
 			)
 		),
 		'location'              => array(

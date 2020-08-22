@@ -1,15 +1,15 @@
 .mod-content {
     .content-element--text-bild {
         margin-bottom: 50px;
-        
-        .text{
+
+        .text {
             padding: 15px;
-            
-            h1{
+
+            h1 {
                 @include h1-sub;
             }
-            
-            p{
+
+            p {
                 margin: 0;
                 padding: 0;
             }
@@ -72,16 +72,6 @@
 
         .spalte-element {
 
-            .btn-black {
-                display: inline-block;
-                background-color: $black;
-                padding: 15px 30px;
-                font-size: 22px;
-                font-weight: bold;
-                color: $white;
-                margin: 10px 0;
-            }
-
             @include media-small {
                 .column-count-small-reset {
                     column-count: 1 !important;
@@ -95,10 +85,10 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 100px;
-        
-         @include media-medium-up {
-                flex-direction: row;
-            }
+
+        @include media-medium-up {
+            flex-direction: row;
+        }
 
         .contact-bloc {
             margin-bottom: 25px;
@@ -110,19 +100,19 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            
+
             @include media-medium-up {
                 width: 50%;
             }
-            
-//            @include media-large-up {
-//                width: calc(100% / 3 * 2);
-//            }
+
+            //            @include media-large-up {
+            //                width: calc(100% / 3 * 2);
+            //            }
 
             .contact-img {
                 margin-right: 15px;
-                
-                img{
+
+                img {
                     height: 150px;
                 }
             }
@@ -161,14 +151,14 @@
             width: 100%;
             background: $yellow;
             padding: 15px;
-            
+
             @include media-medium-up {
                 width: 50%;
             }
-            
-//            @include media-large-up {
-//                width: calc(100% / 3);
-//            }
+
+            //            @include media-large-up {
+            //                width: calc(100% / 3);
+            //            }
 
             .event {
                 display: flex;
@@ -205,4 +195,14 @@
 
         }
     }
+}
+
+.btn-black {
+    display: inline-block;
+    background-color: $black;
+    padding: 15px 30px;
+    font-size: 22px;
+    font-weight: bold;
+    color: $white;
+    margin: 10px 0;
 }
