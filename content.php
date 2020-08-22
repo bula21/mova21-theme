@@ -12,34 +12,34 @@
     <section>
         <?php if ( get_row_layout() == 'text-bild' ): ?>
         <div class="content-element--text-bild">
-                <?php $reverse = get_sub_field( 'reihenfolge' ) == 't2b' ? '' : 'flex-row-reverse'; ?>
-                <div class="row no-gutters <?php echo $reverse; ?>">
-                    <div class="col-12 col-md-6 bg-<?php the_sub_field( 'hintergrundfarbe' ); ?>">
-                       <div class="text">
-                            <h1>
-                                <?php 
+            <?php $reverse = get_sub_field( 'reihenfolge' ) == 't2b' ? '' : 'flex-row-reverse'; ?>
+            <div class="row no-gutters <?php echo $reverse; ?>">
+                <div class="col-12 col-md-6 bg-<?php the_sub_field( 'hintergrundfarbe' ); ?>">
+                    <div class="text">
+                        <h1>
+                            <?php 
                                     the_sub_field('title');
                                 ?>
-                            </h1>
-                            <p>
-                                <?php the_sub_field( 'text' ); ?>
-                            </p>
-                        </div>
+                        </h1>
+                        <p>
+                            <?php the_sub_field( 'text' ); ?>
+                        </p>
                     </div>
-                    <div class="col-12 col-md-6">
-                        <?php
+                </div>
+                <div class="col-12 col-md-6">
+                    <?php
 										$image = get_sub_field( 'bild' );
 										the_aid_picture_tag( $image['id'], 'bula-fullwidth', 'bula-fullwidth_2x', 'content-image' );
 										?>
-                    </div>
                 </div>
+            </div>
         </div>
 
         <?php elseif ( get_row_layout() == 'fp-text' ): ?>
         <div class="content-element--fp-text">
             <?php the_sub_field( 'fp-text' ); ?>
         </div>
-        
+
         <?php elseif ( get_row_layout() == 'header-1col' ):
 						if ( have_rows( 'header-1col' ) ):
 							while ( have_rows( 'header-1col' ) ) : the_row();
@@ -59,9 +59,13 @@
 						if ( have_rows( 'header-2col' ) ):
 							while ( have_rows( 'header-2col' ) ) : the_row();
 								?>
-        <div class="header bg-<?php the_sub_field( 'hintergrundfarbe' ); ?>">
+        <div class="header bg-<?php the_sub_field( 'hintergrundfarbe' );?>">
             <div class="infos">
-                <h1 class="post-title"><?php the_title(); ?></h1>
+                <h1 class="post-title <?php the_sub_field( 'page-title-visibility' );?>">
+                    <?php 
+                    if(get_sub_field( 'page-title-visibility' ) == "on"){
+                        the_title(); 
+                    }?> </h1>
                 <div class="text-intro"><?php the_sub_field( 'text-header' ); ?></div>
             </div>
             <?php 

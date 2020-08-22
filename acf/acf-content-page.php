@@ -898,6 +898,33 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 						'ajax'              => 0,
 						'placeholder'       => '',
 					),
+                    array(
+						'key'               => 'field_5e67af40dab9111',
+						'label'             => 'page title visibility',
+						'name'              => 'page-title-visibility',
+						'type'              => 'select',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '',
+							'class' => '',
+							'id'    => '',
+						),
+						'choices'           => array(
+							'on'    => 'visible',
+							'off'   => 'invisible',
+						),
+						'default_value'     => array(
+							0 => 'red',
+						),
+						'allow_null'        => 0,
+						'multiple'          => 0,
+						'ui'                => 0,
+						'return_format'     => 'value',
+						'ajax'              => 0,
+						'placeholder'       => '',
+					),
 				),
 			)
 		),
