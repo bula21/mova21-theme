@@ -29,7 +29,7 @@ function bula_enqueue_script() {
 	wp_enqueue_script( 'aid-dist-script' );
 
 	if ( WP_DEBUG ) {
-		wp_enqueue_script( 'bula-dist-script-dev-helper', BULA_URL_TO_THEME . '/dev/mod-dev-helper.js', array(), CACHE, true );
+		wp_enqueue_script( 'bula-dist-script-dev-helper', BULA_URL_TO_THEME . '/dev/mod-dev-helper.js', array('jquery'), CACHE, true );
 	}
 }
 
