@@ -195,6 +195,19 @@
 
         }
     }
+
+    .content-element--gallery {
+        .gallery-item {
+            padding: 10px;
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
 }
 
 .btn-black {

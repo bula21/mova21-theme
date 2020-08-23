@@ -359,25 +359,25 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 		'key'                   => 'group_5e67ae511ba70',
 		'title'                 => 'CE: Text-Bild',
 		'fields'                => array(
-            array(
-						'key'               => 'field_5e67af16fadg9ad2',
-						'label'             => 'Title',
-						'name'              => 'title',
-						'type'              => 'text',
-						'instructions'      => '',
-						'required'          => 0,
-						'conditional_logic' => 0,
-						'wrapper'           => array(
-							'width' => '',
-							'class' => '',
-							'id'    => '',
-						),
-						'default_value'     => '',
-						'placeholder'       => '',
-						'prepend'           => '',
-						'append'            => '',
-						'maxlength'         => '',
-					),
+			array(
+				'key'               => 'field_5e67af16fadg9ad2',
+				'label'             => 'Title',
+				'name'              => 'title',
+				'type'              => 'text',
+				'instructions'      => '',
+				'required'          => 0,
+				'conditional_logic' => 0,
+				'wrapper'           => array(
+					'width' => '',
+					'class' => '',
+					'id'    => '',
+				),
+				'default_value'     => '',
+				'placeholder'       => '',
+				'prepend'           => '',
+				'append'            => '',
+				'maxlength'         => '',
+			),
 			array(
 				'key'               => 'field_5e67ae57c4f',
 				'label'             => 'Text',
@@ -422,33 +422,33 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 				'mime_types'        => '',
 			),
 			array(
-						'key'               => 'field_5e67af40b9111',
-						'label'             => 'BgColor',
-						'name'              => 'hintergrundfarbe',
-						'type'              => 'select',
-						'instructions'      => '',
-						'required'          => 0,
-						'conditional_logic' => 0,
-						'wrapper'           => array(
-							'width' => '',
-							'class' => '',
-							'id'    => '',
-						),
-						'choices'           => array(
-							'red'    => 'Rot',
-							'blue'   => 'Blau',
-							'yellow' => 'Gelb',
-						),
-						'default_value'     => array(
-							0 => 'red',
-						),
-						'allow_null'        => 0,
-						'multiple'          => 0,
-						'ui'                => 0,
-						'return_format'     => 'value',
-						'ajax'              => 0,
-						'placeholder'       => '',
-					),
+				'key'               => 'field_5e67af40b9111',
+				'label'             => 'BgColor',
+				'name'              => 'hintergrundfarbe',
+				'type'              => 'select',
+				'instructions'      => '',
+				'required'          => 0,
+				'conditional_logic' => 0,
+				'wrapper'           => array(
+					'width' => '',
+					'class' => '',
+					'id'    => '',
+				),
+				'choices'           => array(
+					'red'    => 'Rot',
+					'blue'   => 'Blau',
+					'yellow' => 'Gelb',
+				),
+				'default_value'     => array(
+					0 => 'red',
+				),
+				'allow_null'        => 0,
+				'multiple'          => 0,
+				'ui'                => 0,
+				'return_format'     => 'value',
+				'ajax'              => 0,
+				'placeholder'       => '',
+			),
 			array(
 				'key'               => 'field_5e67af82bbaab',
 				'label'             => 'Reihenfolge',
@@ -493,7 +493,54 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 		'active'                => true,
 		'description'           => '',
 	) );
-
+	acf_add_local_field_group( array(
+		'key'    => 'group_5e67ae511bc22',
+		'title'  => 'CE: Gallery',
+		'fields' => array(
+			array(
+				'key'               => 'field_5e062e034ac11',
+				'label'             => 'Bilder',
+				'name'              => 'bilder',
+				'type'              => 'repeater',
+				'instructions'      => '',
+				'required'          => 0,
+				'conditional_logic' => 0,
+				'wrapper'           => array(
+					'width' => '',
+					'class' => '',
+					'id'    => '',
+				),
+				'collapsed'         => '',
+				'min'               => 0,
+				'max'               => 0,
+				'layout'            => 'block',
+				'button_label'      => 'Bild hinzufügen',
+				'sub_fields'        => array(
+					array(
+						'key'               => 'field_5e67ae97c4c91',
+						'label'             => 'Bild',
+						'name'              => 'bild',
+						'type'              => 'image',
+						'wrapper'           => array(
+							'width' => '',
+							'class' => '',
+							'id'    => '',
+						),
+						'return_format'     => 'array',
+						'preview_size'      => 'medium',
+						'library'           => 'all',
+						'min_width'         => '',
+						'min_height'        => '',
+						'min_size'          => '',
+						'max_width'         => '',
+						'max_height'        => '',
+						'max_size'          => '',
+						'mime_types'        => '',
+					),
+				)
+			)
+		)
+	) );
 	acf_add_local_field_group( array(
 			'key'                   => 'group_5e67ae511bc88',
 			'title'                 => 'CE: Blöcke mit Sidebar',
@@ -541,7 +588,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 							'max_size'          => '',
 							'mime_types'        => '',
 						),
-                        array(
+						array(
 							'key'               => 'field_5e67ae57adsfasc4c89',
 							'label'             => 'Name',
 							'name'              => 'name',
@@ -560,7 +607,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 							'media_upload'      => 1,
 							'delay'             => 0,
 						),
-                        array(
+						array(
 							'key'               => 'field_5e67ae57adsfadfasc4fc89',
 							'label'             => 'Function',
 							'name'              => 'function',
@@ -712,7 +759,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 		'description'           => '',
 	) );
 
-    acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key'                   => 'group_5ec3a25ad3336d98',
 		'title'                 => 'CE: Header mit text und bild/illustration',
 		'fields'                => array(
@@ -898,7 +945,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 						'ajax'              => 0,
 						'placeholder'       => '',
 					),
-                    array(
+					array(
 						'key'               => 'field_5e67af40dab9111',
 						'label'             => 'page title visibility',
 						'name'              => 'page-title-visibility',
@@ -912,8 +959,8 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 							'id'    => '',
 						),
 						'choices'           => array(
-							'on'    => 'visible',
-							'off'   => 'invisible',
+							'on'  => 'visible',
+							'off' => 'invisible',
 						),
 						'default_value'     => array(
 							0 => 'red',
@@ -925,22 +972,22 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 						'ajax'              => 0,
 						'placeholder'       => '',
 					),
-                    array(
-                        'key'               => 'field_5e67afasda3d285e09',
-                        'label'             => 'Button',
-                        'name'              => 'button',
-                        'type'              => 'link',
-                        'instructions'      => '',
-                        'required'          => 0,
-                        'conditional_logic' => 0,
-                        'wrapper'           => array(
-                            'width' => '30',
-                            'class' => '',
-                            'id'    => '',
-                        ),
-                        'return_format'     => 'array',
-                    ),
-                ),
+					array(
+						'key'               => 'field_5e67afasda3d285e09',
+						'label'             => 'Button',
+						'name'              => 'button',
+						'type'              => 'link',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '30',
+							'class' => '',
+							'id'    => '',
+						),
+						'return_format'     => 'array',
+					),
+				),
 			)
 		),
 		'location'              => array(
@@ -1011,7 +1058,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 //						'min'        => '',
 //						'max'        => '',
 //					),
-                    'layout_5e67adcb98ad36d3dc0ddd' => array(
+					'layout_5e67adcb98ad36d3dc0ddd' => array(
 						'key'        => 'layout_5e67adcb98ad36d3dc0ddd',
 						'name'       => 'header-1col',
 						'label'      => 'Header-1col',
@@ -1042,7 +1089,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 						'min'        => '',
 						'max'        => '',
 					),
-                    'layout_5e67adcb98ad36d3dc0' => array(
+					'layout_5e67adcb98ad36d3dc0'    => array(
 						'key'        => 'layout_5e67adcb98ad36d3dc0',
 						'name'       => 'header-2col',
 						'label'      => 'Header-2col',
@@ -1073,7 +1120,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 						'min'        => '',
 						'max'        => '',
 					),
-					'layout_5e67adcb98dc0'       => array(
+					'layout_5e67adcb98dc0'          => array(
 						'key'        => 'layout_5e67adcb98dc0',
 						'name'       => 'text-bild',
 						'label'      => 'Text-Bild',
@@ -1104,7 +1151,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 						'min'        => '',
 						'max'        => '',
 					),
-					'layout_5e67ade71406d'       => array(
+					'layout_5e67ade71406d'          => array(
 						'key'        => 'layout_5e67ade71406d',
 						'name'       => 'farb-blocke',
 						'label'      => 'Farb-Blöcke',
@@ -1135,7 +1182,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 						'min'        => '',
 						'max'        => '',
 					),
-					'layout_5e67b0aa8454f'       => array(
+					'layout_5e67b0aa8454f'          => array(
 						'key'        => 'layout_5e67b0aa8454f',
 						'name'       => 'text-spalten',
 						'label'      => 'Text-Spalten',
@@ -1166,7 +1213,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 						'min'        => '',
 						'max'        => '',
 					),
-					'layout_5e67b0aa84d01'       => array(
+					'layout_5e67b0aa84d01'          => array(
 						'key'        => 'layout_5e67b0aa84d01',
 						'name'       => 'sidebar-blocks',
 						'label'      => 'Sidebar Blöcke',
@@ -1187,6 +1234,37 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 								),
 								'clone'             => array(
 									0 => 'group_5e67ae511bc88',
+								),
+								'display'           => 'seamless',
+								'layout'            => 'block',
+								'prefix_label'      => 0,
+								'prefix_name'       => 0,
+							),
+						),
+						'min'        => '',
+						'max'        => '',
+					),
+					'layout_5e67b0aa84d02'          => array(
+						'key'        => 'layout_5e67b0aa84d02',
+						'name'       => 'gallery-blocks',
+						'label'      => 'Gallery',
+						'display'    => 'block',
+						'sub_fields' => array(
+							array(
+								'key'               => 'field_5e67b0ac84d04',
+								'label'             => 'Gallery',
+								'name'              => 'gallery',
+								'type'              => 'clone',
+								'instructions'      => '',
+								'required'          => 0,
+								'conditional_logic' => 0,
+								'wrapper'           => array(
+									'width' => '',
+									'class' => '',
+									'id'    => '',
+								),
+								'clone'             => array(
+									0 => 'group_5e67ae511bc22',
 								),
 								'display'           => 'seamless',
 								'layout'            => 'block',

@@ -31,6 +31,7 @@ module.exports = function (grunt) {
                 styles: [
                     'node_modules/bootstrap/dist/css/bootstrap.min.css',
                     'node_modules/font-awesome/css/font-awesome.min.css',
+                    'node_modules/magnific-popup/dist/magnific-popup.css',
                     'css/*.{scss,css}'
                 ],
                 scripts: [
@@ -39,6 +40,7 @@ module.exports = function (grunt) {
                     'node_modules/lottie-web/build/player/lottie.min.js',
                     'node_modules/phaser/dist/phaser.min.js',
                     'node_modules/masonry-layout/dist/masonry.pkgd.min.js',
+                    'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
                     'js/*.js'
                 ]
             }
