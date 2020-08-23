@@ -73,6 +73,8 @@ function bula_register_menu() {
 }
 
 /** images */
+add_image_size( 'bula-gallery-preview', 400, 300, array('center', 'center') );
+add_image_size( 'bula-gallery-preview_2x', 800, 600, array('center', 'center') );
 add_image_size( 'bula-fullwidth', 1400 );
 add_image_size( 'bula-fullwidth_2x', 2800 );
 function the_aid_picture_tag( $image_id = null, $size = 'medium', $size_2x = 'large', $classlist = '' ) {

@@ -220,7 +220,7 @@
 									while ( have_rows( 'bilder' ) ) : the_row(); ?>
                                         <div class="col-12 col-md-4 col-lg-3">
 											<?php $image = get_sub_field( 'bild' );
-											the_aid_picture_tag( $image['id'], 'large', 'large', 'gallery-item' );
+											the_aid_picture_tag( $image['id'], 'bula-gallery-preview', 'bula-gallery-preview_2x', 'gallery-item' );
 											?>
                                         </div>
 									<?php endwhile;
