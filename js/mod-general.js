@@ -20,4 +20,22 @@ jQuery(document).ready(function ($) {
         // options
         itemSelector: '.masonry-item'
     });
+
+    $('.content-element--gallery').each(function() {
+        var self = $(this);
+        $(this).magnificPopup({
+            delegate: '.gallery-item',
+            type: 'image',
+            tLoading: self.data('loading'),
+            mainClass: 'mfp-img',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: self.data('error'),
+            },
+        });
+    });
 });

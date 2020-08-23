@@ -196,6 +196,7 @@
         }
     }
 
+<<<<<<< HEAD
     .contact-row {
         width: 100%;
         display: flex;
@@ -274,4 +275,28 @@
         color: $white;
         margin: 10px 0;
     }
+=======
+    .content-element--gallery {
+        .gallery-item {
+            padding: 10px;
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.btn-black {
+    display: inline-block;
+    background-color: $black;
+    padding: 15px 30px;
+    font-size: 22px;
+    font-weight: bold;
+    color: $white;
+    margin: 10px 0;
+>>>>>>> 304ed38ba8bd8c557f4d257b89f8aa595069f00e
 }

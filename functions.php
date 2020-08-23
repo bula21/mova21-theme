@@ -29,7 +29,7 @@ function bula_enqueue_script() {
 	wp_enqueue_script( 'aid-dist-script' );
 
 	if ( WP_DEBUG ) {
-		wp_enqueue_script( 'bula-dist-script-dev-helper', BULA_URL_TO_THEME . '/dev/mod-dev-helper.js', array(), CACHE, true );
+		wp_enqueue_script( 'bula-dist-script-dev-helper', BULA_URL_TO_THEME . '/dev/mod-dev-helper.js', array('jquery'), CACHE, true );
 	}
 }
 
@@ -73,14 +73,17 @@ function bula_register_menu() {
 }
 
 /** images */
+add_image_size( 'bula-gallery-preview', 400, 300, array('center', 'center') );
+add_image_size( 'bula-gallery-preview_2x', 800, 600, array('center', 'center') );
 add_image_size( 'bula-fullwidth', 1400 );
 add_image_size( 'bula-fullwidth_2x', 2800 );
 function the_aid_picture_tag( $image_id = null, $size = 'medium', $size_2x = 'large', $classlist = '' ) {
 	$src  = wp_get_attachment_image_src( $image_id, $size );
+	$full = wp_get_attachment_image_url($image_id, 'full');
 	$src2 = wp_get_attachment_image_src( $image_id, $size_2x );
 	$alt  = get_post_meta( $image_id, '_wp_attachment_image_alt', true );
 	?>
-    <picture class="<?php echo $classlist; ?>">
+    <picture class="<?php echo $classlist; ?>" data-mfp-src="<?php echo $full; ?>">
         <img srcset="<?php echo $src[0]; ?> 1x, <?php echo $src2[0]; ?> 2x" alt="<?php echo $alt; ?>">
     </picture>
 	<?php
