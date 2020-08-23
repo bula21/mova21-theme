@@ -135,66 +135,93 @@
         </div>
 
         <?php elseif ( get_row_layout() == 'sidebar-blocks' ): ?>
-        <div class="content-element--sidebar-blocks">
-            <div class="contact">
-                <?php
-                        if ( have_rows( 'elements' ) ):
-                        while ( have_rows( 'elements' ) ) : the_row();
-                    ?>
-                <div class="contact-bloc">
-                    <?php if ( $image = get_sub_field( 'bild' ) ): ?>
-                    <div class="contact-img">
-                        <img src="<?php echo $image['sizes']['medium']; ?>">
-                    </div>
-                    <?php endif; ?>
-                    <div class="contact-info">
-                        <?php if ( get_sub_field( 'function' ) ): ?>
-                        <h2>
-                            <?php the_sub_field( 'function' ); ?>
-                        </h2>
-                        <?php endif; ?>
-                        <?php if ( get_sub_field( 'name' ) ): ?>
-                        <h1>
-                            <?php the_sub_field( 'name' ); ?>
-                        </h1>
-                        <?php endif; ?>
-                        <?php if ( get_sub_field( 'contact-info' ) ): ?>
-                        <div class="personal-info">
-                            <?php the_sub_field( 'contact-info' ); ?>
-                        </div>
-                        <?php endif; ?>
-                    </div>
-                </div>
-                <?php
-                        endwhile;
-                        endif;
-                    ?>
+        <div class="contact-bloc">
+            <?php if ( $image = get_sub_field( 'bild' ) ): ?>
+            <div class="contact-img">
+                <img src="<?php echo $image['sizes']['medium']; ?>">
             </div>
-            <div class="timeline">
-                <?php
-                        if ( have_rows( 'timeline-items' ) ):
-                        while ( have_rows( 'timeline-items' ) ) : the_row();
-                    ?>
-                <div class="event">
-                    <?php if ( get_sub_field( 'date' ) ): ?>
-                    <div class="event-date">
-                        <?php the_sub_field( 'date' ); ?>
-                    </div>
-                    <?php endif; ?>
-                    <?php if ( get_sub_field( 'text' ) ): ?>
-                    <div class="event-name">
-                        <?php the_sub_field( 'text' ); ?>
-                    </div>
-                    <?php endif; ?>
+            <?php endif; ?>
+            <div class="contact-info">
+                <?php if ( get_sub_field( 'function' ) ): ?>
+                <h2>
+                    <?php the_sub_field( 'function' ); ?>
+                </h2>
+                <?php endif; ?>
+                <?php if ( get_sub_field( 'name' ) ): ?>
+                <h1>
+                    <?php the_sub_field( 'name' ); ?>
+                </h1>
+                <?php endif; ?>
+                <?php if ( get_sub_field( 'contact-info' ) ): ?>
+                <div class="personal-info">
+                    <?php the_sub_field( 'contact-info' ); ?>
                 </div>
-                <?php
-                        endwhile;
-                        endif;
-                    ?>
+                <?php endif; ?>
             </div>
         </div>
 
+        <div class="timeline">
+            <?php
+                        if ( have_rows( 'timeline-items' ) ):
+                        while ( have_rows( 'timeline-items' ) ) : the_row();
+                    ?>
+            <div class="event">
+                <?php if ( get_sub_field( 'date' ) ): ?>
+                <div class="event-date">
+                    <?php the_sub_field( 'date' ); ?>
+                </div>    
+                <?php endif; ?>
+                <?php if ( get_sub_field( 'text' ) ): ?>
+                <div class="event-name">
+                    <?php the_sub_field( 'text' ); ?>
+                </div>
+                <?php endif; ?>
+            </div>
+            <?php
+                        endwhile;
+                        endif;
+                    ?>
+        </div>
 
+<!--
+        <div class="contact-row">
+            <//?php
+						if ( have_rows( 'person' ) ):
+							while ( have_rows( 'person' ) ) : the_row();
+								$contact_img = get_sub_field( 'image' ); ?>
+            <div class="contact">
+                <div class="img-container">
+                    <img src="<//?php echo $contact_img['sizes']['large']; ?>" alt="<//?php _e($contact_img['alt']);?>">
+                </div>
+                <div class="info-container">
+                    <p class="org-job"><//?php the_sub_field( 'job' ); ?></p>
+                    <p class="org-name"> <//?php the_sub_field( 'name' ); ?></p>
+                    <//?php if ( get_sub_field( 'contact' ) ): ?>
+                    <p class="org-contact">
+                        <a href="mailto:<//?php the_sub_field( 'contact' ); ?>">
+                            <//?php the_sub_field( 'contact' ); ?>
+                        </a>
+                    </p>
+                    <//?php endif; ?>
+                    <//?php if ( $link = get_sub_field( 'person_link' ) ): ?>
+                    <p class="org-link">
+                        <a href="<//?php echo $link['url']; ?>" target="<//?php echo $link['target']; ?>"><//?php echo $link['title'];; ?></a>
+                    </p>
+                    <//?php endif; ?>
+                </div>
+            </div>
+            <//?php endwhile; else : endif; ?>
+        </div>
+-->
+        <?php 
+        if(have_rows ('person')):
+            while( have_rows('person') ): the_row();
+        ?>
+        
+        <?php the_sub_field( 'job' ); ?>
+        
+        <?php   endwhile; else : endif; ?>
+        
         <?php elseif ( get_row_layout() == 'text-spalten' ): ?>
         <div class="content-element--text-spalten">
             <div class="col-12 spalte-element bg-<?php the_sub_field( 'hintergrundfarbe' ); ?>">
