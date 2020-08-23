@@ -1,9 +1,26 @@
-@include media-large-up {
+@include media-small-up {
     .container {
-        max-width: 1400px;
+        max-width: 100%;
     }
 }
 
+@include media-medium-up {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@include media-large-up {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@include media-xlarge {
+    .container {
+        max-width: 1600px;
+    }
+}
 body.menu-active {
     overflow: hidden;
 }
@@ -422,7 +439,7 @@ body.menu-active {
         @include media-small {
             width: 100%;
             margin-bottom: 0;
-            
+
         }
 
         h1 {
@@ -457,8 +474,8 @@ body.menu-active {
             max-height: 100%;
             display: none;
         }
-        
-        img{
+
+        img {
             width: 100%;
         }
     }
@@ -466,6 +483,6 @@ body.menu-active {
 
 .oneCol {
     .infos {
-        width: 100%!important;
+        width: 100% !important;
     }
 }
