@@ -759,7 +759,6 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 		'description'           => '',
 	) );
 
-<<<<<<< HEAD
     acf_add_local_field_group( array(
 		'key'                   => 'group_5e67ad35afaf25af3c2',
 		'title'                 => 'CE: person contact ',
@@ -865,9 +864,6 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 	) );
 
     acf_add_local_field_group( array(
-=======
-	acf_add_local_field_group( array(
->>>>>>> 304ed38ba8bd8c557f4d257b89f8aa595069f00e
 		'key'                   => 'group_5ec3a25ad3336d98',
 		'title'                 => 'CE: Header mit text und bild/illustration',
 		'fields'                => array(
@@ -1135,9 +1131,6 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 					'id'    => '',
 				),
 				'layouts'           => array(
-<<<<<<< HEAD
-                    'layout_5e67adcb98ad36d3dc0ddd' => array(
-=======
 //					'layout_5e67adcb98d3dc0'     => array(
 //						'key'        => 'layout_5e67adcb98d3dc0',
 //						'name'       => 'fp-text',
@@ -1170,7 +1163,6 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 //						'max'        => '',
 //					),
 					'layout_5e67adcb98ad36d3dc0ddd' => array(
->>>>>>> 304ed38ba8bd8c557f4d257b89f8aa595069f00e
 						'key'        => 'layout_5e67adcb98ad36d3dc0ddd',
 						'name'       => 'header-1col',
 						'label'      => 'Header-1col',
@@ -1232,7 +1224,6 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 						'min'        => '',
 						'max'        => '',
 					),
-<<<<<<< HEAD
                     'layout_5e67adcb98ad3ddd6d3dc0ddd' => array(
 						'key'        => 'layout_5e67adcb98ad3ddd6d3dc0ddd',
 						'name'       => 'person-contact',
@@ -1265,9 +1256,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 						'max'        => '',
 					),
 					'layout_5e67adcb98dc0'       => array(
-=======
-					'layout_5e67adcb98dc0'          => array(
->>>>>>> 304ed38ba8bd8c557f4d257b89f8aa595069f00e
+
 						'key'        => 'layout_5e67adcb98dc0',
 						'name'       => 'text-bild',
 						'label'      => 'Text-Bild',

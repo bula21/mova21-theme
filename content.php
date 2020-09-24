@@ -111,7 +111,6 @@
                                 </div>
                             </div>
 
-<<<<<<< HEAD
         <?php elseif ( get_row_layout() == 'sidebar-blocks' ): ?>
         <div class="contact-bloc">
             <?php if ( $image = get_sub_field( 'bild' ) ): ?>
@@ -219,7 +218,7 @@
             </div>
         </div>
         <?php endif; ?>
-=======
+        
 							<?php if ( have_rows( 'blocke' ) ): ?>
                                 <div class="row masonry">
 									<?php while ( have_rows( 'blocke' ) ) : the_row(); ?>
@@ -300,27 +299,6 @@
 									endwhile;
 								endif;
 								?>
-                            </div>
-                        </div>
-
->>>>>>> 304ed38ba8bd8c557f4d257b89f8aa595069f00e
-
-					<?php elseif ( get_row_layout() == 'text-spalten' ): ?>
-                        <div class="content-element--text-spalten">
-                            <div class="col-12 spalte-element bg-<?php the_sub_field( 'hintergrundfarbe' ); ?>">
-								<?php if ( get_sub_field( 'title' ) ): ?>
-                                    <div>
-                                        <h2><?php the_sub_field( 'title' ); ?></h2>
-                                    </div>
-								<?php endif; ?>
-                                <div class="column-count-small-reset" style="column-count: <?php the_sub_field( 'anzahl_spalten' ); ?>">
-									<?php the_sub_field( 'text' ); ?>
-                                </div>
-								<?php if ( $link = get_sub_field( 'button' ) ): ?>
-                                    <a class="btn-black" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
-										<?php echo $link['title']; ?>
-                                    </a>
-								<?php endif; ?>
                             </div>
                         </div>
 					<?php elseif ( get_row_layout() == 'gallery-blocks' ): ?>
