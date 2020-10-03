@@ -1,7 +1,7 @@
 .mod-news {
 
     .header {
-        background: $red;
+        background: $blue;
     }
 
     .content-news {
@@ -10,7 +10,15 @@
 
             .grid-sizer,
             .news-grid {
-                width: 33%;
+                width: 100%;
+
+                @include media-medium-up {
+                    width: 50%;
+                }
+
+                @include media-large-up {
+                    width: 33%;
+                }
             }
 
             .news-grid {
@@ -19,14 +27,21 @@
 
                 .news-bloc {
                     height: 100%;
-                    margin: 0 12.5px;
+                    margin: 0;
                     padding: 10px;
-                    transition: all .5s;
+                    transition: all .1s;
                     transition-timing-function: ease;
 
-                    &:hover {
+                    @include media-medium-up {
+                        margin: 0 15px;
+                    }
 
-                        background-color: rgba($black, .05);
+                    @include media-large-up {
+                        margin: 0 20px;
+                    }
+
+                    &:hover {
+                        background-color: $blue;
 
 
                         img {
@@ -48,15 +63,15 @@
                     }
 
                     .post-date {
-                        @include font_02;
+                        @include font_05;
                     }
-                    
-                    .post-title{
+
+                    .post-title {
                         @include font_03;
                     }
-                    
-                    .post-content{
-                        @include font_02;
+
+                    .post-content {
+                        @include font_05;
                     }
 
 

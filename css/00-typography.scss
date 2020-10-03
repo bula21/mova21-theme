@@ -189,6 +189,24 @@ body {
     }
 }
 
+@mixin font_05 {
+    font-family: 'MessinaSansWeb-SemiBold', serif;
+    text-decoration: none;
+    color: $black;
+    font-size: 14px;
+    line-height: 18px;
+
+    @include media-medium-up {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    @include media-large-up {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
 // ****************************************************
 // use of the main fonts
 // ****************************************************
