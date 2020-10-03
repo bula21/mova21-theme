@@ -4,7 +4,8 @@
  */
 ?>
 
-<div class="news-text mod-news-template">
+<div class="news-text mod-news-template news-bloc">
+   <a class="post-link" href="<?php the_permalink(); ?>">
     <div class="news-image">
 		<?php
 		if ( has_post_thumbnail() ) {
@@ -16,9 +17,8 @@
     </div>
     <div class="post-date"><?php the_date(); ?></div>
     <h3 class="post-title"><?php the_title(); ?></h3>
-    <div class="wysiwyg">
+    <div class="wysiwyg post-content">
 		<?php the_excerpt(); ?>
-        <a class="post-link" href="<?php the_permalink(); ?>">→</a>
     </div>
-    
+    </a> 
 </div>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php /* Single-Template */ ?>
 <?php get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -20,6 +21,7 @@
     </div>
 <?php endwhile; endif; ?>
 <?php get_footer(); ?>
+=======
 <?php /* Single Template */ ?>
 
 <?php get_header(); ?>
@@ -373,3 +375,4 @@
 <?php endwhile; endif; ?>
 
 <?php get_footer(); ?>
+>>>>>>> cbdb3911c5e855db60ceac634681babe168d2ee8

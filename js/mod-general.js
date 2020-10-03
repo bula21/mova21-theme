@@ -21,7 +21,14 @@ jQuery(document).ready(function ($) {
         itemSelector: '.masonry-item'
     });
 
-    $('.content-element--gallery').each(function() {
+    $('.newsGrid').masonry({
+        itemSelector: '.news-grid',
+        columnWidth: '.grid-sizer',
+        percentPosition: true
+    });
+
+
+    $('.content-element--gallery').each(function () {
         var self = $(this);
         $(this).magnificPopup({
             delegate: '.gallery-item',
@@ -31,7 +38,7 @@ jQuery(document).ready(function ($) {
             gallery: {
                 enabled: true,
                 navigateByImgClick: true,
-                preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
             },
             image: {
                 tError: self.data('error'),
