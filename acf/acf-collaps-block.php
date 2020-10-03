@@ -90,6 +90,11 @@ acf_add_local_field_group( array(
 				'operator' => '==',
 				'value'    => 'post',
 			),
+			array(
+				'param'    => 'post_type',
+				'operator' => '==',
+				'value'    => 'page',
+			),
 		),
 	),
 	'menu_order'            => 0,

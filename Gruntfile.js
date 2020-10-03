@@ -222,7 +222,7 @@ module.exports = function (grunt) {
                 options: {
                     src: "./",
                     dest: "www/mova.ch/wp-content/themes/bula21",
-                    host: "bula221i@dev.bula21.ch",
+                    host: "bula221i@mova.ch",
                     deleteAll: true,
                     ssh: true,
                     privateKey: '~/.ssh/tolla'
@@ -264,6 +264,8 @@ module.exports = function (grunt) {
     // deploy tasks: $ grunt deploy-dev
     grunt.registerTask('deploy-dev', ['concurrent:prod', 'clean:temp_folder', 'sftp-deploy:dev']);
     grunt.registerTask('rsync-dev', ['concurrent:prod', 'clean:temp_folder', 'rsync:dev']);
+    grunt.registerTask('rsync-prod', ['concurrent:prod', 'rsync:prod']);
+
     grunt.registerTask('deploy-prod', ['concurrent:prod', 'sftp-deploy:prod']);
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
