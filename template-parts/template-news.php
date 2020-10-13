@@ -9,7 +9,7 @@
     <div class="news-image">
 		<?php
 		if ( has_post_thumbnail() ) {
-			the_post_thumbnail( 'medium' );
+			the_post_thumbnail( 'large' );
 		} else {
 			echo '<img src="' . BULA_URL_TO_THEME . '/img/fallback.jpg' . '" class="fallback">';
 		}
