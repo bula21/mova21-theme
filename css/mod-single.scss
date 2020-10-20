@@ -1,5 +1,4 @@
 .mod-single {
-    margin-top: 50px;
     max-width: 1080px;
     
     .wysiwyg{
@@ -9,9 +8,32 @@
     .header {
         overflow: hidden;
         margin-bottom: 50px;
-
-        .illustration {
+        
+        .illustration{
             height: 10px;
         }
     }
+    
+    .header_video {
+        
+        .illustration {
+            position: relative;
+            
+            @include media-small {
+                display: block;
+                width: 100%;
+                height: 315px;
+            }
+        
+            .embed-container{
+                position: absolute;
+                width: 100%;
+
+                iframe{
+                    width: 100%;
+                }
+            }
+        } 
+    }
 }
+
