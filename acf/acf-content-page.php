@@ -1326,37 +1326,37 @@ acf_add_local_field_group( array(
 					'id'    => '',
 				),
 				'layouts'           => array(
-//					'layout_5e67adcb98d3dc0'     => array(
-//						'key'        => 'layout_5e67adcb98d3dc0',
-//						'name'       => 'fp-text',
-//						'label'      => 'Fp-text',
-//						'display'    => 'block',
-//						'sub_fields' => array(
-//							array(
-//								'key'               => 'field_5e67add21d406a',
-//								'label'             => 'Fp-text',
-//								'name'              => 'fp-text',
-//								'type'              => 'clone',
-//								'instructions'      => '',
-//								'required'          => 0,
-//								'conditional_logic' => 0,
-//								'wrapper'           => array(
-//									'width' => '',
-//									'class' => '',
-//									'id'    => '',
-//								),
-//								'clone'             => array(
-//									0 => 'group_5e67afaf25af3c2',
-//								),
-//								'display'           => 'seamless',
-//								'layout'            => 'block',
-//								'prefix_label'      => 0,
-//								'prefix_name'       => 0,
-//							),
-//						),
-//						'min'        => '',
-//						'max'        => '',
-//					),
+					'layout_5e67adcb98d3dc0'     => array(
+						'key'        => 'layout_5e67adcb98d3dc0',
+						'name'       => 'fp-text',
+						'label'      => 'Fp-text',
+						'display'    => 'block',
+						'sub_fields' => array(
+							array(
+								'key'               => 'field_5e67add21d406a',
+								'label'             => 'Fp-text',
+								'name'              => 'fp-text',
+								'type'              => 'clone',
+								'instructions'      => '',
+								'required'          => 0,
+								'conditional_logic' => 0,
+								'wrapper'           => array(
+									'width' => '',
+									'class' => '',
+									'id'    => '',
+								),
+								'clone'             => array(
+									0 => 'group_5e67afaf25af3c2',
+								),
+								'display'           => 'seamless',
+								'layout'            => 'block',
+								'prefix_label'      => 0,
+								'prefix_name'       => 0,
+							),
+						),
+						'min'        => '',
+						'max'        => '',
+					),
 					'layout_5e67adcb98ad36d3dc0ddd' => array(
 						'key'        => 'layout_5e67adcb98ad36d3dc0ddd',
 						'name'       => 'header-1col',

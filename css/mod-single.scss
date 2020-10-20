@@ -16,6 +16,14 @@
     
     .header_video {
         
+        .infos{
+            min-height: 360px;
+            
+            @include media-small {
+                min-height: auto;
+            }
+        }
+        
         .illustration {
             position: relative;
             
