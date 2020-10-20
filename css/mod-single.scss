@@ -1,4 +1,17 @@
 .mod-single {
     margin-top: 50px;
-    max-width: 980px;
+    max-width: 1080px;
+    
+    .wysiwyg{
+        padding: 0;
+    }
+
+    .header {
+        overflow: hidden;
+        margin-bottom: 50px;
+
+        .illustration {
+            height: 10px;
+        }
+    }
 }

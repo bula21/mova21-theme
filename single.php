@@ -4,12 +4,13 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <div class="container mod-single">
-        <h1 class="post-title"><?php the_title(); ?></h1>
-        <div class="wysiwyg">
-			<?php the_content(); ?>
-        </div>
-
+<!--        <h1 class="post-title"><?php the_title(); ?></h1>-->
+        
         <div class="mod-content">
+            <div class="wysiwyg">
+                <?php the_content(); ?>
+            </div>
+        
 			<?php
 			if ( have_rows( 'content_elemente' ) ):
 				while ( have_rows( 'content_elemente' ) ) :
