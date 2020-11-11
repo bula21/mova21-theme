@@ -273,6 +273,12 @@
         transform: translateY(0);
         transition: transform 300ms;
     }
+    .intranet {
+        display: none;
+        .logged-in & {
+            display: block;
+        }
+    }
 }
 
 .navi-spacer {

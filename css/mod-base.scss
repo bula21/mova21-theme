@@ -175,13 +175,10 @@ body.menu-active {
 .cn-button.bootstrap {
     font-family: sans-serif;
     display: inline-block;
-    padding: 4px 12px;
     margin-right: .3em;
     margin-bottom: 0;
     line-height: 20px;
-    color: #333;
     text-align: center;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, .75);
     font-style: normal;
     vertical-align: middle;
     cursor: pointer;
@@ -417,6 +414,8 @@ body.menu-active {
         transform: translate3d(0, -100%, 0)
     }
 }
+
+
 
 ////////////////////////////////////////////////////////////
 //HEADER

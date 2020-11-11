@@ -176,3 +176,7 @@ function advanced_custom_search( $where, $wp_query ) {
 }
 
 add_filter( 'posts_search', 'advanced_custom_search', 500, 2 );
+
+add_filter( 'private_title_format', function ( $format ) {
+	return '%s';
+} );
