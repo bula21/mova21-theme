@@ -29,7 +29,7 @@ function bula_enqueue_script() {
 	wp_enqueue_script( 'aid-dist-script' );
 
 	if ( WP_DEBUG ) {
-		wp_enqueue_script( 'bula-dist-script-dev-helper', BULA_URL_TO_THEME . '/dev/mod-dev-helper.js', array('jquery'), CACHE, true );
+		wp_enqueue_script( 'bula-dist-script-dev-helper', BULA_URL_TO_THEME . '/dev/mod-dev-helper.js', array( 'jquery' ), CACHE, true );
 	}
 }
 
@@ -70,16 +70,20 @@ function bula_register_menu() {
 			'main-menu' => __( 'Hauptnavigation', 'bula21' )
 		)
 	);
+
+	$subRole = get_role( 'subscriber' );
+	$subRole->add_cap( 'read_private_posts' );
+	$subRole->add_cap( 'read_private_pages' );
 }
 
 /** images */
-add_image_size( 'bula-gallery-preview', 400, 300, array('center', 'center') );
-add_image_size( 'bula-gallery-preview_2x', 800, 600, array('center', 'center') );
+add_image_size( 'bula-gallery-preview', 400, 300, array( 'center', 'center' ) );
+add_image_size( 'bula-gallery-preview_2x', 800, 600, array( 'center', 'center' ) );
 add_image_size( 'bula-fullwidth', 1400 );
 add_image_size( 'bula-fullwidth_2x', 2800 );
 function the_aid_picture_tag( $image_id = null, $size = 'medium', $size_2x = 'large', $classlist = '' ) {
 	$src  = wp_get_attachment_image_src( $image_id, $size );
-	$full = wp_get_attachment_image_url($image_id, 'full');
+	$full = wp_get_attachment_image_url( $image_id, 'full' );
 	$src2 = wp_get_attachment_image_src( $image_id, $size_2x );
 	$alt  = get_post_meta( $image_id, '_wp_attachment_image_alt', true );
 	?>
@@ -179,4 +183,9 @@ add_filter( 'posts_search', 'advanced_custom_search', 500, 2 );
 
 add_filter( 'private_title_format', function ( $format ) {
 	return '%s';
+} );
+
+add_filter( 'openid-connect-generic-login-button-text', function ( $text ) {
+	return __( 'Mit dem Mova Login anmelden', 'bula21' );
+
 } );
