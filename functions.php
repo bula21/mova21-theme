@@ -61,7 +61,7 @@ function bula_acf_toolbars( $toolbars ) {
 
 
 /**
- * Register WP-Menu
+ * Register WP-Menu and other init stuff
  */
 add_action( 'init', 'bula_register_menu' );
 function bula_register_menu() {
@@ -74,6 +74,10 @@ function bula_register_menu() {
 	$subRole = get_role( 'subscriber' );
 	$subRole->add_cap( 'read_private_posts' );
 	$subRole->add_cap( 'read_private_pages' );
+
+	if ( ! current_user_can( 'edit_posts' ) ) {
+		add_filter( 'show_admin_bar', '__return_false' );
+	}
 }
 
 /** images */
@@ -185,7 +189,32 @@ add_filter( 'private_title_format', function ( $format ) {
 	return '%s';
 } );
 
+/**
+ * New button label text
+ */
 add_filter( 'openid-connect-generic-login-button-text', function ( $text ) {
 	return __( 'Mit dem Mova Login anmelden', 'bula21' );
-
 } );
+
+/**
+ * redirect users after login to intranet page
+ */
+add_action( 'openid-connect-generic-redirect-user-back', function ( $redirect_url, $user ) {
+	wp_redirect( __( '/intranet', 'bula21' ) );
+	exit();
+}, 10, 2 );
+
+//Redirect from wp-admin
+add_action( 'admin_init', 'my_admin_redirect' );
+function my_admin_redirect() {
+	if ( ! defined( 'DOING_AJAX' ) ) {
+		if ( current_user_can( 'subscriber' ) ) {
+			$refer = wp_get_referer();
+			if ( ! $refer || strpos( $refer, 'wp-admin' ) ) {
+				wp_safe_redirect( home_url() );
+			} else {
+				wp_safe_redirect( $refer );
+			}
+		}
+	}
+}
