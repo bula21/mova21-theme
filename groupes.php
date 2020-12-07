@@ -25,6 +25,9 @@
                 <div class="cta-bloc">
                     <p class="date"><?php the_sub_field( 'event_date' ); ?></p>
                     <p class="eventName"><?php the_sub_field( 'event_name' ); ?></p>
+                    <div class="eventTextInfoBox">
+                         <p class="eventTextInfo"><?php the_sub_field( 'event_textInfo' ); ?></p>
+                    </div>
                     <?php if ( get_sub_field( 'event_button' ) ): $link = get_sub_field( 'event_button' ); ?>
                     <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
                         <p class="cta-button"><?php echo $link['title']; ?> →</p>

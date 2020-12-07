@@ -24,15 +24,15 @@
             padding: 15px 30px;
             position: relative;
             width: calc(100% / 3 - 50px);
-            height: 150px;
-            
-             &:nth-of-type(3n){
+            min-height: 150px;
+
+            &:nth-of-type(3n) {
                 margin-right: 0;
-                 
-                 @include media-medium {
-                     margin-right: 50px;
-                 }
-        }
+
+                @include media-medium {
+                    margin-right: 50px;
+                }
+            }
 
             @include media-medium {
                 width: calc(100% / 2 - 25px);
@@ -40,10 +40,10 @@
                 margin-bottom: 50px;
                 padding: 15px;
                 margin-right: 50px;
-                
-                 &:nth-of-type(2n){
-                margin-right: 0;
-        }
+
+                &:nth-of-type(2n) {
+                    margin-right: 0;
+                }
             }
 
             @include media-small {
@@ -52,16 +52,6 @@
                 margin-bottom: 25px;
                 padding: 15px;
                 margin-right: 0;
-            }
-
-
-            .arrow {
-                fill: $yellow;
-                transform: rotate(180deg);
-                width: 100%;
-                position: absolute;
-                left: 0;
-                top: 100%;
             }
 
             .cta-bloc {
@@ -86,6 +76,13 @@
 
                     @include media-large-up {}
 
+                }
+
+                .eventTextInfoBox {
+                    margin-left: 10px;
+                    p {
+                        @include font_02;
+                    }
                 }
 
                 a {
@@ -144,7 +141,7 @@
             .rightCol {
                 display: flex;
                 flex-direction: column;
-                
+
                 .text {
                     @include font_02;
                     padding: 0;
