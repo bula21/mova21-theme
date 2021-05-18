@@ -42,6 +42,9 @@ jQuery(document).ready(function ($) {
             },
             image: {
                 tError: self.data('error'),
+                titleSrc: function (item) {
+                    return item.el.attr('title');
+                }
             },
         });
     });

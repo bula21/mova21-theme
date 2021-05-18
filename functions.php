@@ -91,7 +91,7 @@ function the_aid_picture_tag( $image_id = null, $size = 'medium', $size_2x = 'la
 	$src2 = wp_get_attachment_image_src( $image_id, $size_2x );
 	$alt  = get_post_meta( $image_id, '_wp_attachment_image_alt', true );
 	?>
-    <picture class="<?php echo $classlist; ?>" data-mfp-src="<?php echo $full; ?>">
+    <picture class="<?php echo $classlist; ?>" data-mfp-src="<?php echo $full; ?>" title="<?php echo $alt; ?>">
         <img srcset="<?php echo $src[0]; ?> 1x, <?php echo $src2[0]; ?> 2x" alt="<?php echo $alt; ?>">
     </picture>
 	<?php
