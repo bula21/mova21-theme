@@ -378,7 +378,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 				'required'          => 0,
 				'conditional_logic' => 0,
 				'wrapper'           => array(
-					'width' => '',
+					'width' => '50',
 					'class' => '',
 					'id'    => '',
 				),
@@ -387,6 +387,16 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 				'prepend'           => '',
 				'append'            => '',
 				'maxlength'         => '',
+			),
+			array(
+				'key'               => 'image_link',
+				'label'             => 'Link fürs Bild',
+				'instructions'      => 'Optional kann das Bild verlinkt werden',
+				'name'              => 'link',
+				'type'              => 'link',
+				'wrapper'           => array(
+					'width' => '50',
+				),
 			),
 			array(
 				'key'               => 'field_5e67ae57c4f',
