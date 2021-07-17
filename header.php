@@ -33,7 +33,7 @@
             <div class="line"></div>
             <div class="line"></div>
         </button>
-        <form role="search" method="get" id="searchform" class="searchform" action="https://bula21.local/">
+        <form role="search" method="get" id="searchform" class="searchform" action="/">
             <div>
                 <label class="screen-reader-text sr-only" for="s"><?php _e( 'Suche nach:', 'bula21' ); ?></label>
                 <div class="search-element">
