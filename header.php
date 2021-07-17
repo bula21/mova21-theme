@@ -28,8 +28,26 @@
 	<?php die(); endif; ?>
 <div class="mod-search">
     <div class="search-form-wrapper">
-        <button class="search-form-close"><?php _e( 'Schliessen', 'bula21' ); ?></button>
-		<?php echo get_search_form(); ?>
+        <button class="search-form-close" aria-label="<?php _e( 'Schliessen', 'bula21' ); ?>">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </button>
+        <form role="search" method="get" id="searchform" class="searchform" action="https://bula21.local/">
+            <div>
+                <label class="screen-reader-text sr-only" for="s"><?php _e( 'Suche nach:', 'bula21' ); ?></label>
+                <div class="search-element">
+                    <button class="search-icon" role="button" form="searchform">
+                        <img src="<?php echo BULA_URL_TO_THEME; ?>/img/search-icon.svg" alt="<?php _e( 'Search icon' ); ?>">
+                    </button>
+                    <input type="text"
+                           class="search-input"
+                           placeholder="<?php _e( 'Suche nach', 'bula21' ); ?>"
+                           value="<?php echo get_search_query(); ?>" name="s" id="s">
+                </div>
+                <input type="submit" id="searchsubmit" value="Suche" class="sr-only">
+            </div>
+            <input type="hidden" name="lang" value="de"></form>
     </div>
 </div>
 
