@@ -3,3 +3,27 @@
 
 $black: #000;
 $white: #fff;
+$yellow: rgb(255, 235, 0);
+$blue: rgb(85, 192, 255);
+$red: rgb(230, 80, 15);
+$gray: rgb(244, 244, 244);
+
+.bg-blue {
+    background-color: $blue;
+}
+
+.bg-yellow {
+    background-color: $yellow;
+}
+
+.bg-red {
+    background-color: $red;
+}
+
+.bg-black {
+    background-color: $black;
+}
+
+.font-yellow {
+    color: $yellow;
+}

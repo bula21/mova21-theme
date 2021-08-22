@@ -1,0 +1,90 @@
+.mod-news {
+
+    .header {
+        background: $blue;
+    }
+
+    .content-news {
+
+        .newsGrid {
+
+            .grid-sizer,
+            .news-grid {
+                width: 100%;
+
+                @include media-medium-up {
+                    width: 50%;
+                }
+
+                @include media-large-up {
+                    width: 33%;
+                }
+            }
+
+            .news-grid {
+                border: red 5px red;
+                margin-bottom: 50px;
+
+                .news-bloc {
+                    height: 100%;
+                    margin: 0;
+                    padding: 10px;
+                    transition: all .1s;
+                    transition-timing-function: ease;
+
+                    @include media-medium-up {
+                        margin: 0 15px;
+                    }
+
+                    @include media-large-up {
+                        margin: 0 20px;
+                    }
+
+                    &:hover {
+                        background-color: $blue;
+
+
+                        img {
+                            transform: scale(1.05);
+                        }
+                    }
+
+                    .news-image {
+                        overflow: hidden;
+                        margin: -10px -10px 25px -10px;
+                        height: 200px;
+
+                        img {
+                            height: auto;
+                            width: 100%;
+                            transition: all .5s;
+                            transition-timing-function: ease;
+                        }
+                    }
+
+                    .post-date {
+                        @include font_05;
+                    }
+
+                    .post-title {
+                        @include font_03;
+                    }
+
+                    .post-content {
+                        @include font_05;
+                    }
+
+
+                    a {
+                        color: $black;
+                        text-decoration: none;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+}

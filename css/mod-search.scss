@@ -1,0 +1,117 @@
+.mod-search {
+    .search-form-wrapper {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: $yellow;
+        z-index: 100;
+        justify-content: center;
+        align-items: center;
+
+        #searchsubmit {
+            display: block;
+            background-color: $yellow;
+            border: 1px solid black;
+        }
+
+        .search-element {
+            position: relative;
+
+            .search-icon {
+                height: 100%;
+                padding: 20px 0 20px 10px;
+                position: absolute;
+                background: transparent;
+                border: none;
+                box-shadow: none;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .search-input {
+                border: 4px solid $red;
+                padding: 20px 20px 20px 2em;
+                font-size: 3em;
+                font-weight: bold;
+                background-color: $yellow;
+                color: $red;
+
+                &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                    color: $red;
+                }
+
+                &::-moz-placeholder { /* Firefox 19+ */
+                    color: $red;
+                }
+
+                &:-ms-input-placeholder { /* IE 10+ */
+                    color: $red;
+                }
+
+                &:-moz-placeholder { /* Firefox 18- */
+                    color: $red;
+                }
+            }
+        }
+
+        .search-form-close {
+            background-color: transparent;
+            border: 0;
+            top: 0;
+            right: 0;
+            position: fixed;
+            padding: 20px 30px;
+
+            .line {
+                width: 55px;
+                height: 2px;
+                background: $red;
+                margin: 5px 0;
+                transition: opacity 200ms, transform 150ms;
+
+                &:nth-child(1) {
+                    transform: translateY(7px) rotate(20deg);
+                }
+
+                &:nth-child(2) {
+                    transform: translateX(40px);
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    transform: translateY(-6px) rotate(-20deg);
+                }
+            }
+        }
+    }
+
+    .search-active & {
+        .search-form-wrapper {
+            display: flex;
+        }
+    }
+
+    .page-header {
+        padding-top: 20px;
+    }
+
+    .search-result {
+        min-height: 60vh;
+    }
+
+    .search-result-item {
+        padding: 15px;
+        display: block;
+        color: $black;
+
+        &:hover {
+            background-color: $yellow;
+        }
+    }
+
+}

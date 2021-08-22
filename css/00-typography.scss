@@ -1,73 +1,390 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Typography
 
-/*
-// Example for custom font
+$fontpath: "./../../fonts/";
 
 @font-face {
-	font-family: 'My-Font';
-	src: url("../../fonts/My-Font.eot?#iefix") format('embedded-opentype'),
-	url("../../fonts/My-Font.woff2") format('woff2'),
-	url("../../fonts/My-Font.woff") format('woff'),
-	url("../../fonts/My-Font.ttf") format('truetype');
+    font-family: 'MessinaSansWeb-Black';
+    src: url("#{$fontpath}MessinaSansWeb-Black.eot?#iefix") format('embedded-opentype'),
+    url("#{$fontpath}MessinaSansWeb-Black.woff2") format('woff2'),
+    url("#{$fontpath}MessinaSansWeb-Black.woff") format('woff');
+    font-display: swap;
 }
 
-*/
+@font-face {
+    font-family: 'MessinaSansWeb-BlackItalic';
+    src: url("#{$fontpath}MessinaSansWeb-BlackItalic.eot?#iefix") format('embedded-opentype'),
+    url("#{$fontpath}MessinaSansWeb-BlackItalic.woff2") format('woff2'),
+    url("#{$fontpath}MessinaSansWeb-BlackItalic.woff") format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MessinaSansWeb-Bold';
+    src: url("#{$fontpath}MessinaSansWeb-Bold.eot?#iefix") format('embedded-opentype'),
+    url("#{$fontpath}MessinaSansWeb-Bold.woff2") format('woff2'),
+    url("#{$fontpath}MessinaSansWeb-Bold.woff") format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MessinaSansWeb-BoldItalic';
+    src: url("#{$fontpath}MessinaSansWeb-BoldItalic.eot?#iefix") format('embedded-opentype'),
+    url("#{$fontpath}MessinaSansWeb-BoldItalic.woff2") format('woff2'),
+    url("#{$fontpath}MessinaSansWeb-BoldItalic.woff") format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MessinaSansWeb-Book';
+    src: url("#{$fontpath}MessinaSansWeb-Book.eot?#iefix") format('embedded-opentype'),
+    url("#{$fontpath}MessinaSansWeb-Book.woff2") format('woff2'),
+    url("#{$fontpath}MessinaSansWeb-Book.woff") format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MessinaSansWeb-BookItalic';
+    src: url("#{$fontpath}MessinaSansWeb-BookItalic.eot?#iefix") format('embedded-opentype'),
+    url("#{$fontpath}MessinaSansWeb-BookItalic.woff2") format('woff2'),
+    url("#{$fontpath}MessinaSansWeb-BookItalic.woff") format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MessinaSansWeb-Light';
+    src: url("#{$fontpath}MessinaSansWeb-Light.eot?#iefix") format('embedded-opentype'),
+    url("#{$fontpath}MessinaSansWeb-Light.woff2") format('woff2'),
+    url("#{$fontpath}MessinaSansWeb-Light.woff") format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MessinaSansWeb-LightItalic';
+    src: url("#{$fontpath}MessinaSansWeb-LightItalic.eot?#iefix") format('embedded-opentype'),
+    url("#{$fontpath}MessinaSansWeb-LightItalic.woff2") format('woff2'),
+    url("#{$fontpath}MessinaSansWeb-LightItalic.woff") format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MessinaSansWeb-Regular';
+    src: url("#{$fontpath}MessinaSansWeb-Regular.eot?#iefix") format('embedded-opentype'),
+    url("#{$fontpath}MessinaSansWeb-Regular.woff2") format('woff2'),
+    url("#{$fontpath}MessinaSansWeb-Regular.woff") format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MessinaSansWeb-RegularItalic';
+    src: url("#{$fontpath}MessinaSansWeb-RegularItalic.eot?#iefix") format('embedded-opentype'),
+    url("#{$fontpath}MessinaSansWeb-RegularItalic.woff2") format('woff2'),
+    url("#{$fontpath}MessinaSansWeb-RegularItalic.woff") format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MessinaSansWeb-SemiBold';
+    src: url("#{$fontpath}MessinaSansWeb-SemiBold.eot?#iefix") format('embedded-opentype'),
+    url("#{$fontpath}MessinaSansWeb-SemiBold.woff2") format('woff2'),
+    url("#{$fontpath}MessinaSansWeb-SemiBold.woff") format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MessinaSansWeb-SemiBoldItalic';
+    src: url("#{$fontpath}MessinaSansWeb-SemiBoldItalic.eot?#iefix") format('embedded-opentype'),
+    url("#{$fontpath}MessinaSansWeb-SemiBoldItalic.woff2") format('woff2'),
+    url("#{$fontpath}MessinaSansWeb-SemiBoldItalic.woff") format('woff');
+    font-display: swap;
+}
+
+body {
+    font-family: 'MessinaSansWeb-Regular', serif;
+}
+
+
+// ****************************************************
+// main fonts
+// ****************************************************
+
+//page-h1
+@mixin font_01 {
+    font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 40px;
+    line-height: 47px;
+    text-decoration: none;
+    color: $black;
+
+    @include media-medium-up {
+        font-size: 45px;
+        line-height: 50px;
+    }
+
+    @include media-large-up {
+        font-size: 60px;
+        line-height: 64px;
+    }
+
+}
+
+//header-texts and other use
+@mixin font_02 {
+    font-family: 'MessinaSansWeb-Bold', serif;
+    text-decoration: none;
+    color: $black;
+    font-size: 14px;
+    line-height: 18px;
+
+    @include media-medium-up {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    @include media-large-up {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    a {
+        color: $blue;
+    }
+}
+
+//article-h1
+@mixin font_03 {
+    font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 25px;
+    line-height: 30px;
+    text-decoration: none;
+    color: $black;
+
+    @include media-medium-up {
+        font-size: 35px;
+        line-height: 41px;
+    }
+
+    @include media-large-up {
+        font-size: 35px;
+        line-height: 38px;
+    }
+}
+
+//coreText 
+@mixin font_04 {
+    font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 25px;
+    line-height: 29px;
+    text-decoration: none;
+    color: $black;
+
+    @include media-medium-up {
+        font-size: 25px;
+        line-height: 28px;
+    }
+
+    @include media-large-up {
+        font-size: 28px;
+        line-height: 34.5px;
+    }
+}
+
+@mixin font_05 {
+    font-family: 'MessinaSansWeb-SemiBold', serif;
+    text-decoration: none;
+    color: $black;
+    font-size: 14px;
+    line-height: 18px;
+
+    @include media-medium-up {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    @include media-large-up {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+// ****************************************************
+// use of the main fonts
+// ****************************************************
+
+@mixin article {
+    font-family: 'MessinaSansWeb-Regular', serif;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+
+    @include media-medium-up {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    @include media-large-up {
+        font-size: 17px;
+        line-height: 25px;
+    }
+}
 
 @mixin main-menu {
-    font-family: 'Helvetica Neue', serif;
+    font-family: 'MessinaSansWeb-Regular', serif;
     font-size: 25px;
     line-height: 35px;
     text-decoration: none;
 
-     @include media-medium-up {
+    @include media-medium-up {
         font-size: 40px;
         line-height: 55px;
     }
+
     @include media-large-up {
         font-size: 45px;
         line-height: 60px;
     }
 }
 
-@mixin sub-menu {
-    font-family: 'Helvetica Neue', serif;
+@mixin font-menu {
+    font-family: 'MessinaSansWeb-Bold', serif;
     font-size: 18px;
     line-height: 22px;
     text-decoration: none;
+    color: $black;
+    transition: color 250ms;
+
+    &:hover {
+        color: $red;
+    }
 
     @include media-medium-up {
-        font-size: 25px;
+        font-size: 20px;
         line-height: 30px;
     }
-    @include media-large-up {
-        font-size: 30px;
-        line-height: 35px;
-    }
 }
 
-@mixin h2 {
-    font-family: 'Helvetica Neue', serif;
-    font-size: 17px;
-    line-height: 21px;
+@mixin font-footer {
+    font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    color: $black;
+
+    a {
+        color: $black;
+    }
+
     @include media-medium-up {
-        font-size: 23px;
-        line-height: 28px;
-    }
-    @include media-large-up {
-        font-size: 32px;
-        line-height: 40px;
+        font-size: 16px;
+        line-height: 20px;
     }
 }
 
-@mixin h3 {
-    font-family: 'Helvetica Neue', serif;
-    font-size: 15px;
-    line-height: 18px;
+@mixin bold-content {
+    font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 22px;
+    line-height: 26px;
+    text-decoration: none;
+    color: $black;
+
+    a {
+        color: $black;
+    }
+
+    @include media-medium-up {
+        font-size: 30px;
+        line-height: 38px;
+    }
+}
+
+@mixin h1 {
+    font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 40px;
+    line-height: 47px;
+    text-decoration: none;
+    color: $black;
+
+    @include media-medium-up {
+        font-size: 45px;
+        line-height: 50px;
+    }
+
+    @include media-large-up {
+        font-size: 60px;
+        line-height: 64px;
+    }
+
+}
+
+@mixin h1-sub {
+    font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 17px;
+    line-height: 24px;
+    text-decoration: none;
+    color: $black;
+
     @include media-medium-up {
         font-size: 20px;
         line-height: 25px;
     }
+
+    @include media-large-up {
+        font-size: 25px;
+        line-height: 31px;
+    }
+
+}
+
+@mixin header-text {
+    font-family: 'MessinaSansWeb-Bold', serif;
+    text-decoration: none;
+    color: $black;
+    font-size: 14px;
+    line-height: 18px;
+
+    @include media-medium-up {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    @include media-large-up {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    a {
+        color: $blue;
+    }
+}
+
+@mixin h2 {
+    font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 25px;
+    line-height: 30px;
+    text-decoration: none;
+    color: $black;
+
+    @include media-medium-up {
+        font-size: 35px;
+        line-height: 41px;
+    }
+
+    @include media-large-up {
+        font-size: 44px;
+        line-height: 50px;
+    }
+}
+
+@mixin h3 {
+    font-family: 'MessinaSansWeb-Regular', serif;
+    font-size: 15px;
+    line-height: 18px;
+
+    @include media-medium-up {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
     @include media-large-up {
         font-size: 22px;
         line-height: 25px;
@@ -84,8 +401,135 @@
     }
 }
 
+@mixin font-collapse {
+    font-family: 'MessinaSansWeb-SemiBold', serif;
+    font-size: 17px;
+    line-height: 19px;
+    text-decoration: none;
+    color: $black;
+    text-align: left;
+}
+
+@mixin font-collapse-h2 {
+    font-family: 'MessinaSansWeb-SemiBold', serif;
+    font-size: 30px;
+    line-height: 15px;
+    text-decoration: none;
+    color: $black;
+    text-transform: uppercase;
+}
+
+@mixin event-h2 {
+    font-family: 'MessinaSansWeb-Black', serif;
+    font-size: 20px;
+    line-height: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $black;
+
+    @include media-medium-up {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    @include media-large-up {
+        font-size: 20px;
+        line-height: 25px;
+    }
+}
+
+@mixin event-btn {
+    font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 25px;
+    line-height: 29px;
+    text-decoration: none;
+    color: $black;
+    text-align: left;
+
+    @include media-medium-up {
+        font-size: 25px;
+        line-height: 28px;
+    }
+
+    @include media-large-up {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+
+@mixin event-text {
+    font-family: 'MessinaSansWeb-Bold', serif;
+    font-size: 25px;
+    line-height: 29px;
+    text-decoration: none;
+    color: $black;
+
+    @include media-medium-up {
+        font-size: 25px;
+        line-height: 28px;
+    }
+
+    @include media-large-up {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+
+
+//fp - full page
+@mixin fp-text{
+    @include event-text;
+}
+
+@mixin news-title {
+    @include h2;
+}
+
+@mixin news-text {
+    @include header-text;
+}
+
+@mixin bloc-date {
+    @include header-text;
+}
+
+@mixin bloc-title {
+    @include h2;
+}
+
+@mixin bloc-text {
+    @include article;
+    font-family: 'MessinaSansWeb-SemiBold', serif;
+}
+
+@mixin bloc-button {
+    @include header-text;
+}
+
+@mixin org-job {
+    @include header-text;
+    color: $blue;
+}
+
+@mixin org-name {
+    @include header-text;
+}
+
+@mixin org-email {
+    @include article;
+
+    a{
+        font-family: 'MessinaSansWeb-SemiBold', serif;
+        color: $black;
+    }
+}
+
 .wysiwyg {
     padding: 10px 0;
+
+    h1 {
+        @include h1;
+    }
 
     h2 {
         @include h2;
@@ -103,8 +547,13 @@
 
     ul {
         padding-left: 20px;
+
         li {
             padding-left: 10px;
         }
+    }
+
+    strong {
+        font-family: 'MessinaSansWeb-Bold', serif;
     }
 }

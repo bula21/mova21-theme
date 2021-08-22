@@ -31,11 +31,17 @@ module.exports = function (grunt) {
                 styles: [
                     'node_modules/bootstrap/dist/css/bootstrap.min.css',
                     'node_modules/font-awesome/css/font-awesome.min.css',
+                    'node_modules/magnific-popup/dist/magnific-popup.css',
                     'css/*.{scss,css}'
                 ],
                 scripts: [
                     'node_modules/jquery/dist/jquery.min.js',
                     'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+                    'node_modules/lottie-web/build/player/lottie.min.js',
+                    'node_modules/phaser/dist/phaser.min.js',
+                    'node_modules/masonry-layout/dist/masonry.pkgd.min.js',
+                    'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+                    'node_modules/moment/min/moment-with-locales.min.js',
                     'js/*.js'
                 ]
             }
@@ -172,12 +178,12 @@ module.exports = function (grunt) {
             },
             prod: {
                 auth: {
-                    host: 'bula21.ch',
+                    host: 'mova.ch',
                     port: 22,
                     authKey: 'bula-prod'
                 },
                 src: './',
-                dest: 'www/bula21.ch/wp-content/themes/bula21/',
+                dest: 'www/mova.ch/wp-content/themes/bula21/',
                 exclusions: [
                     'css/**',
                     'dev',
@@ -192,8 +198,38 @@ module.exports = function (grunt) {
                 ],
                 progress: true
             },
-        }
+        },
 
+
+        /////////////////////////
+        // rsync deployments
+        rsync: {
+            options: {
+                args: ["--verbose"],
+                exclude: ['.git*', '*.scss', 'node_modules', 'temp', '/js', '/css', '.*', 'Gruntfile.js', 'package.json', 'package-lock.json', 'README.md'],
+                recursive: true
+            },
+            dev: {
+                options: {
+                    src: "./",
+                    dest: "www/dev.bula21.ch/wp-content/themes/bula21",
+                    host: "bula221i@dev.bula21.ch",
+                    deleteAll: true,
+                    ssh: true,
+                    privateKey: '~/.ssh/tolla'
+                }
+            },
+            prod: {
+                options: {
+                    src: "./",
+                    dest: "www/mova.ch/wp-content/themes/bula21",
+                    host: "bula221i@mova.ch",
+                    deleteAll: true,
+                    ssh: true,
+                    privateKey: '~/.ssh/tolla'
+                }
+            }
+        }
     });
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -207,6 +243,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-sftp-deploy');
+    grunt.loadNpmTasks('grunt-rsync');
+
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Sub Tasks
@@ -219,13 +257,16 @@ module.exports = function (grunt) {
     // Script Tasks
     grunt.registerTask('build-scripts', ['concat:scripts']);
     grunt.registerTask('build-scripts-prod', ['concat:scripts']);
-    grunt.registerTask('npmi', function(){
+    grunt.registerTask('npmi', function () {
         var exec = require('child_process').exec;
         exec('npm install');
     });
 
     // deploy tasks: $ grunt deploy-dev
     grunt.registerTask('deploy-dev', ['concurrent:prod', 'clean:temp_folder', 'sftp-deploy:dev']);
+    grunt.registerTask('rsync-dev', ['concurrent:prod', 'clean:temp_folder', 'rsync:dev']);
+    grunt.registerTask('rsync-prod', ['concurrent:prod', 'rsync:prod']);
+
     grunt.registerTask('deploy-prod', ['concurrent:prod', 'sftp-deploy:prod']);
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

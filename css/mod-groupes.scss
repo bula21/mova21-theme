@@ -1,0 +1,190 @@
+.mod-groupes {
+
+    .header {
+        .infos {
+            background: $yellow;
+        }
+
+        .illustration {
+            background: $blue;
+        }
+    }
+
+    .timeLine {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: start;
+        overflow: hidden;
+        margin-bottom: 100px;
+
+        .tl-event {
+            background: $yellow;
+            margin: 0 75px 50px 0;
+            padding: 15px 30px;
+            position: relative;
+            width: calc(100% / 3 - 50px);
+            min-height: 150px;
+
+            &:nth-of-type(3n) {
+                margin-right: 0;
+
+                @include media-medium {
+                    margin-right: 50px;
+                }
+            }
+
+            @include media-medium {
+                width: calc(100% / 2 - 25px);
+                margin-bottom: 50px;
+                padding: 15px;
+                margin-right: 50px;
+
+                &:nth-of-type(2n) {
+                    margin-right: 0;
+                }
+            }
+
+            @include media-small {
+                width: calc(100% - 25px);
+                margin-bottom: 25px;
+                padding: 15px;
+                margin-right: 0;
+            }
+
+            .cta-bloc {
+                p {
+                    text-align: left;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .date {
+                    @include font_02;
+                }
+
+                .eventName {
+                    @include font_04;
+                    white-space: normal;
+                    overflow-wrap: break-word;
+                    word-wrap: break-word;
+                    max-width: calc(100%);
+
+                    @include media-medium-up {}
+
+                    @include media-large-up {}
+
+                }
+
+                .eventTextInfoBox {
+                    margin-left: 10px;
+                    p {
+                        @include font_02;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+
+                    .cta-button {
+                        display: inline;
+                        @include font_02;
+                        color: $blue;
+                        margin-top: 15px;
+                        transition: .2s;
+                        animation-delay: .1;
+                        transition-timing-function: cubic-bezier(.5, .49, .65, .61);
+
+                        &:hover {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .events-container {
+
+        .event {
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            @include media-medium-up {
+                flex-direction: row;
+            }
+
+            @include media-large-up {}
+
+            h2 {
+                min-width: 30%;
+                margin-right: 50px;
+                @include font_03;
+                margin-bottom: 25px;
+
+                @include media-medium-up {
+                    margin-bottom: 0;
+                }
+
+                @include media-large-up {
+                    min-width: 25%;
+                    margin-right: 50px;
+                    margin-bottom: 50px;
+                }
+            }
+
+            .rightCol {
+                display: flex;
+                flex-direction: column;
+
+                .text {
+                    @include font_02;
+                    padding: 0;
+                }
+
+                a {
+                    .btn {
+                        background-color: $red;
+                        outline: none;
+                        @include font_04;
+                        text-align: left;
+                        padding: 10px;
+                        border: 0;
+                        transition: all .3s;
+                        transition-timing-function: cubic-bezier(.48, 1.18, .58, 1);
+
+                        p {
+                            padding: 0;
+                            margin: 0;
+                            transition: all .6s;
+                            transition-timing-function: cubic-bezier(.48, 1.18, .58, 1);
+                            word-wrap: break-word;
+                        }
+
+                        &:hover {
+                            transform: scale(1.05);
+
+                            p {
+                                transform: scale(1.03);
+                                margin-left: 10px;
+
+                                @include media-medium-up {
+                                    margin-left: 0;
+                                }
+                            }
+                        }
+
+                        &:active {
+                            transition: 0;
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
