@@ -231,7 +231,7 @@ add_filter( 'ninja_forms_render_options', function ( $options, $settings ) {
 				$datum      = get_sub_field( 'datum' );
 				$limit      = get_sub_field( 'limit' );
 				$open_seats = $limit - bula_count_submissions_with_date( $datum );
-				if ( $datum ) {
+				if ( $datum && $open_seats > 0 ) {
 					$options[] = [
 						'label'    => $datum . ' (Verfügbare Plätze: ' . $open_seats . ')',
 						'value'    => $datum,
