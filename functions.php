@@ -218,3 +218,49 @@ function my_admin_redirect() {
 		}
 	}
 }
+
+/**
+ * ninja forms fuehrungen booking date stuff
+ */
+add_filter( 'ninja_forms_render_options', function ( $options, $settings ) {
+	if ( 'mova_datum_fuehrung' == $settings['key'] ) {
+
+		if ( have_rows( 'dates_for_tours', 'option' ) ) {
+			while ( have_rows( 'dates_for_tours', 'option' ) ) {
+				the_row();
+				$datum      = get_sub_field( 'datum' );
+				$limit      = get_sub_field( 'limit' );
+				$open_seats = $limit - bula_count_submissions_with_date( $datum );
+				if ( $datum ) {
+					$options[] = [
+						'label'    => $datum . ' (Verfügbare Plätze: ' . $open_seats . ')',
+						'value'    => $datum,
+						'calc'     => 0,
+						'selected' => false
+					];
+				}
+			}
+		}
+	}
+
+	return $options;
+}, 10, 2 );
+
+function bula_count_submissions_with_date( $date ) {
+	if ( function_exists( 'Ninja_Forms' ) ) {
+
+	}
+	$forms    = Ninja_Forms()->form()->get_forms();
+	$has_date = 0;
+
+	foreach ( $forms as $form ) {
+		$subs = Ninja_Forms()->form( $form->get_id() )->get_subs();
+		foreach ( $subs as $sub ) {
+			if ( $sub->get_field_value( 'mova_datum_fuehrung' ) == $date ) {
+				$has_date ++;
+			}
+		}
+	}
+
+	return $has_date;
+}

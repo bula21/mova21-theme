@@ -30,12 +30,14 @@
                                 <div class="col-12 col-md-6">
 									<?php
 									$image = get_sub_field( 'bild' );
-									if ( $link = get_sub_field( 'link' ) ) {
-										echo '<a href="' . $link['url'] . '" target="' . $link['target'] . '">';
-										the_aid_picture_tag( $image['id'], 'bula-fullwidth', 'bula-fullwidth_2x', 'content-image' );
-										echo '</a>';
-									} else {
-										the_aid_picture_tag( $image['id'], 'bula-fullwidth', 'bula-fullwidth_2x', 'content-image' );
+									if ( $image ) {
+										if ( $link = get_sub_field( 'link' ) ) {
+											echo '<a href="' . $link['url'] . '" target="' . $link['target'] . '">';
+											the_aid_picture_tag( $image['id'], 'bula-fullwidth', 'bula-fullwidth_2x', 'content-image' );
+											echo '</a>';
+										} else {
+											the_aid_picture_tag( $image['id'], 'bula-fullwidth', 'bula-fullwidth_2x', 'content-image' );
+										}
 									}
 									?>
                                 </div>
