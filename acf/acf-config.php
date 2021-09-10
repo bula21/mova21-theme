@@ -59,7 +59,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 						'key'               => 'field_5e19dd1b8ed1a',
 						'label'             => 'Datum',
 						'name'              => 'datum',
-						'type'              => 'date_picker',
+						'type'              => 'date_time_picker',
 						'instructions'      => '',
 						'required'          => 0,
 						'conditional_logic' => 0,
@@ -77,8 +77,8 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 						'max_height'        => '',
 						'max_size'          => '',
 						'mime_types'        => '',
-						'display_format'    => 'd.m.Y',
-						'return_format'     => 'd.m.Y'
+						'display_format'    => 'd.m.Y H:i',
+						'return_format'     => 'd.m.Y H:i'
 					),
 					array(
 						'key'               => 'field_5e19dd2b8ed1b',
