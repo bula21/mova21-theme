@@ -209,6 +209,104 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 				'return_format'     => 'U'
 			),
 			array(
+				'key'               => 'bula_hauptpartnerlogos',
+				'label'             => 'Hauptpartnerinnen Logos',
+				'name'              => 'hauptpartnerlogos',
+				'type'              => 'repeater',
+				'instructions'      => '',
+				'required'          => 0,
+				'conditional_logic' => 0,
+				'wrapper'           => array(
+					'width' => '100',
+					'class' => '',
+					'id'    => '',
+				),
+				'collapsed'         => '',
+				'min'               => 0,
+				'max'               => 0,
+				'layout'            => 'block',
+				'button_label'      => 'Logo hinzufügen',
+				'sub_fields'        => array(
+					array(
+						'key'               => 'bula_partner_logo',
+						'label'             => 'Partner Logo',
+						'name'              => 'partnerlogo',
+						'type'              => 'image',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '50',
+							'class' => '',
+							'id'    => '',
+						)
+					),
+					array(
+						'key'               => 'bula_partner_link',
+						'label'             => 'Link',
+						'name'              => 'partnerlogolink',
+						'type'              => 'link',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '50',
+							'class' => '',
+							'id'    => '',
+						)
+					),
+				),
+			),
+			array(
+				'key'               => 'bula_partnerlogos',
+				'label'             => 'Partnerinnen Logos',
+				'name'              => 'partnerlogos',
+				'type'              => 'repeater',
+				'instructions'      => '',
+				'required'          => 0,
+				'conditional_logic' => 0,
+				'wrapper'           => array(
+					'width' => '100',
+					'class' => '',
+					'id'    => '',
+				),
+				'collapsed'         => '',
+				'min'               => 0,
+				'max'               => 0,
+				'layout'            => 'block',
+				'button_label'      => 'Logo hinzufügen',
+				'sub_fields'        => array(
+					array(
+						'key'               => 'bula_partner_logo',
+						'label'             => 'Partner Logo',
+						'name'              => 'partnerlogo',
+						'type'              => 'image',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '50',
+							'class' => '',
+							'id'    => '',
+						)
+					),
+					array(
+						'key'               => 'bula_partner_link',
+						'label'             => 'Link',
+						'name'              => 'partnerlogolink',
+						'type'              => 'link',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '50',
+							'class' => '',
+							'id'    => '',
+						)
+					),
+				),
+			),
+			array(
 				'key'               => 'field_5d00f2201e1aa',
 				'label'             => 'Black-Site',
 				'type'              => 'tab',
