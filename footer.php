@@ -35,7 +35,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <div class="d-flex justify-content-end flex-wrap align-items-center">
+                <div class="partner-wrapper">
 					<?php if ( have_rows( 'hauptpartnerlogos', 'options' ) ): ?>
                         <p class="partner-heading"><?php _e( 'Hauptpartnerinnen', 'aid-domain' ); ?></p>
 						<?php while ( have_rows( 'hauptpartnerlogos', 'options' ) ) :
