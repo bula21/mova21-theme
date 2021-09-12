@@ -27,9 +27,10 @@
     .partner-heading {
         padding: 7px 15px 23px;
         margin-bottom: 0;
-
-        &:nth-of-type(2) {
-            border-left: 2px solid black;
+        @include media-medium-up {
+            &:nth-of-type(2) {
+                border-left: 2px solid black;
+            }
         }
     }
 
@@ -37,6 +38,7 @@
         max-width: 100px;
         margin-right: 15px;
     }
+
     .partner-logo {
         max-width: 80px;
         margin-right: 15px;
