@@ -332,7 +332,8 @@
                         </div>
 					<?php
                     elseif ( get_row_layout() == 'gallery-blocks' ): ?>
-                        <div class="content-element--gallery" data-loading="<?php _e( 'Bild wird geladen', 'bula21' ); ?>" data-error="<?php _e( 'Es gab einen Fehler beim laden des Bildes.', 'bula21' ); ?>">
+                        <div class="content-element--gallery" data-loading="<?php _e( 'Bild wird geladen', 'bula21' ); ?>"
+                             data-error="<?php _e( 'Es gab einen Fehler beim laden des Bildes.', 'bula21' ); ?>">
                             <div class="row">
 								<?php if ( have_rows( 'bilder' ) ):
 									while ( have_rows( 'bilder' ) ):
