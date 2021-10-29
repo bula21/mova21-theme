@@ -252,11 +252,24 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 				'required'          => 0,
 				'conditional_logic' => 0,
 				'wrapper'           => array(
-					'width' => '',
+					'width' => '75',
 					'class' => '',
 					'id'    => '',
 				),
 				'default_value'     => '',
+			),
+			array(
+				'key'           => 'field_5e4fcfe0123b',
+				'label'         => 'Block Ausblenden?',
+				'name'          => 'hide_block',
+				'type'          => 'true_false',
+				'wrapper'       => array(
+					'width' => '25',
+				),
+				'default_value' => 0,
+				'ui'            => 1,
+				'ui_on_text'    => 'Ja',
+				'ui_off_text'   => 'Nein',
 			),
 			array(
 				'key'               => 'field_5e67afb61be5b',
@@ -389,14 +402,27 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 				'maxlength'         => '',
 			),
 			array(
-				'key'               => 'image_link',
-				'label'             => 'Link fürs Bild',
-				'instructions'      => 'Optional kann das Bild verlinkt werden',
-				'name'              => 'link',
-				'type'              => 'link',
-				'wrapper'           => array(
-					'width' => '50',
+				'key'          => 'image_link',
+				'label'        => 'Link fürs Bild',
+				'instructions' => 'Optional kann das Bild verlinkt werden',
+				'name'         => 'link',
+				'type'         => 'link',
+				'wrapper'      => array(
+					'width' => '25',
 				),
+			),
+			array(
+				'key'           => 'field_5e4fcfe0123a',
+				'label'         => 'Block Ausblenden?',
+				'name'          => 'hide_block',
+				'type'          => 'true_false',
+				'wrapper'       => array(
+					'width' => '25',
+				),
+				'default_value' => 0,
+				'ui'            => 1,
+				'ui_on_text'    => 'Ja',
+				'ui_off_text'   => 'Nein',
 			),
 			array(
 				'key'               => 'field_5e67ae57c4f',
@@ -443,7 +469,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 			),
 			array(
 				'key'               => 'field_5e67af40b9111',
-				'label'             => 'BgColor',
+				'label'             => 'Hintergrundfarbe',
 				'name'              => 'hintergrundfarbe',
 				'type'              => 'select',
 				'instructions'      => '',
@@ -542,25 +568,25 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 				'button_label'      => 'Bild hinzufügen',
 				'sub_fields'        => array(
 					array(
-						'key'               => 'field_5e67ae97c4c91',
-						'label'             => 'Bild',
-						'name'              => 'bild',
-						'type'              => 'image',
-						'wrapper'           => array(
+						'key'           => 'field_5e67ae97c4c91',
+						'label'         => 'Bild',
+						'name'          => 'bild',
+						'type'          => 'image',
+						'wrapper'       => array(
 							'width' => '',
 							'class' => '',
 							'id'    => '',
 						),
-						'return_format'     => 'array',
-						'preview_size'      => 'medium',
-						'library'           => 'all',
-						'min_width'         => '',
-						'min_height'        => '',
-						'min_size'          => '',
-						'max_width'         => '',
-						'max_height'        => '',
-						'max_size'          => '',
-						'mime_types'        => '',
+						'return_format' => 'array',
+						'preview_size'  => 'medium',
+						'library'       => 'all',
+						'min_width'     => '',
+						'min_height'    => '',
+						'min_size'      => '',
+						'max_width'     => '',
+						'max_height'    => '',
+						'max_size'      => '',
+						'mime_types'    => '',
 					),
 				)
 			)
@@ -756,9 +782,66 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 		'fields'                => array(
 			array(
 				'key'               => 'field_5e67afs2b61be5a',
-				'label'             => 'Fp-Text',
+				'label'             => 'Full-Width-Text',
 				'name'              => 'fp-text',
 				'type'              => 'wysiwyg',
+				'instructions'      => '',
+				'required'          => 0,
+				'conditional_logic' => 0,
+				'wrapper'           => array(
+					'width' => '75',
+					'class' => '',
+					'id'    => '',
+				),
+				'default_value'     => '',
+			),
+			array(
+				'key'           => 'field_5e4fcfe0123c',
+				'label'         => 'Block Ausblenden?',
+				'name'          => 'hide_block',
+				'type'          => 'true_false',
+				'wrapper'       => array(
+					'width' => '25',
+				),
+				'default_value' => 0,
+				'ui'            => 1,
+				'ui_on_text'    => 'Ja',
+				'ui_off_text'   => 'Nein',
+			),
+		),
+		'location'              => array(
+			array(
+				array(
+					'param'    => 'post_type',
+					'operator' => '==',
+					'value'    => 'post',
+				),
+				array(
+					'param'    => 'post_type',
+					'operator' => '==',
+					'value'    => 'page',
+				),
+			),
+		),
+		'menu_order'            => 0,
+		'position'              => 'normal',
+		'style'                 => 'default',
+		'label_placement'       => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen'        => '',
+		'active'                => true,
+		'description'           => '',
+	) );
+
+	acf_add_local_field_group( array(
+		'key'                   => 'group_5e67ad35afaf25af3c2',
+		'title'                 => 'CE: person contact ',
+		'fields'                => array(
+			array(
+				'key'               => 'field_5e3e51cc5f485',
+				'label'             => 'Person',
+				'name'              => 'person',
+				'type'              => 'repeater',
 				'instructions'      => '',
 				'required'          => 0,
 				'conditional_logic' => 0,
@@ -767,7 +850,72 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 					'class' => '',
 					'id'    => '',
 				),
-				'default_value'     => '',
+				'collapsed'         => '',
+				'min'               => 1,
+				'max'               => 0,
+				'layout'            => 'block',
+				'button_label'      => 'Person hinzufügen',
+				'sub_fields'        => array(
+					array(
+						'key'               => 'field_5e3e520f5f487',
+						'label'             => 'Foto',
+						'name'              => 'image',
+						'type'              => 'image',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'return_format'     => 'array',
+						'preview_size'      => 'medium',
+						'library'           => 'all',
+					),
+					array(
+						'key'               => 'field_5e496e2810659',
+						'label'             => 'Job-Beschreibung',
+						'name'              => 'job',
+						'type'              => 'text',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'default_value'     => '',
+						'placeholder'       => '',
+						'prepend'           => '',
+						'append'            => '',
+						'maxlength'         => '',
+					),
+					array(
+						'key'               => 'field_5e3e521a5f488',
+						'label'             => 'Name',
+						'name'              => 'name',
+						'type'              => 'text',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'default_value'     => '',
+						'placeholder'       => '',
+						'prepend'           => '',
+						'append'            => '',
+						'maxlength'         => '',
+					),
+					array(
+						'key'               => 'field_5e3e521e5f489',
+						'label'             => 'E-Mail',
+						'name'              => 'contact',
+						'type'              => 'text',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'placeholder'       => '',
+						'prepend'           => '',
+						'append'            => '',
+						'maxlength'         => '',
+					),
+					array(
+						'key'          => 'field_5e3e521e5f411',
+						'label'        => 'Link',
+						'name'         => 'person_link',
+						'type'         => 'link',
+						'instructions' => 'Optional',
+					),
+				),
 			),
 		),
 		'location'              => array(
@@ -794,119 +942,23 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 		'description'           => '',
 	) );
 
-    acf_add_local_field_group( array(
-		'key'                   => 'group_5e67ad35afaf25af3c2',
-		'title'                 => 'CE: person contact ',
-		'fields'                => array(
-			array(
-					'key' => 'field_5e3e51cc5f485',
-					'label' => 'Person',
-					'name' => 'person',
-					'type' => 'repeater',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'collapsed' => '',
-					'min' => 1,
-					'max' => 0,
-					'layout' => 'block',
-					'button_label' => 'Person hinzufügen',
-					'sub_fields' => array(
-						array(
-							'key' => 'field_5e3e520f5f487',
-							'label' => 'Foto',
-							'name' => 'image',
-							'type' => 'image',
-							'instructions' => '',
-							'required' => 0,
-							'conditional_logic' => 0,
-							'return_format' => 'array',
-							'preview_size' => 'medium',
-							'library' => 'all',
-						),
-						array(
-							'key' => 'field_5e496e2810659',
-							'label' => 'Job-Beschreibung',
-							'name' => 'job',
-							'type' => 'text',
-							'required' => 0,
-							'conditional_logic' => 0,
-							'default_value' => '',
-							'placeholder' => '',
-							'prepend' => '',
-							'append' => '',
-							'maxlength' => '',
-						),
-						array(
-							'key' => 'field_5e3e521a5f488',
-							'label' => 'Name',
-							'name' => 'name',
-							'type' => 'text',
-							'instructions' => '',
-							'required' => 0,
-							'conditional_logic' => 0,
-							'default_value' => '',
-							'placeholder' => '',
-							'prepend' => '',
-							'append' => '',
-							'maxlength' => '',
-						),
-						array(
-							'key' => 'field_5e3e521e5f489',
-							'label' => 'E-Mail',
-							'name' => 'contact',
-							'type' => 'text',
-							'instructions' => '',
-							'required' => 0,
-							'conditional_logic' => 0,
-							'placeholder' => '',
-							'prepend' => '',
-							'append' => '',
-							'maxlength' => '',
-						),
-						array(
-							'key' => 'field_5e3e521e5f411',
-							'label' => 'Link',
-							'name' => 'person_link',
-							'type' => 'link',
-							'instructions' => 'Optional',
-						),
-					),
-                ),
-            ),
-		'location'              => array(
-			array(
-				array(
-					'param'    => 'post_type',
-					'operator' => '==',
-					'value'    => 'post',
-				),
-				array(
-					'param'    => 'post_type',
-					'operator' => '==',
-					'value'    => 'page',
-				),
-			),
-		),
-		'menu_order'            => 0,
-		'position'              => 'normal',
-		'style'                 => 'default',
-		'label_placement'       => 'top',
-		'instruction_placement' => 'label',
-		'hide_on_screen'        => '',
-		'active'                => true,
-		'description'           => '',
-	) );
-
-    acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key'                   => 'group_5ec3a25ad3336d98',
 		'title'                 => 'CE: Header mit text und bild/illustration',
 		'fields'                => array(
+			array(
+				'key'           => 'field_5e4fcfe0123d',
+				'label'         => 'Block Ausblenden?',
+				'name'          => 'hide_block',
+				'type'          => 'true_false',
+				'wrapper'       => array(
+					'width' => '100',
+				),
+				'default_value' => 0,
+				'ui'            => 1,
+				'ui_on_text'    => 'Ja',
+				'ui_off_text'   => 'Nein',
+			),
 			array(
 				'key'               => 'field_5ec3a256afd4e5f64',
 				'label'             => 'Header-1col',
@@ -935,7 +987,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 						'required'          => 0,
 						'conditional_logic' => 0,
 						'wrapper'           => array(
-							'width' => '',
+							'width' => '75',
 							'class' => '',
 							'id'    => '',
 						),
@@ -1005,6 +1057,19 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 		'title'                 => 'CE: Header mit text und bild/illustration',
 		'fields'                => array(
 			array(
+				'key'           => 'field_5e4fcfe0123e',
+				'label'         => 'Block Ausblenden?',
+				'name'          => 'hide_block',
+				'type'          => 'true_false',
+				'wrapper'       => array(
+					'width' => '100',
+				),
+				'default_value' => 0,
+				'ui'            => 1,
+				'ui_on_text'    => 'Ja',
+				'ui_off_text'   => 'Nein',
+			),
+			array(
 				'key'               => 'field_5ec3a256e5f64',
 				'label'             => 'Header-2col',
 				'name'              => 'header-2col',
@@ -1021,7 +1086,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 				'min'               => 0,
 				'max'               => 0,
 				'layout'            => 'row',
-				'button_label'      => '',
+				'button_label'      => 'Headerzeile hinzufügen',
 				'sub_fields'        => array(
 					array(
 						'key'               => 'field_5ec3a295e5f66',
@@ -1032,7 +1097,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 						'required'          => 0,
 						'conditional_logic' => 0,
 						'wrapper'           => array(
-							'width' => '',
+							'width' => '75',
 							'class' => '',
 							'id'    => '',
 						),
@@ -1163,10 +1228,23 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 		'description'           => '',
 	) );
 
-acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key'                   => 'group_5333ec3a25336d98',
 		'title'                 => 'CE: Header mit text und video',
 		'fields'                => array(
+			array(
+				'key'           => 'field_5e4fcfe01241',
+				'label'         => 'Block Ausblenden?',
+				'name'          => 'hide_block',
+				'type'          => 'true_false',
+				'wrapper'       => array(
+					'width' => '100',
+				),
+				'default_value' => 0,
+				'ui'            => 1,
+				'ui_on_text'    => 'Ja',
+				'ui_off_text'   => 'Nein',
+			),
 			array(
 				'key'               => 'field_5333ec3a256e5f64',
 				'label'             => 'Header-video',
@@ -1184,7 +1262,7 @@ acf_add_local_field_group( array(
 				'min'               => 0,
 				'max'               => 0,
 				'layout'            => 'row',
-				'button_label'      => '',
+				'button_label'      => 'Video hinzufügen',
 				'sub_fields'        => array(
 					array(
 						'key'               => 'field_5333ec3a295e5f66',
@@ -1195,7 +1273,7 @@ acf_add_local_field_group( array(
 						'required'          => 0,
 						'conditional_logic' => 0,
 						'wrapper'           => array(
-							'width' => '',
+							'width' => '75',
 							'class' => '',
 							'id'    => '',
 						),
@@ -1205,22 +1283,23 @@ acf_add_local_field_group( array(
 						'media_upload'      => 1,
 						'delay'             => 0,
 					),
-                    array(
-                        'key' => 'field_5f8f51fe5cc20',
-                        'label' => 'video',
-                        'name' => 'video',
-                        'type' => 'oembed',
-                        'instructions' => '',
-                        'required' => 0,
-                        'conditional_logic' => 0,
-                        'wrapper' => array(
-                            'width' => '',
-                            'class' => '',
-                            'id' => '',
-                        ),
-                        'width' => '',
-                        'height' => '',
-                    ),
+
+					array(
+						'key'               => 'field_5f8f51fe5cc20',
+						'label'             => 'video',
+						'name'              => 'video',
+						'type'              => 'oembed',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '',
+							'class' => '',
+							'id'    => '',
+						),
+						'width'             => '',
+						'height'            => '',
+					),
 					array(
 						'key'               => 'field_5333e67af40b9111',
 						'label'             => 'Header Background Color',
@@ -1336,15 +1415,15 @@ acf_add_local_field_group( array(
 					'id'    => '',
 				),
 				'layouts'           => array(
-					'layout_5e67adcb98d3dc0'     => array(
+					'layout_5e67adcb98d3dc0'           => array(
 						'key'        => 'layout_5e67adcb98d3dc0',
 						'name'       => 'fp-text',
-						'label'      => 'Fp-text',
+						'label'      => 'Ganze Breite Text',
 						'display'    => 'block',
 						'sub_fields' => array(
 							array(
 								'key'               => 'field_5e67add21d406a',
-								'label'             => 'Fp-text',
+								'label'             => 'Ganze Breite Text',
 								'name'              => 'fp-text',
 								'type'              => 'clone',
 								'instructions'      => '',
@@ -1367,7 +1446,7 @@ acf_add_local_field_group( array(
 						'min'        => '',
 						'max'        => '',
 					),
-					'layout_5e67adcb98ad36d3dc0ddd' => array(
+					'layout_5e67adcb98ad36d3dc0ddd'    => array(
 						'key'        => 'layout_5e67adcb98ad36d3dc0ddd',
 						'name'       => 'header-1col',
 						'label'      => 'Header-1col',
@@ -1398,7 +1477,7 @@ acf_add_local_field_group( array(
 						'min'        => '',
 						'max'        => '',
 					),
-					'layout_5e67adcb98ad36d3dc0'    => array(
+					'layout_5e67adcb98ad36d3dc0'       => array(
 						'key'        => 'layout_5e67adcb98ad36d3dc0',
 						'name'       => 'header-2col',
 						'label'      => 'Header-2col',
@@ -1429,7 +1508,7 @@ acf_add_local_field_group( array(
 						'min'        => '',
 						'max'        => '',
 					),
-                    'layout_53344e67adcb98ad36d3dc0'    => array(
+					'layout_53344e67adcb98ad36d3dc0'   => array(
 						'key'        => 'layout_53344e67adcb98ad36d3dc0',
 						'name'       => 'header-video',
 						'label'      => 'Header-video',
@@ -1460,7 +1539,7 @@ acf_add_local_field_group( array(
 						'min'        => '',
 						'max'        => '',
 					),
-                    'layout_5e67adcb98ad3ddd6d3dc0ddd' => array(
+					'layout_5e67adcb98ad3ddd6d3dc0ddd' => array(
 						'key'        => 'layout_5e67adcb98ad3ddd6d3dc0ddd',
 						'name'       => 'person-contact',
 						'label'      => 'Person contact',
@@ -1491,7 +1570,7 @@ acf_add_local_field_group( array(
 						'min'        => '',
 						'max'        => '',
 					),
-					'layout_5e67adcb98dc0'       => array(
+					'layout_5e67adcb98dc0'             => array(
 
 						'key'        => 'layout_5e67adcb98dc0',
 						'name'       => 'text-bild',
@@ -1523,7 +1602,7 @@ acf_add_local_field_group( array(
 						'min'        => '',
 						'max'        => '',
 					),
-					'layout_5e67ade71406d'          => array(
+					'layout_5e67ade71406d'             => array(
 						'key'        => 'layout_5e67ade71406d',
 						'name'       => 'farb-blocke',
 						'label'      => 'Farb-Blöcke',
@@ -1554,7 +1633,7 @@ acf_add_local_field_group( array(
 						'min'        => '',
 						'max'        => '',
 					),
-					'layout_5e67b0aa8454f'          => array(
+					'layout_5e67b0aa8454f'             => array(
 						'key'        => 'layout_5e67b0aa8454f',
 						'name'       => 'text-spalten',
 						'label'      => 'Text-Spalten',
@@ -1585,7 +1664,7 @@ acf_add_local_field_group( array(
 						'min'        => '',
 						'max'        => '',
 					),
-					'layout_5e67b0aa84d01'          => array(
+					'layout_5e67b0aa84d01'             => array(
 						'key'        => 'layout_5e67b0aa84d01',
 						'name'       => 'sidebar-blocks',
 						'label'      => 'Sidebar Blöcke',
@@ -1616,7 +1695,7 @@ acf_add_local_field_group( array(
 						'min'        => '',
 						'max'        => '',
 					),
-					'layout_5e67b0aa84d02'          => array(
+					'layout_5e67b0aa84d02'             => array(
 						'key'        => 'layout_5e67b0aa84d02',
 						'name'       => 'gallery-blocks',
 						'label'      => 'Gallery',
@@ -1663,9 +1742,9 @@ acf_add_local_field_group( array(
 			),
 			array(
 				array(
-					'param' => 'post_type',
+					'param'    => 'post_type',
 					'operator' => '==',
-					'value' => 'post',
+					'value'    => 'post',
 				),
 			),
 		),
@@ -1674,9 +1753,7 @@ acf_add_local_field_group( array(
 		'style'                 => 'default',
 		'label_placement'       => 'top',
 		'instruction_placement' => 'label',
-		'hide_on_screen'        => array(
-
-		),
+		'hide_on_screen'        => array(),
 		'active'                => true,
 		'description'           => '',
 	) );

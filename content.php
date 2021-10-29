@@ -7,10 +7,17 @@
     <div class="container mod-content">
 		<?php
 		if ( have_rows( 'content_elemente' ) ):
+			$id = 0;
 			while ( have_rows( 'content_elemente' ) ):
 				the_row();
+				$id ++;
+				if ( get_sub_field( 'hide_block' ) ) {
+					continue;
+				}
+
 				?>
-                <section>
+                <section id="element-<?php echo $id; ?>">
+
 					<?php if ( get_row_layout() == 'text-bild' ): ?>
                         <div class="content-element--text-bild">
 							<?php $reverse = get_sub_field( 'reihenfolge' ) == 't2b' ? '' : 'flex-row-reverse'; ?>
@@ -56,7 +63,7 @@
 							while ( have_rows( 'header-1col' ) ):
 								the_row();
 								?>
-                                <div class="header oneCol bg-<?php the_sub_field( 'hintergrundfarbe' ); ?>">
+                                <div class="header one-col bg-<?php the_sub_field( 'hintergrundfarbe' ); ?>">
                                     <div class="infos">
                                         <h1 class="post-title"><?php the_title(); ?></h1>
                                         <div class="text-intro"><?php the_sub_field( 'text-header' ); ?></div>
