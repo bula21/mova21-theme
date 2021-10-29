@@ -33,6 +33,42 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="partner-wrapper">
+					<?php if ( have_rows( 'hauptpartnerlogos', 'options' ) ): ?>
+                        <p class="partner-heading"><?php _e( 'Hauptpartnerinnen', 'aid-domain' ); ?></p>
+						<?php while ( have_rows( 'hauptpartnerlogos', 'options' ) ) :
+							the_row();
+							$img = get_sub_field( 'partnerlogo' );
+							if ( $link = get_sub_field( 'partnerlogolink' ) ):?>
+                                <a href="<?php echo $link['url'] ?>" target="<?php echo $link['target'] ?>">
+                                    <img class="hauptpartner-logo" src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+                                </a>
+							<?php else: ?>
+                                <img class="hauptpartner-logo" src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+							<?php endif;
+						endwhile;
+					endif;
+					if ( have_rows( 'partnerlogos', 'options' ) ): ?>
+                        <p class="partner-heading"><?php _e( 'Partner*innen', 'aid-domain' ); ?></p>
+
+						<?php while ( have_rows( 'partnerlogos', 'options' ) ) :
+							the_row();
+							$img = get_sub_field( 'partnerlogo' );
+							if ( $link = get_sub_field( 'partnerlogolink' ) ):?>
+                                <a href="<?php echo $link['url'] ?>" target="<?php echo $link['target'] ?>">
+                                    <img class="partner-logo" src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+                                </a>
+							<?php else: ?>
+                                <img class="partner-logo" src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+							<?php endif;
+						endwhile;
+					endif;
+					?>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
 

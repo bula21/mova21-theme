@@ -59,7 +59,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 						'key'               => 'field_5e19dd1b8ed1a',
 						'label'             => 'Datum',
 						'name'              => 'datum',
-						'type'              => 'date_picker',
+						'type'              => 'date_time_picker',
 						'instructions'      => '',
 						'required'          => 0,
 						'conditional_logic' => 0,
@@ -77,8 +77,8 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 						'max_height'        => '',
 						'max_size'          => '',
 						'mime_types'        => '',
-						'display_format'    => 'd.m.Y',
-						'return_format'     => 'd.m.Y'
+						'display_format'    => 'd.m.Y H:i',
+						'return_format'     => 'd.m.Y H:i'
 					),
 					array(
 						'key'               => 'field_5e19dd2b8ed1b',
@@ -207,6 +207,104 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 				),
 				'display_format'    => 'd.m.Y - H:i:s',
 				'return_format'     => 'U'
+			),
+			array(
+				'key'               => 'bula_hauptpartnerlogos',
+				'label'             => 'Hauptpartnerinnen Logos',
+				'name'              => 'hauptpartnerlogos',
+				'type'              => 'repeater',
+				'instructions'      => '',
+				'required'          => 0,
+				'conditional_logic' => 0,
+				'wrapper'           => array(
+					'width' => '100',
+					'class' => '',
+					'id'    => '',
+				),
+				'collapsed'         => '',
+				'min'               => 0,
+				'max'               => 0,
+				'layout'            => 'block',
+				'button_label'      => 'Logo hinzufügen',
+				'sub_fields'        => array(
+					array(
+						'key'               => 'bula_partner_logo',
+						'label'             => 'Partner Logo',
+						'name'              => 'partnerlogo',
+						'type'              => 'image',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '50',
+							'class' => '',
+							'id'    => '',
+						)
+					),
+					array(
+						'key'               => 'bula_partner_link',
+						'label'             => 'Link',
+						'name'              => 'partnerlogolink',
+						'type'              => 'link',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '50',
+							'class' => '',
+							'id'    => '',
+						)
+					),
+				),
+			),
+			array(
+				'key'               => 'bula_partnerlogos',
+				'label'             => 'Partnerinnen Logos',
+				'name'              => 'partnerlogos',
+				'type'              => 'repeater',
+				'instructions'      => '',
+				'required'          => 0,
+				'conditional_logic' => 0,
+				'wrapper'           => array(
+					'width' => '100',
+					'class' => '',
+					'id'    => '',
+				),
+				'collapsed'         => '',
+				'min'               => 0,
+				'max'               => 0,
+				'layout'            => 'block',
+				'button_label'      => 'Logo hinzufügen',
+				'sub_fields'        => array(
+					array(
+						'key'               => 'bula_partner_logo',
+						'label'             => 'Partner Logo',
+						'name'              => 'partnerlogo',
+						'type'              => 'image',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '50',
+							'class' => '',
+							'id'    => '',
+						)
+					),
+					array(
+						'key'               => 'bula_partner_link',
+						'label'             => 'Link',
+						'name'              => 'partnerlogolink',
+						'type'              => 'link',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '50',
+							'class' => '',
+							'id'    => '',
+						)
+					),
+				),
 			),
 			array(
 				'key'               => 'field_5d00f2201e1aa',
