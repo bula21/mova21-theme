@@ -53,7 +53,7 @@
 							if ( have_rows( 'header-1col' ) ):
 								while ( have_rows( 'header-1col' ) ) : the_row();
 									?>
-            <div class="header oneCol bg-<?php the_sub_field( 'hintergrundfarbe' ); ?>">
+            <div class="header one-col bg-<?php the_sub_field( 'hintergrundfarbe' ); ?>">
                 <div class="infos">
                     <h1 class="post-title"><?php the_title(); ?></h1>
                     <div class="text-intro"><?php the_sub_field( 'text-header' ); ?></div>

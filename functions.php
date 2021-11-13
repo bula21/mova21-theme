@@ -3,7 +3,7 @@
  * Global static theme path
  */
 define( 'BULA_URL_TO_THEME', get_stylesheet_directory_uri() );
-define( 'CACHE', WP_DEBUG ? time() : '20210118' );
+define( 'CACHE', WP_DEBUG ? time() : '20210119' );
 
 foreach ( glob( __DIR__ . '/acf/*.php' ) as $filename ) {
 	require_once( $filename );
@@ -262,17 +262,23 @@ add_filter( 'ninja_forms_render_options', function ( $options, $settings ) {
 }, 10, 2 );
 
 function bula_count_submissions_with_date( $date ) {
+	$has_date = 0;
 	if ( function_exists( 'Ninja_Forms' ) ) {
 
-	}
-	$forms    = Ninja_Forms()->form()->get_forms();
-	$has_date = 0;
+		$forms = Ninja_Forms()->form()->get_forms();
 
-	foreach ( $forms as $form ) {
-		$subs = Ninja_Forms()->form( $form->get_id() )->get_subs();
-		foreach ( $subs as $sub ) {
-			if ( $sub->get_field_value( 'mova_datum_fuehrung' ) == $date ) {
-				$has_date ++;
+		foreach ( $forms as $form ) {
+			$subs = Ninja_Forms()->form( $form->get_id() )->get_subs();
+			foreach ( $subs as $sub ) {
+
+				if ( $sub->get_field_value( 'mova_datum_fuehrung' ) == $date ) {
+					$count = $sub->get_field_value( 'anzahl_teilnehmende' );
+					if ( $count && intval( $count ) ) {
+						$has_date += $count;
+					} else {
+						$has_date ++;
+					}
+				}
 			}
 		}
 	}

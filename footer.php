@@ -53,7 +53,7 @@
                 </div>
                 <div class="partner-wrapper">
 					<?php if ( have_rows( 'partnerlogos', 'options' ) ): ?>
-                        <p class="partner-heading"><?php _e( 'Partnerinnen', 'aid-domain' ); ?></p>
+                        <p class="partner-heading"><?php _e( 'Partner*innen', 'aid-domain' ); ?></p>
 
 						<?php while ( have_rows( 'partnerlogos', 'options' ) ) :
 							the_row();
