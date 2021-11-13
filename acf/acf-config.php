@@ -209,6 +209,38 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 				'return_format'     => 'U'
 			),
 			array(
+				'key'               => 'field_5ccae9ecc211a',
+				'label'             => 'Hauptpartnerinnen Logo breite',
+				'name'              => 'hauptpartnerlogos-breite',
+				'type'              => 'number',
+				'instructions'      => 'Breite in Pixel',
+				'required'          => 0,
+				'conditional_logic' => 0,
+				'wrapper'           => array(
+					'width' => '50',
+					'class' => '',
+					'id'    => '',
+				),
+				'default_value'     => '100',
+				'placeholder'       => '',
+			),
+			array(
+				'key'               => 'field_5ccae9ecc211b',
+				'label'             => 'Partnerinnen Logo breite',
+				'name'              => 'partnerlogos-breite',
+				'type'              => 'number',
+				'instructions'      => 'Breite in Pixel',
+				'required'          => 0,
+				'conditional_logic' => 0,
+				'wrapper'           => array(
+					'width' => '50',
+					'class' => '',
+					'id'    => '',
+				),
+				'default_value'     => '80',
+				'placeholder'       => '',
+			),
+			array(
 				'key'               => 'bula_hauptpartnerlogos',
 				'label'             => 'Hauptpartnerinnen Logos',
 				'name'              => 'hauptpartnerlogos',

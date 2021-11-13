@@ -18,6 +18,21 @@ function bula_enqueue_style() {
 	wp_enqueue_style( 'bula-dist-style', BULA_URL_TO_THEME . '/dist/css/style.css', array(), CACHE );
 }
 
+/**
+ * Add inline styling
+ */
+add_action( 'wp_enqueue_scripts', 'bula_styles_method' );
+function bula_styles_method() {
+	$hauptpartner = get_field( 'hauptpartnerlogos-breite', 'options' );
+	$partner      = get_field( 'partnerlogos-breite', 'options' );
+	$custom_css   = '
+                :root {
+                        --hauptpartner-logo-width: ' . $hauptpartner . 'px;
+                        --partner-logo-width: ' . $partner . 'px;
+                }';
+	wp_add_inline_style( 'bula-dist-style', $custom_css );
+}
+
 add_action( 'wp_enqueue_scripts', 'bula_enqueue_script' );
 function bula_enqueue_script() {
 	wp_enqueue_script( 'bula-dist-script', BULA_URL_TO_THEME . '/dist/js/script.js', array(), CACHE, true );

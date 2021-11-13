@@ -49,8 +49,10 @@
                                 <img class="hauptpartner-logo" src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 							<?php endif;
 						endwhile;
-					endif;
-					if ( have_rows( 'partnerlogos', 'options' ) ): ?>
+					endif; ?>
+                </div>
+                <div class="partner-wrapper">
+					<?php if ( have_rows( 'partnerlogos', 'options' ) ): ?>
                         <p class="partner-heading"><?php _e( 'Partnerinnen', 'aid-domain' ); ?></p>
 
 						<?php while ( have_rows( 'partnerlogos', 'options' ) ) :
