@@ -25,9 +25,7 @@
                                 <div class="col-12 col-md-6 bg-<?php the_sub_field( 'hintergrundfarbe' ); ?>">
                                     <div class="text">
                                         <h1>
-											<?php
-											the_sub_field( 'title' );
-											?>
+											<?php the_sub_field( 'title' ); ?>
                                         </h1>
                                         <p>
 											<?php the_sub_field( 'text' ); ?>
