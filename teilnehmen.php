@@ -11,7 +11,11 @@
             <p><?php the_field('text_intro'); ?></p>
         </div>
         <div class="illustration">
-            <img src="" alt="">
+		    <?php
+            if ( has_post_thumbnail() ) {
+                the_aid_picture_tag(get_post_thumbnail_id(), 'large' );
+            }
+            ?>
         </div>
     </div>
     <div class="choice-container">
