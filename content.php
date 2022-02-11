@@ -111,10 +111,13 @@
 										$image = get_sub_field( 'img-header' );
 										//                     use the picture tag like this:
 										//                         the_aid_picture_tag( $image['id'], 'bula-fullwidth', 'bula-fullwidth_2x', 'content-image' );
-
+										if ( $image ) {
+											?>
+                                            <img src="<?php echo $image['url']; ?>">
+											<?php
+										}
 										?>
                                         <!--                    or use your own custom img tag like this:-->
-                                        <img src="<?php echo $image['url']; ?>">
                                     </div>
                                 </div>
 							<?php

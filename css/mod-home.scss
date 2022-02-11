@@ -117,6 +117,14 @@
         }
     }
 
+    .show-more-news {
+        padding: 15px 0;
+
+        a {
+            font-size: 1.2em;
+        }
+    }
+
     h2 {
         @include h2;
         margin-bottom: 15px;
