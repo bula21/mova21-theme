@@ -452,7 +452,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 				'required'          => 0,
 				'conditional_logic' => 0,
 				'wrapper'           => array(
-					'width' => '50',
+					'width' => '25',
 					'class' => '',
 					'id'    => '',
 				),
@@ -466,6 +466,20 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 				'max_height'        => '',
 				'max_size'          => '',
 				'mime_types'        => '',
+			),
+			array(
+				'key'           => 'bula_image_contain',
+				'label'         => 'Bild vollständig anzeigen?',
+				'name'          => 'bula_image_contain',
+				'instructions'  => 'Das Bild füllt normalerweise den ganzen Block aus, dann wird es aber nicht vollständig angezeigt (z.B. bei Logos)',
+				'type'          => 'true_false',
+				'wrapper'       => array(
+					'width' => '25',
+				),
+				'default_value' => 0,
+				'ui'            => 1,
+				'ui_on_text'    => 'Ja',
+				'ui_off_text'   => 'Nein',
 			),
 			array(
 				'key'               => 'field_5e67af40b9111',

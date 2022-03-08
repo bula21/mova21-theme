@@ -36,12 +36,15 @@
 									<?php
 									$image = get_sub_field( 'bild' );
 									if ( $image ) {
+										$classlist = 'content-image';
+										$classlist .= get_sub_field( 'bula_image_contain' ) ? ' image-contain' : '';
+
 										if ( $link = get_sub_field( 'link' ) ) {
 											echo '<a href="' . $link['url'] . '" target="' . $link['target'] . '">';
-											the_aid_picture_tag( $image['id'], 'bula-fullwidth', 'bula-fullwidth_2x', 'content-image' );
+											the_aid_picture_tag( $image['id'], 'bula-fullwidth', 'bula-fullwidth_2x', $classlist );
 											echo '</a>';
 										} else {
-											the_aid_picture_tag( $image['id'], 'bula-fullwidth', 'bula-fullwidth_2x', 'content-image' );
+											the_aid_picture_tag( $image['id'], 'bula-fullwidth', 'bula-fullwidth_2x', $classlist );
 										}
 									}
 									?>
