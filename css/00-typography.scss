@@ -360,18 +360,16 @@ body {
 @mixin h2 {
     font-family: 'MessinaSansWeb-Bold', serif;
     font-size: 25px;
-    line-height: 30px;
+    line-height: 1.2em;
     text-decoration: none;
     color: $black;
 
     @include media-medium-up {
         font-size: 35px;
-        line-height: 41px;
     }
 
     @include media-large-up {
         font-size: 44px;
-        line-height: 50px;
     }
 }
 
@@ -477,7 +475,7 @@ body {
 
 
 //fp - full page
-@mixin fp-text{
+@mixin fp-text {
     @include event-text;
 }
 
@@ -518,7 +516,7 @@ body {
 @mixin org-email {
     @include article;
 
-    a{
+    a {
         font-family: 'MessinaSansWeb-SemiBold', serif;
         color: $black;
     }
