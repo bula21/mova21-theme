@@ -7,10 +7,17 @@
     <div class="container mod-content">
 		<?php
 		if ( have_rows( 'content_elemente' ) ):
+			$id = 0;
 			while ( have_rows( 'content_elemente' ) ):
 				the_row();
+				$id ++;
+				if ( get_sub_field( 'hide_block' ) ) {
+					continue;
+				}
+
 				?>
-                <section>
+                <section id="element-<?php echo $id; ?>">
+
 					<?php if ( get_row_layout() == 'text-bild' ): ?>
                         <div class="content-element--text-bild">
 							<?php $reverse = get_sub_field( 'reihenfolge' ) == 't2b' ? '' : 'flex-row-reverse'; ?>
@@ -18,9 +25,7 @@
                                 <div class="col-12 col-md-6 bg-<?php the_sub_field( 'hintergrundfarbe' ); ?>">
                                     <div class="text">
                                         <h1>
-											<?php
-											the_sub_field( 'title' );
-											?>
+											<?php the_sub_field( 'title' ); ?>
                                         </h1>
                                         <p>
 											<?php the_sub_field( 'text' ); ?>
@@ -31,12 +36,15 @@
 									<?php
 									$image = get_sub_field( 'bild' );
 									if ( $image ) {
+										$classlist = 'content-image';
+										$classlist .= get_sub_field( 'bula_image_contain' ) ? ' image-contain' : '';
+
 										if ( $link = get_sub_field( 'link' ) ) {
 											echo '<a href="' . $link['url'] . '" target="' . $link['target'] . '">';
-											the_aid_picture_tag( $image['id'], 'bula-fullwidth', 'bula-fullwidth_2x', 'content-image' );
+											the_aid_picture_tag( $image['id'], 'bula-fullwidth', 'bula-fullwidth_2x', $classlist );
 											echo '</a>';
 										} else {
-											the_aid_picture_tag( $image['id'], 'bula-fullwidth', 'bula-fullwidth_2x', 'content-image' );
+											the_aid_picture_tag( $image['id'], 'bula-fullwidth', 'bula-fullwidth_2x', $classlist );
 										}
 									}
 									?>
@@ -56,7 +64,7 @@
 							while ( have_rows( 'header-1col' ) ):
 								the_row();
 								?>
-                                <div class="header oneCol bg-<?php the_sub_field( 'hintergrundfarbe' ); ?>">
+                                <div class="header one-col bg-<?php the_sub_field( 'hintergrundfarbe' ); ?>">
                                     <div class="infos">
                                         <h1 class="post-title"><?php the_title(); ?></h1>
                                         <div class="text-intro"><?php the_sub_field( 'text-header' ); ?></div>
@@ -106,10 +114,13 @@
 										$image = get_sub_field( 'img-header' );
 										//                     use the picture tag like this:
 										//                         the_aid_picture_tag( $image['id'], 'bula-fullwidth', 'bula-fullwidth_2x', 'content-image' );
-
+										if ( $image ) {
+											?>
+                                            <img src="<?php echo $image['url']; ?>">
+											<?php
+										}
 										?>
                                         <!--                    or use your own custom img tag like this:-->
-                                        <img src="<?php echo $image['url']; ?>">
                                     </div>
                                 </div>
 							<?php

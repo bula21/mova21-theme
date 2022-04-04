@@ -88,8 +88,37 @@
 <div class="navi-spacer">&nbsp;</div>
 
 <?php if ( WP_DEBUG ) : ?>
-<div class="dev-banner" style="background-color: red; position: fixed; width: 200px;top: 0;z-index: 999; text-align: center;left: calc( 50% - 100px );font-size: 1.5em;">
-    DEV SYSTEM!
+    <div class="dev-banner" style="background-color: red; position: fixed; width: 200px;top: 0;z-index: 999; text-align: center;left: calc( 50% - 100px );font-size: 1.5em;">
+        DEV SYSTEM!
+    </div>
+<?php
+endif;
+
+
+if ( post_password_required() ) :
+$post  = get_post();
+$label = 'pwbox-' . ( empty( $post->ID ) ? wp_rand() : $post->ID );
+?>
+
+<div class="container mod-content">
+    <div class="header">
+        <h1><?php _e( 'Diese Seite ist Passwortgeschützt' ); ?></h1>
+    </div>
+    <div class="entry-content">
+
+        <p class="post-password-message"><?php echo esc_html__( 'This content is password protected. Please enter a password to view.', 'twentytwentyone' ); ?></p>
+        <form action="<?php echo esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ); ?>" class="post-password-form" method="post">
+            <label class="post-password-form__label" for="<?php echo esc_attr( $label ); ?>">
+				<?php echo esc_html_x( 'Password', 'Post password form', 'twentytwentyone' ); ?>
+            </label>
+            <input class="post-password-form__input" name="post_password" id="<?php echo esc_attr( $label ); ?>" type="password" size="20"/>
+            <input type="submit" class="post-password-form__submit" name="<?php echo esc_attr_x( 'Submit', 'Post password form', 'twentytwentyone' ); ?>"
+                   value="<?php echo esc_attr_x( 'Enter', 'Post password form', 'twentytwentyone' ); ?>"/>
+        </form>
+    </div>
 </div>
 <?php
+get_footer();
+die();
+
 endif;

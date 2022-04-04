@@ -3,7 +3,7 @@
  * Global static theme path
  */
 define( 'BULA_URL_TO_THEME', get_stylesheet_directory_uri() );
-define( 'CACHE', WP_DEBUG ? time() : '20210118' );
+define( 'CACHE', WP_DEBUG ? time() : '20220404' );
 
 foreach ( glob( __DIR__ . '/acf/*.php' ) as $filename ) {
 	require_once( $filename );
@@ -16,6 +16,21 @@ foreach ( glob( __DIR__ . '/acf/*.php' ) as $filename ) {
 add_action( 'wp_enqueue_scripts', 'bula_enqueue_style' );
 function bula_enqueue_style() {
 	wp_enqueue_style( 'bula-dist-style', BULA_URL_TO_THEME . '/dist/css/style.css', array(), CACHE );
+}
+
+/**
+ * Add inline styling
+ */
+add_action( 'wp_enqueue_scripts', 'bula_styles_method' );
+function bula_styles_method() {
+	$hauptpartner = get_field( 'hauptpartnerlogos-breite', 'options' );
+	$partner      = get_field( 'partnerlogos-breite', 'options' );
+	$custom_css   = '
+                :root {
+                        --hauptpartner-logo-width: ' . $hauptpartner . 'px;
+                        --partner-logo-width: ' . $partner . 'px;
+                }';
+	wp_add_inline_style( 'bula-dist-style', $custom_css );
 }
 
 add_action( 'wp_enqueue_scripts', 'bula_enqueue_script' );

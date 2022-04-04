@@ -21,6 +21,7 @@
         max-width: 1770px;
     }
 }
+
 body.menu-active {
     overflow: hidden;
 }
@@ -34,6 +35,18 @@ body.menu-active {
         color: $red;
     }
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+:target:before {
+    content: "";
+    display: block;
+    height: 100px;
+    margin: -100px 0 0;
+}
+
 
 // cookie notice
 #cookie-notice {
@@ -416,7 +429,6 @@ body.menu-active {
 }
 
 
-
 ////////////////////////////////////////////////////////////
 //HEADER
 ////////////////////////////////////////////////////////////
@@ -476,11 +488,13 @@ body.menu-active {
 
         img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 }
 
-.oneCol {
+.one-col {
     .infos {
         width: 100% !important;
     }

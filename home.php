@@ -113,7 +113,7 @@
 		<?php
 		// Content Block 3 - News
 		$query = new WP_Query(
-			array( 'post_type' => 'post' )
+			array( 'post_type' => 'post', 'posts_per_page' => 5 )
 		// maybe add max-number of posts, like:
 		// 'posts-per-page' => 3
 		// or add category-filter, like
@@ -129,6 +129,9 @@
 					get_template_part( 'template-parts/content', 'news' );
 				}
 				?>
+                <div class="show-more-news">
+                    <a href="<?php _e('/news', 'bula21');?>"><?php _e('Alle News anzeigen', 'bula21'); ?></a>
+                </div>
             </div>
 			<?php
 		}
