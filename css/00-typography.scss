@@ -134,16 +134,15 @@ body {
     text-decoration: none;
     color: $black;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 1.3em;
 
     @include media-medium-up {
         font-size: 18px;
-        line-height: 22px;
+        line-height: 1.2em;
     }
 
     @include media-large-up {
         font-size: 20px;
-        line-height: 26px;
     }
 
     a {
