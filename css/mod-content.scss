@@ -1,7 +1,9 @@
 .mod-content {
 
     .content-element--text-bild {
-        margin-bottom: 50px;
+        @include media-medium-up {
+            margin-bottom: 50px;
+        }
 
         .text {
             padding: 15px;
@@ -21,6 +23,12 @@
             height: auto;
             min-height: 100%;
             object-fit: cover;
+        }
+
+        .text-bild--link {
+            display: block;
+            height: 100%;
+            min-height: 200px;
         }
 
         .image-contain.content-image img {
@@ -111,10 +119,6 @@
                 width: 50%;
             }
 
-            //            @include media-large-up {
-            //                width: calc(100% / 3 * 2);
-            //            }
-
             .contact-img {
                 margin-right: 15px;
 
@@ -162,10 +166,6 @@
                 width: 50%;
             }
 
-            //            @include media-large-up {
-            //                width: calc(100% / 3);
-            //            }
-
             .event {
                 display: flex;
                 flex-direction: row;
@@ -210,8 +210,6 @@
         .contact {
             width: 100%;
             margin-bottom: 50px;
-            display: flex;
-            flex-direction: row;
             display: block;
 
             @include media-small-up {
