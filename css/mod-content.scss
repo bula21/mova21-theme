@@ -280,6 +280,9 @@
     }
 
     .content-element--gallery {
+        .gallery-image-link {
+            display: block;
+        }
         .gallery-item {
             padding: 10px;
             display: inline-block;

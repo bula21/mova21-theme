@@ -31,7 +31,7 @@ jQuery(document).ready(function ($) {
     $('.content-element--gallery').each(function () {
         var self = $(this);
         $(this).magnificPopup({
-            delegate: '.gallery-item',
+            delegate: '.gallery-item:not(.has-link)',
             type: 'image',
             tLoading: self.data('loading'),
             mainClass: 'mfp-img',

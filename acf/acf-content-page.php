@@ -587,20 +587,24 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 						'name'          => 'bild',
 						'type'          => 'image',
 						'wrapper'       => array(
-							'width' => '',
+							'width' => '50',
 							'class' => '',
 							'id'    => '',
 						),
 						'return_format' => 'array',
 						'preview_size'  => 'medium',
 						'library'       => 'all',
-						'min_width'     => '',
-						'min_height'    => '',
-						'min_size'      => '',
-						'max_width'     => '',
-						'max_height'    => '',
-						'max_size'      => '',
-						'mime_types'    => '',
+					),
+					array(
+						'key'           => 'field_5e67ae97c4c1a',
+						'label'         => 'Link (optional)',
+						'name'          => 'link',
+						'type'          => 'link',
+						'wrapper'       => array(
+							'width' => '50',
+							'class' => '',
+							'id'    => '',
+						),
 					),
 				)
 			)

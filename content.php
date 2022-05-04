@@ -352,9 +352,15 @@
                                         <div class="col-12 col-md-4 col-lg-3">
 											<?php
 											$image = get_sub_field( 'bild' );
+											$link  = get_sub_field( 'link' );
 											$alt   = get_post_meta( $image['id'], '_wp_attachment_image_alt', true );
-
-											the_aid_picture_tag( $image['id'], 'bula-gallery-preview', 'bula-gallery-preview_2x', 'gallery-item' );
+											if ( $link ) {
+												echo sprintf( '<a class="gallery-image-link" href="%s" target="%s">', $link['url'] ?? '', $link['target'] ?? '' );
+												the_aid_picture_tag( $image['id'], 'bula-gallery-preview', 'bula-gallery-preview_2x', 'gallery-item has-link' );
+												echo '</a>';
+											} else {
+												the_aid_picture_tag( $image['id'], 'bula-gallery-preview', 'bula-gallery-preview_2x', 'gallery-item' );
+											}
 											if ( ! empty( $alt ) ) {
 												echo '<p class="gallery-caption">' . $alt . '</p>';
 											}
