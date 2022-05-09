@@ -10,11 +10,6 @@
             <h1 class="post-title"><?php the_title(); ?></h1>
             <div class="text-intro"><?php the_field( 'text_intro' ); ?></div>
         </div>
-<!--
-        <div class="illustration">
-            <img src="" alt="">
-        </div>
--->
     </div>
     <div class="org-container">
         <?php
