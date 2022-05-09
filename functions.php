@@ -3,7 +3,7 @@
  * Global static theme path
  */
 define( 'BULA_URL_TO_THEME', get_stylesheet_directory_uri() );
-define( 'CACHE', WP_DEBUG ? time() : '20220404' );
+define( 'CACHE', WP_DEBUG ? time() : '20220405' );
 
 foreach ( glob( __DIR__ . '/acf/*.php' ) as $filename ) {
 	require_once( $filename );

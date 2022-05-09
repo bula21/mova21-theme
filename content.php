@@ -40,7 +40,7 @@
 										$classlist .= get_sub_field( 'bula_image_contain' ) ? ' image-contain' : '';
 
 										if ( $link = get_sub_field( 'link' ) ) {
-											echo '<a href="' . $link['url'] . '" target="' . $link['target'] . '">';
+											echo '<a class="text-bild--link" href="' . $link['url'] . '" target="' . $link['target'] . '">';
 											the_aid_picture_tag( $image['id'], 'bula-fullwidth', 'bula-fullwidth_2x', $classlist );
 											echo '</a>';
 										} else {
