@@ -1,6 +1,6 @@
 <?php /* Template Name: Home */ ?>
 
-<?php get_header(); ?>
+<?php is_rest()?:get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <div class="container mod-home">
@@ -140,4 +140,4 @@
 
     </div>
 <?php endwhile; endif; ?>
-<?php get_footer(); ?>
+<?php is_rest()?:get_footer(); ?>

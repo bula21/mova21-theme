@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php is_rest()?:get_header(); ?>
 
 
 <div class="container mod-404">
@@ -22,4 +22,4 @@
 	?>
 </div>
 
-<?php get_footer(); ?>
+<?php is_rest()?:get_footer(); ?>

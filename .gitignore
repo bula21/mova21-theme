@@ -4,3 +4,4 @@ dist/
 node_modules/
 .ftppass
 package-lock.json
+.key
