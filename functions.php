@@ -95,7 +95,7 @@ function bula_register_menu() {
 	}
 
 	if ( isset( $_GET['content-only'] ) && $_GET['content-only'] == 1 ) {
-		add_filter( 'body_class', function( $classes ) {
+		add_filter( 'body_class', function ( $classes ) {
 			return array_merge( $classes, array( 'content-only' ) );
 		} );
 	}
@@ -295,7 +295,7 @@ function bula_count_submissions_with_date( $date ) {
 
 add_filter( 'rest_prepare_post', function ( $post_response, $post, $context ) {
 	ob_start();
-	$args = array( 'ID' => $post->ID );
+	$args = array( 'p' => $post->ID );
 	query_posts( $args );
 	get_template_part( 'single' );
 	$full_content = ob_get_clean();
