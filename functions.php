@@ -93,6 +93,12 @@ function bula_register_menu() {
 	if ( ! current_user_can( 'edit_posts' ) ) {
 		add_filter( 'show_admin_bar', '__return_false' );
 	}
+
+	if ( isset( $_GET['content-only'] ) && $_GET['content-only'] == 1 ) {
+		add_filter( 'body_class', function( $classes ) {
+			return array_merge( $classes, array( 'content-only' ) );
+		} );
+	}
 }
 
 /** images */
@@ -319,10 +325,6 @@ if ( ! function_exists( 'is_rest' ) ) {
 		if ( defined( 'REST_REQUEST' ) && REST_REQUEST // (#1)
 		     || isset( $_GET['rest_route'] ) // (#2)
 		        && strpos( $_GET['rest_route'], '/', 0 ) === 0 ) {
-			return true;
-		}
-
-		if ( isset( $_GET['content-only'] ) && $_GET['content-only'] == 1 ) {
 			return true;
 		}
 

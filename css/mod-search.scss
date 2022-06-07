@@ -1,4 +1,9 @@
 .mod-search {
+
+    .content-only & {
+        display: none;
+    }
+
     .search-form-wrapper {
         display: none;
         position: fixed;

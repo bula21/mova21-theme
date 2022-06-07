@@ -1,4 +1,8 @@
 .mod-footer {
+    .content-only & {
+        display: none;
+    }
+
     background-color: $yellow;
     padding: 20px 0;
     position: absolute;
