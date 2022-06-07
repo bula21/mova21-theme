@@ -322,6 +322,10 @@ if ( ! function_exists( 'is_rest' ) ) {
 			return true;
 		}
 
+		if ( isset( $_GET['content-only'] ) && $_GET['content-only'] == 1 ) {
+			return true;
+		}
+
 		// (#3)
 		global $wp_rewrite;
 		if ( $wp_rewrite === null ) {
