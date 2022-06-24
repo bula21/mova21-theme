@@ -85,7 +85,6 @@
         </div>
     </div>
 </div>
-<div class="navi-spacer">&nbsp;</div>
 
 <?php if ( WP_DEBUG ) : ?>
     <div class="dev-banner" style="background-color: red; position: fixed; width: 200px;top: 0;z-index: 999; text-align: center;left: calc( 50% - 100px );font-size: 1.5em;">
