@@ -42,7 +42,34 @@ jQuery(document).ready(function ($) {
             },
             image: {
                 tError: self.data('error'),
+                titleSrc: function (item) {
+                    return item.el.attr('title');
+                }
             },
         });
     });
+
+    var countdown = $('.home-content-block-countdown').data('time');
+    if (countdown) {
+        setInterval(function () {
+            var now = moment();
+            var camp = moment.unix(countdown).subtract(2, 'hours');
+            var duration = camp.diff(now);
+
+            var d = Math.floor(moment.duration(duration).asDays());
+            $('.home-content-block-countdown .days').text(d);
+            duration = moment.duration(duration).subtract(d, 'days');
+
+            var h = Math.floor(moment.duration(duration).asHours());
+            $('.home-content-block-countdown .hours').text(h);
+            duration = moment.duration(duration).subtract(h, 'hours');
+
+            var i = Math.floor(moment.duration(duration).asMinutes());
+            $('.home-content-block-countdown .minutes').text(i);
+            duration = moment.duration(duration).subtract(i, 'minutes');
+
+            var s = Math.floor(moment.duration(duration).asSeconds());
+            $('.home-content-block-countdown .seconds').text(s);
+        }, 1000);
+    }
 });

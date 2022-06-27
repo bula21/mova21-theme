@@ -1,11 +1,18 @@
 .mod-home {
 
     .home-animation-1 {
+        position: relative;
+        padding-bottom: 55%;
+
         img {
             width: 100%;
         }
 
         .animation {
+            position: absolute;
+            top: 0;
+            left: 15px;
+            right: 15px;
             background-size: cover;
             background-image: url("/wp-content/themes/bula21/img/mova_header_background.png")
         }
@@ -51,6 +58,24 @@
         }
     }
 
+    .home-content-block-countdown {
+        margin-bottom: 50px;
+
+        .number {
+            margin-top: 20px;
+            font-size: 80px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .time-entity {
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+    }
+
     .home-content-block-3 {
         .content-news {
             .news-image {
@@ -89,6 +114,14 @@
             .news-text {
                 background-color: $yellow;
             }
+        }
+    }
+
+    .show-more-news {
+        padding: 15px 0;
+
+        a {
+            font-size: 1.2em;
         }
     }
 

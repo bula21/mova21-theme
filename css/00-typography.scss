@@ -158,16 +158,15 @@ body {
     text-decoration: none;
     color: $black;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 1.3em;
 
     @include media-medium-up {
         font-size: 18px;
-        line-height: 22px;
+        line-height: 1.2em;
     }
 
     @include media-large-up {
         font-size: 20px;
-        line-height: 26px;
     }
 
     a {
@@ -384,18 +383,16 @@ body {
 @mixin h2 {
     font-weight: 600;
     font-size: 25px;
-    line-height: 30px;
+    line-height: 1.2em;
     text-decoration: none;
     color: $black;
 
     @include media-medium-up {
         font-size: 35px;
-        line-height: 41px;
     }
 
     @include media-large-up {
         font-size: 44px;
-        line-height: 50px;
     }
 }
 
@@ -501,7 +498,7 @@ body {
 
 
 //fp - full page
-@mixin fp-text{
+@mixin fp-text {
     @include event-text;
 }
 

@@ -28,8 +28,26 @@
 	<?php die(); endif; ?>
 <div class="mod-search">
     <div class="search-form-wrapper">
-        <button class="search-form-close"><?php _e( 'Schliessen', 'bula21' ); ?></button>
-		<?php echo get_search_form(); ?>
+        <button class="search-form-close" aria-label="<?php _e( 'Schliessen', 'bula21' ); ?>">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </button>
+        <form role="search" method="get" id="searchform" class="searchform" action="/">
+            <div>
+                <label class="screen-reader-text sr-only" for="s"><?php _e( 'Suche nach:', 'bula21' ); ?></label>
+                <div class="search-element">
+                    <button class="search-icon" role="button" form="searchform">
+                        <img src="<?php echo BULA_URL_TO_THEME; ?>/img/search-icon.svg" alt="<?php _e( 'Search icon' ); ?>">
+                    </button>
+                    <input type="text"
+                           class="search-input"
+                           placeholder="<?php _e( 'Suche nach', 'bula21' ); ?>"
+                           value="<?php echo get_search_query(); ?>" name="s" id="s">
+                </div>
+                <input type="submit" id="searchsubmit" value="Suche" class="sr-only">
+            </div>
+            <input type="hidden" name="lang" value="de"></form>
     </div>
 </div>
 
@@ -70,8 +88,37 @@
 <div class="navi-spacer">&nbsp;</div>
 
 <?php if ( WP_DEBUG ) : ?>
-<div class="dev-banner" style="background-color: red; position: fixed; width: 200px;top: 0;z-index: 999; text-align: center;left: calc( 50% - 100px );font-size: 1.5em;">
-    DEV SYSTEM!
+    <div class="dev-banner" style="background-color: red; position: fixed; width: 200px;top: 0;z-index: 999; text-align: center;left: calc( 50% - 100px );font-size: 1.5em;">
+        DEV SYSTEM!
+    </div>
+<?php
+endif;
+
+
+if ( post_password_required() ) :
+$post  = get_post();
+$label = 'pwbox-' . ( empty( $post->ID ) ? wp_rand() : $post->ID );
+?>
+
+<div class="container mod-content">
+    <div class="header">
+        <h1><?php _e( 'Diese Seite ist Passwortgeschützt' ); ?></h1>
+    </div>
+    <div class="entry-content">
+
+        <p class="post-password-message"><?php echo esc_html__( 'This content is password protected. Please enter a password to view.', 'twentytwentyone' ); ?></p>
+        <form action="<?php echo esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ); ?>" class="post-password-form" method="post">
+            <label class="post-password-form__label" for="<?php echo esc_attr( $label ); ?>">
+				<?php echo esc_html_x( 'Password', 'Post password form', 'twentytwentyone' ); ?>
+            </label>
+            <input class="post-password-form__input" name="post_password" id="<?php echo esc_attr( $label ); ?>" type="password" size="20"/>
+            <input type="submit" class="post-password-form__submit" name="<?php echo esc_attr_x( 'Submit', 'Post password form', 'twentytwentyone' ); ?>"
+                   value="<?php echo esc_attr_x( 'Enter', 'Post password form', 'twentytwentyone' ); ?>"/>
+        </form>
+    </div>
 </div>
 <?php
+get_footer();
+die();
+
 endif;

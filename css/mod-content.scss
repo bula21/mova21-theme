@@ -1,6 +1,9 @@
 .mod-content {
+
     .content-element--text-bild {
-        margin-bottom: 50px;
+        @include media-medium-up {
+            margin-bottom: 50px;
+        }
 
         .text {
             padding: 15px;
@@ -20,6 +23,16 @@
             height: auto;
             min-height: 100%;
             object-fit: cover;
+        }
+
+        .text-bild--link {
+            display: block;
+            height: 100%;
+            min-height: 200px;
+        }
+
+        .image-contain.content-image img {
+            object-fit: contain;
         }
     }
 
@@ -71,6 +84,7 @@
         }
 
         .spalte-element {
+            padding-top: 15px;
 
             @include media-small {
                 .column-count-small-reset {
@@ -104,10 +118,6 @@
             @include media-medium-up {
                 width: 50%;
             }
-
-            //            @include media-large-up {
-            //                width: calc(100% / 3 * 2);
-            //            }
 
             .contact-img {
                 margin-right: 15px;
@@ -156,10 +166,6 @@
                 width: 50%;
             }
 
-            //            @include media-large-up {
-            //                width: calc(100% / 3);
-            //            }
-
             .event {
                 display: flex;
                 flex-direction: row;
@@ -204,8 +210,6 @@
         .contact {
             width: 100%;
             margin-bottom: 50px;
-            display: flex;
-            flex-direction: row;
             display: block;
 
             @include media-small-up {
@@ -285,66 +289,71 @@
                 width: 100%;
             }
         }
+
+        .gallery-caption {
+            padding: 0 10px;
+        }
+
     }
 
-        .contact {
-            width: 100%;
-            margin-bottom: 50px;
-            display: inline-block;
+    .contact {
+        width: 100%;
+        margin-bottom: 50px;
+        display: inline-block;
 
-            @include media-small-up {
-                width: calc(50% - 30px);
-                margin-right: 30px;
+        @include media-small-up {
+            width: calc(50% - 30px);
+            margin-right: 30px;
+        }
+
+        @include media-medium-up {
+            width: calc(33% - 40px);
+            margin-right: 40px;
+        }
+
+        @include media-large-up {
+            width: calc(25% - 50px);
+            margin-right: 50px;
+        }
+
+        .img-container {
+            &:nth-of-type(3) {
+                border: none;
             }
 
-            @include media-medium-up {
-                width: calc(33% - 40px);
-                margin-right: 40px;
-            }
-
-            @include media-large-up {
-                width: calc(25% - 50px);
-                margin-right: 50px;
-            }
-
-            .img-container {
-                &:nth-of-type(3) {
-                    border: none;
-                }
-
-                img {
-                    width: 100%;
-                }
-            }
-
-            .info-container {
-                align-self: flex-end;
-                width: 200px;
-
-                @include media-medium-up {
-                    width: auto;
-                }
-
-                p {
-                    margin: 0;
-                    padding: 0;
-                }
-
-                .org-job {
-                    @include org-job;
-                    margin-bottom: 10px;
-                }
-
-                .org-name {
-                    @include org-name;
-                }
-
-                .org-contact,
-                .org-link {
-                    @include org-email;
-                }
+            img {
+                width: 100%;
             }
         }
+
+        .info-container {
+            align-self: flex-end;
+            width: 200px;
+
+            @include media-medium-up {
+                width: auto;
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+            }
+
+            .org-job {
+                @include org-job;
+                margin-bottom: 10px;
+            }
+
+            .org-name {
+                @include org-name;
+            }
+
+            .org-contact,
+            .org-link {
+                @include org-email;
+            }
+        }
+    }
 }
 
 .btn-black {

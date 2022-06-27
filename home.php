@@ -65,11 +65,55 @@
                 </div>
             </div>
         </div>
+		<?php if ( $datetime = get_field( 'countdowndate', 'options' ) ): ?>
+            <div class="home-content-block-countdown" data-time="<?php echo wp_date( 'U', $datetime ); ?>">
+                <div class="row">
+                    <div class="col">
+                        <h2><?php _e( 'bis ins mova', 'bula21' ); ?></h2>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-12 col-md-3 bg-blue">
+                            <div class="number days">
 
+                            </div>
+                            <div class="time-entity ">
+								<?php _e( 'Tage', 'bula21' ); ?>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 bg-red">
+                            <div class="number hours">
+
+                            </div>
+                            <div class="time-entity">
+								<?php _e( 'Stunden', 'bula21' ); ?>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 bg-yellow">
+                            <div class="number minutes">
+
+                            </div>
+                            <div class="time-entity">
+								<?php _e( 'Minuten', 'bula21' ); ?>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 bg-black font-yellow">
+                            <div class="number seconds">
+
+                            </div>
+                            <div class="time-entity">
+								<?php _e( 'Sekunden', 'bula21' ); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		<?php endif; ?>
 		<?php
 		// Content Block 3 - News
 		$query = new WP_Query(
-			array( 'post_type' => 'post' )
+			array( 'post_type' => 'post', 'posts_per_page' => 5 )
 		// maybe add max-number of posts, like:
 		// 'posts-per-page' => 3
 		// or add category-filter, like
@@ -85,6 +129,9 @@
 					get_template_part( 'template-parts/content', 'news' );
 				}
 				?>
+                <div class="show-more-news">
+                    <a href="<?php _e('/news', 'bula21');?>"><?php _e('Alle News anzeigen', 'bula21'); ?></a>
+                </div>
             </div>
 			<?php
 		}

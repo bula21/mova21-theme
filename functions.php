@@ -3,7 +3,7 @@
  * Global static theme path
  */
 define( 'BULA_URL_TO_THEME', get_stylesheet_directory_uri() );
-define( 'CACHE', WP_DEBUG ? time() : '20210117' );
+define( 'CACHE', WP_DEBUG ? time() : '20220405' );
 
 foreach ( glob( __DIR__ . '/acf/*.php' ) as $filename ) {
 	require_once( $filename );
@@ -16,6 +16,21 @@ foreach ( glob( __DIR__ . '/acf/*.php' ) as $filename ) {
 add_action( 'wp_enqueue_scripts', 'bula_enqueue_style' );
 function bula_enqueue_style() {
 	wp_enqueue_style( 'bula-dist-style', BULA_URL_TO_THEME . '/dist/css/style.css', array(), CACHE );
+}
+
+/**
+ * Add inline styling
+ */
+add_action( 'wp_enqueue_scripts', 'bula_styles_method' );
+function bula_styles_method() {
+	$hauptpartner = get_field( 'hauptpartnerlogos-breite', 'options' );
+	$partner      = get_field( 'partnerlogos-breite', 'options' );
+	$custom_css   = '
+                :root {
+                        --hauptpartner-logo-width: ' . $hauptpartner . 'px;
+                        --partner-logo-width: ' . $partner . 'px;
+                }';
+	wp_add_inline_style( 'bula-dist-style', $custom_css );
 }
 
 add_action( 'wp_enqueue_scripts', 'bula_enqueue_script' );
@@ -91,7 +106,7 @@ function the_aid_picture_tag( $image_id = null, $size = 'medium', $size_2x = 'la
 	$src2 = wp_get_attachment_image_src( $image_id, $size_2x );
 	$alt  = get_post_meta( $image_id, '_wp_attachment_image_alt', true );
 	?>
-    <picture class="<?php echo $classlist; ?>" data-mfp-src="<?php echo $full; ?>">
+    <picture class="<?php echo $classlist; ?>" data-mfp-src="<?php echo $full; ?>" title="<?php echo $alt; ?>">
         <img srcset="<?php echo $src[0]; ?> 1x, <?php echo $src2[0]; ?> 2x" alt="<?php echo $alt; ?>">
     </picture>
 	<?php
@@ -217,4 +232,56 @@ function my_admin_redirect() {
 			}
 		}
 	}
+}
+
+/**
+ * ninja forms fuehrungen booking date stuff
+ */
+add_filter( 'ninja_forms_render_options', function ( $options, $settings ) {
+	if ( 'mova_datum_fuehrung' == $settings['key'] ) {
+
+		if ( have_rows( 'dates_for_tours', 'option' ) ) {
+			while ( have_rows( 'dates_for_tours', 'option' ) ) {
+				the_row();
+				$datum      = get_sub_field( 'datum' );
+				$limit      = get_sub_field( 'limit' );
+				$open_seats = $limit - bula_count_submissions_with_date( $datum );
+				if ( $datum && $open_seats > 0 ) {
+					$options[] = [
+						'label'    => $datum . ' (Verfügbare Plätze: ' . $open_seats . ')',
+						'value'    => $datum,
+						'calc'     => 0,
+						'selected' => false
+					];
+				}
+			}
+		}
+	}
+
+	return $options;
+}, 10, 2 );
+
+function bula_count_submissions_with_date( $date ) {
+	$has_date = 0;
+	if ( function_exists( 'Ninja_Forms' ) ) {
+
+		$forms = Ninja_Forms()->form()->get_forms();
+
+		foreach ( $forms as $form ) {
+			$subs = Ninja_Forms()->form( $form->get_id() )->get_subs();
+			foreach ( $subs as $sub ) {
+
+				if ( $sub->get_field_value( 'mova_datum_fuehrung' ) == $date ) {
+					$count = $sub->get_field_value( 'anzahl_teilnehmende' );
+					if ( $count && intval( $count ) ) {
+						$has_date += $count;
+					} else {
+						$has_date ++;
+					}
+				}
+			}
+		}
+	}
+
+	return $has_date;
 }

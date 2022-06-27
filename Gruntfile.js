@@ -41,6 +41,7 @@ module.exports = function (grunt) {
                     'node_modules/phaser/dist/phaser.min.js',
                     'node_modules/masonry-layout/dist/masonry.pkgd.min.js',
                     'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+                    'node_modules/moment/min/moment-with-locales.min.js',
                     'js/*.js'
                 ]
             }
@@ -205,7 +206,7 @@ module.exports = function (grunt) {
         rsync: {
             options: {
                 args: ["--verbose"],
-                exclude: ['.git*', '*.scss', 'node_modules', 'temp', '/js', '/css', '.*', 'Gruntfile.js', 'package.json', 'package-lock.json', 'README.md' ],
+                exclude: ['.git*', '*.scss', 'node_modules', 'temp', '/js', '/css', '.*', 'Gruntfile.js', 'package.json', 'package-lock.json', 'README.md'],
                 recursive: true
             },
             dev: {

@@ -7,6 +7,11 @@
 
         .illustration {
             background: $red;
+            width: 100%;
+            display: block;
+            @include media-medium-up {
+                width: 50%;
+            }
         }
     }
 
