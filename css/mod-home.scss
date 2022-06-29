@@ -43,6 +43,7 @@
                     width: 100%;
                     text-align: center;
                     @include h2;
+                    margin: 0;
 
                     @include media-small {
                         font-size: 26px;
