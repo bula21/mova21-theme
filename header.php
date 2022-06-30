@@ -51,6 +51,28 @@
     </div>
 </div>
 
+<?php if ( has_nav_menu( 'meta-menu' ) ): ?>
+    <div class="mod-navigation meta">
+        <div class="container">
+            <div class="banner-wrapper">
+                <div></div>
+                <div class="navigation-wrapper">
+                    <div class="inner-wrapper">
+                        <?php wp_nav_menu( array( 'theme_location' => 'meta-menu', 'container_class' => 'bula-meta-menu', 'depth' => 1 ) ); ?>
+
+                        <div class="lang-menu">
+                            <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'de' ); ?>">D</a>
+                            <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'fr' ); ?>">F</a>
+                            <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'it' ); ?>">I</a>
+                            <a class="lang-switch" href="/en/international/">E</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>
+
 <div class="mod-navigation">
     <div class="container">
         <div class="banner-wrapper">
@@ -65,21 +87,26 @@
                 <div class="line"></div>
             </button>
             <div class="navigation-wrapper">
-                <div class="inner-wrapper">
+                <div class="inner-wrapper main">
 					<?php if ( has_nav_menu( 'main-menu' ) ) {
 						wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'bula-main-menu', 'depth' => 3 ) );
 					} ?>
 
+	                <?php if ( has_nav_menu( 'meta-menu' ) ): ?>
+		                <?php wp_nav_menu( array( 'theme_location' => 'meta-menu', 'container_class' => 'bula-meta-menu', 'depth' => 1 ) ); ?>
+	                <?php endif; ?>
+
                     <button class="search-icon" aria-label="<?php _e( 'Search', 'bula21' ); ?>">
                         <img src="<?php echo BULA_URL_TO_THEME; ?>/img/search-icon.svg" alt="<?php _e( 'Search icon' ); ?>">
                     </button>
-                    <div class="mobile-spacer">&nbsp;</div>
+
                     <div class="lang-menu">
                         <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'de' ); ?>">D</a>
                         <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'fr' ); ?>">F</a>
                         <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'it' ); ?>">I</a>
                         <a class="lang-switch" href="/en/international/">E</a>
                     </div>
+                    <div class="mobile-spacer">&nbsp;</div>
                 </div>
             </div>
         </div>

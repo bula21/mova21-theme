@@ -67,7 +67,7 @@
         .search-form-close {
             background-color: transparent;
             border: 0;
-            top: 0;
+            top: var(--wp-admin--admin-bar--height,0);
             right: 0;
             position: fixed;
             padding: 20px 30px;

@@ -82,7 +82,8 @@ add_action( 'init', 'bula_register_menu' );
 function bula_register_menu() {
 	register_nav_menus(
 		array(
-			'main-menu' => __( 'Hauptnavigation', 'bula21' )
+			'main-menu' => __( 'Hauptnavigation', 'bula21' ),
+			'meta-menu' => __( 'Metanavigation', 'bula21' )
 		)
 	);
 
@@ -340,4 +341,13 @@ if ( ! function_exists( 'is_rest' ) ) {
 
 		return strpos( $current_url['path'] ?? '/', $rest_url['path'], 0 ) === 0;
 	}
+}
+
+add_filter( 'walker_nav_menu_start_el', 'bula_menu_item_custom_output', 10, 4 );
+function bula_menu_item_custom_output( $item_output, $item, $depth, $args ) {
+    if ($args->theme_location == 'meta-menu' && $item->url == '#playradio' ) {
+        $item_output = str_replace('#playradio',"javascript:open('https://sonar.42m.ch/','_blank','width=500,height=1000,popup=1')",$item_output);
+    }
+
+    return $item_output;
 }

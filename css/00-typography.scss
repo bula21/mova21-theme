@@ -271,7 +271,7 @@ body {
 @mixin font-menu {
     font-weight: 600;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 1.2222;
     text-decoration: none;
     color: $black;
     transition: color 250ms;
@@ -282,7 +282,25 @@ body {
 
     @include media-medium-up {
         font-size: 20px;
-        line-height: 30px;
+        line-height: 1.5;
+    }
+}
+
+@mixin font-menu-meta {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2222;
+    text-decoration: none;
+    color: $black;
+    transition: color 250ms;
+
+    &:hover {
+        color: $red;
+    }
+
+    @include media-medium-up {
+        font-size: 14px;
+        line-height: 1.5;
     }
 }
 
