@@ -4,7 +4,9 @@
 $fontpath: "./../../fonts/";
 
 @font-face {
-    font-family: 'MessinaSansWeb-Black';
+    font-family: 'MessinaSansWeb';
+    font-weight: 800;
+    font-style: normal;
     src: url("#{$fontpath}MessinaSansWeb-Black.eot?#iefix") format('embedded-opentype'),
     url("#{$fontpath}MessinaSansWeb-Black.woff2") format('woff2'),
     url("#{$fontpath}MessinaSansWeb-Black.woff") format('woff');
@@ -12,7 +14,9 @@ $fontpath: "./../../fonts/";
 }
 
 @font-face {
-    font-family: 'MessinaSansWeb-BlackItalic';
+    font-family: 'MessinaSansWeb';
+    font-weight: 800;
+    font-style: italic;
     src: url("#{$fontpath}MessinaSansWeb-BlackItalic.eot?#iefix") format('embedded-opentype'),
     url("#{$fontpath}MessinaSansWeb-BlackItalic.woff2") format('woff2'),
     url("#{$fontpath}MessinaSansWeb-BlackItalic.woff") format('woff');
@@ -20,7 +24,9 @@ $fontpath: "./../../fonts/";
 }
 
 @font-face {
-    font-family: 'MessinaSansWeb-Bold';
+    font-family: 'MessinaSansWeb';
+    font-weight: 600;
+    font-style: normal;
     src: url("#{$fontpath}MessinaSansWeb-Bold.eot?#iefix") format('embedded-opentype'),
     url("#{$fontpath}MessinaSansWeb-Bold.woff2") format('woff2'),
     url("#{$fontpath}MessinaSansWeb-Bold.woff") format('woff');
@@ -28,7 +34,9 @@ $fontpath: "./../../fonts/";
 }
 
 @font-face {
-    font-family: 'MessinaSansWeb-BoldItalic';
+    font-family: 'MessinaSansWeb';
+    font-weight: 600;
+    font-style: italic;
     src: url("#{$fontpath}MessinaSansWeb-BoldItalic.eot?#iefix") format('embedded-opentype'),
     url("#{$fontpath}MessinaSansWeb-BoldItalic.woff2") format('woff2'),
     url("#{$fontpath}MessinaSansWeb-BoldItalic.woff") format('woff');
@@ -36,7 +44,9 @@ $fontpath: "./../../fonts/";
 }
 
 @font-face {
-    font-family: 'MessinaSansWeb-Book';
+    font-family: 'MessinaSansWeb';
+    font-weight: 350;
+    font-style: normal;
     src: url("#{$fontpath}MessinaSansWeb-Book.eot?#iefix") format('embedded-opentype'),
     url("#{$fontpath}MessinaSansWeb-Book.woff2") format('woff2'),
     url("#{$fontpath}MessinaSansWeb-Book.woff") format('woff');
@@ -44,7 +54,9 @@ $fontpath: "./../../fonts/";
 }
 
 @font-face {
-    font-family: 'MessinaSansWeb-BookItalic';
+    font-family: 'MessinaSansWeb';
+    font-weight: 350;
+    font-style: italic;
     src: url("#{$fontpath}MessinaSansWeb-BookItalic.eot?#iefix") format('embedded-opentype'),
     url("#{$fontpath}MessinaSansWeb-BookItalic.woff2") format('woff2'),
     url("#{$fontpath}MessinaSansWeb-BookItalic.woff") format('woff');
@@ -52,7 +64,9 @@ $fontpath: "./../../fonts/";
 }
 
 @font-face {
-    font-family: 'MessinaSansWeb-Light';
+    font-family: 'MessinaSansWeb';
+    font-weight: 300;
+    font-style: normal;
     src: url("#{$fontpath}MessinaSansWeb-Light.eot?#iefix") format('embedded-opentype'),
     url("#{$fontpath}MessinaSansWeb-Light.woff2") format('woff2'),
     url("#{$fontpath}MessinaSansWeb-Light.woff") format('woff');
@@ -60,7 +74,9 @@ $fontpath: "./../../fonts/";
 }
 
 @font-face {
-    font-family: 'MessinaSansWeb-LightItalic';
+    font-family: 'MessinaSansWeb';
+    font-weight: 300;
+    font-style: italic;
     src: url("#{$fontpath}MessinaSansWeb-LightItalic.eot?#iefix") format('embedded-opentype'),
     url("#{$fontpath}MessinaSansWeb-LightItalic.woff2") format('woff2'),
     url("#{$fontpath}MessinaSansWeb-LightItalic.woff") format('woff');
@@ -68,7 +84,9 @@ $fontpath: "./../../fonts/";
 }
 
 @font-face {
-    font-family: 'MessinaSansWeb-Regular';
+    font-family: 'MessinaSansWeb';
+    font-weight: 400;
+    font-style: normal;
     src: url("#{$fontpath}MessinaSansWeb-Regular.eot?#iefix") format('embedded-opentype'),
     url("#{$fontpath}MessinaSansWeb-Regular.woff2") format('woff2'),
     url("#{$fontpath}MessinaSansWeb-Regular.woff") format('woff');
@@ -76,7 +94,9 @@ $fontpath: "./../../fonts/";
 }
 
 @font-face {
-    font-family: 'MessinaSansWeb-RegularItalic';
+    font-family: 'MessinaSansWeb';
+    font-weight: 400;
+    font-style: italic;
     src: url("#{$fontpath}MessinaSansWeb-RegularItalic.eot?#iefix") format('embedded-opentype'),
     url("#{$fontpath}MessinaSansWeb-RegularItalic.woff2") format('woff2'),
     url("#{$fontpath}MessinaSansWeb-RegularItalic.woff") format('woff');
@@ -84,7 +104,9 @@ $fontpath: "./../../fonts/";
 }
 
 @font-face {
-    font-family: 'MessinaSansWeb-SemiBold';
+    font-family: 'MessinaSansWeb';
+    font-weight: 500;
+    font-style: normal;
     src: url("#{$fontpath}MessinaSansWeb-SemiBold.eot?#iefix") format('embedded-opentype'),
     url("#{$fontpath}MessinaSansWeb-SemiBold.woff2") format('woff2'),
     url("#{$fontpath}MessinaSansWeb-SemiBold.woff") format('woff');
@@ -92,7 +114,9 @@ $fontpath: "./../../fonts/";
 }
 
 @font-face {
-    font-family: 'MessinaSansWeb-SemiBoldItalic';
+    font-family: 'MessinaSansWeb';
+    font-weight: 500;
+    font-style: italic;
     src: url("#{$fontpath}MessinaSansWeb-SemiBoldItalic.eot?#iefix") format('embedded-opentype'),
     url("#{$fontpath}MessinaSansWeb-SemiBoldItalic.woff2") format('woff2'),
     url("#{$fontpath}MessinaSansWeb-SemiBoldItalic.woff") format('woff');
@@ -100,7 +124,7 @@ $fontpath: "./../../fonts/";
 }
 
 body {
-    font-family: 'MessinaSansWeb-Regular', serif;
+    font-family: 'MessinaSansWeb', "Helvetica Neue", serif;
 }
 
 
@@ -110,7 +134,7 @@ body {
 
 //page-h1
 @mixin font_01 {
-    font-family: 'MessinaSansWeb-Bold', serif;
+    font-weight: 600;
     font-size: 40px;
     line-height: 47px;
     text-decoration: none;
@@ -130,7 +154,7 @@ body {
 
 //header-texts and other use
 @mixin font_02 {
-    font-family: 'MessinaSansWeb-Bold', serif;
+    font-weight: 600;
     text-decoration: none;
     color: $black;
     font-size: 14px;
@@ -152,7 +176,7 @@ body {
 
 //article-h1
 @mixin font_03 {
-    font-family: 'MessinaSansWeb-Bold', serif;
+    font-weight: 600;
     font-size: 25px;
     line-height: 30px;
     text-decoration: none;
@@ -169,9 +193,9 @@ body {
     }
 }
 
-//coreText 
+//coreText
 @mixin font_04 {
-    font-family: 'MessinaSansWeb-Bold', serif;
+    font-weight: 600;
     font-size: 25px;
     line-height: 29px;
     text-decoration: none;
@@ -189,7 +213,7 @@ body {
 }
 
 @mixin font_05 {
-    font-family: 'MessinaSansWeb-SemiBold', serif;
+    font-weight: 600;
     text-decoration: none;
     color: $black;
     font-size: 14px;
@@ -211,7 +235,7 @@ body {
 // ****************************************************
 
 @mixin article {
-    font-family: 'MessinaSansWeb-Regular', serif;
+    font-weight: 400;
     font-size: 14px;
     line-height: 18px;
     text-decoration: none;
@@ -228,7 +252,7 @@ body {
 }
 
 @mixin main-menu {
-    font-family: 'MessinaSansWeb-Regular', serif;
+    font-weight: 400;
     font-size: 25px;
     line-height: 35px;
     text-decoration: none;
@@ -245,9 +269,9 @@ body {
 }
 
 @mixin font-menu {
-    font-family: 'MessinaSansWeb-Bold', serif;
+    font-weight: 600;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 1.2222;
     text-decoration: none;
     color: $black;
     transition: color 250ms;
@@ -258,12 +282,30 @@ body {
 
     @include media-medium-up {
         font-size: 20px;
-        line-height: 30px;
+        line-height: 1.5;
+    }
+}
+
+@mixin font-menu-meta {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2222;
+    text-decoration: none;
+    color: $black;
+    transition: color 250ms;
+
+    &:hover {
+        color: $red;
+    }
+
+    @include media-medium-up {
+        font-size: 14px;
+        line-height: 1.5;
     }
 }
 
 @mixin font-footer {
-    font-family: 'MessinaSansWeb-Bold', serif;
+    font-weight: 600;
     font-size: 16px;
     line-height: 20px;
     text-decoration: none;
@@ -280,7 +322,7 @@ body {
 }
 
 @mixin bold-content {
-    font-family: 'MessinaSansWeb-Bold', serif;
+    font-weight: 600;
     font-size: 22px;
     line-height: 26px;
     text-decoration: none;
@@ -297,7 +339,7 @@ body {
 }
 
 @mixin h1 {
-    font-family: 'MessinaSansWeb-Bold', serif;
+    font-weight: 600;
     font-size: 40px;
     line-height: 47px;
     text-decoration: none;
@@ -316,7 +358,7 @@ body {
 }
 
 @mixin h1-sub {
-    font-family: 'MessinaSansWeb-Bold', serif;
+    font-weight: 600;
     font-size: 17px;
     line-height: 24px;
     text-decoration: none;
@@ -335,7 +377,7 @@ body {
 }
 
 @mixin header-text {
-    font-family: 'MessinaSansWeb-Bold', serif;
+    font-weight: 600;
     text-decoration: none;
     color: $black;
     font-size: 14px;
@@ -357,7 +399,7 @@ body {
 }
 
 @mixin h2 {
-    font-family: 'MessinaSansWeb-Bold', serif;
+    font-weight: 600;
     font-size: 25px;
     line-height: 1.2em;
     text-decoration: none;
@@ -373,7 +415,7 @@ body {
 }
 
 @mixin h3 {
-    font-family: 'MessinaSansWeb-Regular', serif;
+    font-weight: 400;
     font-size: 15px;
     line-height: 18px;
 
@@ -399,7 +441,7 @@ body {
 }
 
 @mixin font-collapse {
-    font-family: 'MessinaSansWeb-SemiBold', serif;
+    font-weight: 500;
     font-size: 17px;
     line-height: 19px;
     text-decoration: none;
@@ -408,7 +450,7 @@ body {
 }
 
 @mixin font-collapse-h2 {
-    font-family: 'MessinaSansWeb-SemiBold', serif;
+    font-weight: 500;
     font-size: 30px;
     line-height: 15px;
     text-decoration: none;
@@ -417,7 +459,7 @@ body {
 }
 
 @mixin event-h2 {
-    font-family: 'MessinaSansWeb-Black', serif;
+    font-weight: 800;
     font-size: 20px;
     line-height: 25px;
     text-decoration: none;
@@ -436,7 +478,7 @@ body {
 }
 
 @mixin event-btn {
-    font-family: 'MessinaSansWeb-Bold', serif;
+    font-weight: 600;
     font-size: 25px;
     line-height: 29px;
     text-decoration: none;
@@ -455,7 +497,7 @@ body {
 }
 
 @mixin event-text {
-    font-family: 'MessinaSansWeb-Bold', serif;
+    font-weight: 600;
     font-size: 25px;
     line-height: 29px;
     text-decoration: none;
@@ -496,7 +538,7 @@ body {
 
 @mixin bloc-text {
     @include article;
-    font-family: 'MessinaSansWeb-SemiBold', serif;
+    font-weight: 500;
 }
 
 @mixin bloc-button {
@@ -515,8 +557,8 @@ body {
 @mixin org-email {
     @include article;
 
-    a {
-        font-family: 'MessinaSansWeb-SemiBold', serif;
+    a{
+        font-weight: 500;
         color: $black;
     }
 }
@@ -551,6 +593,6 @@ body {
     }
 
     strong {
-        font-family: 'MessinaSansWeb-Bold', serif;
+        font-weight: 600;
     }
 }

@@ -14,7 +14,7 @@
             left: 15px;
             right: 15px;
             background-size: cover;
-            background-image: url("/wp-content/themes/bula21/img/mova_header_background.png")
+            background-image: url("/wp-content/themes/bula21/img/mova_header_background2.jpg")
         }
     }
 
@@ -43,6 +43,7 @@
                     width: 100%;
                     text-align: center;
                     @include h2;
+                    margin: 0;
 
                     @include media-small {
                         font-size: 26px;
