@@ -6,10 +6,10 @@
 
     .content-news {
 
-        .newsGrid {
+        .news-grid {
 
             .grid-sizer,
-            .news-grid {
+            .news-grid-item {
                 width: 100%;
 
                 @include media-medium-up {
@@ -21,8 +21,7 @@
                 }
             }
 
-            .news-grid {
-                border: red 5px red;
+            .news-grid-item {
                 margin-bottom: 50px;
 
                 .news-bloc {
@@ -55,8 +54,9 @@
                         height: 350px;
 
                         img {
-                            height: auto;
+                            height: 100%;
                             width: 100%;
+                            object-fit: cover;
                             transition: all .5s;
                             transition-timing-function: ease;
                         }

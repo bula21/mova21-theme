@@ -21,8 +21,8 @@ jQuery(document).ready(function ($) {
         itemSelector: '.masonry-item'
     });
 
-    $('.newsGrid').masonry({
-        itemSelector: '.news-grid',
+    $('.news-grid').masonry({
+        itemSelector: '.news-grid-item',
         columnWidth: '.grid-sizer',
         percentPosition: true
     });

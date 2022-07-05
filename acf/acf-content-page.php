@@ -852,6 +852,68 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 	) );
 
 	acf_add_local_field_group( array(
+		'key'                   => 'group_5e67afaf2511111',
+		'title'                 => 'CE: News Beiträge',
+		'fields'                => array(
+			array(
+				'key'               => 'field_5e67afs2b611112',
+				'label'             => 'Kategorie',
+				'name'              => 'post_category',
+				'type' => 'taxonomy',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '75',
+					'class' => '',
+					'id' => '',
+				),
+				'taxonomy' => 'category',
+				'field_type' => 'checkbox',
+				'add_term' => 0,
+				'save_terms' => 0,
+				'load_terms' => 0,
+				'return_format' => 'id',
+				'multiple' => 0,
+				'allow_null' => 0,
+			),
+			array(
+				'key'           => 'field_5e4fcfe01113',
+				'label'         => 'Wie viele Beiträge sollen angezeigt werden?',
+				'name'          => 'limit_posts',
+				'type'          => 'number',
+				'wrapper'       => array(
+					'width' => '25',
+				),
+				'default_value' => 1,
+			),
+		),
+		'location'              => array(
+			array(
+				array(
+					'param'    => 'post_type',
+					'operator' => '==',
+					'value'    => 'post',
+				),
+				array(
+					'param'    => 'post_type',
+					'operator' => '==',
+					'value'    => 'page',
+				),
+			),
+		),
+		'menu_order'            => 0,
+		'position'              => 'normal',
+		'style'                 => 'default',
+		'label_placement'       => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen'        => '',
+		'active'                => true,
+		'description'           => '',
+	) );
+
+
+	acf_add_local_field_group( array(
 		'key'                   => 'group_5e67ad35afaf25af3c2',
 		'title'                 => 'CE: person contact ',
 		'fields'                => array(
@@ -1445,24 +1507,33 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 								'name'              => 'fp-text',
 								'type'              => 'clone',
 								'instructions'      => '',
-								'required'          => 0,
-								'conditional_logic' => 0,
-								'wrapper'           => array(
-									'width' => '',
-									'class' => '',
-									'id'    => '',
-								),
 								'clone'             => array(
 									0 => 'group_5e67afaf25af3c2',
 								),
 								'display'           => 'seamless',
 								'layout'            => 'block',
-								'prefix_label'      => 0,
-								'prefix_name'       => 0,
 							),
 						),
-						'min'        => '',
-						'max'        => '',
+					),
+					'layout_5e67adcb98d3dc1'           => array(
+						'key'        => 'layout_5e67adcb98d3dc1',
+						'name'       => 'news-posts',
+						'label'      => 'News Beiträge',
+						'display'    => 'block',
+						'sub_fields' => array(
+							array(
+								'key'               => 'field_5e67add21d406b',
+								'label'             => 'News Beiträge',
+								'name'              => 'news-posts',
+								'type'              => 'clone',
+								'instructions'      => '',
+								'clone'             => array(
+									0 => 'group_5e67afaf2511111',
+								),
+								'display'           => 'seamless',
+								'layout'            => 'block',
+							),
+						),
 					),
 					'layout_5e67adcb98ad36d3dc0ddd'    => array(
 						'key'        => 'layout_5e67adcb98ad36d3dc0ddd',
