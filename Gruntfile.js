@@ -265,7 +265,7 @@ module.exports = function (grunt) {
     // deploy tasks: $ grunt deploy-dev
     grunt.registerTask('deploy-dev', ['concurrent:prod', 'clean:temp_folder', 'sftp-deploy:dev']);
     grunt.registerTask('rsync-dev', ['concurrent:prod', 'clean:temp_folder', 'rsync:dev']);
-    grunt.registerTask('rsync-prod', ['concurrent:prod', 'rsync:prod']);
+    grunt.registerTask('rsync-prod', ['concurrent:prod', 'clean:temp_folder', 'rsync:prod']);
 
     grunt.registerTask('deploy-prod', ['concurrent:prod', 'sftp-deploy:prod']);
 
