@@ -24,6 +24,7 @@
         }
 
         .navigation-wrapper {
+            pointer-events: none;
             .inner-wrapper {
                 display: flex;
                 align-items: center;
@@ -322,6 +323,7 @@
         @include media-small {
             .menu-active & {
                 .navigation-wrapper {
+                    pointer-events: initial;
                     .inner-wrapper {
                         max-width: 540px;
                         padding-left: 10px;
@@ -349,6 +351,7 @@
 
 .mod-navigation.meta {
     .banner-wrapper .navigation-wrapper {
+        pointer-events: none;
         .inner-wrapper {
             align-items: stretch;
         }
