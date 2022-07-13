@@ -27,6 +27,18 @@ jQuery(document).ready(function ($) {
         percentPosition: true
     });
 
+    // hack for the BBSpoiler plugin within masonry
+    $('.sp-wrap.sp-wrap-default').click(function () {
+        var mas = $(this).closest('.masonry')
+        if (mas) {
+            setTimeout(function () {
+                $(mas).masonry({
+                    // options
+                    itemSelector: '.masonry-item'
+                });
+            }, 350);
+        }
+    });
 
     $('.content-element--gallery').each(function () {
         var self = $(this);
