@@ -6,6 +6,9 @@
 
     position: sticky;
     top: var(--wp-admin--admin-bar--height, 0);
+    @media screen and (max-width: 600px) {
+        top: 0;
+    }
     width: 100%;
     z-index: 10;
     background-color: $white;
@@ -206,6 +209,7 @@
                 .navigation-wrapper {
                     opacity: 1;
                     overflow-y: auto;
+                    visibility: visible;
 
                     .inner-wrapper {
                         transform: translateX(0);
@@ -242,6 +246,7 @@
                 z-index: 10;
                 padding-bottom: 30px;
                 overflow: hidden;
+                visibility: hidden;
 
                 .inner-wrapper {
                     transform: translateX(100vw);
