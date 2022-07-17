@@ -84,6 +84,14 @@
                     flex: auto;
                     text-align: center;
 
+                    &.intranet {
+                        display: none;
+
+                        .logged-in & {
+                            display: inherit;
+                        }
+                    }
+
                     a {
                         padding: 20px;
                         @include font-menu;
@@ -159,7 +167,7 @@
                         }
 
                         .menu-item:not(.menu-item-has-children) a {
-                            flex:   1;
+                            flex: 1;
                         }
 
 
@@ -175,7 +183,8 @@
 
                 }
             }
-            .menu>.menu-item>.sub-menu:before {
+
+            .menu > .menu-item > .sub-menu:before {
                 display: block;
                 position: absolute;
                 content: " ";
@@ -347,7 +356,7 @@
         display: none;
 
         .logged-in & {
-            display: block;
+            display: inherit;
         }
     }
 }

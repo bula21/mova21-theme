@@ -58,7 +58,7 @@
                 <div></div>
                 <div class="navigation-wrapper">
                     <div class="inner-wrapper">
-                        <?php wp_nav_menu( array( 'theme_location' => 'meta-menu', 'container_class' => 'bula-meta-menu', 'depth' => 1 ) ); ?>
+						<?php wp_nav_menu( array( 'theme_location' => 'meta-menu', 'container_class' => 'bula-meta-menu', 'depth' => 1 ) ); ?>
 
                         <div class="lang-menu">
                             <a class="lang-switch" href="<?php echo bula_get_current_url_in( 'de' ); ?>">D</a>
@@ -92,9 +92,9 @@
 						wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'bula-main-menu', 'depth' => 3 ) );
 					} ?>
 
-	                <?php if ( has_nav_menu( 'meta-menu' ) ): ?>
-		                <?php wp_nav_menu( array( 'theme_location' => 'meta-menu', 'container_class' => 'bula-meta-menu', 'depth' => 1 ) ); ?>
-	                <?php endif; ?>
+					<?php if ( has_nav_menu( 'meta-menu' ) ): ?>
+						<?php wp_nav_menu( array( 'theme_location' => 'meta-menu', 'container_class' => 'bula-meta-menu', 'depth' => 1 ) ); ?>
+					<?php endif; ?>
 
                     <button class="search-icon" aria-label="<?php _e( 'Search', 'bula21' ); ?>">
                         <img src="<?php echo BULA_URL_TO_THEME; ?>/img/search-icon.svg" alt="<?php _e( 'Search icon' ); ?>">
@@ -114,7 +114,7 @@
 </div>
 
 <?php if ( WP_DEBUG ) : ?>
-    <div class="dev-banner" style="background-color: red; position: fixed; width: 200px;top: 0;z-index: 999; text-align: center;left: calc( 50% - 100px );font-size: 1.5em;">
+    <div class="dev-banner" style="background-color: red; position: fixed; width: 200px;top: 0;z-index: 999; text-align: center;left: calc( 50% - 100px );font-size: 1.2em;">
         DEV SYSTEM!
     </div>
 <?php
