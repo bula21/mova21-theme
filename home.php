@@ -1,6 +1,6 @@
 <?php /* Template Name: Home */ ?>
 
-<?php is_rest()?:get_header(); ?>
+<?php is_rest() ? : get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <div class="container mod-home">
@@ -65,7 +65,10 @@
                 </div>
             </div>
         </div>
-		<?php if ( $datetime = get_field( 'countdowndate', 'options' ) ): ?>
+		<?php
+		$datetime  = get_field( 'countdowndate', 'options' );
+		$is_future = $datetime -7200 > wp_date( 'U' );
+		if ( $datetime && $is_future ): ?>
             <div class="home-content-block-countdown" data-time="<?php echo wp_date( 'U', $datetime ); ?>">
                 <div class="row">
                     <div class="col">
@@ -130,7 +133,7 @@
 				}
 				?>
                 <div class="show-more-news">
-                    <a href="<?php _e('/news', 'bula21');?>"><?php _e('Alle News anzeigen', 'bula21'); ?></a>
+                    <a href="<?php _e( '/news', 'bula21' ); ?>"><?php _e( 'Alle News anzeigen', 'bula21' ); ?></a>
                 </div>
             </div>
 			<?php
@@ -140,4 +143,4 @@
 
     </div>
 <?php endwhile; endif; ?>
-<?php is_rest()?:get_footer(); ?>
+<?php is_rest() ? : get_footer(); ?>

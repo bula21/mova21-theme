@@ -67,6 +67,9 @@ jQuery(document).ready(function ($) {
             var now = moment();
             var camp = moment.unix(countdown).subtract(2, 'hours');
             var duration = camp.diff(now);
+            if (duration <= 0) {
+                $('.home-content-block-countdown').addClass('d-none');
+            }
 
             var d = Math.floor(moment.duration(duration).asDays());
             $('.home-content-block-countdown .days').text(d);
