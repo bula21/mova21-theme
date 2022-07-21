@@ -67,7 +67,7 @@
         </div>
 		<?php
 		$datetime  = get_field( 'countdowndate', 'options' );
-		$is_future = $datetime -7200 > wp_date( 'U' );
+		$is_future = $datetime - 7200 > wp_date( 'U' );
 		if ( $datetime && $is_future ): ?>
             <div class="home-content-block-countdown" data-time="<?php echo wp_date( 'U', $datetime ); ?>">
                 <div class="row">
@@ -111,6 +111,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="home-content-block-countdown-liftoff d-none">
+                <iframe src="https://giphy.com/embed/QxHYo06xOo9cuyaEue"></iframe>
             </div>
 		<?php endif; ?>
 		<?php

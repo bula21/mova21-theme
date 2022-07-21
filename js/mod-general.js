@@ -69,6 +69,7 @@ jQuery(document).ready(function ($) {
             var duration = camp.diff(now);
             if (duration <= 0) {
                 $('.home-content-block-countdown').addClass('d-none');
+                $('.home-content-block-countdown-liftoff').removeClass('d-none');
             }
 
             var d = Math.floor(moment.duration(duration).asDays());

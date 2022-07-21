@@ -71,6 +71,17 @@
         }
     }
 
+    .home-content-block-countdown-liftoff {
+        display: flex;
+        justify-content: center;
+
+        iframe {
+            width: 100%;
+            max-width: 400px;
+            aspect-ratio: 1.333;
+        }
+    }
+
     .home-content-block-3 {
         .content-news {
             .news-image {
