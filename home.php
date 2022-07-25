@@ -120,7 +120,11 @@
 		<?php
 		// Content Block 3 - News
 		$query = new WP_Query(
-			array( 'post_type' => 'post', 'posts_per_page' => 5 )
+			array(
+				'post_type'        => 'post',
+				'posts_per_page'   => get_field( 'anzahl_posts' ),
+				'category__not_in' => get_field( 'hide_cat' ),
+			)
 		// maybe add max-number of posts, like:
 		// 'posts-per-page' => 3
 		// or add category-filter, like

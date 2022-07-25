@@ -23,7 +23,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 	<?php die(); endif; ?>
 <div class="mod-search">
