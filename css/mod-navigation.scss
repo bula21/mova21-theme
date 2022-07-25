@@ -382,6 +382,10 @@
 .lang-menu {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 50px;
+    @include media-large-up {
+        margin-bottom: initial;
+    }
 
     .lang-switch {
         padding: 0 5px;
